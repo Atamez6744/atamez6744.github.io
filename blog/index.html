@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Ale Tamez</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog — Ale Tamez">
+    <meta property="og:description" content="Thinking out loud about AI, people, and what happens when you put the two together with intention.">
+    <meta property="og:image" content="https://alejandratamez.com/IMG_2428.JPG">
+    <meta property="og:site_name" content="Ale Tamez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #C48B6F;
+            --navy: #5A9E8F;
+            --cream: #FFFFFF;
+            --sage: #C9A24D;
+            --white: #FFFFFF;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--navy);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- NAV ---- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid rgba(90, 158, 143, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-logo:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--navy);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--terracotta);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--terracotta);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--navy);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* ---- HERO ---- */
+        .hero {
+            padding: 160px 2rem 80px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: rgba(90, 158, 143, 0.7);
+            line-height: 1.75;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        /* ---- FILTERS ---- */
+        .filters-section {
+            max-width: 1100px;
+            margin: 0 auto 3rem;
+            padding: 0 2rem;
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.5rem 1.25rem;
+            border-radius: 100px;
+            border: 1.5px solid rgba(90, 158, 143, 0.15);
+            background: var(--white);
+            color: var(--navy);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--terracotta);
+            color: var(--terracotta);
+        }
+
+        .filter-btn.active {
+            background: var(--terracotta);
+            border-color: var(--terracotta);
+            color: var(--white);
+        }
+
+        /* ---- BLOG GRID ---- */
+        .blog-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            box-shadow: 0 2px 12px rgba(90, 158, 143, 0.06);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .blog-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.35s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(90, 158, 143, 0.12);
+        }
+
+        .blog-card.visible:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-accent {
+            height: 4px;
+            width: 100%;
+        }
+
+        .accent-terracotta { background: var(--terracotta); }
+        .accent-navy { background: var(--navy); }
+        .accent-sage { background: var(--sage); }
+
+        .card-body {
+            padding: 2rem 2rem 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            background: rgba(196, 139, 111, 0.08);
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .card-excerpt {
+            font-size: 0.95rem;
+            color: rgba(90, 158, 143, 0.65);
+            line-height: 1.65;
+            flex: 1;
+            margin-bottom: 1.25rem;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(90, 158, 143, 0.06);
+            padding-top: 1rem;
+        }
+
+        .card-read-time {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: rgba(90, 158, 143, 0.45);
+        }
+
+        .card-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--terracotta);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: gap 0.25s ease;
+        }
+
+        .blog-card:hover .card-link {
+            gap: 0.65rem;
+        }
+
+        .card-link svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.25s ease;
+        }
+
+        .blog-card:hover .card-link svg {
+            transform: translateX(2px);
+        }
+
+        /* ---- FEATURED (first card) ---- */
+        .blog-card.featured {
+            grid-column: 1 / -1;
+        }
+
+        .blog-card.featured .card-body {
+            padding: 2.5rem 3rem 2rem;
+        }
+
+        .blog-card.featured .card-title {
+            font-size: 2rem;
+        }
+
+        .blog-card.featured .card-excerpt {
+            font-size: 1.05rem;
+            max-width: 680px;
+        }
+
+        /* ---- FOOTER ---- */
+        footer {
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-tagline {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.45);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* ---- MOBILE ---- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1.5rem 2rem 2rem;
+                gap: 1.25rem;
+                border-bottom: 1px solid rgba(90, 158, 143, 0.08);
+                box-shadow: 0 8px 24px rgba(90, 158, 143, 0.08);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero {
+                padding: 130px 1.5rem 50px;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1.25rem 4rem;
+                gap: 1.5rem;
+            }
+
+            .blog-card.featured .card-body {
+                padding: 1.75rem 1.5rem 1.25rem;
+            }
+
+            .blog-card.featured .card-title {
+                font-size: 1.5rem;
+            }
+
+            .card-body {
+                padding: 1.5rem 1.5rem 1.25rem;
+            }
+
+            .filters-section {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* ---- FADE-IN ANIMATION ---- */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">Ale Tamez</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="./" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero fade-in">
+        <span class="hero-label">The Blog</span>
+        <h1>Thinking Out Loud</h1>
+        <p>This is where I think out loud. About AI, about people, about what happens when you put the two together with intention. Some of these are polished. Some are messy. All of them are real.</p>
+    </section>
+
+    <!-- FILTERS -->
+    <div class="filters-section fade-in">
+        <div class="filter-row">
+            <button class="filter-btn active">All Posts</button>
+            <button class="filter-btn">AI Adoption</button>
+            <button class="filter-btn">Leadership</button>
+            <button class="filter-btn">Change Management</button>
+            <button class="filter-btn">AI Education</button>
+            <button class="filter-btn">Community</button>
+            <button class="filter-btn">Future of Work</button>
+            <button class="filter-btn">AI Strategy</button>
+            <button class="filter-btn">Learning</button>
+        </div>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-grid">
+
+        <!-- Post 1 - Featured -->
+        <a href="the-adoption-lie.html" class="blog-card featured">
+            <div class="card-accent accent-terracotta"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">AI Adoption</span>
+                    <span class="card-tag">Change Management</span>
+                    <span class="card-tag">Leadership</span>
+                </div>
+                <h2 class="card-title">The Adoption Lie Nobody Talks About</h2>
+                <p class="card-excerpt">We celebrate adoption rates like they're the finish line. But are people actually using it, or did they just click the button because someone told them to?</p>
+                <div class="card-footer">
+                    <span class="card-read-time">July 14, 2025 &middot; 4 min read</span>
+                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 2 -->
+        <a href="ai-education-in-spanish.html" class="blog-card">
+            <div class="card-accent accent-sage"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">La Clave AI</span>
+                    <span class="card-tag">AI Education</span>
+                    <span class="card-tag">Community</span>
+                    <span class="card-tag">Spanish</span>
+                </div>
+                <h2 class="card-title">Why I'm Building AI Education in Spanish</h2>
+                <p class="card-excerpt">There are over 500 million Spanish speakers in the world. The vast majority of AI education exists only in English. That's not a gap. That's a wall.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">October 6, 2025 &middot; 3 min read</span>
+                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 3 -->
+        <a href="humans-are-not-the-bottleneck.html" class="blog-card">
+            <div class="card-accent accent-navy"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">AI Adoption</span>
+                    <span class="card-tag">Leadership</span>
+                    <span class="card-tag">Culture</span>
+                </div>
+                <h2 class="card-title">Humans Are Not the Bottleneck</h2>
+                <p class="card-excerpt">People are not the bottleneck. The absence of trust, context, and relevance is the bottleneck.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">December 15, 2025 &middot; 3 min read</span>
+                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 4 -->
+        <a href="seven-books-ai-strategy.html" class="blog-card">
+            <div class="card-accent accent-terracotta"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Learning</span>
+                    <span class="card-tag">AI Strategy</span>
+                    <span class="card-tag">Self-Awareness</span>
+                </div>
+                <h2 class="card-title">What Seven Books at Once Taught Me About AI Strategy</h2>
+                <p class="card-excerpt">People think reading seven books at once is chaotic. I think reading one book at a time is leaving patterns on the table.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">February 10, 2026 &middot; 4 min read</span>
+                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 5 -->
+        <a href="hybrid-human-agent-teams.html" class="blog-card">
+            <div class="card-accent accent-sage"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">AI Adoption</span>
+                    <span class="card-tag">Future of Work</span>
+                    <span class="card-tag">Manic Mondays</span>
+                </div>
+                <h2 class="card-title">Manic Monday: The Case for Hybrid Human-Agent Teams</h2>
+                <p class="card-excerpt">The future of work isn't human or machine. It's human and machine, working in roles that play to their respective strengths.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">April 4, 2026 &middot; 3 min read</span>
+                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">Ale Tamez</div>
+        <p class="footer-tagline">Making AI work for people, not the other way around.</p>
+        <p class="footer-copy">&copy; 2026 Ale Tamez. All rights reserved.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger the animation for blog cards
+                    const delay = entry.target.classList.contains('blog-card')
+                        ? index * 120
+                        : 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, delay);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .blog-card').forEach(el => observer.observe(el));
+
+        // Filter button toggle (visual only)
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ale Tamez">
+    <meta property="og:image" content="https://alejandratamez.com/IMG_2428.JPG">
+    <title>Manic Monday: The Case for Hybrid Human-Agent Teams | Ale Tamez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #C48B6F;
+            --terracotta-light: #D4A08A;
+            --navy: #5A9E8F;
+            --cream: #FFFFFF;
+            --cream-dark: #F5F5F3;
+            --sage: #C9A24D;
+            --white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-medium: #5A5A5A;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--cream-dark);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .nav-logo:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--navy);
+            transition: 0.3s;
+        }
+
+        .article-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .article-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-tags span {
+            background-color: var(--cream-dark);
+            color: var(--terracotta);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+
+        .article-meta .read-time {
+            color: var(--terracotta);
+            font-weight: 500;
+        }
+
+        .article-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--terracotta);
+            border: none;
+            margin: 2rem 0;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-body p:first-of-type::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+        }
+
+        .article-body em {
+            font-style: italic;
+        }
+
+        .post-nav {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--cream-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .post-nav a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--terracotta);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .post-nav a:hover {
+            color: var(--terracotta-light);
+        }
+
+        .post-nav .back-link {
+            color: var(--text-medium);
+        }
+
+        .post-nav .back-link:hover {
+            color: var(--terracotta);
+        }
+
+        .post-nav .next-post {
+            text-align: right;
+        }
+
+        .post-nav .prev-post {
+            text-align: left;
+        }
+
+        .post-nav .next-post .label,
+        .post-nav .prev-post .label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            font-weight: 400;
+            margin-bottom: 0.2rem;
+        }
+
+        footer {
+            background-color: var(--navy);
+            color: var(--cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer .tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--cream-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        footer .copyright {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--cream-dark);
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-body p:first-of-type::first-letter {
+                font-size: 3rem;
+            }
+
+            .post-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .post-nav .next-post {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">Ale Tamez</a>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="./">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-tags">
+                <span>AI Adoption</span>
+                <span>Future of Work</span>
+                <span>Manic Mondays</span>
+            </div>
+            <h1 class="article-title">Manic Monday: The Case for Hybrid Human-Agent Teams</h1>
+            <p class="article-meta"><span class="read-time">April 4, 2026 &middot; 3 min read</span></p>
+        </header>
+
+        <hr class="article-divider">
+
+        <div class="article-body">
+            <p>Every Monday on LinkedIn, I publish a post I call "Manic Monday." It started as a way to process my own thinking about where AI and work are heading. It became something bigger: a weekly argument that the future of work isn't human <em>or</em> machine. It's human <em>and</em> machine, working in roles that play to their respective strengths.</p>
+
+            <p>Here's the mental model: think of a jazz band. The drummer keeps time (that's the AI, consistent, tireless, precise). The saxophonist improvises (that's the human, creative, contextual, emotional). Neither one is the star. The music only works when both show up and know their part.</p>
+
+            <p>The problem with most AI deployment strategies is that they treat AI as a replacement musician. "Here, this tool can write your emails." Okay. But the value of a great email was never the grammar. It was the judgment about what to say, when to say it, and how to make the reader feel seen. That's the saxophone.</p>
+
+            <p>Hybrid human-agent teams mean designing workflows where AI handles the rhythm section: data summarization, first-draft generation, pattern detection, scheduling optimization. And humans handle the improvisation: stakeholder relationships, ethical judgment, creative problem-solving, emotional intelligence.</p>
+
+            <p>The leaders who figure out how to compose those teams, not just deploy the tools, will build organizations that sound like music. The rest will sound like a drum machine playing alone in an empty room.</p>
+        </div>
+
+        <div class="post-nav">
+            <a href="seven-books-ai-strategy.html" class="prev-post">
+                <span class="label">&larr; Previous Post</span>
+                What Seven Books at Once Taught Me About AI Strategy
+            </a>
+            <a href="./" class="back-link">Back to Blog</a>
+        </div>
+    </article>
+
+    <footer>
+        <p class="tagline">"Making technology satisfyingly satisfying."</p>
+        <p class="copyright">&copy; 2026 Ale Tamez. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

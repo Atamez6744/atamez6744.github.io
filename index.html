@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandra Tamez de la Garza | Change Management & GenAI Enablement</title>
+  <meta name="description" content="Change Management leader and GenAI enablement strategist putting people at the center of technology transformation.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alejandra Tamez de la Garza — Change Management & GenAI Enablement">
+  <meta property="og:description" content="Adoption is a metric. Bravery is a strategy. Change Management leader and GenAI enablement strategist putting people at the center of technology transformation.">
+  <meta property="og:image" content="https://alejandratamez.com/IMG_2428.JPG">
+  <meta property="og:url" content="https://alejandratamez.com/">
+  <meta property="og:site_name" content="Ale Tamez">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alejandra Tamez de la Garza — Change Management & GenAI Enablement">
+  <meta name="twitter:description" content="Adoption is a metric. Bravery is a strategy. Change Management leader and GenAI enablement strategist.">
+  <meta name="twitter:image" content="https://alejandratamez.com/IMG_2428.JPG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ===== CSS RESET & VARIABLES ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --terracotta: #C48B6F;
+      --terracotta-light: #D4A08A;
+      --terracotta-dark: #A8735A;
+      --navy: #5A9E8F;
+      --navy-light: #6DB3A3;
+      --cream: #FFFFFF;
+      --cream-dark: #F5F5F3;
+      --sage: #C9A24D;
+      --sage-light: #D4B877;
+      --text-dark: #2C2C2C;
+      --text-medium: #5A5A5A;
+      --text-light: #8A8A8A;
+      --white: #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--cream);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.2;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--terracotta); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--terracotta-dark); }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(90, 158, 143, 0.08);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled { box-shadow: 0 2px 20px rgba(90, 158, 143, 0.1); }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--terracotta);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--navy); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--navy);
+      transition: all 0.3s;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 72px;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,105,61,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 60px 0;
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: 3.8rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--terracotta);
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+
+    .hero-text {
+      font-size: 1.1rem;
+      color: var(--text-medium);
+      margin-bottom: 36px;
+      max-width: 520px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--terracotta);
+      color: var(--white);
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(196, 139, 111, 0.3);
+    }
+
+    .hero-cta:hover {
+      background: var(--terracotta-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(196, 139, 111, 0.4);
+    }
+
+    .hero-cta svg { width: 18px; height: 18px; transition: transform 0.3s; }
+    .hero-cta:hover svg { transform: translateX(4px); }
+
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--navy);
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid var(--navy);
+      transition: all 0.3s;
+    }
+
+    .hero-cta-secondary:hover {
+      background: var(--navy);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .hero-cta-secondary svg { width: 18px; height: 18px; }
+
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image {
+      width: 420px;
+      height: 520px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(90, 158, 143, 0.15);
+    }
+
+    .hero-image-accent {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 200px;
+      height: 200px;
+      border: 3px solid var(--terracotta);
+      border-radius: 20px;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    /* ===== QUOTES RIBBON ===== */
+    .quotes-ribbon {
+      background: var(--navy);
+      padding: 48px 0;
+      overflow: hidden;
+    }
+
+    .quotes-track {
+      display: flex;
+      gap: 60px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .quote-item {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      max-width: 380px;
+      position: relative;
+      padding: 0 30px;
+    }
+
+    .quote-item::before {
+      content: '\201C';
+      font-size: 3rem;
+      color: var(--terracotta);
+      position: absolute;
+      top: -20px;
+      left: 0;
+      line-height: 1;
+    }
+
+    .quote-source {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--sage-light);
+      margin-top: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      padding: 120px 0;
+      background: var(--white);
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--terracotta);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 48px;
+      letter-spacing: -0.02em;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .manifesto p {
+      font-size: 1.05rem;
+      color: var(--text-medium);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .manifesto p:first-of-type::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      float: left;
+      color: var(--terracotta);
+      font-weight: 700;
+      line-height: 1;
+      margin-right: 8px;
+      margin-top: 4px;
+    }
+
+    .about-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .dogs-photo {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(90, 158, 143, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .dogs-caption {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--text-medium);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .care-about-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .care-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .care-tag {
+      background: var(--cream);
+      color: var(--text-medium);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid rgba(90, 158, 143, 0.08);
+    }
+
+    /* ===== EXPERIENCE SECTION ===== */
+    .experience {
+      padding: 120px 0;
+      background: var(--cream);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(90, 158, 143, 0.06);
+      border: 1px solid rgba(90, 158, 143, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(90, 158, 143, 0.1);
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--terracotta);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+      font-weight: 500;
+    }
+
+    .experience-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .exp-block { margin-bottom: 48px; }
+
+    .exp-block h3 {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .exp-company {
+      font-weight: 600;
+      color: var(--terracotta);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .exp-block ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-block li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: var(--text-medium);
+    }
+
+    .exp-block li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .frameworks-section { margin-top: 60px; }
+
+    .framework-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(90, 158, 143, 0.06);
+      border-left: 4px solid var(--terracotta);
+    }
+
+    .framework-card h3 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .framework-card p {
+      font-size: 0.95rem;
+      color: var(--text-medium);
+      margin-bottom: 16px;
+    }
+
+    .flywheel-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .flywheel-step {
+      text-align: center;
+      padding: 16px 8px;
+      background: var(--cream);
+      border-radius: 12px;
+    }
+
+    .flywheel-step .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--terracotta);
+    }
+
+    .flywheel-step .step-name {
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .flywheel-step .step-desc {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      line-height: 1.4;
+    }
+
+    .competencies {
+      margin-top: 40px;
+    }
+
+    .competencies h3 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .comp-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .comp-tag {
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .certs {
+      margin-top: 40px;
+    }
+
+    .certs h3 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .cert-badges {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .cert-badge {
+      background: var(--white);
+      border: 2px solid var(--sage);
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+
+    /* ===== BLOG PREVIEW ===== */
+    .blog-preview {
+      padding: 120px 0;
+      background: var(--white);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+    }
+
+    .section-header .view-all {
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-header .view-all svg { width: 16px; height: 16px; }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .blog-card {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(90, 158, 143, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(90, 158, 143, 0.1);
+    }
+
+    .blog-card-tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .blog-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--terracotta);
+      background: rgba(196, 139, 111, 0.1);
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+
+    .blog-card h3 {
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .blog-card p {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .blog-card-footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .read-time {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .read-more {
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .read-more svg { width: 14px; height: 14px; transition: transform 0.3s; }
+    .read-more:hover svg { transform: translateX(4px); }
+
+    /* ===== PROJECTS PREVIEW ===== */
+    .projects-preview {
+      padding: 120px 0;
+      background: var(--cream);
+    }
+
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      border: 1px solid rgba(90, 158, 143, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--terracotta), var(--sage));
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(90, 158, 143, 0.1);
+    }
+
+    .project-card .project-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--cream);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .project-card .project-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--terracotta);
+    }
+
+    .project-card h3 {
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+      line-height: 1.6;
+    }
+
+    .coming-soon-badge {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--sage);
+      background: rgba(201, 162, 77, 0.12);
+      padding: 4px 14px;
+      border-radius: 50px;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact {
+      padding: 120px 0;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .contact .section-label { color: var(--sage-light); }
+
+    .contact .section-title { color: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .contact-text {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--terracotta);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: var(--terracotta-light);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--white);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .contact-info { list-style: none; }
+
+    .contact-info li {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 1rem;
+    }
+
+    .contact-info li:last-child { border-bottom: none; }
+
+    .contact-info .info-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-info .info-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--sage-light);
+    }
+
+    .contact-info .info-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 2px;
+    }
+
+    .contact-info .info-value {
+      color: var(--white);
+    }
+
+    .contact-info a { color: var(--white); }
+    .contact-info a:hover { color: var(--sage-light); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 32px 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+    }
+
+    footer .footer-tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.25);
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero-title { font-size: 3rem; }
+      .hero-grid { gap: 40px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .experience-content { grid-template-columns: 1fr; }
+      .flywheel-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid rgba(90, 158, 143, 0.1);
+        box-shadow: 0 10px 30px rgba(90, 158, 143, 0.1);
+      }
+      .hamburger { display: flex; }
+
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-content { order: 2; }
+      .hero-image-wrapper { order: 1; }
+      .hero-image { width: 280px; height: 350px; }
+      .hero-image-accent { display: none; }
+      .hero-title { font-size: 2.4rem; }
+      .hero-tagline { font-size: 1.2rem; }
+      .hero-text { max-width: 100%; }
+
+      .quotes-track { flex-direction: column; align-items: center; gap: 32px; }
+
+      .section-title { font-size: 2rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-sidebar { position: static; }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-grid { grid-template-columns: 1fr; }
+      .project-cards { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .stat-card { padding: 20px; }
+      .stat-number { font-size: 2rem; }
+      .flywheel-steps { grid-template-columns: 1fr 1fr; }
+      .contact-buttons { flex-direction: column; }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">Ale Tamez</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog/">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in">
+          <span class="hero-label">Change Management & GenAI Enablement</span>
+          <h1 class="hero-title">Alejandra Tamez<br>de la Garza</h1>
+          <p class="hero-tagline">"Adoption is a metric. Bravery is a strategy."</p>
+          <p class="hero-text">Mexicana-Americana. Bilingual. Bold by design. I stand in the gap between what technology can do and what people are willing to try — en los dos idiomas. My job? Making the unfamiliar feel possible. <em style="color: var(--terracotta); font-family: 'Playfair Display', serif;">Bienvenidos.</em></p>
+          <div class="hero-buttons">
+            <a href="#contact" class="hero-cta">
+              Let's Build Something That Matters
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+            <a href="Alejandra_Tamez_Resume.pdf" download class="hero-cta-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+              Download Resume
+            </a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper fade-in">
+          <img src="IMG_2428.JPG" alt="Alejandra Tamez de la Garza" class="hero-image">
+          <div class="hero-image-accent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTES RIBBON -->
+  <section class="quotes-ribbon">
+    <div class="container">
+      <div class="quotes-track">
+        <div class="quote-item">
+          Greatness is in the agency of others.
+          <span class="quote-source">Scott Galloway</span>
+        </div>
+        <div class="quote-item">
+          Whatever you do, do from the heart.
+          <span class="quote-source">Colossians 3:23</span>
+        </div>
+        <div class="quote-item">
+          It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult.
+          <span class="quote-source">Seneca</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <span class="section-label">About Me</span>
+      <h2 class="section-title">The Person Behind the Strategy</h2>
+      <div class="about-grid">
+        <div class="manifesto fade-in">
+          <p>I believe the most powerful technology in any organization is the person who refuses to accept "that's just how we do things." I've spent my career standing in the gap between what technology can do and what people are willing to try, and my job has always been the same: make the unfamiliar feel possible. I didn't stumble into AI enablement. I chased it. I saw a world where Copilot and generative AI could transform how people work, and I built the playbook, the training, and the champions network to make it real. Not because someone asked me to, but because I couldn't sit still knowing the potential was right there, untouched.</p>
+
+          <p>Beyond the resume, I'm an ENFP who believes the best way to understand the world is to stay curious. Whether I'm playing piano (with more heart than skill) or hosting a weekly Bible study to stay grounded, I'm driven by a "learn-it-all" spirit that AI has only accelerated. Growing up between two cultures and languages gave me a dual perspective — a gift that turned into a professional toolkit of empathy, compassion, and a relentless drive to evolve. I bring that duality into every strategy I build and every workshop I lead. And while I might lead the room, my two Shih Tzus, Leo and Santi, remain the undisputed CEOs of my home.</p>
+
+          <p>This is what I know to be true: People are the transformation or the detractors. The organizations that will win the next decade are the ones brave enough to invest in the humans using them. I want to work with leaders and teams who believe that too, who understand that adoption without empowerment is just compliance wearing a smile. If you're building something that puts people at the center, I want to be in the room. Let's connect!</p>
+        </div>
+        <div class="about-sidebar fade-in">
+          <img src="IMG_3417.jpeg" alt="Leo and Santi — the real CEOs" class="dogs-photo">
+          <p class="dogs-caption">Leo & Santi — the real CEOs</p>
+          <p class="care-about-title">What I Care About</p>
+          <div class="care-tags">
+            <span class="care-tag">People</span>
+            <span class="care-tag">Dogs</span>
+            <span class="care-tag">Travel</span>
+            <span class="care-tag">Faith</span>
+            <span class="care-tag">AI</span>
+            <span class="care-tag">Culture</span>
+            <span class="care-tag">Self-Awareness</span>
+            <span class="care-tag">Community</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <span class="section-label">Experience & Skills</span>
+      <h2 class="section-title">Where Ideas Meet Impact</h2>
+
+      <!-- Stats -->
+      <div class="stats-grid fade-in">
+        <div class="stat-card">
+          <div class="stat-number">6,500+</div>
+          <div class="stat-label">Employees Enabled on Copilot</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">87%</div>
+          <div class="stat-label">Adoption Rate Achieved</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">70+</div>
+          <div class="stat-label">Training Sessions Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">55</div>
+          <div class="stat-label">Champions Network Built</div>
+        </div>
+      </div>
+
+      <!-- Work History -->
+      <div class="experience-content fade-in">
+        <div>
+          <div class="exp-block">
+            <h3>Change Management & GenAI Enablement Lead</h3>
+            <p class="exp-company">Applied Materials — Austin, TX — 2022 – Present</p>
+            <ul>
+              <li>Drove Microsoft Copilot adoption across 6,500+ employees, achieving an 87% adoption rate</li>
+              <li>Built and managed a 55-person Champions network to sustain peer-driven enablement</li>
+              <li>Designed and delivered 70+ training sessions on Copilot and generative AI tools</li>
+              <li>Created the Enablement Flywheel framework (Listen, Enable, Measure, Amplify)</li>
+              <li>Developed a proprietary AI Use Case Prioritization Framework with weighted scoring matrix</li>
+              <li>Proposed the "Eureka" employee innovation platform to HR leadership</li>
+              <li>Led OCM Operating Model proposal to embed change management at project initiation</li>
+            </ul>
+          </div>
+          <div class="exp-block">
+            <h3>Community Engagement & Last-Mile Innovation</h3>
+            <p class="exp-company">Amazon — Previous Role</p>
+            <ul>
+              <li>Led a SNAP last-mile delivery pilot designed to serve marginalized communities</li>
+              <li>Managed community engagement initiatives connecting technology to underserved populations</li>
+              <li>Developed cross-functional partnerships bridging operational capability with community need</li>
+            </ul>
+          </div>
+          <div class="exp-block">
+            <h3>Executive Assistant to Founder/CEO</h3>
+            <p class="exp-company">Arabella Advisors — Previous Role</p>
+            <ul>
+              <li>Strategic executive support to the founder and CEO of a philanthropic advisory firm</li>
+              <li>Managed high-stakes communications, scheduling, and stakeholder coordination</li>
+              <li>Gained foundational experience in mission-driven leadership</li>
+            </ul>
+          </div>
+          <div class="exp-block">
+            <h3>Founder & Operator</h3>
+            <p class="exp-company">Indigenous Women Artisans Partnership — Previous Venture</p>
+            <ul>
+              <li>Founded a retail business partnering with indigenous women artisans</li>
+              <li>Managed end-to-end operations: sourcing, logistics, sales, and community storytelling</li>
+              <li>Built cross-cultural supplier relationships grounded in equity and mutual benefit</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <!-- Education -->
+          <div class="exp-block">
+            <h3>Education</h3>
+            <p class="exp-company" style="margin-bottom:8px;">Master of Public Administration (MPA)</p>
+            <p style="color:var(--text-medium); font-size:0.95rem; margin-bottom:20px;">Virginia Commonwealth University</p>
+            <p class="exp-company" style="margin-bottom:8px;">Bachelor of Arts</p>
+            <p style="color:var(--text-medium); font-size:0.95rem;">Radford University</p>
+          </div>
+
+          <!-- Certifications -->
+          <div class="certs">
+            <h3>Certifications</h3>
+            <div class="cert-badges">
+              <span class="cert-badge">Prosci Change Management</span>
+              <span class="cert-badge">IBM AI/Technology</span>
+              <span class="cert-badge">Microsoft Certified</span>
+            </div>
+          </div>
+
+          <!-- Competencies -->
+          <div class="competencies">
+            <h3>Core Competencies</h3>
+            <div class="comp-grid">
+              <span class="comp-tag">GenAI Enablement</span>
+              <span class="comp-tag">Change Management</span>
+              <span class="comp-tag">Training Design</span>
+              <span class="comp-tag">Executive Communication</span>
+              <span class="comp-tag">Microsoft Copilot</span>
+              <span class="comp-tag">Champions Networks</span>
+              <span class="comp-tag">Bilingual EN/ES</span>
+              <span class="comp-tag">Data Storytelling</span>
+              <span class="comp-tag">Community Building</span>
+            </div>
+          </div>
+
+          <!-- Community -->
+          <div class="exp-block" style="margin-top: 40px;">
+            <h3>Community & Advocacy</h3>
+            <ul>
+              <li>Data center impact research and policy advocacy in Central Texas</li>
+              <li>Prepared formal recommendations for Austin's Technology Commission</li>
+              <li>Bible study group host</li>
+              <li>Missions experience in Nicaragua and Costa Rica</li>
+              <li>Founder, La Clave AI: Spanish-language AI education venture</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frameworks -->
+      <div class="frameworks-section fade-in">
+        <div class="framework-card">
+          <h3>The Enablement Flywheel</h3>
+          <p>A four-phase methodology for sustainable technology adoption:</p>
+          <div class="flywheel-steps">
+            <div class="flywheel-step">
+              <div class="step-num">1</div>
+              <div class="step-name">Listen</div>
+              <div class="step-desc">Understand the real barriers, not the assumed ones</div>
+            </div>
+            <div class="flywheel-step">
+              <div class="step-num">2</div>
+              <div class="step-name">Enable</div>
+              <div class="step-desc">Meet people where they are with relevant training</div>
+            </div>
+            <div class="flywheel-step">
+              <div class="step-num">3</div>
+              <div class="step-name">Measure</div>
+              <div class="step-desc">Track behavior change, not just login counts</div>
+            </div>
+            <div class="flywheel-step">
+              <div class="step-num">4</div>
+              <div class="step-name">Amplify</div>
+              <div class="step-desc">Turn early wins into organizational momentum</div>
+            </div>
+          </div>
+        </div>
+        <div class="framework-card">
+          <h3>AI Use Case Prioritization Framework</h3>
+          <p>A weighted scoring system that helps organizations move from "we should use AI" to "here's exactly where to start and why." Includes a scoring matrix, Excel workbook, and interactive React dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS PREVIEW -->
+  <section class="projects-preview" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-label">Projects</span>
+          <h2 class="section-title">Where Ideas Meet Impact</h2>
+        </div>
+        <a href="projects.html" class="view-all">
+          View All Projects
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+      <div class="project-cards fade-in">
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          </div>
+          <h3>Copilot Enablement at Scale</h3>
+          <p>The full story of driving 87% adoption across 6,500 employees: the Champions network, the Flywheel methodology, the training engine. This is the flagship.</p>
+          <span class="coming-soon-badge">Case Study Coming Soon</span>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+          </div>
+          <h3>AI Use Case Prioritization Framework</h3>
+          <p>A weighted scoring matrix, Excel workbook, and React dashboard to help organizations move from "we should use AI" to "here's where to start."</p>
+          <span class="coming-soon-badge">Case Study Coming Soon</span>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+          </div>
+          <h3>La Clave AI</h3>
+          <p>Spanish-language AI education for 500M+ Spanish speakers. A venture built on the belief that AI access shouldn't depend on what language you speak.</p>
+          <span class="coming-soon-badge">In Development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="blog-preview" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-label">Blog</span>
+          <h2 class="section-title">AI Ideas & Learnings</h2>
+          <p style="color: var(--text-medium); font-size: 1rem; margin-top: -32px; margin-bottom: 0;">This is where I think out loud. About AI, about people, about what happens when you put the two together with intention.</p>
+        </div>
+        <a href="blog/" class="view-all">
+          View All Posts
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+      <div class="blog-grid fade-in">
+        <a href="blog/the-adoption-lie.html" class="blog-card" style="text-decoration:none;">
+          <div class="blog-card-tags">
+            <span class="blog-tag">AI Adoption</span>
+            <span class="blog-tag">Change Management</span>
+          </div>
+          <h3>The Adoption Lie Nobody Talks About</h3>
+          <p>We celebrate adoption rates like they're the finish line. But are people actually using it, or did they just click the button because someone told them to?</p>
+          <div class="blog-card-footer">
+            <span class="read-time">July 14, 2025 &middot; 4 min read</span>
+            <span class="read-more">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+          </div>
+        </a>
+        <a href="blog/ai-education-in-spanish.html" class="blog-card" style="text-decoration:none;">
+          <div class="blog-card-tags">
+            <span class="blog-tag">La Clave AI</span>
+            <span class="blog-tag">Community</span>
+          </div>
+          <h3>Why I'm Building AI Education in Spanish</h3>
+          <p>There are over 500 million Spanish speakers in the world. The vast majority of AI education exists only in English. That's not a gap. That's a wall.</p>
+          <div class="blog-card-footer">
+            <span class="read-time">October 6, 2025 &middot; 3 min read</span>
+            <span class="read-more">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+          </div>
+        </a>
+        <a href="blog/humans-are-not-the-bottleneck.html" class="blog-card" style="text-decoration:none;">
+          <div class="blog-card-tags">
+            <span class="blog-tag">Leadership</span>
+            <span class="blog-tag">Culture</span>
+          </div>
+          <h3>Humans Are Not the Bottleneck</h3>
+          <p>People are not the bottleneck. The absence of trust, context, and relevance is. When you roll out a tool without explaining why it matters, you've just added another tab.</p>
+          <div class="blog-card-footer">
+            <span class="read-time">December 15, 2025 &middot; 3 min read</span>
+            <span class="read-more">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="fade-in">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Let's Build Something<br>That Matters</h2>
+          <p class="contact-text">Whether you're designing an AI enablement strategy, looking for a speaker who actually speaks human, or just want to connect with someone who believes people are the point — I'd love to hear from you. I'm especially interested in freelance partnerships, speaking opportunities, and collaborations that put community and courage at the center.</p>
+          <div class="contact-buttons">
+            <a href="mailto:tames.a512@gmail.com" class="btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener" class="btn-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="fade-in">
+          <ul class="contact-info">
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Email</div>
+                <div class="info-value"><a href="mailto:tames.a512@gmail.com">tames.a512@gmail.com</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Location</div>
+                <div class="info-value">Austin, Texas</div>
+              </div>
+            </li>
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Languages</div>
+                <div class="info-value">English & Spanish</div>
+              </div>
+            </li>
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Focus Areas</div>
+                <div class="info-value">AI Enablement, Change Management, Training</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Alejandra Tamez de la Garza. All rights reserved.</p>
+      <p class="footer-tagline">"Adoption is a metric. Bravery is a strategy."</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
