@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alejandra Tamez de la Garza | Change Management & GenAI Enablement</title>
-  <meta name="description" content="Change Management leader and GenAI enablement strategist putting people at the center of technology transformation.">
+  <title>Alejandra Tamez de la Garza | LLM Fluency for Humans and Teams</title>
+  <meta name="description" content="I help companies and individuals learn how to use any LLM, ChatGPT, Claude, Copilot, Gemini, and whatever comes next. Bilingual AI enablement, change management, and training.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Alejandra Tamez de la Garza — Change Management & GenAI Enablement">
-  <meta property="og:description" content="Adoption is a metric. Bravery is a strategy. Change Management leader and GenAI enablement strategist putting people at the center of technology transformation.">
+  <meta property="og:title" content="Alejandra Tamez de la Garza — LLM Fluency for Humans and Teams">
+  <meta property="og:description" content="Learn to work with any AI, not just one. Bilingual AI enablement, change management, and training for companies and individuals.">
   <meta property="og:image" content="https://alejandratamez.com/IMG_2428.JPG">
   <meta property="og:url" content="https://alejandratamez.com/">
   <meta property="og:site_name" content="Ale Tamez">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alejandra Tamez de la Garza — Change Management & GenAI Enablement">
-  <meta name="twitter:description" content="Adoption is a metric. Bravery is a strategy. Change Management leader and GenAI enablement strategist.">
+  <meta name="twitter:title" content="Alejandra Tamez de la Garza — LLM Fluency for Humans and Teams">
+  <meta name="twitter:description" content="Learn to work with any AI, not just one. Bilingual AI enablement and training.">
   <meta name="twitter:image" content="https://alejandratamez.com/IMG_2428.JPG">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,18 +27,19 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --terracotta: #C48B6F;
-      --terracotta-light: #D4A08A;
-      --terracotta-dark: #A8735A;
-      --navy: #5A9E8F;
-      --navy-light: #6DB3A3;
+      /* Rosa Mexicano / Dark Gray / Gold palette, bold and welcoming */
+      --terracotta: #E4007C;          /* Rosa Mexicano (primary accent) */
+      --terracotta-light: #F04BA0;    /* Lighter pink for hovers */
+      --terracotta-dark: #B8005F;     /* Deeper pink for emphasis */
+      --navy: #3A3A3A;                /* Dark gray (secondary) */
+      --navy-light: #5A5A5A;          /* Lighter gray */
       --cream: #FFFFFF;
-      --cream-dark: #F5F5F3;
-      --sage: #C9A24D;
-      --sage-light: #D4B877;
-      --text-dark: #2C2C2C;
-      --text-medium: #5A5A5A;
-      --text-light: #8A8A8A;
+      --cream-dark: #FFF9F0;          /* Warm ivory background */
+      --sage: #D4A017;                /* Mexican gold accent */
+      --sage-light: #E8BC3E;          /* Soft gold */
+      --text-dark: #1F1F1F;
+      --text-medium: #4A4A4A;
+      --text-light: #7A7A7A;
       --white: #FFFFFF;
     }
 
@@ -72,11 +73,11 @@
       z-index: 1000;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(90, 158, 143, 0.08);
+      border-bottom: 1px solid rgba(58, 58, 58, 0.08);
       transition: box-shadow 0.3s;
     }
 
-    nav.scrolled { box-shadow: 0 2px 20px rgba(90, 158, 143, 0.1); }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(58, 58, 58, 0.1); }
 
     .nav-inner {
       max-width: 1200px;
@@ -158,8 +159,39 @@
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(196,105,61,0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(228,0,124,0.07) 0%, transparent 70%);
       pointer-events: none;
+    }
+
+    /* Subtle top frame on the hero */
+    .hero-frame {
+      position: absolute;
+      top: 72px;
+      left: 0;
+      right: 0;
+      height: 20px;
+      pointer-events: none;
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    .hero-frame svg { width: 100%; height: 100%; display: block; }
+
+    /* Talavera-inspired geometric motif, bottom-left corner of hero */
+    .talavera-accent {
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 260px;
+      height: 260px;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-frame { height: 16px; }
+      .talavera-accent { width: 180px; height: 180px; bottom: -40px; left: -40px; }
     }
 
     .hero-grid {
@@ -217,14 +249,14 @@
       font-weight: 600;
       font-size: 1rem;
       transition: all 0.3s;
-      box-shadow: 0 4px 15px rgba(196, 139, 111, 0.3);
+      box-shadow: 0 4px 15px rgba(228, 0, 124, 0.3);
     }
 
     .hero-cta:hover {
       background: var(--terracotta-dark);
       color: var(--white);
       transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(196, 139, 111, 0.4);
+      box-shadow: 0 6px 25px rgba(228, 0, 124, 0.4);
     }
 
     .hero-cta svg { width: 18px; height: 18px; transition: transform 0.3s; }
@@ -266,7 +298,7 @@
       object-fit: cover;
       object-position: top center;
       border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(90, 158, 143, 0.15);
+      box-shadow: 0 20px 60px rgba(58, 58, 58, 0.15);
     }
 
     .hero-image-accent {
@@ -383,7 +415,7 @@
     .dogs-photo {
       width: 100%;
       border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(90, 158, 143, 0.1);
+      box-shadow: 0 10px 40px rgba(58, 58, 58, 0.1);
       margin-bottom: 20px;
     }
 
@@ -419,7 +451,7 @@
       border-radius: 50px;
       font-size: 0.85rem;
       font-weight: 500;
-      border: 1px solid rgba(90, 158, 143, 0.08);
+      border: 1px solid rgba(58, 58, 58, 0.08);
     }
 
     /* ===== EXPERIENCE SECTION ===== */
@@ -440,14 +472,14 @@
       border-radius: 16px;
       padding: 32px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(90, 158, 143, 0.06);
-      border: 1px solid rgba(90, 158, 143, 0.05);
+      box-shadow: 0 4px 20px rgba(58, 58, 58, 0.06);
+      border: 1px solid rgba(58, 58, 58, 0.05);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .stat-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(90, 158, 143, 0.1);
+      box-shadow: 0 8px 30px rgba(58, 58, 58, 0.1);
     }
 
     .stat-number {
@@ -517,7 +549,7 @@
       border-radius: 16px;
       padding: 36px;
       margin-bottom: 24px;
-      box-shadow: 0 4px 20px rgba(90, 158, 143, 0.06);
+      box-shadow: 0 4px 20px rgba(58, 58, 58, 0.06);
       border-left: 4px solid var(--terracotta);
     }
 
@@ -651,14 +683,14 @@
       border-radius: 16px;
       padding: 32px;
       transition: transform 0.3s, box-shadow 0.3s;
-      border: 1px solid rgba(90, 158, 143, 0.05);
+      border: 1px solid rgba(58, 58, 58, 0.05);
       display: flex;
       flex-direction: column;
     }
 
     .blog-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(90, 158, 143, 0.1);
+      box-shadow: 0 8px 30px rgba(58, 58, 58, 0.1);
     }
 
     .blog-card-tags {
@@ -674,7 +706,7 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--terracotta);
-      background: rgba(196, 139, 111, 0.1);
+      background: rgba(228, 0, 124, 0.1);
       padding: 4px 12px;
       border-radius: 50px;
     }
@@ -732,7 +764,7 @@
       background: var(--white);
       border-radius: 16px;
       padding: 36px;
-      border: 1px solid rgba(90, 158, 143, 0.05);
+      border: 1px solid rgba(58, 58, 58, 0.05);
       transition: transform 0.3s, box-shadow 0.3s;
       position: relative;
       overflow: hidden;
@@ -750,7 +782,7 @@
 
     .project-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(90, 158, 143, 0.1);
+      box-shadow: 0 8px 30px rgba(58, 58, 58, 0.1);
     }
 
     .project-card .project-icon {
@@ -950,8 +982,8 @@
         background: var(--cream);
         padding: 24px;
         gap: 20px;
-        border-bottom: 1px solid rgba(90, 158, 143, 0.1);
-        box-shadow: 0 10px 30px rgba(90, 158, 143, 0.1);
+        border-bottom: 1px solid rgba(58, 58, 58, 0.1);
+        box-shadow: 0 10px 30px rgba(58, 58, 58, 0.1);
       }
       .hamburger { display: flex; }
 
@@ -1020,16 +1052,55 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
+    <!-- Subtle top frame: thin pink line + delicate row of motifs in pink and dark gray -->
+    <div class="hero-frame" aria-hidden="true">
+      <svg viewBox="0 0 1200 20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="heroFrame" x="0" y="0" width="60" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="15" cy="10" r="1.5" fill="#E4007C"/>
+            <rect x="28" y="8" width="4" height="4" fill="#3A3A3A" transform="rotate(45 30 10)"/>
+            <circle cx="45" cy="10" r="1.5" fill="#3A3A3A"/>
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="1200" height="1.5" fill="#E4007C"/>
+        <rect x="0" y="6" width="1200" height="14" fill="url(#heroFrame)"/>
+      </svg>
+    </div>
+
+    <!-- Talavera-inspired corner motif -->
+    <div class="talavera-accent" aria-hidden="true">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(100 100)">
+          <!-- 8-petal Talavera flower -->
+          <g fill="#3A3A3A">
+            <ellipse cx="0" cy="-60" rx="18" ry="40"/>
+            <ellipse cx="0" cy="60" rx="18" ry="40"/>
+            <ellipse cx="-60" cy="0" rx="40" ry="18"/>
+            <ellipse cx="60" cy="0" rx="40" ry="18"/>
+          </g>
+          <g fill="#E4007C" transform="rotate(45)">
+            <ellipse cx="0" cy="-55" rx="14" ry="32"/>
+            <ellipse cx="0" cy="55" rx="14" ry="32"/>
+            <ellipse cx="-55" cy="0" rx="32" ry="14"/>
+            <ellipse cx="55" cy="0" rx="32" ry="14"/>
+          </g>
+          <circle r="28" fill="#D4A017"/>
+          <circle r="16" fill="#FFF9F0"/>
+          <circle r="6" fill="#E4007C"/>
+        </g>
+      </svg>
+    </div>
+
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content fade-in">
-          <span class="hero-label">Change Management & GenAI Enablement</span>
-          <h1 class="hero-title">Alejandra Tamez<br>de la Garza</h1>
+          <span class="hero-label">LLM Fluency for Humans and Teams</span>
+          <h1 class="hero-title">Learn to work with <em style="font-style: italic;">any</em> AI, not just one.</h1>
           <p class="hero-tagline">"Adoption is a metric. Bravery is a strategy."</p>
-          <p class="hero-text">Mexicana-Americana. Bilingual. Bold by design. I stand in the gap between what technology can do and what people are willing to try — en los dos idiomas. My job? Making the unfamiliar feel possible. <em style="color: var(--terracotta); font-family: 'Playfair Display', serif;">Bienvenidos.</em></p>
+          <p class="hero-text">I teach companies and individuals how to use ChatGPT, Claude, Copilot, Gemini, and whatever comes next, so the tool never owns the person. Mexicana-Americana. Bilingual. Bold by design. My job? Making the unfamiliar feel possible. <em style="color: var(--terracotta); font-family: 'Playfair Display', serif;">Bienvenidos.</em></p>
           <div class="hero-buttons">
             <a href="#contact" class="hero-cta">
-              Let's Build Something That Matters
+              Work With Me
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
             </a>
             <a href="Alejandra_Tamez_Resume.pdf" download class="hero-cta-secondary">
@@ -1135,7 +1206,6 @@
               <li>Built and managed a 55-person Champions network to sustain peer-driven enablement</li>
               <li>Designed and delivered 70+ training sessions on Copilot and generative AI tools</li>
               <li>Created the Enablement Flywheel framework (Listen, Enable, Measure, Amplify)</li>
-              <li>Developed a proprietary AI Use Case Prioritization Framework with weighted scoring matrix</li>
               <li>Proposed the "Eureka" employee innovation platform to HR leadership</li>
               <li>Led OCM Operating Model proposal to embed change management at project initiation</li>
             </ul>
@@ -1212,7 +1282,7 @@
               <li>Data center impact research and policy advocacy in Central Texas</li>
               <li>Prepared formal recommendations for Austin's Technology Commission</li>
               <li>Bible study group host</li>
-              <li>Missions experience in Nicaragua and Costa Rica</li>
+              <li>Mission and nonprofit work overseas in Central and South America</li>
               <li>Founder, La Clave AI: Spanish-language AI education venture</li>
             </ul>
           </div>
@@ -1247,10 +1317,6 @@
             </div>
           </div>
         </div>
-        <div class="framework-card">
-          <h3>AI Use Case Prioritization Framework</h3>
-          <p>A weighted scoring system that helps organizations move from "we should use AI" to "here's exactly where to start and why." Includes a scoring matrix, Excel workbook, and interactive React dashboard.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -1261,7 +1327,7 @@
       <div class="section-header">
         <div>
           <span class="section-label">Projects</span>
-          <h2 class="section-title">Where Ideas Meet Impact</h2>
+          <h2 class="section-title">Receipts</h2>
         </div>
         <a href="projects.html" class="view-all">
           View All Projects
@@ -1279,10 +1345,10 @@
         </div>
         <div class="project-card">
           <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
           </div>
-          <h3>AI Use Case Prioritization Framework</h3>
-          <p>A weighted scoring matrix, Excel workbook, and React dashboard to help organizations move from "we should use AI" to "here's where to start."</p>
+          <h3>10-Day AI Bootcamp</h3>
+          <p>A hands-on bootcamp for anyone ready to get started with AI. Built on habit-design principles and the "Team of Five" framework. Real prompting practice, real workflows, real skill.</p>
           <span class="coming-soon-badge">Case Study Coming Soon</span>
         </div>
         <div class="project-card">
