@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandra Tamez de la Garza | LLM Fluency for Humans and Teams</title>
+  <meta name="description" content="I help companies and individuals learn how to use any LLM, ChatGPT, Claude, Copilot, Gemini, and whatever comes next. Bilingual AI enablement, change management, and training.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alejandra Tamez de la Garza — LLM Fluency for Humans and Teams">
+  <meta property="og:description" content="Learn to work with any AI, not just one. Bilingual AI enablement, change management, and training for companies and individuals.">
+  <meta property="og:image" content="https://alejandratamez.com/IMG_2428.JPG">
+  <meta property="og:url" content="https://alejandratamez.com/">
+  <meta property="og:site_name" content="Ale Tamez">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alejandra Tamez de la Garza — LLM Fluency for Humans and Teams">
+  <meta name="twitter:description" content="Learn to work with any AI, not just one. Bilingual AI enablement and training.">
+  <meta name="twitter:image" content="https://alejandratamez.com/IMG_2428.JPG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ===== CSS RESET & VARIABLES ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Rosa Mexicano / Dark Gray / Gold palette, bold and welcoming */
+      --terracotta: #E4007C;          /* Rosa Mexicano (primary accent) */
+      --terracotta-light: #F04BA0;    /* Lighter pink for hovers */
+      --terracotta-dark: #B8005F;     /* Deeper pink for emphasis */
+      --navy: #3A3A3A;                /* Dark gray (secondary) */
+      --navy-light: #5A5A5A;          /* Lighter gray */
+      --cream: #FFFFFF;
+      --cream-dark: #FFF9F0;          /* Warm ivory background */
+      --sage: #D4A017;                /* Mexican gold accent */
+      --sage-light: #E8BC3E;          /* Soft gold */
+      --text-dark: #1F1F1F;
+      --text-medium: #4A4A4A;
+      --text-light: #7A7A7A;
+      --white: #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--cream);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.2;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--terracotta); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--terracotta-dark); }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(58, 58, 58, 0.08);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled { box-shadow: 0 2px 20px rgba(58, 58, 58, 0.1); }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--terracotta);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--navy); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--navy);
+      transition: all 0.3s;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 72px;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(228,0,124,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Subtle top frame on the hero */
+    .hero-frame {
+      position: absolute;
+      top: 72px;
+      left: 0;
+      right: 0;
+      height: 20px;
+      pointer-events: none;
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    .hero-frame svg { width: 100%; height: 100%; display: block; }
+
+    /* Talavera-inspired geometric motif, bottom-left corner of hero */
+    .talavera-accent {
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 260px;
+      height: 260px;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-frame { height: 16px; }
+      .talavera-accent { width: 180px; height: 180px; bottom: -40px; left: -40px; }
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 60px 0;
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: 3.8rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--terracotta);
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+
+    .hero-text {
+      font-size: 1.1rem;
+      color: var(--text-medium);
+      margin-bottom: 36px;
+      max-width: 520px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--terracotta);
+      color: var(--white);
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(228, 0, 124, 0.3);
+    }
+
+    .hero-cta:hover {
+      background: var(--terracotta-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(228, 0, 124, 0.4);
+    }
+
+    .hero-cta svg { width: 18px; height: 18px; transition: transform 0.3s; }
+    .hero-cta:hover svg { transform: translateX(4px); }
+
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--navy);
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid var(--navy);
+      transition: all 0.3s;
+    }
+
+    .hero-cta-secondary:hover {
+      background: var(--navy);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .hero-cta-secondary svg { width: 18px; height: 18px; }
+
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image {
+      width: 420px;
+      height: 520px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(58, 58, 58, 0.15);
+    }
+
+    .hero-image-accent {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 200px;
+      height: 200px;
+      border: 3px solid var(--terracotta);
+      border-radius: 20px;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    /* ===== QUOTES RIBBON ===== */
+    .quotes-ribbon {
+      background: var(--navy);
+      padding: 48px 0;
+      overflow: hidden;
+    }
+
+    .quotes-track {
+      display: flex;
+      gap: 60px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .quote-item {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      max-width: 380px;
+      position: relative;
+      padding: 0 30px;
+    }
+
+    .quote-item::before {
+      content: '\201C';
+      font-size: 3rem;
+      color: var(--terracotta);
+      position: absolute;
+      top: -20px;
+      left: 0;
+      line-height: 1;
+    }
+
+    .quote-source {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--sage-light);
+      margin-top: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      padding: 120px 0;
+      background: var(--white);
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--terracotta);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 48px;
+      letter-spacing: -0.02em;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .manifesto p {
+      font-size: 1.05rem;
+      color: var(--text-medium);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .manifesto p:first-of-type::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      float: left;
+      color: var(--terracotta);
+      font-weight: 700;
+      line-height: 1;
+      margin-right: 8px;
+      margin-top: 4px;
+    }
+
+    .about-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .dogs-photo {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(58, 58, 58, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .dogs-caption {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--text-medium);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .care-about-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .care-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .care-tag {
+      background: var(--cream);
+      color: var(--text-medium);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid rgba(58, 58, 58, 0.08);
+    }
+
+    /* ===== EXPERIENCE SECTION ===== */
+    .experience {
+      padding: 120px 0;
+      background: var(--cream);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(58, 58, 58, 0.06);
+      border: 1px solid rgba(58, 58, 58, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(58, 58, 58, 0.1);
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--terracotta);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+      font-weight: 500;
+    }
+
+    .experience-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .exp-block { margin-bottom: 48px; }
+
+    /* ===== THREE PILLARS (replaces resume-style job blocks) ===== */
+    .pillars-intro {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 32px;
+    }
+
+    .pillar {
+      padding: 24px 0;
+      border-top: 1px solid rgba(58, 58, 58, 0.12);
+    }
+
+    .pillar:last-child {
+      border-bottom: 1px solid rgba(58, 58, 58, 0.12);
+    }
+
+    .pillar-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      margin-bottom: 10px;
+    }
+
+    .pillar-text {
+      font-size: 1rem;
+      color: var(--text-medium);
+      line-height: 1.7;
+    }
+
+    .pillar-text a {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--terracotta);
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .pillar-text a:hover {
+      color: var(--terracotta);
+    }
+
+    .exp-block h3 {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .exp-company {
+      font-weight: 600;
+      color: var(--terracotta);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .exp-block ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-block li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: var(--text-medium);
+    }
+
+    .exp-block li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .frameworks-section { margin-top: 60px; }
+
+    .framework-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(58, 58, 58, 0.06);
+      border-left: 4px solid var(--terracotta);
+    }
+
+    .framework-card h3 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .framework-card p {
+      font-size: 0.95rem;
+      color: var(--text-medium);
+      margin-bottom: 16px;
+    }
+
+    .flywheel-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .flywheel-step {
+      text-align: center;
+      padding: 16px 8px;
+      background: var(--cream);
+      border-radius: 12px;
+    }
+
+    .flywheel-step .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--terracotta);
+    }
+
+    .flywheel-step .step-name {
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .flywheel-step .step-desc {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      line-height: 1.4;
+    }
+
+    /* ===== ORBIT FLYWHEEL (minimalist) ===== */
+    .flywheel-interactive {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 56px;
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    .flywheel-orbit-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      aspect-ratio: 1;
+    }
+
+    .flywheel-orbit-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    /* The rotating group of dots */
+    .flywheel-orbit {
+      transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1);
+      transform-origin: 200px 200px;
+    }
+
+    .flywheel-dot-orbit {
+      transition: r 0.8s ease, fill 0.8s ease, opacity 0.8s ease;
+    }
+
+    .flywheel-guide-ring {
+      fill: none;
+      stroke: rgba(58, 58, 58, 0.12);
+      stroke-width: 1;
+    }
+
+    /* Still center text */
+    .flywheel-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20% 15%;
+      pointer-events: none;
+    }
+
+    .flywheel-center-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      transition: opacity 0.6s ease;
+    }
+
+    .flywheel-center-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .flywheel-center.fading .flywheel-center-label,
+    .flywheel-center.fading .flywheel-center-name {
+      animation: centerFade 0.8s ease;
+    }
+
+    @keyframes centerFade {
+      0% { opacity: 0; transform: translateY(6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Description panel (right side) */
+    .flywheel-phase-panel {
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .flywheel-phase-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-light);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .flywheel-phase-desc {
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      line-height: 1.6;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .flywheel-phase-panel.fading .flywheel-phase-desc {
+      animation: centerFade 0.8s ease;
+    }
+
+    .flywheel-progress {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(58, 58, 58, 0.1);
+    }
+
+    .flywheel-progress-item {
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-light);
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: color 0.4s ease;
+      text-transform: uppercase;
+    }
+
+    .flywheel-progress-item:hover {
+      color: var(--text-medium);
+    }
+
+    .flywheel-progress-item.active {
+      color: var(--terracotta);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .flywheel-orbit { transition: none; }
+      .flywheel-dot-orbit { transition: r 0.3s ease, fill 0.3s ease; }
+      .flywheel-center.fading .flywheel-center-label,
+      .flywheel-center.fading .flywheel-center-name,
+      .flywheel-phase-panel.fading .flywheel-phase-desc { animation: none; }
+    }
+
+    .competencies {
+      margin-top: 40px;
+    }
+
+    .competencies h3 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .comp-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .comp-tag {
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .certs {
+      margin-top: 40px;
+    }
+
+    .certs h3 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .cert-badges {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .cert-badge {
+      background: var(--white);
+      border: 2px solid var(--sage);
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+
+    /* ===== BLOG PREVIEW ===== */
+    .blog-preview {
+      padding: 120px 0;
+      background: var(--white);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+    }
+
+    .section-header .view-all {
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-header .view-all svg { width: 16px; height: 16px; }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .blog-card {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(58, 58, 58, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(58, 58, 58, 0.1);
+    }
+
+    .blog-card-tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .blog-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--terracotta);
+      background: rgba(228, 0, 124, 0.1);
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+
+    .blog-card h3 {
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .blog-card p {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .blog-card-footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .read-time {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .read-more {
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .read-more svg { width: 14px; height: 14px; transition: transform 0.3s; }
+    .read-more:hover svg { transform: translateX(4px); }
+
+    /* ===== PROJECTS PREVIEW ===== */
+    .projects-preview {
+      padding: 120px 0;
+      background: var(--cream);
+    }
+
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      border: 1px solid rgba(58, 58, 58, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--terracotta), var(--sage));
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(58, 58, 58, 0.1);
+    }
+
+    .project-card .project-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--cream);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .project-card .project-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--terracotta);
+    }
+
+    .project-card h3 {
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+      line-height: 1.6;
+    }
+
+    .coming-soon-badge {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--sage);
+      background: rgba(201, 162, 77, 0.12);
+      padding: 4px 14px;
+      border-radius: 50px;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact {
+      padding: 120px 0;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .contact .section-label { color: var(--sage-light); }
+
+    .contact .section-title { color: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .contact-text {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--terracotta);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: var(--terracotta-light);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--white);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .contact-info { list-style: none; }
+
+    .contact-info li {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 1rem;
+    }
+
+    .contact-info li:last-child { border-bottom: none; }
+
+    .contact-info .info-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-info .info-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--sage-light);
+    }
+
+    .contact-info .info-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 2px;
+    }
+
+    .contact-info .info-value {
+      color: var(--white);
+    }
+
+    .contact-info a { color: var(--white); }
+    .contact-info a:hover { color: var(--sage-light); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 32px 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+    }
+
+    footer .footer-tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.25);
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero-title { font-size: 3rem; }
+      .hero-grid { gap: 40px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .experience-content { grid-template-columns: 1fr; }
+      .flywheel-steps { grid-template-columns: repeat(2, 1fr); }
+      .flywheel-interactive { grid-template-columns: 1fr; gap: 32px; }
+      .flywheel-orbit-wrapper { max-width: 260px; }
+      .flywheel-phase-panel { min-height: auto; text-align: center; align-items: center; }
+      .flywheel-progress { justify-content: center; flex-wrap: wrap; gap: 16px; }
+      .flywheel-center-name { font-size: 1.6rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid rgba(58, 58, 58, 0.1);
+        box-shadow: 0 10px 30px rgba(58, 58, 58, 0.1);
+      }
+      .hamburger { display: flex; }
+
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-content { order: 2; }
+      .hero-image-wrapper { order: 1; }
+      .hero-image { width: 280px; height: 350px; }
+      .hero-image-accent { display: none; }
+      .hero-title { font-size: 2.4rem; }
+      .hero-tagline { font-size: 1.2rem; }
+      .hero-text { max-width: 100%; }
+
+      .quotes-track { flex-direction: column; align-items: center; gap: 32px; }
+
+      .section-title { font-size: 2rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-sidebar { position: static; }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-grid { grid-template-columns: 1fr; }
+      .project-cards { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .stat-card { padding: 20px; }
+      .stat-number { font-size: 2rem; }
+      .flywheel-steps { grid-template-columns: 1fr 1fr; }
+      .contact-buttons { flex-direction: column; }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">Ale Tamez</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog/">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <!-- Subtle top frame: thin pink line + delicate row of motifs in pink and dark gray -->
+    <div class="hero-frame" aria-hidden="true">
+      <svg viewBox="0 0 1200 20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="heroFrame" x="0" y="0" width="60" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="15" cy="10" r="1.5" fill="#E4007C"/>
+            <rect x="28" y="8" width="4" height="4" fill="#3A3A3A" transform="rotate(45 30 10)"/>
+            <circle cx="45" cy="10" r="1.5" fill="#3A3A3A"/>
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="1200" height="1.5" fill="#E4007C"/>
+        <rect x="0" y="6" width="1200" height="14" fill="url(#heroFrame)"/>
+      </svg>
+    </div>
+
+    <!-- Talavera-inspired corner motif -->
+    <div class="talavera-accent" aria-hidden="true">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(100 100)">
+          <!-- 8-petal Talavera flower -->
+          <g fill="#3A3A3A">
+            <ellipse cx="0" cy="-60" rx="18" ry="40"/>
+            <ellipse cx="0" cy="60" rx="18" ry="40"/>
+            <ellipse cx="-60" cy="0" rx="40" ry="18"/>
+            <ellipse cx="60" cy="0" rx="40" ry="18"/>
+          </g>
+          <g fill="#E4007C" transform="rotate(45)">
+            <ellipse cx="0" cy="-55" rx="14" ry="32"/>
+            <ellipse cx="0" cy="55" rx="14" ry="32"/>
+            <ellipse cx="-55" cy="0" rx="32" ry="14"/>
+            <ellipse cx="55" cy="0" rx="32" ry="14"/>
+          </g>
+          <circle r="28" fill="#D4A017"/>
+          <circle r="16" fill="#FFF9F0"/>
+          <circle r="6" fill="#E4007C"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in">
+          <span class="hero-label">LLM Fluency for Humans and Teams</span>
+          <h1 class="hero-title">Learn to work with <em style="font-style: italic;">any</em> AI, not just one.</h1>
+          <p class="hero-tagline">"Adoption is a metric. Bravery is a strategy."</p>
+          <p class="hero-text">I teach companies and individuals how to use ChatGPT, Claude, Copilot, Gemini, and whatever comes next, so the tool never owns the person. Mexicana-Americana. Bilingual. Bold by design. My job? Making the unfamiliar feel possible. <em style="color: var(--terracotta); font-family: 'Playfair Display', serif;">Bienvenidos.</em></p>
+          <div class="hero-buttons">
+            <a href="#contact" class="hero-cta">
+              Work With Me
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+            <a href="Alejandra_Tamez_Resume.pdf" download class="hero-cta-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+              Download Resume
+            </a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper fade-in">
+          <img src="IMG_2428.JPG" alt="Alejandra Tamez de la Garza" class="hero-image">
+          <div class="hero-image-accent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ENABLEMENT FLYWHEEL (standalone section, moved up from Experience) -->
+  <section class="experience" id="flywheel-section" style="padding-top: 80px; padding-bottom: 60px;">
+    <div class="container">
+      <span class="section-label">My Methodology</span>
+      <h2 class="section-title">The Enablement Flywheel</h2>
+
+      <!-- Frameworks -->
+      <div class="frameworks-section fade-in">
+        <div class="framework-card">
+          <p style="font-size: 1.05rem; color: var(--text-medium); margin-bottom: 8px;">A four-phase methodology for sustainable technology adoption.</p>
+
+          <div class="flywheel-interactive" id="flywheel">
+            <!-- The orbit wheel -->
+            <div class="flywheel-orbit-wrapper">
+              <svg class="flywheel-orbit-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enablement Flywheel phases">
+                <!-- Guide ring: subtle circle that shows the orbit path -->
+                <circle class="flywheel-guide-ring" cx="200" cy="200" r="150"/>
+
+                <!-- Rotating group of four dots, one at each cardinal position -->
+                <g class="flywheel-orbit" id="flywheelOrbit">
+                  <!-- Dot at 12 o'clock (top) = active by default -->
+                  <circle class="flywheel-dot-orbit" data-phase="0" cx="200" cy="50" r="16" fill="#E4007C"/>
+                  <!-- Dot at 3 o'clock (right) -->
+                  <circle class="flywheel-dot-orbit" data-phase="1" cx="350" cy="200" r="8" fill="#CFCDC6"/>
+                  <!-- Dot at 6 o'clock (bottom) -->
+                  <circle class="flywheel-dot-orbit" data-phase="2" cx="200" cy="350" r="8" fill="#CFCDC6"/>
+                  <!-- Dot at 9 o'clock (left) -->
+                  <circle class="flywheel-dot-orbit" data-phase="3" cx="50" cy="200" r="8" fill="#CFCDC6"/>
+                </g>
+              </svg>
+
+              <!-- Still center, does NOT rotate -->
+              <div class="flywheel-center" id="flywheelCenter">
+                <div class="flywheel-center-label" id="flywheelPhaseLabel">Phase 1</div>
+                <div class="flywheel-center-name" id="flywheelPhaseName">Listen</div>
+              </div>
+            </div>
+
+            <!-- Right side: description + progress -->
+            <div class="flywheel-phase-panel" id="flywheelPanel" aria-live="polite">
+              <div class="flywheel-phase-eyebrow">The Enablement Flywheel</div>
+              <div class="flywheel-phase-desc" id="flywheelPhaseDesc">Understand the real barriers, not the assumed ones.</div>
+
+              <div class="flywheel-progress">
+                <button class="flywheel-progress-item active" data-jump="0">Listen</button>
+                <button class="flywheel-progress-item" data-jump="1">Enable</button>
+                <button class="flywheel-progress-item" data-jump="2">Measure</button>
+                <button class="flywheel-progress-item" data-jump="3">Amplify</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fallback for no-JS users -->
+          <noscript>
+            <ol style="margin-top: 20px; padding-left: 20px; color: var(--text-medium);">
+              <li><strong>Listen.</strong> Understand the real barriers, not the assumed ones.</li>
+              <li><strong>Enable.</strong> Meet people where they are with relevant training.</li>
+              <li><strong>Measure.</strong> Track behavior change, not just login counts.</li>
+              <li><strong>Amplify.</strong> Turn early wins into organizational momentum.</li>
+            </ol>
+          </noscript>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <span class="section-label">Experience & Skills</span>
+      <h2 class="section-title">Where Ideas Meet Impact</h2>
+
+      <!-- Stats -->
+      <div class="stats-grid fade-in">
+        <div class="stat-card">
+          <div class="stat-number">8,500+</div>
+          <div class="stat-label">Employees Enabled on Copilot</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">94%</div>
+          <div class="stat-label">Adoption Rate Achieved</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">70+</div>
+          <div class="stat-label">Training Sessions Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">200</div>
+          <div class="stat-label">Champions Network Built</div>
+        </div>
+      </div>
+
+      <!-- Work History -->
+      <div class="experience-content fade-in">
+        <div>
+          <p class="pillars-intro">Three threads run through every role I've held.</p>
+
+          <div class="pillar">
+            <h3 class="pillar-name">Enablement</h3>
+            <p class="pillar-text">I build adoption engines that move past compliance into actual capability. At Applied Materials, that meant a Copilot program reaching 8,500+ employees, a 200-person Champions network, and the Enablement Flywheel methodology that holds it all together.</p>
+          </div>
+
+          <div class="pillar">
+            <h3 class="pillar-name">Community</h3>
+            <p class="pillar-text">The instinct to build <em>with</em> people, not for them, has shaped every chapter. Amazon's SNAP last-mile pilot serving food-insecure communities. A retail venture partnering with indigenous women artisans across Latin America. Most recently, board service as Director of Marketing and Fundraising for <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener">Bags of Grace</a>.</p>
+          </div>
+
+          <div class="pillar">
+            <h3 class="pillar-name">Founder</h3>
+            <p class="pillar-text">Whether it's a business, a methodology, or a movement, I default to building. La Clave AI is the next chapter, an effort to bring AI fluency to the 500M+ Spanish speakers the industry has overlooked.</p>
+          </div>
+        </div>
+
+        <div>
+          <!-- Certifications -->
+          <div class="certs">
+            <h3>Certifications</h3>
+            <div class="cert-badges">
+              <span class="cert-badge">Prosci Change Management</span>
+              <span class="cert-badge">IBM AI/Technology</span>
+              <span class="cert-badge">Microsoft Certified</span>
+            </div>
+          </div>
+
+          <!-- Competencies -->
+          <div class="competencies">
+            <h3>Core Competencies</h3>
+            <div class="comp-grid">
+              <span class="comp-tag">GenAI Enablement</span>
+              <span class="comp-tag">Change Management</span>
+              <span class="comp-tag">Training Design</span>
+              <span class="comp-tag">Executive Communication</span>
+              <span class="comp-tag">Microsoft Copilot</span>
+              <span class="comp-tag">Champions Networks</span>
+              <span class="comp-tag">Bilingual EN/ES</span>
+              <span class="comp-tag">Data Storytelling</span>
+              <span class="comp-tag">Community Building</span>
+            </div>
+          </div>
+
+          <!-- Community -->
+          <div class="exp-block" style="margin-top: 40px;">
+            <h3>Community & Advocacy</h3>
+            <ul>
+              <li>Board Member, Director of Marketing and Fundraising, <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Bags of Grace</a></li>
+              <li>Data center impact research and policy advocacy in Central Texas</li>
+              <li>Prepared formal recommendations for Austin's Technology Commission</li>
+              <li>Mission and nonprofit work overseas in Central and South America</li>
+              <li>Founder, La Clave AI: Spanish-language AI education venture</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- PROJECTS PREVIEW -->
+  <section class="projects-preview" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-label">Projects</span>
+          <h2 class="section-title">Receipts</h2>
+        </div>
+        <a href="projects.html" class="view-all">
+          View All Projects
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+      <div class="project-cards fade-in">
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          </div>
+          <h3>Copilot Enablement at Scale</h3>
+          <p>The full story of driving 87% adoption across 6,500 employees: the Champions network, the Flywheel methodology, the training engine. This is the flagship.</p>
+          <span class="coming-soon-badge">Case Study Coming Soon</span>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
+          </div>
+          <h3>10-Day AI Bootcamp</h3>
+          <p>A hands-on bootcamp for anyone ready to get started with AI. Built on habit-design principles and the "Team of Five" framework. Real prompting practice, real workflows, real skill.</p>
+          <span class="coming-soon-badge">Case Study Coming Soon</span>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+          </div>
+          <h3>La Clave AI</h3>
+          <p>Spanish-language AI education for 500M+ Spanish speakers. A venture built on the belief that AI access shouldn't depend on what language you speak.</p>
+          <span class="coming-soon-badge">In Development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BLOG PREVIEW -->
+  <section class="blog-preview" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-label">Blog</span>
+          <h2 class="section-title">AI Ideas & Learnings</h2>
+          <p style="color: var(--text-medium); font-size: 1rem; margin-top: -32px; margin-bottom: 0;">This is where I think out loud. About AI, about people, about what happens when you put the two together with intention.</p>
+        </div>
+        <a href="blog/" class="view-all">
+          View All Posts
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+      <div class="blog-grid fade-in">
+        <a href="blog/the-adoption-lie.html" class="blog-card" style="text-decoration:none;">
+          <div class="blog-card-tags">
+            <span class="blog-tag">AI Adoption</span>
+            <span class="blog-tag">Change Management</span>
+          </div>
+          <h3>The Adoption Lie Nobody Talks About</h3>
+          <p>We celebrate adoption rates like they're the finish line. But are people actually using it, or did they just click the button because someone told them to?</p>
+          <div class="blog-card-footer">
+            <span class="read-time">July 14, 2025 &middot; 4 min read</span>
+            <span class="read-more">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+          </div>
+        </a>
+        <a href="blog/ai-education-in-spanish.html" class="blog-card" style="text-decoration:none;">
+          <div class="blog-card-tags">
+            <span class="blog-tag">La Clave AI</span>
+            <span class="blog-tag">Community</span>
+          </div>
+          <h3>Why I'm Building AI Education in Spanish</h3>
+          <p>There are over 500 million Spanish speakers in the world. The vast majority of AI education exists only in English. That's not a gap. That's a wall.</p>
+          <div class="blog-card-footer">
+            <span class="read-time">October 6, 2025 &middot; 3 min read</span>
+            <span class="read-more">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+          </div>
+        </a>
+        <a href="blog/humans-are-not-the-bottleneck.html" class="blog-card" style="text-decoration:none;">
+          <div class="blog-card-tags">
+            <span class="blog-tag">Leadership</span>
+            <span class="blog-tag">Culture</span>
+          </div>
+          <h3>Humans Are Not the Bottleneck</h3>
+          <p>People are not the bottleneck. The absence of trust, context, and relevance is. When you roll out a tool without explaining why it matters, you've just added another tab.</p>
+          <div class="blog-card-footer">
+            <span class="read-time">December 15, 2025 &middot; 3 min read</span>
+            <span class="read-more">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <span class="section-label">About Me</span>
+      <h2 class="section-title">The Person Behind the Strategy</h2>
+      <div class="about-grid">
+        <div class="manifesto fade-in">
+          <p>I believe the most powerful technology in any organization is the person who refuses to accept "that's just how we do things." I've spent my career standing in the gap between what technology can do and what people are willing to try, and my job has always been the same: make the unfamiliar feel possible. I didn't stumble into AI enablement. I chased it. I saw a world where Copilot and generative AI could transform how people work, and I built the playbook, the training, and the champions network to make it real. Not because someone asked me to, but because I couldn't sit still knowing the potential was right there, untouched.</p>
+
+          <p>Beyond the resume, I'm an ENFP who believes the best way to understand the world is to stay curious. Whether I'm playing piano (with more heart than skill) or hosting a weekly Bible study to stay grounded, I'm driven by a "learn-it-all" spirit that AI has only accelerated. Growing up between two cultures and languages gave me a dual perspective — a gift that turned into a professional toolkit of empathy, compassion, and a relentless drive to evolve. I bring that duality into every strategy I build and every workshop I lead. And while I might lead the room, my two Shih Tzus, Leo and Santi, remain the undisputed CEOs of my home.</p>
+
+          <p>This is what I know to be true: People are the transformation or the detractors. The organizations that will win the next decade are the ones brave enough to invest in the humans using them. I want to work with leaders and teams who believe that too, who understand that adoption without empowerment is just compliance wearing a smile. If you're building something that puts people at the center, I want to be in the room. Let's connect!</p>
+        </div>
+        <div class="about-sidebar fade-in">
+          <img src="IMG_3417.jpeg" alt="Leo and Santi — the real CEOs" class="dogs-photo">
+          <p class="dogs-caption">Leo & Santi — the real CEOs</p>
+          <p class="care-about-title">What I Care About</p>
+          <div class="care-tags">
+            <span class="care-tag">People</span>
+            <span class="care-tag">Dogs</span>
+            <span class="care-tag">Travel</span>
+            <span class="care-tag">Faith</span>
+            <span class="care-tag">AI</span>
+            <span class="care-tag">Culture</span>
+            <span class="care-tag">Self-Awareness</span>
+            <span class="care-tag">Community</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="fade-in">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Let's Build Something<br>That Matters</h2>
+          <p class="contact-text">Whether you're designing an AI enablement strategy, looking for a speaker who actually speaks human, or just want to connect with someone who believes people are the point — I'd love to hear from you. I'm especially interested in freelance partnerships, speaking opportunities, and collaborations that put community and courage at the center.</p>
+          <div class="contact-buttons">
+            <a href="mailto:hola@alejandratamez.com" class="btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener" class="btn-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="fade-in">
+          <ul class="contact-info">
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Email</div>
+                <div class="info-value"><a href="mailto:hola@alejandratamez.com">hola@alejandratamez.com</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Location</div>
+                <div class="info-value">Austin, Texas</div>
+              </div>
+            </li>
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Languages</div>
+                <div class="info-value">English & Spanish</div>
+              </div>
+            </li>
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Focus Areas</div>
+                <div class="info-value">AI Enablement, Change Management, Training</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- QUOTES RIBBON -->
+  <section class="quotes-ribbon">
+    <div class="container">
+      <div class="quotes-track">
+        <div class="quote-item">
+          Greatness is in the agency of others.
+          <span class="quote-source">Scott Galloway</span>
+        </div>
+        <div class="quote-item">
+          Whatever you do, do from the heart.
+          <span class="quote-source">Colossians 3:23</span>
+        </div>
+        <div class="quote-item">
+          It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult.
+          <span class="quote-source">Seneca</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Alejandra Tamez de la Garza. All rights reserved.</p>
+      <p class="footer-tagline">"Adoption is a metric. Bravery is a strategy."</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+  <!-- ===== ORBIT FLYWHEEL SCRIPT ===== -->
+  <script>
+    (function() {
+      const phases = [
+        { name: 'Listen',   desc: 'Understand the real barriers, not the assumed ones.' },
+        { name: 'Enable',   desc: 'Meet people where they are with relevant training.' },
+        { name: 'Measure',  desc: 'Track behavior change, not just login counts.' },
+        { name: 'Amplify',  desc: 'Turn early wins into organizational momentum.' }
+      ];
+
+      const orbit = document.getElementById('flywheelOrbit');
+      const dots = document.querySelectorAll('.flywheel-dot-orbit');
+      const center = document.getElementById('flywheelCenter');
+      const panel = document.getElementById('flywheelPanel');
+      const nameEl = document.getElementById('flywheelPhaseName');
+      const labelEl = document.getElementById('flywheelPhaseLabel');
+      const descEl = document.getElementById('flywheelPhaseDesc');
+      const progressBtns = document.querySelectorAll('.flywheel-progress-item');
+      const container = document.getElementById('flywheel');
+
+      if (!orbit || !container) return;
+
+      const ACTIVE_COLOR = '#E4007C';
+      const INACTIVE_COLOR = '#CFCDC6';
+      const ACTIVE_RADIUS = 16;
+      const INACTIVE_RADIUS = 8;
+
+      let currentPhase = 0;
+      let rotation = 0;
+      let timerId = null;
+      let isPaused = false;
+
+      function render(index) {
+        // Rotate the orbit so the target dot lands at 12 o'clock (top)
+        // Each step is 90 degrees clockwise
+        rotation -= 90;
+        orbit.style.transform = 'rotate(' + rotation + 'deg)';
+
+        // Update dot styling: active becomes big + pink, others small + gray
+        dots.forEach(dot => {
+          const phase = parseInt(dot.dataset.phase, 10);
+          if (phase === index) {
+            dot.setAttribute('r', ACTIVE_RADIUS);
+            dot.setAttribute('fill', ACTIVE_COLOR);
+          } else {
+            dot.setAttribute('r', INACTIVE_RADIUS);
+            dot.setAttribute('fill', INACTIVE_COLOR);
+          }
+        });
+
+        // Update progress buttons
+        progressBtns.forEach((btn, i) => {
+          btn.classList.toggle('active', i === index);
+        });
+
+        // Swap center + description text with fade
+        const phase = phases[index];
+        center.classList.remove('fading');
+        panel.classList.remove('fading');
+        void center.offsetWidth; // Force reflow to restart animation
+        labelEl.textContent = 'Phase ' + (index + 1);
+        nameEl.textContent = phase.name;
+        descEl.textContent = phase.desc;
+        center.classList.add('fading');
+        panel.classList.add('fading');
+
+        currentPhase = index;
+      }
+
+      function advance() {
+        render((currentPhase + 1) % phases.length);
+      }
+
+      // Pause on hover (desktop)
+      container.addEventListener('mouseenter', () => { isPaused = true; });
+      container.addEventListener('mouseleave', () => { isPaused = false; });
+
+      // Click progress items to jump to a phase
+      progressBtns.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+          if (i === currentPhase) return;
+          const diff = i - currentPhase;
+          // Pre-adjust rotation so render()'s -=90 lands on the correct position
+          rotation -= (diff - 1) * 90;
+          render(i);
+        });
+      });
+
+      // Only animate when visible (saves battery, feels intentional)
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (!timerId) {
+              timerId = setInterval(() => { if (!isPaused) advance(); }, 4000);
+            }
+          } else if (timerId) {
+            clearInterval(timerId);
+            timerId = null;
+          }
+        });
+      }, { threshold: 0.3 });
+
+      io.observe(container);
+
+      // Respect reduce-motion preference
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        io.disconnect();
+      }
+    })();
+  </script>
+
+</body>
+</html>
