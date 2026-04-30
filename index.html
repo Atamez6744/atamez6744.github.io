@@ -21,32 +21,34 @@
   <meta name="twitter:image" content="https://alejandratamez.com/IMG_2428.JPG">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ===== CSS RESET & VARIABLES ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* Rosa Mexicano / Dark Gray / Gold palette, bold and welcoming */
-      --terracotta: #E4007C;          /* Rosa Mexicano (primary accent) */
-      --terracotta-light: #F04BA0;    /* Lighter pink for hovers */
-      --terracotta-dark: #B8005F;     /* Deeper pink for emphasis */
-      --navy: #3A3A3A;                /* Dark gray (secondary) */
-      --navy-light: #5A5A5A;          /* Lighter gray */
-      --cream: #FFFFFF;
-      --cream-dark: #FFF9F0;          /* Warm ivory background */
-      --sage: #D4A017;                /* Mexican gold accent */
-      --sage-light: #E8BC3E;          /* Soft gold */
-      --text-dark: #1F1F1F;
-      --text-medium: #4A4A4A;
-      --text-light: #7A7A7A;
+      /* Aesop-inspired palette: linen, taupes, cocoa, espresso */
+      --terracotta: #705148;          /* Cocoa (primary accent) */
+      --terracotta-light: #8A6A60;    /* Lighter cocoa for hovers */
+      --terracotta-dark: #523931;     /* Deeper cocoa */
+      --navy: #1D1B18;                /* Espresso (headlines, primary text) */
+      --navy-light: #3A3631;          /* Slightly softer espresso */
+      --cream: #DFDCD8;               /* Linen (main background) */
+      --cream-dark: #D2CEC8;          /* Slightly deeper linen */
+      --sage: #AA9D8F;                /* Stone (secondary text) */
+      --sage-light: #BEB4AA;          /* Mushroom (hairlines, soft elements) */
+      --text-dark: #1D1B18;
+      --text-medium: #3A3631;
+      --text-light: #705148;
+      --hairline: #BEB4AA;            /* Mushroom for borders */
+      --stone: #AA9D8F;
       --white: #FFFFFF;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Outfit', sans-serif;
       color: var(--text-dark);
       background-color: var(--cream);
       line-height: 1.7;
@@ -54,8 +56,10 @@
     }
 
     h1, h2, h3, h4 {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
       line-height: 1.2;
+      letter-spacing: -0.005em;
     }
 
     img { max-width: 100%; height: auto; display: block; }
@@ -73,11 +77,11 @@
       z-index: 1000;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(58, 58, 58, 0.08);
+      border-bottom: 1px solid rgba(29, 27, 24, 0.08);
       transition: box-shadow 0.3s;
     }
 
-    nav.scrolled { box-shadow: 0 2px 20px rgba(58, 58, 58, 0.1); }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(29, 27, 24, 0.1); }
 
     .nav-inner {
       max-width: 1200px;
@@ -90,7 +94,7 @@
     }
 
     .nav-logo {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: 1.4rem;
       font-weight: 700;
       color: var(--navy);
@@ -223,12 +227,15 @@
     }
 
     .hero-tagline {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-style: italic;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-style: normal;
+      font-weight: 500;
       color: var(--terracotta);
       margin-bottom: 28px;
-      line-height: 1.4;
+      line-height: 1.6;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
     }
 
     .hero-text {
@@ -249,14 +256,14 @@
       font-weight: 600;
       font-size: 1rem;
       transition: all 0.3s;
-      box-shadow: 0 4px 15px rgba(228, 0, 124, 0.3);
+      box-shadow: 0 4px 15px rgba(112, 81, 72, 0.3);
     }
 
     .hero-cta:hover {
       background: var(--terracotta-dark);
       color: var(--white);
       transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(228, 0, 124, 0.4);
+      box-shadow: 0 6px 25px rgba(112, 81, 72, 0.4);
     }
 
     .hero-cta svg { width: 18px; height: 18px; transition: transform 0.3s; }
@@ -298,7 +305,7 @@
       object-fit: cover;
       object-position: top center;
       border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(58, 58, 58, 0.15);
+      box-shadow: 0 20px 60px rgba(29, 27, 24, 0.15);
     }
 
     .hero-image-accent {
@@ -328,7 +335,7 @@
     }
 
     .quote-item {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: 1.1rem;
       font-style: italic;
       color: rgba(255, 255, 255, 0.85);
@@ -350,11 +357,13 @@
 
     .quote-source {
       display: block;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Outfit', sans-serif;
       font-style: normal;
-      font-size: 0.8rem;
-      color: var(--sage-light);
-      margin-top: 12px;
+      font-size: 0.75rem;
+      color: rgba(212, 200, 175, 0.7);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 14px;
       letter-spacing: 0.05em;
     }
 
@@ -375,11 +384,11 @@
     }
 
     .section-title {
-      font-size: 2.8rem;
-      font-weight: 700;
+      font-size: 3rem;
+      font-weight: 500;
       color: var(--navy);
       margin-bottom: 48px;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.015em;
     }
 
     .about-grid {
@@ -397,7 +406,7 @@
     }
 
     .manifesto p:first-of-type::first-letter {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: 3.5rem;
       float: left;
       color: var(--terracotta);
@@ -415,12 +424,12 @@
     .dogs-photo {
       width: 100%;
       border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(58, 58, 58, 0.1);
+      box-shadow: 0 10px 40px rgba(29, 27, 24, 0.1);
       margin-bottom: 20px;
     }
 
     .dogs-caption {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-style: italic;
       font-size: 0.95rem;
       color: var(--text-medium);
@@ -429,7 +438,7 @@
     }
 
     .care-about-title {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Outfit', sans-serif;
       font-size: 0.8rem;
       font-weight: 600;
       text-transform: uppercase;
@@ -451,7 +460,7 @@
       border-radius: 50px;
       font-size: 0.85rem;
       font-weight: 500;
-      border: 1px solid rgba(58, 58, 58, 0.08);
+      border: 1px solid rgba(29, 27, 24, 0.08);
     }
 
     /* ===== EXPERIENCE SECTION ===== */
@@ -472,18 +481,18 @@
       border-radius: 16px;
       padding: 32px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(58, 58, 58, 0.06);
-      border: 1px solid rgba(58, 58, 58, 0.05);
+      box-shadow: 0 4px 20px rgba(29, 27, 24, 0.06);
+      border: 1px solid rgba(29, 27, 24, 0.05);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .stat-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(58, 58, 58, 0.1);
+      box-shadow: 0 8px 30px rgba(29, 27, 24, 0.1);
     }
 
     .stat-number {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: 2.8rem;
       font-weight: 800;
       color: var(--terracotta);
@@ -507,7 +516,7 @@
 
     /* ===== THREE PILLARS (replaces resume-style job blocks) ===== */
     .pillars-intro {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.4rem;
       font-weight: 600;
       color: var(--navy);
@@ -517,15 +526,15 @@
 
     .pillar {
       padding: 24px 0;
-      border-top: 1px solid rgba(58, 58, 58, 0.12);
+      border-top: 1px solid rgba(29, 27, 24, 0.12);
     }
 
     .pillar:last-child {
-      border-bottom: 1px solid rgba(58, 58, 58, 0.12);
+      border-bottom: 1px solid rgba(29, 27, 24, 0.12);
     }
 
     .pillar-name {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--terracotta);
@@ -595,7 +604,7 @@
       border-radius: 16px;
       padding: 36px;
       margin-bottom: 24px;
-      box-shadow: 0 4px 20px rgba(58, 58, 58, 0.06);
+      box-shadow: 0 4px 20px rgba(29, 27, 24, 0.06);
       border-left: 4px solid var(--terracotta);
     }
 
@@ -625,7 +634,7 @@
     }
 
     .flywheel-step .step-num {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem;
       font-weight: 700;
       color: var(--terracotta);
@@ -679,7 +688,7 @@
 
     .flywheel-guide-ring {
       fill: none;
-      stroke: rgba(58, 58, 58, 0.12);
+      stroke: rgba(29, 27, 24, 0.12);
       stroke-width: 1;
     }
 
@@ -707,7 +716,7 @@
     }
 
     .flywheel-center-name {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 2rem;
       font-weight: 700;
       color: var(--navy);
@@ -746,7 +755,7 @@
       font-size: 1.15rem;
       color: var(--text-dark);
       line-height: 1.6;
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-weight: 400;
       font-style: italic;
     }
@@ -760,14 +769,14 @@
       gap: 24px;
       margin-top: 32px;
       padding-top: 24px;
-      border-top: 1px solid rgba(58, 58, 58, 0.1);
+      border-top: 1px solid rgba(29, 27, 24, 0.1);
     }
 
     .flywheel-progress-item {
       background: none;
       border: none;
       padding: 0;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Outfit', sans-serif;
       font-size: 0.8rem;
       font-weight: 500;
       color: var(--text-light);
@@ -878,14 +887,14 @@
       border-radius: 16px;
       padding: 32px;
       transition: transform 0.3s, box-shadow 0.3s;
-      border: 1px solid rgba(58, 58, 58, 0.05);
+      border: 1px solid rgba(29, 27, 24, 0.05);
       display: flex;
       flex-direction: column;
     }
 
     .blog-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(58, 58, 58, 0.1);
+      box-shadow: 0 8px 30px rgba(29, 27, 24, 0.1);
     }
 
     .blog-card-tags {
@@ -901,7 +910,7 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--terracotta);
-      background: rgba(228, 0, 124, 0.1);
+      background: rgba(112, 81, 72, 0.1);
       padding: 4px 12px;
       border-radius: 50px;
     }
@@ -959,7 +968,7 @@
       background: var(--white);
       border-radius: 16px;
       padding: 36px;
-      border: 1px solid rgba(58, 58, 58, 0.05);
+      border: 1px solid rgba(29, 27, 24, 0.05);
       transition: transform 0.3s, box-shadow 0.3s;
       position: relative;
       overflow: hidden;
@@ -977,7 +986,7 @@
 
     .project-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(58, 58, 58, 0.1);
+      box-shadow: 0 8px 30px rgba(29, 27, 24, 0.1);
     }
 
     .project-card .project-icon {
@@ -1149,7 +1158,7 @@
     }
 
     footer .footer-tagline {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-style: italic;
       color: rgba(255, 255, 255, 0.25);
       margin-top: 8px;
@@ -1182,8 +1191,8 @@
         background: var(--cream);
         padding: 24px;
         gap: 20px;
-        border-bottom: 1px solid rgba(58, 58, 58, 0.1);
-        box-shadow: 0 10px 30px rgba(58, 58, 58, 0.1);
+        border-bottom: 1px solid rgba(29, 27, 24, 0.1);
+        box-shadow: 0 10px 30px rgba(29, 27, 24, 0.1);
       }
       .hamburger { display: flex; }
 
@@ -1193,7 +1202,7 @@
       .hero-image { width: 280px; height: 350px; }
       .hero-image-accent { display: none; }
       .hero-title { font-size: 2.4rem; }
-      .hero-tagline { font-size: 1.2rem; }
+      .hero-tagline { font-size: 0.75rem; letter-spacing: 0.18em; }
       .hero-text { max-width: 100%; }
 
       .quotes-track { flex-direction: column; align-items: center; gap: 32px; }
@@ -1252,52 +1261,13 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <!-- Subtle top frame: thin pink line + delicate row of motifs in pink and dark gray -->
-    <div class="hero-frame" aria-hidden="true">
-      <svg viewBox="0 0 1200 20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <pattern id="heroFrame" x="0" y="0" width="60" height="20" patternUnits="userSpaceOnUse">
-            <circle cx="15" cy="10" r="1.5" fill="#E4007C"/>
-            <rect x="28" y="8" width="4" height="4" fill="#3A3A3A" transform="rotate(45 30 10)"/>
-            <circle cx="45" cy="10" r="1.5" fill="#3A3A3A"/>
-          </pattern>
-        </defs>
-        <rect x="0" y="0" width="1200" height="1.5" fill="#E4007C"/>
-        <rect x="0" y="6" width="1200" height="14" fill="url(#heroFrame)"/>
-      </svg>
-    </div>
-
-    <!-- Talavera-inspired corner motif -->
-    <div class="talavera-accent" aria-hidden="true">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(100 100)">
-          <!-- 8-petal Talavera flower -->
-          <g fill="#3A3A3A">
-            <ellipse cx="0" cy="-60" rx="18" ry="40"/>
-            <ellipse cx="0" cy="60" rx="18" ry="40"/>
-            <ellipse cx="-60" cy="0" rx="40" ry="18"/>
-            <ellipse cx="60" cy="0" rx="40" ry="18"/>
-          </g>
-          <g fill="#E4007C" transform="rotate(45)">
-            <ellipse cx="0" cy="-55" rx="14" ry="32"/>
-            <ellipse cx="0" cy="55" rx="14" ry="32"/>
-            <ellipse cx="-55" cy="0" rx="32" ry="14"/>
-            <ellipse cx="55" cy="0" rx="32" ry="14"/>
-          </g>
-          <circle r="28" fill="#D4A017"/>
-          <circle r="16" fill="#FFF9F0"/>
-          <circle r="6" fill="#E4007C"/>
-        </g>
-      </svg>
-    </div>
-
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content fade-in">
           <span class="hero-label">LLM Fluency for Humans and Teams</span>
           <h1 class="hero-title">Learn to work with <em style="font-style: italic;">any</em> AI, not just one.</h1>
-          <p class="hero-tagline">"Adoption is a metric. Bravery is a strategy."</p>
-          <p class="hero-text">I teach companies and individuals how to use ChatGPT, Claude, Copilot, Gemini, and whatever comes next, so the tool never owns the person. Mexicana-Americana. Bilingual. Bold by design. My job? Making the unfamiliar feel possible. <em style="color: var(--terracotta); font-family: 'Playfair Display', serif;">Bienvenidos.</em></p>
+          <p class="hero-tagline">Adoption is a Metric. Bravery is a Strategy.</p>
+          <p class="hero-text">I teach companies and individuals how to use ChatGPT, Claude, Copilot, Gemini, and whatever comes next, so the tool never owns the person. Mexicana-Americana. Bilingual. Bold by design. My job? Making the unfamiliar feel possible. <em style="color: var(--terracotta); font-family: 'Cormorant Garamond', serif;">Bienvenidos.</em></p>
           <div class="hero-buttons">
             <a href="#contact" class="hero-cta">
               Work With Me
@@ -1339,13 +1309,13 @@
                 <!-- Rotating group of four dots, one at each cardinal position -->
                 <g class="flywheel-orbit" id="flywheelOrbit">
                   <!-- Dot at 12 o'clock (top) = active by default -->
-                  <circle class="flywheel-dot-orbit" data-phase="0" cx="200" cy="50" r="16" fill="#E4007C"/>
+                  <circle class="flywheel-dot-orbit" data-phase="0" cx="200" cy="50" r="16" fill="#705148"/>
                   <!-- Dot at 3 o'clock (right) -->
-                  <circle class="flywheel-dot-orbit" data-phase="1" cx="350" cy="200" r="8" fill="#CFCDC6"/>
+                  <circle class="flywheel-dot-orbit" data-phase="1" cx="350" cy="200" r="8" fill="#BEB4AA"/>
                   <!-- Dot at 6 o'clock (bottom) -->
-                  <circle class="flywheel-dot-orbit" data-phase="2" cx="200" cy="350" r="8" fill="#CFCDC6"/>
+                  <circle class="flywheel-dot-orbit" data-phase="2" cx="200" cy="350" r="8" fill="#BEB4AA"/>
                   <!-- Dot at 9 o'clock (left) -->
-                  <circle class="flywheel-dot-orbit" data-phase="3" cx="50" cy="200" r="8" fill="#CFCDC6"/>
+                  <circle class="flywheel-dot-orbit" data-phase="3" cx="50" cy="200" r="8" fill="#BEB4AA"/>
                 </g>
               </svg>
 
@@ -1754,8 +1724,8 @@
 
       if (!orbit || !container) return;
 
-      const ACTIVE_COLOR = '#E4007C';
-      const INACTIVE_COLOR = '#CFCDC6';
+      const ACTIVE_COLOR = '#705148';
+      const INACTIVE_COLOR = '#BEB4AA';
       const ACTIVE_RADIUS = 16;
       const INACTIVE_RADIUS = 8;
 
