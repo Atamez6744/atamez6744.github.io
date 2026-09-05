@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alejandra Tamez de la Garza | LLM Fluency for Humans and Teams</title>
-  <meta name="description" content="I help companies and individuals learn how to use any LLM, ChatGPT, Claude, Copilot, Gemini, and whatever comes next. Bilingual AI enablement, change management, and training.">
+  <title>Alejandra Tamez de la Garza | I Translate Courage Into Capability</title>
+  <meta name="description" content="GenAI Enablement Lead, Change Catalyst, Bridge Builder. I help people trade shortcuts for growth, and show them what's possible once they actually show up.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Alejandra Tamez de la Garza — LLM Fluency for Humans and Teams">
-  <meta property="og:description" content="Learn to work with any AI, not just one. Bilingual AI enablement, change management, and training for companies and individuals.">
+  <meta property="og:title" content="Alejandra Tamez de la Garza — I Translate Courage Into Capability">
+  <meta property="og:description" content="GenAI Enablement Lead, Change Catalyst, Bridge Builder. I help people trade shortcuts for growth, and show them what's possible once they actually show up.">
   <meta property="og:image" content="https://alejandratamez.com/New%20Headshot.png">
   <meta property="og:url" content="https://alejandratamez.com/">
   <meta property="og:site_name" content="Ale Tamez">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alejandra Tamez de la Garza — LLM Fluency for Humans and Teams">
-  <meta name="twitter:description" content="Learn to work with any AI, not just one. Bilingual AI enablement and training.">
+  <meta name="twitter:title" content="Alejandra Tamez de la Garza — I Translate Courage Into Capability">
+  <meta name="twitter:description" content="GenAI Enablement Lead, Change Catalyst, Bridge Builder. I help people trade shortcuts for growth, and show them what's possible once they actually show up.">
   <meta name="twitter:image" content="https://alejandratamez.com/New%20Headshot.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -241,8 +241,25 @@
     .hero-text {
       font-size: 1.1rem;
       color: var(--text-medium);
-      margin-bottom: 36px;
+      margin-bottom: 24px;
       max-width: 520px;
+    }
+
+    .role-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .role-tag {
+      background: var(--cream-dark);
+      color: var(--terracotta-dark);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(112, 81, 72, 0.15);
     }
 
     .hero-cta {
@@ -952,6 +969,97 @@
     .read-more svg { width: 14px; height: 14px; transition: transform 0.3s; }
     .read-more:hover svg { transform: translateX(4px); }
 
+    /* ===== WHAT I ACTUALLY DO ===== */
+    .do-section { padding: 100px 0 40px; background: var(--white); }
+
+    .do-title { font-size: 2.4rem; color: var(--navy); margin-bottom: 40px; }
+
+    .do-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .do-card {
+      background: var(--white);
+      border: 1px solid rgba(29, 27, 24, 0.08);
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .do-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(29, 27, 24, 0.08);
+    }
+
+    .do-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--cream-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .do-icon svg { width: 20px; height: 20px; color: var(--terracotta); }
+
+    .do-icon.diamond::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: var(--terracotta);
+      transform: rotate(45deg);
+      display: block;
+    }
+
+    .do-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .do-card p { font-size: 0.95rem; color: var(--text-medium); line-height: 1.7; }
+
+    /* ===== HOW I WORK ===== */
+    .work-section { padding: 60px 0 100px; background: var(--white); }
+
+    .work-title { font-size: 2.4rem; color: var(--navy); margin-bottom: 40px; }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .work-card {
+      background: var(--cream);
+      border: 1px solid rgba(29, 27, 24, 0.08);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .work-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      margin-bottom: 10px;
+    }
+
+    .work-card p { font-size: 0.92rem; color: var(--text-medium); line-height: 1.65; margin-bottom: 10px; }
+
+    .work-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.9rem; color: var(--sage); }
+
+    @media (max-width: 768px) {
+      .do-grid, .work-grid { grid-template-columns: 1fr; }
+      .do-title, .work-title { font-size: 1.9rem; }
+    }
+
     /* ===== PROJECTS PREVIEW ===== */
     .projects-preview {
       padding: 120px 0;
@@ -1263,10 +1371,13 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content fade-in">
-          <span class="hero-label">LLM Fluency for Humans and Teams</span>
-          <h1 class="hero-title">Learn to work with <em style="font-style: italic;">any</em> AI, not just one.</h1>
-          <p class="hero-tagline">My superpower is connection. Everything else is just logistics.</p>
-          <p class="hero-text">I bring together people, strategy, projects, and information, and turn them into outcomes that actually move the needle.</p>
+          <h1 class="hero-title">I translate courage into capability.</h1>
+          <p class="hero-text">Life is what you make it. I help people trade shortcuts for growth, and show them what's possible once they actually show up.</p>
+          <div class="role-tags">
+            <span class="role-tag">GenAI Enablement Lead</span>
+            <span class="role-tag">Change Catalyst</span>
+            <span class="role-tag">Bridge Builder</span>
+          </div>
           <div class="hero-buttons">
             <a href="#contact" class="hero-cta">
               Work With Me
@@ -1281,6 +1392,73 @@
         <div class="hero-image-wrapper fade-in">
           <img src="New Headshot.png" alt="Alejandra Tamez de la Garza" class="hero-image">
           <div class="hero-image-accent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I ACTUALLY DO -->
+  <section class="do-section fade-in">
+    <div class="container">
+      <h2 class="do-title">What I Actually Do</h2>
+      <div class="do-grid">
+        <div class="do-card">
+          <div class="do-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </div>
+          <h3>Help People See It</h3>
+          <p>I translate complex AI systems into human possibility. Not "here's the tool" &mdash; "here's what becomes possible once you learn this." Visionary meets pragmatic.</p>
+        </div>
+        <div class="do-card">
+          <div class="do-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </div>
+          <h3>Build the Courage</h3>
+          <p>Adoption isn't measured in click-throughs, it's measured in courage. Getting people to actually try means caring enough to remember their resistance, meet them where they are, and show up as myself first.</p>
+        </div>
+        <div class="do-card">
+          <div class="do-icon diamond"></div>
+          <h3>No Shortcuts</h3>
+          <p>I don't believe in them. Growth takes iteration, discomfort, and showing up again and again. I build systems and spaces that make that work feel possible, not like punishment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section class="work-section fade-in">
+    <div class="container">
+      <h2 class="work-title">How I Work</h2>
+      <div class="work-grid">
+        <div class="work-card">
+          <h3>Embrace the paradox</h3>
+          <p>Life is short and life is long. Small and significant, all at once. What you choose to do with it matters radically.</p>
+          <p class="work-tagline">Choose joy. Choose growth.</p>
+        </div>
+        <div class="work-card">
+          <h3>Direct and authentic</h3>
+          <p>There's no gap between who I am and who you see. I expect the same from you &mdash; growth runs on honesty, not politics.</p>
+          <p class="work-tagline">Straight shooter. Zero filler.</p>
+        </div>
+        <div class="work-card">
+          <h3>Relationships matter most</h3>
+          <p>I remember the details about you because you matter. It's what makes me a better leader, partner, and builder.</p>
+          <p class="work-tagline">El que no vive para servir&hellip;</p>
+        </div>
+        <div class="work-card">
+          <h3>Perpetually curious</h3>
+          <p>I hate repetition, I love learning. This year it's depth: technical skills, automation, always building something new. I don't take shortcuts &mdash; I build rooms.</p>
+          <p class="work-tagline">Whiteboarding never stops.</p>
+        </div>
+        <div class="work-card">
+          <h3>Systems thinker</h3>
+          <p>I see how things fit together, how one small shift ripples across the whole. I build in parallel &mdash; AMAT, Bags of Grace, La Clave &mdash; different rooms, same values.</p>
+          <p class="work-tagline">See the whole. Build intentionally.</p>
+        </div>
+        <div class="work-card">
+          <h3>Faith informs action</h3>
+          <p>I pray like it depends on God, and I work like it depends on me. Faith isn't separate from my work &mdash; it's the operating system: justice, growth, care for the vulnerable.</p>
+          <p class="work-tagline">Pray. Work. Repeat.</p>
         </div>
       </div>
     </div>
