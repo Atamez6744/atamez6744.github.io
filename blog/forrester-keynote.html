@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ale Tamez">
+    <meta property="og:image" content="https://alejandratamez.com/forrester-keynote.jpg">
+    <title>What a Forrester Keynote Taught Me About Saying Yes to Something New | Ale Tamez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #C48B6F;
+            --terracotta-light: #D4A08A;
+            --navy: #5A9E8F;
+            --cream: #FFFFFF;
+            --cream-dark: #F5F5F3;
+            --sage: #C9A24D;
+            --white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-medium: #5A5A5A;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--cream-dark);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .nav-logo:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--navy);
+            transition: 0.3s;
+        }
+
+        .article-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .article-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-tags span {
+            background-color: var(--cream-dark);
+            color: var(--terracotta);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+
+        .article-meta .read-time {
+            color: var(--terracotta);
+            font-weight: 500;
+        }
+
+        .article-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--terracotta);
+            border: none;
+            margin: 2rem 0;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 2.25rem 0 1rem;
+        }
+
+        .article-body p:first-of-type::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+        }
+
+        .article-body em {
+            font-style: italic;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 0.5rem 0 2rem;
+            display: block;
+        }
+
+        .article-image-caption {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            text-align: center;
+            margin-top: -1.5rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .image-row {
+            display: flex;
+            gap: 0.75rem;
+            margin: 0.5rem 0 2rem;
+        }
+
+        .image-row img {
+            width: 50%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* Post Navigation */
+        .post-nav {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--cream-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .post-nav a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--terracotta);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .post-nav a:hover {
+            color: var(--terracotta-light);
+        }
+
+        .post-nav .back-link {
+            color: var(--text-medium);
+        }
+
+        .post-nav .back-link:hover {
+            color: var(--terracotta);
+        }
+
+        .post-nav .next-post {
+            text-align: right;
+        }
+
+        .post-nav .prev-post {
+            text-align: left;
+        }
+
+        .post-nav .next-post .label,
+        .post-nav .prev-post .label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            font-weight: 400;
+            margin-bottom: 0.2rem;
+        }
+
+        footer {
+            background-color: var(--navy);
+            color: var(--cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer .tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--cream-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        footer .copyright {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--cream-dark);
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-body p:first-of-type::first-letter {
+                font-size: 3rem;
+            }
+
+            .image-row {
+                flex-direction: column;
+            }
+
+            .image-row img {
+                width: 100%;
+            }
+
+            .post-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .post-nav .next-post {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">Ale Tamez</a>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="./">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-tags">
+                <span>Speaking</span>
+                <span>Learning</span>
+                <span>Leadership</span>
+            </div>
+            <h1 class="article-title">What a Forrester Keynote Taught Me About Saying Yes to Something New</h1>
+            <p class="article-meta"><span class="read-time">October 21, 2026 &middot; 3 min read</span> &middot; Forrester IT Conference, September 14, 2026</p>
+        </header>
+
+        <img src="../forrester-keynote.jpg" alt="Three panelists seated in white chairs on a stage, mid conversation, in front of a large green and yellow screen that reads Technology &amp; Innovation Forum." class="article-image" width="1600" height="888">
+        <p class="article-image-caption">On stage at the Forrester IT conference, September 14, 2026, sharing ideas on how AI is reshaping the IT role.</p>
+
+        <hr class="article-divider">
+
+        <div class="article-body">
+            <p>On September 14, 2026, I stepped onto the stage as a keynote speaker at the Forrester IT conference. I shared that stage with the CIO of SailPoint, whose headquarters sit right here in Austin, Texas. Together we explored how the IT role is changing and how quickly our work is evolving because of AI.</p>
+
+            <p>I felt nervous. I also felt curious, and curiosity won.</p>
+
+            <p>Here is what I learned.</p>
+
+            <h2>Different is where growth lives.</h2>
+
+            <p>Think of a musician sitting in with a band in an unfamiliar key. The first few bars feel intricate and new, then the ear adjusts and the whole room opens up. A new stage works the same way. The nerves were an invitation, and accepting it made the experience fabulous.</p>
+
+            <h2>The questions were the best part.</h2>
+
+            <p>The conversation with the audience felt like call and response in a great jazz set. People asked sharp questions, and afterwards they came to share feedback and ideas. Every exchange sent me home with something new to think about.</p>
+
+            <h2>Two years of learning showed up on stage.</h2>
+
+            <p>For the last two years I have followed the writers and leaders shaping the AI conversation. I read their books, listened to their ideas, and learned from their experiments. On stage, all of that came alive. I found myself quoting them and recommending what I had read because of them.</p>
+
+            <p>One recommendation I shared is <em>Subtract</em> by Leidy Klotz, a book about the power of removing legacy systems before adding new solutions. <strong>Remove first.</strong> Sometimes the strongest ROI comes from making space, like clearing a closet before buying more shelves. In my own work, I begin every project with one question: what can we retire before we build anything new? A clear runway helps people adopt faster, because every old process we release gives the new one room to land.</p>
+
+            <p>I also pointed people to the <em>Beyond the Prompt</em> podcast, a fabulous companion for anyone curious about how AI changes the way we think and work. It felt like carrying a whole choir of voices into the room and letting each one sing.</p>
+
+            <h2>Wisdom is a fabulous neighbor.</h2>
+
+            <p>I spent the day surrounded by leaders years ahead of me in knowledge and experience. I listened closely, took notes like a student, and left with more questions than I arrived with. Learning beside them was a gift, and contributing my own view alongside theirs made it even sweeter.</p>
+
+            <h2>I loved every part of it.</h2>
+
+            <p>The preparation, the butterflies, the hallway conversations, the stage. Moments like these are ephemeral, so I savored each one.</p>
+
+            <p><strong>My takeaway:</strong> when something feels different and a little scary, lean in. The room has space for you, and your voice may be the missing note.</p>
+
+            <p>Margin is where life happens, and this season gave me plenty to reflect on. What new room is calling your name?</p>
+        </div>
+
+        <div class="post-nav">
+            <a href="./" class="back-link">&larr; Back to Blog</a>
+            <a href="bags-of-grace.html" class="next-post">
+                <span class="label">Next Post &rarr;</span>
+                What It Means to Serve Alongside People Who Love Deeply
+            </a>
+        </div>
+    </article>
+
+    <footer>
+        <p class="tagline">"Making technology satisfyingly satisfying."</p>
+        <p class="copyright">&copy; 2026 Ale Tamez. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
