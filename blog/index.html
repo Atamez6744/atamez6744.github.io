@@ -352,6 +352,30 @@
             max-width: 680px;
         }
 
+        .card-image {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: left center;
+        }
+
+        .blog-card.featured.has-image {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            grid-template-rows: auto 1fr;
+        }
+
+        .blog-card.featured.has-image .card-accent {
+            grid-column: 1 / -1;
+        }
+
+        .blog-card.featured.has-image .card-image {
+            height: 100%;
+            aspect-ratio: auto;
+            min-height: 320px;
+        }
+
         /* ---- FOOTER ---- */
         footer {
             background: var(--navy);
@@ -430,6 +454,16 @@
                 font-size: 1.5rem;
             }
 
+            .blog-card.featured.has-image {
+                display: flex;
+            }
+
+            .blog-card.featured.has-image .card-image {
+                height: auto;
+                aspect-ratio: 16 / 9;
+                min-height: 0;
+            }
+
             .card-body {
                 padding: 1.5rem 1.5rem 1.25rem;
             }
@@ -496,7 +530,26 @@
     <div class="blog-grid">
 
         <!-- Post 1 - Featured -->
-        <a href="decade-that-was-a-year.html" class="blog-card featured">
+        <a href="forrester-keynote.html" class="blog-card featured has-image">
+            <div class="card-accent accent-navy"></div>
+            <img src="../forrester-keynote.jpg" alt="Three panelists seated in white chairs on a stage, mid conversation, in front of a large green and yellow screen that reads Technology &amp; Innovation Forum." class="card-image" width="1600" height="888" loading="lazy">
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Speaking</span>
+                    <span class="card-tag">Learning</span>
+                    <span class="card-tag">Leadership</span>
+                </div>
+                <h2 class="card-title">What a Forrester Keynote Taught Me About Saying Yes to Something New</h2>
+                <p class="card-excerpt">I shared the Forrester IT conference stage with the CIO of SailPoint to talk about how AI is reshaping the IT role. I felt nervous. I also felt curious, and curiosity won.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">October 21, 2026 &middot; 3 min read</span>
+                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 2 -->
+        <a href="decade-that-was-a-year.html" class="blog-card">
             <div class="card-accent accent-terracotta"></div>
             <div class="card-body">
                 <div class="card-tags">
