@@ -1,0 +1,1700 @@
+# Spanish translation dictionary for alejandratamez.com
+# Each entry is an English line ("en:") followed by its Spanish version ("es:").
+# Run `python3 scripts/build_spanish.py --missing` to see what still needs translating.
+# "es: =" means the text stays the same in Spanish.
+
+# ---------------------------------------------------------------- Shared: nav + footer
+en: <a href="#home" class="nav-logo">Ale Tamez</a>
+es: =
+
+en: <a href="about.html">About</a>
+es: <a href="about.html">Sobre mí</a>
+
+en: <a href="#contact">Contact</a>
+es: <a href="#contact">Contacto</a>
+
+en: Alejandra Tamez de la Garza
+es: =
+
+en: &copy; 2026 Alejandra Tamez de la Garza. All rights reserved.
+es: &copy; 2026 Alejandra Tamez de la Garza. Todos los derechos reservados.
+
+en: "My superpower is connection. Everything else is just logistics."
+es: "Mi superpoder es la conexión. Todo lo demás es pura logística."
+
+# ---------------------------------------------------------------- Home
+en: Alejandra Tamez de la Garza | I Translate Courage Into Capability
+es: Alejandra Tamez de la Garza | Convierto el valor en capacidad
+
+en: Alejandra Tamez de la Garza — I Translate Courage Into Capability
+es: Alejandra Tamez de la Garza — Convierto el valor en capacidad
+
+en: GenAI Enablement Lead, Change Catalyst, Bridge Builder. I help people trade shortcuts for growth, and show them what's possible once they actually show up.
+es: Líder de Habilitación en IA Generativa, Catalizadora del Cambio, Constructora de Puentes. Ayudo a las personas a cambiar los atajos por crecimiento, y les muestro lo que es posible cuando de verdad se presentan.
+
+en: I translate complex systems into human possibility.
+es: Traduzco sistemas complejos en posibilidades humanas.
+
+en: Life is what you make it. I help people trade shortcuts for growth, and show them what's possible once they actually show up.
+es: La vida es lo que tú haces de ella. Ayudo a las personas a cambiar los atajos por crecimiento, y les muestro lo que es posible cuando de verdad se presentan.
+
+en: <span class="role-tag">GenAI Enablement Lead</span> <span class="role-tag">Change Catalyst</span> <span class="role-tag">Bridge Builder</span>
+es: <span class="role-tag">Líder de Habilitación en IA</span> <span class="role-tag">Catalizadora del Cambio</span> <span class="role-tag">Constructora de Puentes</span>
+
+en: <a href="#contact" class="hero-cta"> Work With Me
+es: <a href="#contact" class="hero-cta"> Trabajemos juntos
+
+en: Download Resume </a>
+es: Descargar CV (inglés) </a>
+
+en: What I Actually Do
+es: Lo que realmente hago
+
+en: Help People See It
+es: Ayudar a la gente a verlo
+
+en: I translate complex AI systems into human possibility. Not "here's the tool" &mdash; "here's what becomes possible once you learn this." Visionary meets pragmatic.
+es: Traduzco sistemas complejos de IA en posibilidades humanas. No es "aquí está la herramienta" &mdash; es "esto es lo que se vuelve posible cuando lo aprendes." Visión con los pies en la tierra.
+
+en: Measure What Matters
+es: Medir lo que importa
+
+en: Adoption isn't about usage. It's about redesigning the way you work. What changed about how you actually do your job? What capabilities became possible that weren't before? What friction got removed that unlocks new potential and innovation?
+es: La adopción no se trata de uso. Se trata de rediseñar tu forma de trabajar. ¿Qué cambió en cómo haces tu trabajo? ¿Qué capacidades se volvieron posibles que antes no existían? ¿Qué fricción desapareció para liberar nuevo potencial e innovación?
+
+en: No Shortcuts
+es: Sin atajos
+
+en: I don't believe in them. Growth takes iteration, discomfort, and showing up again and again. I build systems and spaces that make that work feel possible, not like punishment.
+es: No creo en ellos. Crecer requiere iterar, incomodarse y presentarse una y otra vez. Construyo sistemas y espacios que hacen que ese trabajo se sienta posible, no como un castigo.
+
+en: How I Work
+es: Cómo trabajo
+
+en: Embrace the paradox
+es: Abrazar la paradoja
+
+en: Life is short and life is long. Small and significant, all at once. What you choose to do with it matters radically.
+es: La vida es corta y la vida es larga. Pequeña y significativa, todo al mismo tiempo. Lo que eliges hacer con ella importa radicalmente.
+
+en: Choose joy. Choose growth.
+es: Elige la alegría. Elige crecer.
+
+en: Direct and authentic
+es: Directa y auténtica
+
+en: There's no gap between who I am and who you see. I expect the same from you &mdash; growth runs on honesty, not politics.
+es: No hay distancia entre quien soy y quien ves. Espero lo mismo de ti &mdash; el crecimiento funciona con honestidad, no con política.
+
+en: Straight shooter. Zero filler.
+es: Al grano. Cero relleno.
+
+en: Relationships matter most
+es: Las relaciones son lo primero
+
+en: I remember the details about you because you matter. It's what makes me a better leader, partner, and builder.
+es: Recuerdo los detalles sobre ti porque me importas. Eso me hace mejor líder, socia y constructora.
+
+en: El que no vive para servir&hellip;
+es: =
+
+en: Perpetually curious
+es: Curiosa por siempre
+
+en: I hate repetition, I love learning. This year it's depth: technical skills, automation, always building something new. I don't take shortcuts &mdash; I build rooms.
+es: Odio la repetición, amo aprender. Este año toca profundidad: habilidades técnicas, automatización, siempre construyendo algo nuevo. No tomo atajos &mdash; construyo espacios.
+
+en: Whiteboarding never stops.
+es: El pizarrón nunca descansa.
+
+en: Systems thinker
+es: Pensamiento sistémico
+
+en: I see how things fit together, how one small shift ripples across the whole. I build in parallel &mdash; AMAT, Bags of Grace, La Clave &mdash; different rooms, same values.
+es: Veo cómo encajan las piezas, cómo un pequeño cambio se expande por todo el sistema. Construyo en paralelo &mdash; AMAT, Bags of Grace, La Clave &mdash; espacios distintos, los mismos valores.
+
+en: See the whole. Build intentionally.
+es: Ver el todo. Construir con intención.
+
+en: Faith informs action
+es: La fe guía la acción
+
+en: I pray like it depends on God, and I work like it depends on me. Faith isn't separate from my work &mdash; it's the operating system: justice, growth, care for the vulnerable.
+es: Oro como si dependiera de Dios y trabajo como si dependiera de mí. La fe no está separada de mi trabajo &mdash; es el sistema operativo: justicia, crecimiento y cuidado de los más vulnerables.
+
+en: Pray. Work. Repeat.
+es: Orar. Trabajar. Repetir.
+
+en: <span class="section-label">Projects</span>
+es: <span class="section-label">Proyectos</span>
+
+en: Receipts
+es: Las pruebas
+
+en: <a href="projects.html" class="view-all"> View All Projects
+es: <a href="projects.html" class="view-all"> Ver todos los proyectos
+
+en: The full story of driving 94% sustained adoption across 13,000+ seats: the Champions network, the Flywheel methodology, the training engine. This is the flagship.
+es: La historia completa de cómo logramos 94% de adopción sostenida en más de 13,000 licencias: la red de Champions, la metodología Flywheel y el motor de capacitación. Este es el proyecto insignia.
+
+en: <a href="case-studies/copilot-enablement-at-scale.html" class="read-more" style="margin-top: 16px;">Read the Case Study
+es: <a href="case-studies/copilot-enablement-at-scale.html" class="read-more" style="margin-top: 16px;">Leer el caso de estudio
+
+en: 10-Day AI Bootcamp
+es: Bootcamp de IA de 10 días
+
+en: A hands-on bootcamp for anyone ready to get started with AI. Built on habit-design principles and the "Team of Five" framework. Real prompting practice, real workflows, real skill.
+es: Un bootcamp práctico para quien esté listo para empezar con la IA. Basado en principios de diseño de hábitos y en el marco "Team of Five". Práctica real de prompts, flujos de trabajo reales, habilidad real.
+
+en: <span class="coming-soon-badge">Case Study Coming Soon</span>
+es: <span class="coming-soon-badge">Caso de estudio muy pronto</span>
+
+en: La Clave AI
+es: =
+
+en: Spanish-language AI education for 500M+ Spanish speakers. A venture built on the belief that AI access shouldn't depend on what language you speak.
+es: Educación en IA en español para más de 500 millones de hispanohablantes. Un proyecto basado en la convicción de que el acceso a la IA no debería depender del idioma que hablas.
+
+en: <span class="coming-soon-badge">In Development</span>
+es: <span class="coming-soon-badge">En desarrollo</span>
+
+en: <span class="section-label">The Toolkit</span>
+es: <span class="section-label">Herramientas</span>
+
+en: Frameworks You Can Click
+es: Marcos de trabajo que puedes usar
+
+en: The tools I use to turn AI licenses into lasting habits, rebuilt so anyone can use them. Free, private, and in your browser.
+es: Las herramientas que uso para convertir licencias de IA en hábitos duraderos, reconstruidas para que cualquiera pueda usarlas. Gratis, privadas y en tu navegador.
+
+en: <a href="tools/" class="view-all"> Open the Toolkit
+es: <a href="tools/" class="view-all"> Ver las herramientas
+
+en: <a href="tools/flywheel-readiness.html" class="toolkit-item" style="--tk:#1F4E8C"><span class="tk-phase">Listen</span>
+es: <a href="tools/flywheel-readiness.html" class="toolkit-item" style="--tk:#1F4E8C"><span class="tk-phase">Escuchar</span>
+
+en: Flywheel Check
+es: Diagnóstico Flywheel
+
+en: 16 questions to find where your AI adoption is wobbling, and what to fix first.
+es: 16 preguntas para descubrir dónde se tambalea tu adopción de IA y qué arreglar primero.
+
+en: <span class="tk-go">Take the check &rarr;</span></a> <a href="tools/prompt-builder.html" class="toolkit-item" style="--tk:#D9951E"><span class="tk-phase">Enable</span>
+es: <span class="tk-go">Hacer el diagnóstico &rarr;</span></a> <a href="tools/prompt-builder.html" class="toolkit-item" style="--tk:#D9951E"><span class="tk-phase">Habilitar</span>
+
+en: Prompt Builder
+es: Constructor de Prompts
+
+en: Bilingual (EN/ES) Copilot prompt coach with live scoring and iteration prompts.
+es: Coach bilingüe (EN/ES) de prompts para Copilot, con calificación en vivo y prompts para iterar.
+
+en: <span class="tk-go">Build a prompt &rarr;</span></a> <a href="tools/ai-value-calculator.html" class="toolkit-item" style="--tk:#2A8C82"><span class="tk-phase">Measure</span>
+es: <span class="tk-go">Construir un prompt &rarr;</span></a> <a href="tools/ai-value-calculator.html" class="toolkit-item" style="--tk:#2A8C82"><span class="tk-phase">Medir</span>
+
+en: Value Calculator
+es: Calculadora de Valor
+
+en: Adoption doesn't equal ROI. See the real return and the cost of the habit gap.
+es: Adopción no es igual a retorno. Descubre el retorno real y lo que te cuesta la brecha de hábito.
+
+en: <span class="tk-go">Run the numbers &rarr;</span></a> <a href="tools/use-case-prioritizer.html" class="toolkit-item" style="--tk:#C2185B"><span class="tk-phase">Amplify</span>
+es: <span class="tk-go">Hacer las cuentas &rarr;</span></a> <a href="tools/use-case-prioritizer.html" class="toolkit-item" style="--tk:#C2185B"><span class="tk-phase">Amplificar</span>
+
+en: Use Case Prioritizer
+es: Priorizador de Casos de Uso
+
+en: Score AI ideas and map them on Impact vs. Ease to find your Quick Wins.
+es: Califica tus ideas de IA y ubícalas en un mapa de Impacto vs. Facilidad para encontrar tus Victorias Rápidas.
+
+en: <span class="tk-go">Prioritize &rarr;</span></a>
+es: <span class="tk-go">Priorizar &rarr;</span></a>
+
+en: <span class="section-label">Blog</span>
+es: =
+
+en: AI Ideas & Learnings
+es: Ideas y aprendizajes sobre IA
+
+en: <a href="blog/" class="view-all"> View All Posts
+es: <a href="blog/" class="view-all"> Ver todas las publicaciones
+
+en: <span class="blog-tag">AI Adoption</span> <span class="blog-tag">Change Management</span>
+es: <span class="blog-tag">Adopción de IA</span> <span class="blog-tag">Gestión del Cambio</span>
+
+en: <span class="read-time">July 14, 2025 &middot; 4 min read</span> <span class="read-more">Read More
+es: <span class="read-time">14 de julio de 2025 &middot; 4 min de lectura</span> <span class="read-more">Leer más
+
+en: <span class="blog-tag">La Clave AI</span> <span class="blog-tag">Community</span>
+es: <span class="blog-tag">La Clave AI</span> <span class="blog-tag">Comunidad</span>
+
+en: <span class="read-time">October 6, 2025 &middot; 3 min read</span> <span class="read-more">Read More
+es: <span class="read-time">6 de octubre de 2025 &middot; 3 min de lectura</span> <span class="read-more">Leer más
+
+en: <span class="blog-tag">Leadership</span> <span class="blog-tag">Culture</span>
+es: <span class="blog-tag">Liderazgo</span> <span class="blog-tag">Cultura</span>
+
+en: People are not the bottleneck. The absence of trust, context, and relevance is. When you roll out a tool without explaining why it matters, you've just added another tab.
+es: Las personas no son el cuello de botella. Lo es la falta de confianza, contexto y relevancia. Cuando lanzas una herramienta sin explicar por qué importa, solo agregaste otra pestaña.
+
+en: <span class="read-time">December 15, 2025 &middot; 3 min read</span> <span class="read-more">Read More
+es: <span class="read-time">15 de diciembre de 2025 &middot; 3 min de lectura</span> <span class="read-more">Leer más
+
+en: <span class="section-label">Get In Touch</span>
+es: <span class="section-label">Hablemos</span>
+
+en: Let's Build Something<br>That Matters
+es: Construyamos algo<br>que importe
+
+en: Whether you're designing an AI enablement strategy, looking for a speaker who actually speaks human, or just want to connect with someone who believes people are the point — I'd love to hear from you. I'm especially interested in freelance partnerships, speaking opportunities, and collaborations that put community and courage at the center.
+es: Ya sea que estés diseñando una estrategia de habilitación en IA, buscando una conferencista que de verdad hable en lenguaje humano, o simplemente quieras conectar con alguien que cree que las personas son lo más importante — me encantaría saber de ti. Me interesan especialmente las alianzas independientes, las conferencias y las colaboraciones que ponen a la comunidad y la valentía en el centro.
+
+en: Email Me </a> <a href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener" class="btn-secondary">
+es: Escríbeme </a> <a href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener" class="btn-secondary">
+
+en: Connect on LinkedIn </a>
+es: Conectemos en LinkedIn </a>
+
+en: Email
+es: Correo
+
+en: <a href="mailto:hola@alejandratamez.com">hola@alejandratamez.com</a>
+es: =
+
+en: Location
+es: Ubicación
+
+en: Austin, Texas
+es: =
+
+en: Languages
+es: Idiomas
+
+en: English & Spanish
+es: Inglés y español
+
+en: Focus Areas
+es: Áreas de enfoque
+
+en: AI Enablement, Change Management, Training
+es: Habilitación en IA, Gestión del Cambio, Capacitación
+
+# ---------------------------------------------------------------- Shared words (used inside links and tags anywhere)
+en: About
+es: Sobre mí
+
+en: Projects
+es: Proyectos
+
+en: Toolkit
+es: Herramientas
+
+en: Blog
+es: =
+
+en: Contact
+es: Contacto
+
+en: Ale Tamez
+es: =
+
+en: Toggle menu
+es: Abrir o cerrar menú
+
+en: Read More
+es: Leer más
+
+en: Get In Touch
+es: Hablemos
+
+en: Let's talk
+es: Hablemos
+
+en: Explore the Toolkit
+es: Ver todas las herramientas
+
+en: Copilot Enablement at Scale
+es: Habilitación de Copilot a escala
+
+en: Adoption Doesn't Equal ROI
+es: Adopción no es igual a retorno
+
+en: Why I'm Building AI Education in Spanish
+es: Por qué estoy creando educación en IA en español
+
+en: Humans Are Not the Bottleneck
+es: Las personas no son el cuello de botella
+
+en: This is where I think out loud. About AI, about people, about what happens when you put the two together with intention.
+es: Aquí es donde pienso en voz alta. Sobre IA, sobre personas y sobre lo que pasa cuando juntas las dos cosas con intención.
+
+en: We celebrate adoption rates like they're the finish line. But are people actually using it, or did they just click the button because someone told them to?
+es: Celebramos las tasas de adopción como si fueran la meta. Pero ¿la gente realmente la está usando, o solo hizo clic en el botón porque alguien se lo pidió?
+
+en: There are over 500 million Spanish speakers in the world. The vast majority of AI education exists only in English. That's not a gap. That's a wall.
+es: Hay más de 500 millones de hispanohablantes en el mundo. La gran mayoría de la educación sobre IA existe solo en inglés. Eso no es una brecha. Es un muro.
+
+en: Greatness is in the agency of others. <span class="quote-source">Scott Galloway</span>
+es: La grandeza está en la capacidad de acción de los demás. <span class="quote-source">Scott Galloway</span>
+
+en: Whatever you do, do from the heart. <span class="quote-source">Colossians 3:23</span>
+es: Todo lo que hagan, háganlo de corazón. <span class="quote-source">Colosenses 3:23</span>
+
+en: It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult. <span class="quote-source">Seneca</span>
+es: No es porque las cosas sean difíciles que no nos atrevemos; es porque no nos atrevemos que son difíciles. <span class="quote-source">Séneca</span>
+
+# ---------------------------------------------------------------- Projects
+en: Portfolio of projects in AI enablement, change management, and community impact by Alejandra Tamez de la Garza.
+es: Portafolio de proyectos de habilitación en IA, gestión del cambio e impacto comunitario de Alejandra Tamez de la Garza.
+
+en: Projects — Ale Tamez
+es: Proyectos — Ale Tamez
+
+en: Where ideas meet impact. AI enablement, change management, and community projects by Alejandra Tamez de la Garza.
+es: Donde las ideas se convierten en impacto. Proyectos de habilitación en IA, gestión del cambio y comunidad de Alejandra Tamez de la Garza.
+
+en: Projects & Portfolio
+es: Proyectos y portafolio
+
+en: Where Ideas Meet Impact
+es: Donde las ideas se vuelven impacto
+
+en: Here's where ideas meet impact. Each project tells a story: what was broken, what I did, and what changed because of it.
+es: Aquí es donde las ideas se vuelven impacto. Cada proyecto cuenta una historia: qué no funcionaba, qué hice y qué cambió gracias a eso.
+
+en: Flagship Project
+es: Proyecto insignia
+
+en: The full story of driving 94% sustained adoption across 13,000+ seats at Applied Materials. This project encompassed building a 200-person Champions network running open office hours, FAQs, SOPs, and AI gamification, designing the Enablement Flywheel methodology, and creating a training engine that met people where they were — not where the org chart said they should be.
+es: La historia completa de cómo logramos 94% de adopción sostenida en más de 13,000 licencias en Applied Materials. Este proyecto incluyó crear una red de 200 Champions con horarios de consulta abiertos, preguntas frecuentes, procedimientos (SOPs) y gamificación de IA; diseñar la metodología Enablement Flywheel; y construir un motor de capacitación que llegó a las personas donde estaban — no donde el organigrama decía que deberían estar.
+
+en: Adoption Rate
+es: Tasa de adopción
+
+en: 94% across 13,000+ seats
+es: 94% en más de 13,000 licencias
+
+en: Champions Network
+es: Red de Champions
+
+en: ~200 peer-driven enablers
+es: ~200 facilitadores entre pares
+
+en: Training Sessions
+es: Sesiones de capacitación
+
+en: 70+ delivered
+es: Más de 70 impartidas
+
+en: Methodology
+es: Metodología
+
+en: Enablement Flywheel
+es: =
+
+en: Read the full case study &rarr;
+es: Leer el caso de estudio completo &rarr;
+
+en: AI Use Case Prioritization Framework
+es: Marco de Priorización de Casos de Uso de IA
+
+en: Active Tool
+es: Herramienta activa
+
+en: A weighted scoring system that helps organizations move from "we should use AI" to "here's exactly where to start and why." Built to cut through AI hype and give decision-makers a clear, data-driven path forward. Includes a scoring matrix, Excel workbook, and interactive React dashboard.
+es: Un sistema de puntuación ponderada que ayuda a las organizaciones a pasar de "deberíamos usar IA" a "aquí es exactamente donde empezar y por qué." Creado para cortar el ruido alrededor de la IA y darle a quienes deciden un camino claro y basado en datos. Incluye una matriz de puntuación, un libro de Excel y un tablero interactivo en React.
+
+en: Deliverables
+es: Entregables
+
+en: Scoring matrix + Dashboard
+es: Matriz de puntuación + tablero
+
+en: Format
+es: Formato
+
+en: Excel + React app
+es: Excel + app en React
+
+en: Purpose
+es: Propósito
+
+en: Prioritize AI use cases
+es: Priorizar casos de uso de IA
+
+en: Audience
+es: Audiencia
+
+en: Enterprise leadership
+es: Liderazgo empresarial
+
+en: Try the live tool &rarr;
+es: Prueba la herramienta en vivo &rarr;
+
+en: Explore the full Toolkit &rarr;
+es: Ver todas las herramientas &rarr;
+
+en: In Development
+es: En desarrollo
+
+en: Spanish-language AI education for 500M+ Spanish speakers worldwide. La Clave ("The Key") is built on the belief that AI access shouldn't depend on what language you speak. Designed for small business owners in Mexico, first-generation professionals in the U.S., and communities in Latin America who deserve a seat at the table.
+es: Educación en IA en español para más de 500 millones de hispanohablantes en el mundo. La Clave nace de la convicción de que el acceso a la IA no debería depender del idioma que hablas. Está pensada para dueños de pequeños negocios en México, profesionales de primera generación en Estados Unidos y comunidades de América Latina que merecen un lugar en la mesa.
+
+en: Target Market
+es: Mercado objetivo
+
+en: 500M+ Spanish speakers
+es: Más de 500 millones de hispanohablantes
+
+en: Focus
+es: Enfoque
+
+en: Culturally-contextual AI ed
+es: Educación en IA con contexto cultural
+
+en: Status
+es: Estado
+
+en: Business plan + 90-day roadmap
+es: Plan de negocio + hoja de ruta de 90 días
+
+en: Mission
+es: Misión
+
+en: Access & equity in AI
+es: Acceso y equidad en la IA
+
+en: Data Center Impact Research
+es: Investigación sobre el impacto de los centros de datos
+
+en: Policy Advocacy
+es: Incidencia en políticas públicas
+
+en: Policy advocacy work examining the water, energy, equity, and labor impacts of data centers in Central Texas. Prepared formal recommendation documents for Austin's Technology Commission, demonstrating a different dimension of how technology intersects with community wellbeing.
+es: Trabajo de incidencia en políticas públicas que analiza el impacto de los centros de datos en el agua, la energía, la equidad y el empleo en el Centro de Texas. Preparé documentos formales de recomendaciones para la Comisión de Tecnología de Austin, mostrando otra dimensión de cómo la tecnología se cruza con el bienestar de la comunidad.
+
+en: Focus Areas
+es: Áreas de enfoque
+
+en: Water, energy, equity, labor
+es: Agua, energía, equidad, empleo
+
+en: Austin Tech Commission
+es: Comisión de Tecnología de Austin
+
+en: Policy recommendations
+es: Recomendaciones de política pública
+
+en: Region
+es: Región
+
+en: Central Texas
+es: Centro de Texas
+
+en: Eureka Innovation Platform
+es: Plataforma de Innovación Eureka
+
+en: Concept / Pitched
+es: Concepto / Presentado
+
+en: An employee innovation platform concept pitched to HR leadership at Applied Materials. Eureka was designed to connect culture to business outcomes by giving every employee a voice in how AI tools are applied to real work challenges. Received positive executive reception.
+es: Un concepto de plataforma de innovación para colaboradores, presentado al liderazgo de Recursos Humanos de Applied Materials. Eureka se diseñó para conectar la cultura con los resultados del negocio, dando a cada persona voz sobre cómo aplicar las herramientas de IA a retos reales de trabajo. Tuvo una recepción ejecutiva positiva.
+
+en: Concept
+es: Concepto
+
+en: Employee innovation platform
+es: Plataforma de innovación para colaboradores
+
+en: Pitched To
+es: Presentado a
+
+en: HR Leadership
+es: Liderazgo de RR. HH.
+
+en: Goal
+es: Objetivo
+
+en: Culture → business outcomes
+es: Cultura → resultados de negocio
+
+en: Reception
+es: Recepción
+
+en: Positive executive response
+es: Respuesta ejecutiva positiva
+
+en: Want to Build Something Together?
+es: ¿Construimos algo juntos?
+
+en: I'm always looking for collaborations that put people at the center. Let's talk.
+es: Siempre busco colaboraciones que pongan a las personas en el centro. Hablemos.
+
+# ---------------------------------------------------------------- About
+en: The person behind the strategy: my story, the Enablement Flywheel methodology, certifications, and the work I've done in AI enablement and community.
+es: La persona detrás de la estrategia: mi historia, la metodología Enablement Flywheel, mis certificaciones y mi trabajo en habilitación de IA y en la comunidad.
+
+en: About — Ale Tamez
+es: Sobre mí — Ale Tamez
+
+en: About | Alejandra Tamez de la Garza
+es: Sobre mí | Alejandra Tamez de la Garza
+
+en: About Me
+es: Sobre mí
+
+en: The Person Behind the Strategy
+es: La persona detrás de la estrategia
+
+en: I believe the most powerful technology in any organization is the person who refuses to accept "that's just how we do things." I've spent my career standing in the gap between what technology can do and what people are willing to try, and my job has always been the same: make the unfamiliar feel possible. I didn't stumble into AI enablement. I chased it. I saw a world where Copilot and generative AI could transform how people work, and I built the playbook, the training, and the champions network to make it real. Not because someone asked me to, but because I couldn't sit still knowing the potential was right there, untouched.
+es: Creo que la tecnología más poderosa de cualquier organización es la persona que se niega a aceptar el "así siempre lo hemos hecho." He pasado mi carrera parada en la brecha entre lo que la tecnología puede hacer y lo que las personas están dispuestas a intentar, y mi trabajo siempre ha sido el mismo: hacer que lo desconocido se sienta posible. No llegué a la habilitación en IA por accidente. La busqué. Vi un mundo donde Copilot y la IA generativa podían transformar la forma en que trabajamos, y construí el manual, la capacitación y la red de champions para hacerlo realidad. No porque alguien me lo pidiera, sino porque no podía quedarme quieta sabiendo que el potencial estaba ahí, sin aprovechar.
+
+en: Beyond the resume, I'm an ENFP who believes the best way to understand the world is to stay curious. Whether I'm playing piano (with more heart than skill) or hosting a weekly Bible study to stay grounded, I'm driven by a "learn-it-all" spirit that AI has only accelerated. Growing up between two cultures and languages gave me a dual perspective — a gift that turned into a professional toolkit of empathy, compassion, and a relentless drive to evolve. I bring that duality into every strategy I build and every workshop I lead. And while I might lead the room, my two Shih Tzus, Leo and Santi, remain the undisputed CEOs of my home.
+es: Más allá del currículum, soy ENFP y creo que la mejor forma de entender el mundo es mantener la curiosidad. Ya sea tocando el piano (con más corazón que técnica) o liderando un estudio bíblico semanal para mantenerme centrada, me mueve un espíritu de "querer aprenderlo todo" que la IA solo ha acelerado. Crecer entre dos culturas y dos idiomas me dio una doble perspectiva — un regalo que se convirtió en una caja de herramientas profesional hecha de empatía, compasión y unas ganas incansables de evolucionar. Llevo esa dualidad a cada estrategia que construyo y a cada taller que facilito. Y aunque yo dirija la sala, mis dos Shih Tzus, Leo y Santi, siguen siendo los CEOs indiscutibles de mi casa.
+
+en: This is what I know to be true: People are the transformation or the detractors. The organizations that will win the next decade are the ones brave enough to invest in the humans using them. I want to work with leaders and teams who believe that too, who understand that adoption without empowerment is just compliance wearing a smile. If you're building something that puts people at the center, I want to be in the room. Let's connect!
+es: Esto es lo que sé que es verdad: las personas son la transformación o son su freno. Las organizaciones que ganarán la próxima década serán las que tengan el valor de invertir en las personas que usan la tecnología. Quiero trabajar con líderes y equipos que también lo crean, que entiendan que la adopción sin empoderamiento es solo cumplimiento con una sonrisa. Si estás construyendo algo que pone a las personas en el centro, quiero estar en esa conversación. ¡Conectemos!
+
+en: Leo and Santi — the real CEOs
+es: Leo y Santi — los verdaderos CEOs
+
+en: Leo & Santi — the real CEOs
+es: Leo y Santi — los verdaderos CEOs
+
+en: What I Care About
+es: Lo que me importa
+
+en: <span class="care-tag">People</span> <span class="care-tag">Dogs</span> <span class="care-tag">Travel</span> <span class="care-tag">Faith</span> <span class="care-tag">AI</span> <span class="care-tag">Culture</span> <span class="care-tag">Self-Awareness</span> <span class="care-tag">Community</span>
+es: <span class="care-tag">Personas</span> <span class="care-tag">Perros</span> <span class="care-tag">Viajes</span> <span class="care-tag">Fe</span> <span class="care-tag">IA</span> <span class="care-tag">Cultura</span> <span class="care-tag">Autoconocimiento</span> <span class="care-tag">Comunidad</span>
+
+en: My Methodology
+es: Mi metodología
+
+en: The Enablement Flywheel
+es: El Enablement Flywheel
+
+en: A four-phase methodology for sustainable technology adoption.
+es: Una metodología de cuatro fases para una adopción tecnológica sostenible.
+
+en: Enablement Flywheel phases
+es: Fases del Enablement Flywheel
+
+en: Phase 1
+es: Fase 1
+
+en: Phase 2
+es: Fase 2
+
+en: Phase 3
+es: Fase 3
+
+en: Phase 4
+es: Fase 4
+
+en: Listen
+es: Escuchar
+
+en: Enable
+es: Habilitar
+
+en: Measure
+es: Medir
+
+en: Amplify
+es: Amplificar
+
+en: Understand the real barriers, not the assumed ones.
+es: Entender las barreras reales, no las que suponemos.
+
+en: Meet people where they are with relevant training.
+es: Llegar a las personas donde están, con capacitación relevante.
+
+en: Track behavior change, not just login counts.
+es: Medir el cambio de comportamiento, no solo los inicios de sesión.
+
+en: Turn early wins into organizational momentum.
+es: Convertir las primeras victorias en impulso para toda la organización.
+
+en: Experience & Skills
+es: Experiencia y habilidades
+
+en: Copilot Seats Enabled
+es: Licencias de Copilot habilitadas
+
+en: Sustained Adoption
+es: Adopción sostenida
+
+en: Training Sessions Delivered
+es: Sesiones de capacitación impartidas
+
+en: Champions Network Built
+es: Red de Champions creada
+
+en: Three threads run through every role I've held.
+es: Tres hilos atraviesan cada puesto que he tenido.
+
+en: Enablement
+es: Habilitación
+
+en: I build adoption engines that move past compliance into actual capability. At Applied Materials, that meant a Copilot program reaching 13,000+ seats across 70+ geographies, a 200-person Champions network running open office hours, FAQs, SOPs, and AI gamification, and the Enablement Flywheel methodology that holds it all together.
+es: Construyo motores de adopción que van más allá del cumplimiento y llegan a la capacidad real. En Applied Materials, eso significó un programa de Copilot con más de 13,000 licencias en más de 70 geografías, una red de 200 Champions con horarios de consulta abiertos, preguntas frecuentes, procedimientos y gamificación de IA, y la metodología Enablement Flywheel que lo sostiene todo.
+
+en: Community
+es: Comunidad
+
+en: The instinct to build <em>with</em> people, not for them, has shaped every chapter. Amazon's SNAP last-mile pilot serving food-insecure communities. A retail venture partnering with indigenous women artisans across Latin America. Most recently, board service as Director of Marketing and Fundraising for <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener">Bags of Grace</a>.
+es: El instinto de construir <em>con</em> las personas, no para ellas, ha marcado cada capítulo. El piloto de última milla de SNAP en Amazon para comunidades con inseguridad alimentaria. Un negocio en alianza con mujeres artesanas indígenas de América Latina. Y, más recientemente, mi servicio en la mesa directiva como Directora de Marketing y Recaudación de Fondos de <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener">Bags of Grace</a>.
+
+en: Founder
+es: Fundadora
+
+en: Whether it's a business, a methodology, or a movement, I default to building. La Clave AI is the next chapter, an effort to bring AI fluency to the 500M+ Spanish speakers the industry has overlooked.
+es: Ya sea un negocio, una metodología o un movimiento, mi instinto es construir. La Clave AI es el siguiente capítulo: un esfuerzo por llevar el dominio de la IA a los más de 500 millones de hispanohablantes que la industria ha pasado por alto.
+
+en: Certifications
+es: Certificaciones
+
+en: <span class="cert-badge">Prosci Change Management</span> <span class="cert-badge">IBM AI/Technology</span> <span class="cert-badge">Microsoft Certified</span> <span class="cert-badge">Artificial Intelligence: Implications for Business Strategy (MIT)</span> <span class="cert-badge">Section.AI Advanced AI Accelerator</span>
+es: <span class="cert-badge">Gestión del Cambio Prosci</span> <span class="cert-badge">IBM IA/Tecnología</span> <span class="cert-badge">Certificación Microsoft</span> <span class="cert-badge">Artificial Intelligence: Implications for Business Strategy (MIT)</span> <span class="cert-badge">Section.AI Advanced AI Accelerator</span>
+
+en: Core Competencies
+es: Competencias clave
+
+en: <span class="comp-tag">GenAI Enablement</span> <span class="comp-tag">Change Management</span> <span class="comp-tag">Training Design</span> <span class="comp-tag">Executive Communication</span> <span class="comp-tag">Microsoft Copilot</span> <span class="comp-tag">Champions Networks</span> <span class="comp-tag">Bilingual EN/ES</span> <span class="comp-tag">Data Storytelling</span> <span class="comp-tag">Community Building</span>
+es: <span class="comp-tag">Habilitación en IA Generativa</span> <span class="comp-tag">Gestión del Cambio</span> <span class="comp-tag">Diseño de Capacitación</span> <span class="comp-tag">Comunicación Ejecutiva</span> <span class="comp-tag">Microsoft Copilot</span> <span class="comp-tag">Redes de Champions</span> <span class="comp-tag">Bilingüe EN/ES</span> <span class="comp-tag">Storytelling con Datos</span> <span class="comp-tag">Construcción de Comunidad</span>
+
+en: Speaking
+es: Conferencias
+
+en: <a href="blog/forrester-keynote.html" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Keynote Speaker, Forrester IT Conference, September 14, 2026.</a> Shared the stage with the CIO of SailPoint to discuss how AI is reshaping the IT role.
+es: <a href="blog/forrester-keynote.html" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Conferencista principal, Forrester IT Conference, 14 de septiembre de 2026.</a> Compartí el escenario con el CIO de SailPoint para hablar de cómo la IA está transformando el rol de TI.
+
+en: Community & Advocacy
+es: Comunidad e incidencia
+
+en: Board Member, Director of Marketing and Fundraising, <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Bags of Grace</a>
+es: Miembro de la mesa directiva, Directora de Marketing y Recaudación de Fondos, <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Bags of Grace</a>
+
+en: Data center impact research and policy advocacy in Central Texas
+es: Investigación sobre el impacto de los centros de datos e incidencia en políticas públicas en el Centro de Texas
+
+en: Prepared formal recommendations for Austin's Technology Commission
+es: Preparé recomendaciones formales para la Comisión de Tecnología de Austin
+
+en: Mission and nonprofit work overseas in Central and South America
+es: Trabajo misionero y sin fines de lucro en Centroamérica y Sudamérica
+
+en: Founder, La Clave AI: Spanish-language AI education venture
+es: Fundadora de La Clave AI: un proyecto de educación en IA en español
+
+en: Work With Me
+es: Trabajemos juntos
+
+# ---------------------------------------------------------------- Case study: Copilot Enablement at Scale
+en: How a 200-person Champions network and the Enablement Flywheel methodology drove 94% sustained Copilot adoption across 13,000+ seats at Applied Materials.
+es: Cómo una red de 200 Champions y la metodología Enablement Flywheel llevaron la adopción de Copilot a un 94% sostenido en más de 13,000 licencias en Applied Materials.
+
+en: Copilot Enablement at Scale | Ale Tamez
+es: Habilitación de Copilot a escala | Ale Tamez
+
+en: Copilot Enablement at Scale: 94% Sustained Adoption at Applied Materials | Ale Tamez
+es: Habilitación de Copilot a escala: 94% de adopción sostenida en Applied Materials | Ale Tamez
+
+en: &larr; Back to Projects
+es: &larr; Volver a Proyectos
+
+en: Case Study &middot; Flagship Project
+es: Caso de estudio &middot; Proyecto insignia
+
+en: How a 200-person Champions network and a four-phase enablement methodology took Microsoft Copilot from a licensed tool to daily habit across 13,000+ seats at Applied Materials.
+es: Cómo una red de 200 Champions y una metodología de habilitación de cuatro fases convirtieron a Microsoft Copilot de una licencia más en un hábito diario en más de 13,000 licencias en Applied Materials.
+
+en: <span><strong>Organization:</strong> Applied Materials</span> <span><strong>Role:</strong> AI Enablement &amp; Change Management Lead</span> <span><strong>Focus:</strong> GenAI Adoption, Training Design, Champions Networks</span>
+es: <span><strong>Organización:</strong> Applied Materials</span> <span><strong>Rol:</strong> Líder de Habilitación en IA y Gestión del Cambio</span> <span><strong>Enfoque:</strong> Adopción de IA Generativa, Diseño de Capacitación, Redes de Champions</span>
+
+en: The Challenge
+es: El reto
+
+en: Rolling out an enterprise AI license is easy. Getting thousands of people to actually change how they work is not. Applied Materials needed Copilot adoption that held up past the launch-week spike, at a scale where no single training session, email, or executive mandate could reach everyone who needed it.
+es: Lanzar una licencia empresarial de IA es fácil. Lograr que miles de personas realmente cambien su forma de trabajar, no. Applied Materials necesitaba una adopción de Copilot que se mantuviera más allá del pico de la semana de lanzamiento, a una escala donde ninguna capacitación, correo o mandato ejecutivo por sí solo podía llegar a todas las personas que lo necesitaban.
+
+en: The risk with a rollout this size isn't that people won't click "activate." It's that activation gets mistaken for adoption. Without a deliberate strategy, a license this powerful becomes just another tab people open once and forget, and the org ends up with an impressive activation number and no actual behavior change underneath it.
+es: El riesgo en un lanzamiento de este tamaño no es que la gente no haga clic en "activar." Es confundir la activación con la adopción. Sin una estrategia intencional, una licencia tan poderosa se vuelve solo otra pestaña que se abre una vez y se olvida, y la organización termina con un número de activación impresionante y ningún cambio real de comportamiento detrás.
+
+en: The Approach: The Enablement Flywheel
+es: El enfoque: el Enablement Flywheel
+
+en: Rather than a single training push, the rollout ran on a four-phase methodology designed to build momentum instead of spending it in one launch event.
+es: En lugar de una sola ola de capacitación, el lanzamiento funcionó con una metodología de cuatro fases diseñada para generar impulso, en vez de gastarlo todo en un solo evento de lanzamiento.
+
+en: Understand the real barriers, not the assumed ones. Before designing any training, the work started with finding out where people actually got stuck with AI tools, whether that was confidence, relevance to their specific role, or simply not knowing where to start, rather than guessing from the top down.
+es: Entender las barreras reales, no las que suponemos. Antes de diseñar cualquier capacitación, el trabajo empezó por descubrir dónde se atoraba realmente la gente con las herramientas de IA, ya fuera por confianza, por relevancia para su rol o simplemente por no saber por dónde empezar, en lugar de adivinar desde arriba.
+
+en: Meet people where they are with relevant training. This is where the 70+ training sessions came in: role-specific, hands-on, and built around real workflows instead of generic feature tours, so the training matched how a given team actually used their time.
+es: Llegar a las personas donde están, con capacitación relevante. Aquí entraron las más de 70 sesiones de capacitación: específicas por rol, prácticas y construidas alrededor de flujos de trabajo reales en lugar de recorridos genéricos de funciones, para que la capacitación reflejara cómo cada equipo realmente usaba su tiempo.
+
+en: A recurring theme in those sessions: people expected AI to get things right on the first try, the same way they'd judge a piece of software. Once training reframed working with Copilot as iterative, more like collaborating with a colleague than querying a calculator, the friction dropped and people kept coming back.
+es: Un tema recurrente en esas sesiones: la gente esperaba que la IA acertara al primer intento, igual que juzgaría cualquier software. Cuando la capacitación replanteó el trabajo con Copilot como algo iterativo, más parecido a colaborar con un colega que a consultar una calculadora, la fricción bajó y la gente siguió regresando.
+
+en: The aha moment for me was so simple. I understood that iteration is key when working with AI. People treat AI like it should always be perfect, when it's just like working with humans.
+es: Mi momento "ajá" fue muy sencillo. Entendí que iterar es clave al trabajar con IA. La gente trata a la IA como si siempre tuviera que ser perfecta, cuando en realidad es igual que trabajar con personas.
+
+en: <cite>&mdash; Ale Tamez</cite>
+es: =
+
+en: Track behavior change, not just login counts. Activation numbers are easy to celebrate and easy to misread. The program measured for continued, voluntary use, the signal that people were actually finding Copilot useful rather than just compliant.
+es: Medir el cambio de comportamiento, no solo los inicios de sesión. Los números de activación son fáciles de celebrar y fáciles de malinterpretar. El programa midió el uso continuo y voluntario: la señal de que la gente realmente encontraba útil a Copilot, y no solo estaba cumpliendo.
+
+en: Turn early wins into organizational momentum. This is where the Champions network did its work, taking adoption from a program run by one team to a habit sustained by peers across the org.
+es: Convertir las primeras victorias en impulso para toda la organización. Aquí es donde la red de Champions hizo su trabajo, llevando la adopción de ser un programa de un solo equipo a un hábito sostenido entre colegas en toda la organización.
+
+en: The Champions Network
+es: La red de Champions
+
+en: The 200-person Champions network was the mechanism that let this scale past what any central team could deliver alone. Champions weren't just advocates; they ran the actual infrastructure that kept adoption alive between formal training sessions:
+es: La red de 200 Champions fue el mecanismo que permitió escalar más allá de lo que cualquier equipo central podría lograr por sí solo. Los Champions no solo promovían la herramienta; operaban la infraestructura que mantenía viva la adopción entre una capacitación formal y otra:
+
+en: <strong>Open office hours</strong> so people could get unstuck without waiting for the next scheduled session
+es: <strong>Horarios de consulta abiertos</strong> para que la gente pudiera destrabarse sin esperar a la siguiente sesión programada
+
+en: <strong>Living FAQs</strong> that captured real questions as they came up, instead of a static launch-day document
+es: <strong>Preguntas frecuentes vivas</strong> que capturaban las dudas reales conforme surgían, en lugar de un documento estático del día del lanzamiento
+
+en: <strong>SOPs</strong> that turned one person's discovery into a repeatable practice for their whole team
+es: <strong>Procedimientos (SOPs)</strong> que convertían el descubrimiento de una persona en una práctica repetible para todo su equipo
+
+en: <strong>Gamification</strong> that made continued use something people wanted to keep up with, not another compliance checkbox
+es: <strong>Gamificación</strong> que hizo del uso continuo algo que la gente quería mantener, no otra casilla de cumplimiento
+
+en: Peer-to-peer enablement carries more weight than a mandate from L&amp;D. A Champion sitting two desks away who can show a colleague how they use Copilot in their own daily work converts skeptics that a company-wide email never will.
+es: La habilitación entre pares pesa más que un mandato del área de capacitación. Un Champion sentado a dos escritorios de distancia, que le muestra a un colega cómo usa Copilot en su trabajo diario, convence a escépticos que un correo para toda la empresa nunca convencerá.
+
+en: The Result
+es: El resultado
+
+en: The program reached 94% adoption across 13,000+ seats, not as a launch-day spike, but as sustained, voluntary use tracked through the Measure phase of the Flywheel. The 200-person Champions network continues to run the open hours, FAQs, SOPs, and gamification infrastructure that keeps that number holding, well past the initial rollout.
+es: El programa alcanzó 94% de adopción en más de 13,000 licencias, no como un pico del día de lanzamiento, sino como un uso sostenido y voluntario medido en la fase Medir del Flywheel. La red de 200 Champions sigue operando los horarios de consulta, las preguntas frecuentes, los procedimientos y la gamificación que mantienen ese número firme, mucho después del lanzamiento inicial.
+
+en: Adoption is a metric. Bravery is a strategy. The number that matters isn't how many people activated a tool, it's how many kept choosing to use it once no one was watching.
+es: La adopción es una métrica. La valentía es una estrategia. El número que importa no es cuántas personas activaron una herramienta, sino cuántas siguieron eligiendo usarla cuando nadie las estaba mirando.
+
+en: Planning an AI Rollout of Your Own?
+es: ¿Estás planeando tu propio lanzamiento de IA?
+
+en: If you're facing the gap between "we bought the licenses" and "people actually use this," let's talk about what an enablement strategy built for your team could look like.
+es: Si estás frente a la brecha entre "compramos las licencias" y "la gente realmente lo usa," hablemos de cómo podría verse una estrategia de habilitación diseñada para tu equipo.
+
+# ---------------------------------------------------------------- Toolkit hub (tools/index.html)
+en: Free, interactive tools for AI adoption and change management: prioritize AI use cases, assess adoption readiness, build better prompts in English or Spanish, and calculate real AI value.
+es: Herramientas interactivas y gratuitas para la adopción de IA y la gestión del cambio: prioriza casos de uso de IA, evalúa qué tan lista está tu organización, construye mejores prompts en español o inglés y calcula el valor real de la IA.
+
+en: The Toolkit — Ale Tamez
+es: Herramientas — Ale Tamez
+
+en: The Toolkit | Ale Tamez
+es: Herramientas | Ale Tamez
+
+en: Free tools for leaders turning AI licenses into lasting habits. No sign-up, no data collected.
+es: Herramientas gratuitas para líderes que convierten licencias de IA en hábitos duraderos. Sin registro y sin recopilar datos.
+
+en: The Toolkit
+es: Herramientas
+
+en: Frameworks you can actually click.
+es: Marcos de trabajo que de verdad puedes usar.
+
+en: I've spent years helping thousands of people go from "I have a Copilot license" to "I can't imagine working without it." These are the tools I use to do it, rebuilt so anyone can use them. Free, no sign-up, and nothing you type ever leaves your browser.
+es: Llevo años ayudando a miles de personas a pasar de "tengo una licencia de Copilot" a "ya no me imagino trabajar sin él." Estas son las herramientas que uso para lograrlo, reconstruidas para que cualquiera pueda usarlas. Gratis, sin registro, y nada de lo que escribes sale de tu navegador.
+
+en: <strong>A framework on a slide is a recipe. A tool is the kitchen.</strong> Anyone can read about prioritization or readiness. These let you put in your own ingredients and see what comes out.
+es: <strong>Un marco de trabajo en una diapositiva es una receta. Una herramienta es la cocina.</strong> Cualquiera puede leer sobre priorización o preparación. Estas herramientas te dejan poner tus propios ingredientes y ver qué sale.
+
+en: Change Management · 3 min
+es: Gestión del cambio · 3 min
+
+en: AI Adoption Flywheel Check
+es: Diagnóstico Flywheel de Adopción de IA
+
+en: 16 questions across Listen, Enable, Measure, and Amplify. Get your momentum score, find your weakest phase, and leave with a specific plan.
+es: 16 preguntas sobre Escuchar, Habilitar, Medir y Amplificar. Obtén tu puntaje de impulso, descubre tu fase más débil y llévate un plan concreto.
+
+en: "Is our rollout building momentum or quietly losing it?"
+es: "¿Nuestro lanzamiento está ganando impulso o lo está perdiendo en silencio?"
+
+en: Take the check
+es: Hacer el diagnóstico
+
+en: Strategy · 10 min
+es: Estrategia · 10 min
+
+en: AI Use Case Prioritizer
+es: Priorizador de Casos de Uso de IA
+
+en: Score your AI ideas on value, reach, data readiness, risk, and the factor everyone forgets: change effort. See them land on an Impact vs. Ease map and export your shortlist.
+es: Califica tus ideas de IA por valor, alcance, preparación de datos, riesgo y el factor que todos olvidan: el esfuerzo de cambio. Míralas en un mapa de Impacto vs. Facilidad y exporta tu lista corta.
+
+en: "We have 40 AI ideas. Which five do we start with?"
+es: "Tenemos 40 ideas de IA. ¿Con cuáles cinco empezamos?"
+
+en: Prioritize your ideas
+es: Prioriza tus ideas
+
+en: Skills · English / Español
+es: Habilidades · Español / English
+
+en: Build Copilot prompts with Goal, Context, Source, and Expectations. Live scoring, role templates, and follow-up prompts that teach the most important habit: iteration.
+es: Construye prompts para Copilot con Objetivo, Contexto, Fuente y Expectativas. Calificación en vivo, plantillas por rol y prompts de seguimiento que enseñan el hábito más importante: iterar.
+
+en: "Why does Copilot keep giving me generic answers?"
+es: "¿Por qué Copilot me sigue dando respuestas genéricas?"
+
+en: Build a prompt
+es: Construir un prompt
+
+en: Measurement · 2 min
+es: Medición · 2 min
+
+en: AI Value Calculator
+es: Calculadora de Valor de IA
+
+en: Follow the money from licenses bought to value created. See your break-even point, your real return, and what closing the gap between "activated" and "habitual" is worth.
+es: Sigue el dinero desde las licencias compradas hasta el valor creado. Descubre tu punto de equilibrio, tu retorno real y cuánto vale cerrar la brecha entre "activado" y "habitual."
+
+en: "We hit 92% adoption. So why can't we show ROI?"
+es: "Llegamos a 92% de adopción. ¿Entonces por qué no podemos demostrar el retorno?"
+
+en: Run the numbers
+es: Hacer las cuentas
+
+en: Use them together
+es: Úsalas juntas
+
+en: Each tool maps to a phase of the Enablement Flywheel, the methodology behind 94% sustained Copilot adoption across 13,000+ seats.
+es: Cada herramienta corresponde a una fase del Enablement Flywheel, la metodología detrás de un 94% de adopción sostenida de Copilot en más de 13,000 licencias.
+
+en: Find where adoption is really stuck.
+es: Encuentra dónde está realmente atorada la adopción.
+
+en: Teach the skill that changes everything.
+es: Enseña la habilidad que lo cambia todo.
+
+en: Track value, not vanity metrics.
+es: Mide valor, no métricas de vanidad.
+
+en: Pick the next wins to scale.
+es: Elige las próximas victorias para escalar.
+
+en: Flywheel Check
+es: Diagnóstico Flywheel
+
+en: Value Calculator
+es: Calculadora de Valor
+
+en: Prioritizer
+es: Priorizador
+
+en: <strong>Private by design</strong>No accounts, no tracking, no server. Everything runs and stays in your browser.
+es: <strong>Privadas por diseño</strong>Sin cuentas, sin rastreo, sin servidor. Todo funciona y se queda en tu navegador.
+
+en: <strong>Built for humans</strong>Plain language, real analogies, and a next step at the end of every tool.
+es: <strong>Hechas para personas</strong>Lenguaje sencillo, analogías reales y un siguiente paso al final de cada herramienta.
+
+en: <strong>Hand-built</strong>Plain HTML, CSS, and JavaScript, with no frameworks. Fast on any device, and printable to PDF.
+es: <strong>Hechas a mano</strong>HTML, CSS y JavaScript puros, sin frameworks. Rápidas en cualquier dispositivo y se pueden imprimir en PDF.
+
+en: Want these tools working inside your organization?
+es: ¿Quieres estas herramientas funcionando dentro de tu organización?
+
+en: I adapt these frameworks into full enablement programs, with workshops, champions networks, and measurement that holds up.
+es: Adapto estos marcos de trabajo en programas completos de habilitación, con talleres, redes de champions y una medición que se sostiene.
+
+en: Download my resume
+es: Descargar mi CV (inglés)
+
+# ---------------------------------------------------------------- Tools: shared
+en: Print / Save PDF
+es: Imprimir / Guardar PDF
+
+en: Cancel
+es: Cancelar
+
+# ---------------------------------------------------------------- Tool: AI Value Calculator
+en: Adoption doesn't equal ROI. This free calculator shows the gap between AI license activation and real business value, and what closing that gap is worth.
+es: Adopción no es igual a retorno. Esta calculadora gratuita muestra la brecha entre activar licencias de IA y crear valor real para el negocio, y cuánto vale cerrarla.
+
+en: AI Value Calculator — Ale Tamez Toolkit
+es: Calculadora de Valor de IA — Herramientas de Ale Tamez
+
+en: AI Value Calculator | Ale Tamez
+es: Calculadora de Valor de IA | Ale Tamez
+
+en: Your activation rate is a vanity metric. See what your AI licenses are really worth, and what closing the habit gap would unlock.
+es: Tu tasa de activación es una métrica de vanidad. Descubre cuánto valen realmente tus licencias de IA y qué desbloquearía cerrar la brecha de hábito.
+
+en: &nbsp;/&nbsp; Measurement
+es: &nbsp;/&nbsp; Medición
+
+en: We celebrate activation rates like they're the finish line. This calculator follows the money from "licenses bought" to "value actually created," and shows what's lost at every step between them.
+es: Celebramos las tasas de activación como si fueran la meta. Esta calculadora sigue el dinero desde "licencias compradas" hasta "valor realmente creado," y muestra lo que se pierde en cada paso intermedio.
+
+en: <strong>Activation is a gym membership. Value is getting stronger.</strong> Everyone who signed up in January counts as "activated." The only number that changes anything is how many people are still showing up in March, and what they do with the strength they built.
+es: <strong>La activación es la membresía del gimnasio. El valor es ponerte más fuerte.</strong> Todos los que se inscribieron en enero cuentan como "activados." El único número que cambia algo es cuántas personas siguen yendo en marzo, y qué hacen con la fuerza que construyeron.
+
+en: Your numbers
+es: Tus números
+
+en: Defaults are realistic starting points. Swap in your own.
+es: Los valores iniciales son puntos de partida realistas. Cámbialos por los tuyos.
+
+en: The investment
+es: La inversión
+
+en: Licensed seats
+es: Licencias contratadas
+
+en: Cost per seat / month
+es: Costo por licencia / mes
+
+en: ($)
+es: =
+
+en: The people
+es: Las personas
+
+en: Activated
+es: Activados
+
+en: (logged in at least once)
+es: (iniciaron sesión al menos una vez)
+
+en: Habitual users
+es: Usuarios habituales
+
+en: (use it in 3 of 4 weeks)
+es: (lo usan 3 de cada 4 semanas)
+
+en: Minutes saved per habitual user / day
+es: Minutos ahorrados por usuario habitual / día
+
+en: The economics
+es: La economía
+
+en: Fully loaded cost per hour
+es: Costo total por hora
+
+en: Working days per year
+es: Días laborales al año
+
+en: The honest slider: time redeployed
+es: El control honesto: tiempo reinvertido
+
+en: Saved time only creates value if it goes somewhere useful. What share of saved minutes turns into higher-value work, instead of disappearing into more email?
+es: El tiempo ahorrado solo crea valor si se usa en algo útil. ¿Qué parte de esos minutos se convierte en trabajo de mayor valor, en lugar de desaparecer en más correos?
+
+en: Where the value goes
+es: A dónde va el valor
+
+en: From licenses bought to value created.
+es: De licencias compradas a valor creado.
+
+en: Annual license cost
+es: Costo anual de licencias
+
+en: Value created / yr
+es: Valor creado / año
+
+en: Return
+es: Retorno
+
+en: value ÷ license cost
+es: valor ÷ costo de licencias
+
+en: Break-even
+es: Punto de equilibrio
+
+en: minutes / habitual user / day
+es: minutos / usuario habitual / día
+
+en: The habit gap
+es: La brecha de hábito
+
+en: in additional annual value, from the same licenses you already pay for.
+es: en valor anual adicional, con las mismas licencias que ya pagas.
+
+en: What if enablement lifted habitual use by…
+es: ¿Y si la habilitación aumentara el uso habitual en…
+
+en: <strong>How it's calculated:</strong> Value = seats × habitual % × minutes saved ÷ 60 × working days × hourly cost × redeployment %. Return = value ÷ annual license cost. Activated-but-not-habitual users are counted as creating no measurable value. That's deliberately conservative, because one login a month doesn't change how work gets done. Use this to start a conversation with your CFO, not as an audited business case. <a href="../blog/the-adoption-lie.html">Read the post that inspired it &rarr;</a>
+es: <strong>Cómo se calcula:</strong> Valor = licencias × % habitual × minutos ahorrados ÷ 60 × días laborales × costo por hora × % reinvertido. Retorno = valor ÷ costo anual de licencias. Los usuarios activados pero no habituales se cuentan como sin valor medible. Es deliberadamente conservador, porque iniciar sesión una vez al mes no cambia la forma de trabajar. Úsalo para iniciar una conversación con tu director de finanzas, no como un caso de negocio auditado. <a href="../blog/the-adoption-lie.html">Leer la publicación que lo inspiró &rarr;</a>
+
+en: Ready to close the habit gap?
+es: ¿Lista o listo para cerrar la brecha de hábito?
+
+en: The gap between activated and habitual is where enablement earns its keep. Let's design yours.
+es: La brecha entre activado y habitual es donde la habilitación demuestra su valor. Diseñemos la tuya.
+
+en: Take the Flywheel Check
+es: Hacer el Diagnóstico Flywheel
+
+# ---------------------------------------------------------------- Tool: Flywheel Check
+en: A free 3-minute assessment that shows how ready your organization is to turn AI licenses into lasting habits, built on the Enablement Flywheel: Listen, Enable, Measure, Amplify.
+es: Un diagnóstico gratuito de 3 minutos que muestra qué tan lista está tu organización para convertir licencias de IA en hábitos duraderos, basado en el Enablement Flywheel: Escuchar, Habilitar, Medir, Amplificar.
+
+en: AI Adoption Flywheel Check — Ale Tamez Toolkit
+es: Diagnóstico Flywheel de Adopción de IA — Herramientas de Ale Tamez
+
+en: AI Adoption Flywheel Check | Ale Tamez
+es: Diagnóstico Flywheel de Adopción de IA | Ale Tamez
+
+en: 16 questions. 3 minutes. Find the phase where your AI adoption is wobbling, and what to do next.
+es: 16 preguntas. 3 minutos. Descubre en qué fase se tambalea tu adopción de IA y qué hacer después.
+
+en: &nbsp;/&nbsp; Change Management
+es: &nbsp;/&nbsp; Gestión del cambio
+
+en: 16 honest questions, about 3 minutes. Find out whether your AI rollout is building momentum or quietly losing it, and which phase to fix first. Based on the four-phase Enablement Flywheel I used to take Microsoft Copilot to 94% sustained adoption across 13,000+ seats.
+es: 16 preguntas honestas, unos 3 minutos. Descubre si tu lanzamiento de IA está ganando impulso o perdiéndolo en silencio, y qué fase arreglar primero. Basado en el Enablement Flywheel de cuatro fases que usé para llevar Microsoft Copilot a un 94% de adopción sostenida en más de 13,000 licencias.
+
+en: <strong>A flywheel is like a merry-go-round.</strong> The first pushes are the hardest. Every push after that adds momentum, until it almost spins on its own. But if one section is broken, the whole ride wobbles. This check finds the wobble.
+es: <strong>Un flywheel es como un carrusel.</strong> Los primeros empujones son los más difíciles. Cada empujón después suma impulso, hasta que casi gira solo. Pero si una sección está rota, todo el juego se tambalea. Este diagnóstico encuentra ese tambaleo.
+
+en: 0 of 16 answered
+es: 0 de 16 respondidas
+
+en: See my results
+es: Ver mis resultados
+
+en: Start over
+es: Empezar de nuevo
+
+en: Flywheel chart of your scores by phase
+es: Gráfica Flywheel de tus resultados por fase
+
+en: Your stage
+es: Tu etapa
+
+en: Your next moves
+es: Tus siguientes pasos
+
+en: Start with the highlighted phase. A flywheel only spins as well as its weakest section.
+es: Empieza por la fase resaltada. Un flywheel solo gira tan bien como su sección más débil.
+
+en: Copy summary
+es: Copiar resumen
+
+en: <strong>About this assessment:</strong> It's a conversation starter, not a scientific instrument. It works best when 3–5 people from different levels take it separately and compare answers. The gaps between a VP's score and a frontline employee's score are often the most useful finding. Answers are stored only in your browser.
+es: <strong>Sobre este diagnóstico:</strong> Es un punto de partida para conversar, no un instrumento científico. Funciona mejor cuando 3 a 5 personas de distintos niveles lo contestan por separado y comparan respuestas. Las diferencias entre el resultado de una vicepresidencia y el de alguien en primera línea suelen ser el hallazgo más útil. Tus respuestas se guardan solo en tu navegador.
+
+en: Want help getting the wheel spinning?
+es: ¿Quieres ayuda para que la rueda empiece a girar?
+
+en: I design enablement programs that turn "we bought the licenses" into "this is how we work now."
+es: Diseño programas de habilitación que convierten "compramos las licencias" en "así trabajamos ahora."
+
+en: Read the case study
+es: Leer el caso de estudio
+
+# ---------------------------------------------------------------- Tool: Prompt Builder (most text is set by the page's own script)
+en: A free bilingual (English / Spanish) prompt builder for Microsoft Copilot and other AI assistants. Build better prompts with Goal, Context, Source, and Expectations.
+es: Un constructor de prompts gratuito y bilingüe (español / inglés) para Microsoft Copilot y otros asistentes de IA. Construye mejores prompts con Objetivo, Contexto, Fuente y Expectativas.
+
+en: Prompt Builder (EN / ES) — Ale Tamez Toolkit
+es: Constructor de Prompts (ES / EN) — Herramientas de Ale Tamez
+
+en: Prompt Builder | Ale Tamez
+es: Constructor de Prompts | Ale Tamez
+
+en: Stop typing one-line prompts. Build Copilot prompts that work the first time, and know how to iterate when they don't.
+es: Deja de escribir prompts de una sola línea. Construye prompts para Copilot que funcionen a la primera, y aprende a iterar cuando no.
+
+en: <span class="letter" aria-hidden="true">G</span>
+es: <span class="letter" aria-hidden="true">O</span>
+
+en: <span class="letter" aria-hidden="true">C</span>
+es: =
+
+en: <span class="letter" aria-hidden="true">S</span>
+es: <span class="letter" aria-hidden="true">F</span>
+
+en: <span class="letter" aria-hidden="true">E</span>
+es: =
+
+# ---------------------------------------------------------------- Tool: Use Case Prioritizer
+en: A free, interactive weighted-scoring tool that helps teams move from 'we should use AI' to 'here's exactly where to start and why.' Built by Alejandra Tamez de la Garza.
+es: Una herramienta interactiva y gratuita de puntuación ponderada que ayuda a los equipos a pasar de "deberíamos usar IA" a "aquí es exactamente donde empezar y por qué." Creada por Alejandra Tamez de la Garza.
+
+en: AI Use Case Prioritizer — Ale Tamez Toolkit
+es: Priorizador de Casos de Uso de IA — Herramientas de Ale Tamez
+
+en: AI Use Case Prioritizer | Ale Tamez
+es: Priorizador de Casos de Uso de IA | Ale Tamez
+
+en: Score your AI ideas, see them on an Impact vs. Ease map, and find your Quick Wins.
+es: Califica tus ideas de IA, míralas en un mapa de Impacto vs. Facilidad y encuentra tus Victorias Rápidas.
+
+en: &nbsp;/&nbsp; Strategy
+es: &nbsp;/&nbsp; Estrategia
+
+en: Every organization has a list of 40 "we should use AI for…" ideas. This tool helps you find the five worth starting with: score each idea, tune the weights to your priorities, and see where it lands on an Impact vs. Ease map.
+es: Toda organización tiene una lista de 40 ideas de "deberíamos usar IA para…". Esta herramienta te ayuda a encontrar las cinco con las que vale la pena empezar: califica cada idea, ajusta los pesos a tus prioridades y mira dónde cae en un mapa de Impacto vs. Facilidad.
+
+en: <strong>Think of it like house hunting.</strong> You don't buy the first house you see. You decide what matters (location, price, space), weight it, and compare. Same with AI: the shiniest idea isn't always the right first move.
+es: <strong>Piénsalo como buscar casa.</strong> No compras la primera que ves. Decides qué importa (ubicación, precio, espacio), le das un peso y comparas. Lo mismo pasa con la IA: la idea más brillante no siempre es el primer paso correcto.
+
+en: Editing a use case. Save to update it.
+es: Editando un caso de uso. Guarda para actualizarlo.
+
+en: Score a use case
+es: Califica un caso de uso
+
+en: Rate each factor from 1 (low) to 5 (high). Use your gut first; you can always refine.
+es: Califica cada factor del 1 (bajo) al 5 (alto). Confía primero en tu intuición; siempre puedes ajustar.
+
+en: Use case
+es: Caso de uso
+
+en: e.g. Draft meeting recaps
+es: p. ej. Redactar resúmenes de reuniones
+
+en: Team / owner
+es: Equipo / responsable
+
+en: (optional)
+es: (opcional)
+
+en: e.g. Program Mgmt
+es: p. ej. Gestión de Programas
+
+en: Add to the map
+es: Agregar al mapa
+
+en: <span><span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;">Tune the weights</span><br><span class="hint">What matters most to <em>your</em> organization right now?</span></span>
+es: <span><span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;">Ajusta los pesos</span><br><span class="hint">¿Qué es lo más importante para <em>tu</em> organización ahora mismo?</span></span>
+
+en: Reset to recommended
+es: Volver a los recomendados
+
+en: Impact vs. Ease map
+es: Mapa de Impacto vs. Facilidad
+
+en: Up and to the right is where you start.
+es: Arriba a la derecha es donde empiezas.
+
+en: Scatter plot of use cases by impact and ease
+es: Gráfica de dispersión de casos de uso por impacto y facilidad
+
+en: Load sample portfolio
+es: Cargar portafolio de ejemplo
+
+en: Your ranked shortlist
+es: Tu lista corta, en orden
+
+en: Overall score blends every factor using your weights (0–100).
+es: La puntuación general combina todos los factores según tus pesos (0–100).
+
+en: Export CSV
+es: Exportar CSV
+
+en: Clear all
+es: Borrar todo
+
+en: Quadrant
+es: Cuadrante
+
+en: Impact
+es: Impacto
+
+en: Ease
+es: Facilidad
+
+en: Overall
+es: General
+
+en: Actions
+es: Acciones
+
+en: <strong style="color:#1D6B63;">Quick Wins</strong>High impact, easy to land. Start here to build momentum and trust.
+es: <strong style="color:#1D6B63;">Victorias Rápidas</strong>Alto impacto y fáciles de lograr. Empieza aquí para generar impulso y confianza.
+
+en: <strong style="color:var(--talavera);">Big Bets</strong>High impact, hard to land. Plan them deliberately with a sponsor and a pilot.
+es: <strong style="color:var(--talavera);">Grandes Apuestas</strong>Alto impacto, difíciles de lograr. Planéalas con intención, con un patrocinador y un piloto.
+
+en: <strong style="color:#8A5C0E;">Easy Extras</strong>Easy but modest. Great for training exercises and Champion demos.
+es: <strong style="color:#8A5C0E;">Extras Fáciles</strong>Fáciles pero modestas. Ideales para ejercicios de capacitación y demos de Champions.
+
+en: <strong style="color:var(--rosa);">Money Pits</strong>Hard and low value. Park these, however exciting the demo looked.
+es: <strong style="color:var(--rosa);">Pozos sin Fondo</strong>Difíciles y de bajo valor. Déjalas en pausa, por más emocionante que se haya visto el demo.
+
+en: <strong>How the math works:</strong> <em>Impact</em> combines Business Value and Reach. <em>Ease</em> combines Data Readiness, Feasibility, low Risk, and low Change Effort. Each factor is weighted by your sliders and normalized to 0–100. Change Effort is in here on purpose. In my experience, the people side is the factor teams most often forget to score. Your data is saved only in your browser and never leaves your device.
+es: <strong>Cómo funcionan las cuentas:</strong> <em>Impacto</em> combina Valor de negocio y Alcance. <em>Facilidad</em> combina Preparación de datos, Viabilidad, bajo Riesgo y bajo Esfuerzo de cambio. Cada factor se pondera con tus controles y se normaliza de 0 a 100. El Esfuerzo de cambio está aquí a propósito. En mi experiencia, el lado humano es el factor que los equipos más olvidan calificar. Tus datos se guardan solo en tu navegador y nunca salen de tu dispositivo.
+
+en: Have a list of 40 ideas and no idea where to start?
+es: ¿Tienes una lista de 40 ideas y no sabes por dónde empezar?
+
+en: I help teams turn AI ambition into a prioritized roadmap people actually adopt.
+es: Ayudo a los equipos a convertir su ambición en IA en una hoja de ruta priorizada que la gente realmente adopta.
+
+# ---------------------------------------------------------------- Blog: tags (keep consistent: filter buttons match these)
+en: AI Adoption
+es: Adopción de IA
+
+en: Leadership
+es: Liderazgo
+
+en: Change Management
+es: Gestión del Cambio
+
+en: AI Education
+es: Educación en IA
+
+en: Future of Work
+es: Futuro del Trabajo
+
+en: AI Strategy
+es: Estrategia de IA
+
+en: Learning
+es: Aprendizaje
+
+en: Speaking
+es: Conferencias
+
+en: Culture
+es: Cultura
+
+en: Self-Awareness
+es: Autoconocimiento
+
+en: Manic Mondays
+es: =
+
+en: Faith
+es: Fe
+
+en: Spanish
+es: Español
+
+# ---------------------------------------------------------------- Blog: dates + read times
+en: October 21, 2026 &middot; 3 min read
+es: 21 de octubre de 2026 &middot; 3 min de lectura
+
+en: August 30, 2026 &middot; 5 min read
+es: 30 de agosto de 2026 &middot; 5 min de lectura
+
+en: July 14, 2025 &middot; 4 min read
+es: 14 de julio de 2025 &middot; 4 min de lectura
+
+en: October 6, 2025 &middot; 3 min read
+es: 6 de octubre de 2025 &middot; 3 min de lectura
+
+en: December 15, 2025 &middot; 3 min read
+es: 15 de diciembre de 2025 &middot; 3 min de lectura
+
+en: February 10, 2026 &middot; 4 min read
+es: 10 de febrero de 2026 &middot; 4 min de lectura
+
+en: April 4, 2026 &middot; 3 min read
+es: 4 de abril de 2026 &middot; 3 min de lectura
+
+en: August 15, 2026 &middot; 3 min read
+es: 15 de agosto de 2026 &middot; 3 min de lectura
+
+en: August 30, 2026 &middot; 3 min read
+es: 30 de agosto de 2026 &middot; 3 min de lectura
+
+en: Read post
+es: Leer publicación
+
+# ---------------------------------------------------------------- Blog index
+en: Thinking out loud about AI, people, and what happens when you put the two together with intention.
+es: Pensando en voz alta sobre IA, personas y lo que pasa cuando juntas las dos cosas con intención.
+
+en: Blog — Ale Tamez
+es: =
+
+en: Blog | Ale Tamez
+es: =
+
+en: Toggle navigation
+es: Abrir o cerrar navegación
+
+en: The Blog
+es: El blog
+
+en: Thinking Out Loud
+es: Pensando en voz alta
+
+en: All Posts
+es: Todas
+
+en: Three panelists seated in white chairs on a stage, mid conversation, in front of a large green and yellow screen that reads Technology & Innovation Forum.
+es: Tres panelistas sentados en sillas blancas sobre un escenario, a mitad de una conversación, frente a una gran pantalla verde y amarilla que dice Technology & Innovation Forum.
+
+en: What a Forrester Keynote Taught Me About Saying Yes to Something New
+es: Lo que una conferencia en Forrester me enseñó sobre decirle que sí a algo nuevo
+
+en: I shared the Forrester IT conference stage with the CIO of SailPoint to talk about how AI is reshaping the IT role. I felt nervous. I also felt curious, and curiosity won.
+es: Compartí el escenario de la conferencia de TI de Forrester con el CIO de SailPoint para hablar de cómo la IA está transformando el rol de TI. Sentí nervios. También sentí curiosidad, y ganó la curiosidad.
+
+en: The Decade That Was Actually a Year
+es: La década que en realidad fue un año
+
+en: I opened a deck from exactly one year ago expecting nostalgia. What I found instead made me rethink what growth with AI actually looks like, and how to measure it in myself.
+es: Abrí una presentación de hace exactamente un año esperando nostalgia. Lo que encontré me hizo repensar cómo se ve realmente crecer con la IA, y cómo medirlo en mí misma.
+
+en: People are not the bottleneck. The absence of trust, context, and relevance is the bottleneck.
+es: Las personas no son el cuello de botella. El cuello de botella es la falta de confianza, contexto y relevancia.
+
+en: What Seven Books at Once Taught Me About AI Strategy
+es: Lo que leer siete libros a la vez me enseñó sobre estrategia de IA
+
+en: People think reading seven books at once is chaotic. I think reading one book at a time is leaving patterns on the table.
+es: La gente piensa que leer siete libros a la vez es caótico. Yo pienso que leer un libro a la vez es dejar patrones sobre la mesa.
+
+en: Manic Monday: The Case for Hybrid Human-Agent Teams
+es: Manic Monday: a favor de los equipos híbridos de personas y agentes
+
+en: The future of work isn't human or machine. It's human and machine, working in roles that play to their respective strengths.
+es: El futuro del trabajo no es humano o máquina. Es humano y máquina, en roles que aprovechan las fortalezas de cada uno.
+
+en: Manic Monday: To Be Seen
+es: Manic Monday: ser vistos
+
+en: At the heart of every meaningful relationship is a simple human desire: to be seen. Being seen is not the same as being acknowledged.
+es: En el corazón de toda relación significativa hay un deseo humano muy simple: ser visto. Ser visto no es lo mismo que ser reconocido.
+
+en: What It Means to Serve Alongside People Who Love Deeply
+es: Lo que significa servir junto a personas que aman profundamente
+
+en: I get to serve on the board of Bags of Grace as Director of Marketing and Fundraising, and if you ever want to see the best of Austin in one room, come to a packing event.
+es: Tengo el privilegio de servir en la mesa directiva de Bags of Grace como Directora de Marketing y Recaudación de Fondos, y si alguna vez quieres ver lo mejor de Austin en un solo lugar, ven a un evento de empacado.
+
+en: Making AI work for people, not the other way around.
+es: Que la IA trabaje para las personas, y no al revés.
+
+en: &copy; 2026 Ale Tamez. All rights reserved.
+es: &copy; 2026 Ale Tamez. Todos los derechos reservados.
+
+# ---------------------------------------------------------------- Blog posts: shared navigation
+en: &larr; Previous Post
+es: &larr; Publicación anterior
+
+en: Next Post &rarr;
+es: Siguiente publicación &rarr;
+
+en: Back to Blog
+es: Volver al blog
+
+en: &larr; Back to Blog
+es: &larr; Volver al blog
+
+en: "Making technology satisfyingly satisfying."
+es: "Haciendo que la tecnología sea deliciosamente satisfactoria."
+
+# ---------------------------------------------------------------- Post: Adoption Doesn't Equal ROI
+en: Adoption Doesn't Equal ROI | Ale Tamez
+es: Adopción no es igual a retorno | Ale Tamez
+
+en: We celebrate adoption rates like they're the finish line. "87% of employees activated Copilot!" Great. But here's the question nobody wants to ask: are they actually using it, or did they just click the button because someone told them to?
+es: Celebramos las tasas de adopción como si fueran la meta. "¡El 87% de los colaboradores activó Copilot!" Qué bien. Pero aquí está la pregunta que nadie quiere hacer: ¿realmente lo están usando, o solo hicieron clic en el botón porque alguien se lo pidió?
+
+en: I've spent years in the space between "deployed" and "adopted," and I can tell you they are not the same zip code. Deployment is a technical milestone. Adoption is a human one. And the gap between them is where most organizations lose the plot.
+es: He pasado años en el espacio entre "implementado" y "adoptado," y te puedo decir que no viven en el mismo código postal. La implementación es un hito técnico. La adopción es un hito humano. Y en la brecha entre ambos es donde la mayoría de las organizaciones pierden el rumbo.
+
+en: Think of it like a gym membership. January 1st, everyone signs up. That's deployment. By February, the parking lot is empty again. The gym didn't fail. The onboarding did. Nobody helped people figure out which machine to use for <em>their</em> goals, nobody checked in when it got hard, and nobody celebrated the small wins that keep people coming back.
+es: Piénsalo como una membresía de gimnasio. El 1 de enero, todos se inscriben. Eso es la implementación. Para febrero, el estacionamiento vuelve a estar vacío. El gimnasio no falló. Falló la bienvenida. Nadie ayudó a la gente a descubrir qué máquina usar para <em>sus</em> metas, nadie les preguntó cómo iban cuando se puso difícil, y nadie celebró las pequeñas victorias que hacen que la gente regrese.
+
+en: That's what the Enablement Flywheel is built to solve. Listen first: what are people actually struggling with? Enable next: meet them in their workflow, not in a generic training deck. Measure what matters: behavior change, not login counts. And then Amplify: turn early adopters into storytellers who pull others forward.
+es: Eso es lo que el Enablement Flywheel está diseñado para resolver. Primero, Escuchar: ¿con qué está batallando realmente la gente? Después, Habilitar: llegar a ellos en su flujo de trabajo, no en una presentación genérica de capacitación. Medir lo que importa: el cambio de comportamiento, no los inicios de sesión. Y luego Amplificar: convertir a los primeros usuarios en narradores que jalan a los demás hacia adelante.
+
+en: Adoption isn't a metric. It's a culture. And culture doesn't change because you send a Viva Engage post. It changes because someone in the room made it safe to try.
+es: La adopción no es una métrica. Es una cultura. Y la cultura no cambia porque mandes una publicación en Viva Engage. Cambia porque alguien en la sala hizo que intentarlo se sintiera seguro.
+
+# ---------------------------------------------------------------- Post: Why I'm Building AI Education in Spanish
+en: Why I'm Building AI Education in Spanish | Ale Tamez
+es: Por qué estoy creando educación en IA en español | Ale Tamez
+
+en: There are over 500 million Spanish speakers in the world. The vast majority of AI education, tooling, prompting guides, and community content exists only in English. That's not a gap. That's a wall.
+es: Hay más de 500 millones de hispanohablantes en el mundo. La gran mayoría de la educación sobre IA, las herramientas, las guías de prompts y el contenido de la comunidad existe solo en inglés. Eso no es una brecha. Es un muro.
+
+en: I grew up bilingual. I know what it feels like to toggle between worlds, to translate not just words but context, nuance, and trust. And I know that when you learn something in your own language, it doesn't just land differently. It lands deeper.
+es: Crecí siendo bilingüe. Sé lo que se siente moverse entre dos mundos, traducir no solo palabras sino contexto, matices y confianza. Y sé que cuando aprendes algo en tu propio idioma, no solo se siente distinto. Se queda más hondo.
+
+en: La Clave AI (La Clave means "The Key") is my answer to that wall. It's a Spanish-language AI education venture designed for the people who are always last to the table: small business owners in Mexico, first-generation professionals in the U.S., communities in Latin America who are being told AI will change everything but aren't being given the keys to participate.
+es: La Clave AI es mi respuesta a ese muro. Es un proyecto de educación en IA en español, diseñado para quienes siempre llegan al último a la mesa: dueños de pequeños negocios en México, profesionales de primera generación en Estados Unidos, comunidades de América Latina a las que les dicen que la IA lo va a cambiar todo, pero a las que no les dan las llaves para participar.
+
+en: This isn't about translation. Google Translate can do that. This is about cultural context. It's about understanding that a workshop for a small business owner in Monterrey needs to feel different than one for a product manager in San Francisco, not because the content is different, but because the trust-building is.
+es: No se trata de traducir. Eso lo hace Google Translate. Se trata de contexto cultural. Se trata de entender que un taller para la dueña de un pequeño negocio en Monterrey tiene que sentirse distinto al de un product manager en San Francisco, no porque el contenido sea diferente, sino porque la forma de construir confianza lo es.
+
+en: I don't have all the answers yet. I have a business plan, a 90-day roadmap, and a conviction that this matters. If you speak Spanish and care about AI access, I want to hear from you.
+es: Todavía no tengo todas las respuestas. Tengo un plan de negocio, una hoja de ruta de 90 días y la convicción de que esto importa. Si hablas español y te importa el acceso a la IA, quiero saber de ti.
+
+# ---------------------------------------------------------------- Post: Humans Are Not the Bottleneck
+en: Humans Are Not the Bottleneck | Ale Tamez
+es: Las personas no son el cuello de botella | Ale Tamez
+
+en: I keep hearing the same thing from executives: "Our people are the bottleneck to AI adoption." And every time, I want to flip the table.
+es: Sigo escuchando lo mismo de los ejecutivos: "Nuestra gente es el cuello de botella de la adopción de IA." Y cada vez, me dan ganas de voltear la mesa.
+
+en: People are not the bottleneck. The absence of trust, context, and relevance is the bottleneck. When you roll out a tool without explaining why it matters to <em>their</em> work, you haven't empowered anyone. You've just added another tab to their browser.
+es: Las personas no son el cuello de botella. El cuello de botella es la falta de confianza, contexto y relevancia. Cuando lanzas una herramienta sin explicar por qué importa para <em>su</em> trabajo, no empoderaste a nadie. Solo agregaste otra pestaña a su navegador.
+
+en: Here's an analogy I use all the time: imagine handing someone a key and telling them it opens a door somewhere in the building. No map. No explanation of what's behind the door. No reason to believe what's on the other side is worth the walk. That's what most AI rollouts feel like to the end user.
+es: Esta es una analogía que uso todo el tiempo: imagina darle a alguien una llave y decirle que abre una puerta en algún lugar del edificio. Sin mapa. Sin explicar qué hay detrás de la puerta. Sin ninguna razón para creer que lo que hay del otro lado vale la caminata. Así se sienten la mayoría de los lanzamientos de IA para quien los usa.
+
+en: Now imagine a different approach. You walk them to the door. You explain what's behind it. You let them peek inside. You introduce them to someone who already walked through and loved it. You stand next to them when they turn the key for the first time. That's enablement. That's change management done right.
+es: Ahora imagina otro enfoque. Lo acompañas hasta la puerta. Le explicas qué hay detrás. Lo dejas asomarse. Le presentas a alguien que ya cruzó y le encantó. Te quedas a su lado cuando gira la llave por primera vez. Eso es habilitación. Eso es gestión del cambio bien hecha.
+
+en: The organizations that will lead in the next decade aren't the ones with the most licenses. They're the ones that invested in making every person feel like the technology was built <em>for</em> them, not <em>despite</em> them.
+es: Las organizaciones que van a liderar la próxima década no son las que tienen más licencias. Son las que invirtieron en que cada persona sintiera que la tecnología se construyó <em>para</em> ella, no <em>a pesar</em> de ella.
+
+en: Adoption is a metric. Bravery is a strategy.
+es: La adopción es una métrica. La valentía es una estrategia.
+
+en: What Seven Books at Once Taught Me About AI Strategy
+es: Lo que leer siete libros a la vez me enseñó sobre estrategia de IA
+
+# ---------------------------------------------------------------- Post: Hybrid Human-Agent Teams
+en: Manic Monday: The Case for Hybrid Human-Agent Teams | Ale Tamez
+es: Manic Monday: a favor de los equipos híbridos de personas y agentes | Ale Tamez
+
+en: Every Monday on our company's internal platform, I publish a post I call "Manic Monday." It started as a way to process my own thinking about where AI and work are heading. It became something bigger: a weekly argument that the future of work isn't human <em>or</em> machine. It's human <em>and</em> machine, working in roles that play to their respective strengths.
+es: Cada lunes, en la plataforma interna de mi empresa, publico algo que llamo "Manic Monday." Empezó como una forma de ordenar mis propias ideas sobre hacia dónde van la IA y el trabajo. Se convirtió en algo más grande: un argumento semanal de que el futuro del trabajo no es humano <em>o</em> máquina. Es humano <em>y</em> máquina, en roles que aprovechan las fortalezas de cada uno.
+
+en: Here's the mental model: think of a jazz band. The drummer keeps time (that's the AI, consistent, tireless, precise). The saxophonist improvises (that's the human, creative, contextual, emotional). Neither one is the star. The music only works when both show up and know their part.
+es: Este es el modelo mental: piensa en una banda de jazz. El baterista lleva el ritmo (esa es la IA: constante, incansable, precisa). El saxofonista improvisa (esa es la persona: creativa, con contexto, emocional). Ninguno es la estrella. La música solo funciona cuando los dos se presentan y conocen su parte.
+
+en: The problem with most AI deployment strategies is that they treat AI as a replacement musician. "Here, this tool can write your emails." Okay. But the value of a great email was never the grammar. It was the judgment about what to say, when to say it, and how to make the reader feel seen. That's the saxophone.
+es: El problema de la mayoría de las estrategias de implementación de IA es que tratan a la IA como un músico de reemplazo. "Mira, esta herramienta puede escribir tus correos." Está bien. Pero el valor de un gran correo nunca fue la gramática. Fue el criterio sobre qué decir, cuándo decirlo y cómo hacer que quien lo lee se sienta visto. Ese es el saxofón.
+
+en: Hybrid human-agent teams mean designing workflows where AI handles the rhythm section: data summarization, first-draft generation, pattern detection, scheduling optimization. And humans handle the improvisation: stakeholder relationships, ethical judgment, creative problem-solving, emotional intelligence.
+es: Los equipos híbridos de personas y agentes significan diseñar flujos de trabajo donde la IA se encarga de la sección rítmica: resumir datos, generar primeros borradores, detectar patrones, optimizar agendas. Y las personas se encargan de la improvisación: las relaciones con los grupos de interés, el criterio ético, la resolución creativa de problemas, la inteligencia emocional.
+
+en: The leaders who figure out how to compose those teams, not just deploy the tools, will build organizations that sound like music. The rest will sound like a drum machine playing alone in an empty room.
+es: Los líderes que descubran cómo componer esos equipos, y no solo implementar las herramientas, construirán organizaciones que suenan a música. Las demás sonarán como una caja de ritmos tocando sola en un cuarto vacío.
+
+# ---------------------------------------------------------------- Post: Seven Books at Once
+en: What Seven Books at Once Taught Me About AI Strategy | Ale Tamez
+es: Lo que leer siete libros a la vez me enseñó sobre estrategia de IA | Ale Tamez
+
+en: Right now I'm working through <em>Range</em> by David Epstein, <em>Subtract</em> by Leidy Klotz, <em>Multipliers</em> by Liz Wiseman, <em>Unreasonable Hospitality</em> by Will Guidara, and a few others. Each one on its own is good. But together, they argue with each other, build on each other, and form connections the authors never intended.
+es: Ahora mismo estoy leyendo <em>Range</em> de David Epstein, <em>Subtract</em> de Leidy Klotz, <em>Multipliers</em> de Liz Wiseman, <em>Unreasonable Hospitality</em> de Will Guidara y algunos otros. Cada uno por separado es bueno. Pero juntos discuten entre sí, se complementan y forman conexiones que sus autores nunca imaginaron.
+
+en: Here's what I mean. <em>Range</em> says that generalists, people who sample widely before specializing, outperform specialists in complex environments. <em>Subtract</em> says we solve problems by adding when we should be removing. <em>Multipliers</em> says the best leaders amplify the intelligence around them instead of hoarding it. And <em>Unreasonable Hospitality</em> says the details you didn't have to get right are the ones people remember forever.
+es: Te explico. <em>Range</em> dice que los generalistas, quienes exploran mucho antes de especializarse, superan a los especialistas en entornos complejos. <em>Subtract</em> dice que resolvemos problemas agregando cosas cuando deberíamos quitarlas. <em>Multipliers</em> dice que los mejores líderes amplifican la inteligencia a su alrededor en lugar de acapararla. Y <em>Unreasonable Hospitality</em> dice que los detalles que no tenías que cuidar son los que la gente recuerda para siempre.
+
+en: Now apply that stack to AI strategy. Most organizations specialize too early (they pick one use case and go all in before understanding the landscape). They add tools instead of removing friction. Their leaders gatekeep AI knowledge instead of multiplying it. And they completely ignore the experience layer, the "hospitality" of how the technology is introduced.
+es: Ahora aplica esa combinación a la estrategia de IA. La mayoría de las organizaciones se especializan demasiado pronto (eligen un caso de uso y apuestan todo antes de entender el panorama). Agregan herramientas en lugar de quitar fricción. Sus líderes acaparan el conocimiento sobre IA en lugar de multiplicarlo. Y ignoran por completo la capa de experiencia, la "hospitalidad" con la que se presenta la tecnología.
+
+en: That's not a reading list. That's a diagnostic.
+es: Eso no es una lista de lectura. Es un diagnóstico.
+
+en: I read this way on purpose. The books don't know they're talking to each other. But I do. And the patterns that emerge from those collisions are the ones that actually change how I think and how I lead.
+es: Leo así a propósito. Los libros no saben que están hablando entre sí. Pero yo sí. Y los patrones que surgen de esos choques son los que realmente cambian cómo pienso y cómo lidero.
+
+# ---------------------------------------------------------------- Post: Bags of Grace
+en: Bags of Grace
+es: =
+
+en: What It Means to Serve Alongside People Who Love Deeply | Ale Tamez
+es: Lo que significa servir junto a personas que aman profundamente | Ale Tamez
+
+en: I get to serve on the board of Bags of Grace as Director of Marketing and Fundraising, and if you ever want to see the best of Austin in one room, come to a packing event. Toddlers next to grandparents. College kids next to people who have been doing this for decades. Everybody with the same job: fill a bag with what someone will need, and fill it with care.
+es: Tengo el privilegio de servir en la mesa directiva de Bags of Grace como Directora de Marketing y Recaudación de Fondos, y si alguna vez quieres ver lo mejor de Austin en un solo lugar, ven a un evento de empacado. Niños pequeños junto a abuelos. Universitarios junto a personas que llevan décadas haciendo esto. Todos con la misma tarea: llenar una bolsa con lo que alguien va a necesitar, y llenarla con cariño.
+
+en: Volunteers of all ages gathered together at a Bags of Grace packing event
+es: Voluntarios de todas las edades reunidos en un evento de empacado de Bags of Grace
+
+en: That is the part that gets me every time. Nobody in that room is there because it looks good on a resume. They are there because they believe people deserve dignity, and dignity looks like a hot meal, clean socks, and something to read, packed by hands that thought about the person who would open it.
+es: Esa es la parte que me conmueve cada vez. Nadie en ese lugar está ahí porque se vea bien en el currículum. Están ahí porque creen que las personas merecen dignidad, y la dignidad se ve como una comida caliente, calcetines limpios y algo para leer, empacados por manos que pensaron en la persona que abriría esa bolsa.
+
+en: Volunteer giving a thumbs up next to stacked bins of packed bags
+es: Voluntario con el pulgar arriba junto a contenedores apilados de bolsas empacadas
+
+en: Two women embracing, one wearing a Bags of Grace shirt
+es: Dos mujeres abrazándose, una con una camiseta de Bags of Grace
+
+en: Packed bins ready to go, and two of the hearts behind them.
+es: Contenedores listos para salir, y dos de los corazones detrás de ellos.
+
+en: Every Sunday, those bags go to Church Under the Bridge, along with a couple of other partner nonprofits who distribute them across Austin. I love knowing that something we packed on a Saturday afternoon, surrounded by laughter and a few hundred yellow shirts, is in someone's hands by the next morning.
+es: Cada domingo, esas bolsas llegan a Church Under the Bridge y a un par de organizaciones aliadas más que las reparten por todo Austin. Me encanta saber que algo que empacamos un sábado por la tarde, rodeados de risas y de unos cientos de camisetas amarillas, está en las manos de alguien a la mañana siguiente.
+
+en: Serving on this board has taught me something I try to carry into every other room I walk into, including the ones at work. Love, when it is real, is not abstract. It shows up as logistics. It shows up as bins stacked on a luggage cart, as name tags and thank yous, as someone teaching a nine year old how to fold a bag properly. Grace is a feeling, but Bags of Grace is a Tuesday planning call and a Saturday full of boxes. Both parts matter.
+es: Servir en esta mesa directiva me ha enseñado algo que intento llevar a cada lugar al que entro, incluido el trabajo. El amor, cuando es real, no es abstracto. Se nota en la logística. Se nota en contenedores apilados en un carrito, en gafetes y en gracias, en alguien enseñándole a un niño de nueve años a doblar bien una bolsa. La gracia es un sentimiento, pero Bags of Grace es una llamada de planeación el martes y un sábado lleno de cajas. Las dos partes importan.
+
+en: I am endlessly grateful to be part of a group of people who love others deeply, and who show it with their hands. If you are in Austin and looking for a way to serve, come find us. There is always a bag that needs packing, and always room for one more set of hands.
+es: Estoy infinitamente agradecida de ser parte de un grupo de personas que aman profundamente a los demás, y que lo demuestran con sus manos. Si estás en Austin y buscas una forma de servir, ven a buscarnos. Siempre hay una bolsa por empacar, y siempre hay lugar para un par de manos más.
+
+# ---------------------------------------------------------------- Post: To Be Seen
+en: Manic Monday: To Be Seen | Ale Tamez
+es: Manic Monday: ser vistos | Ale Tamez
+
+en: At the heart of every meaningful relationship is a simple human desire: to be seen.
+es: En el corazón de toda relación significativa hay un deseo humano muy simple: ser visto.
+
+en: Each of us arrives with a unique combination of code. Our DNA, experiences, predispositions, strengths, insecurities, preferences, and perspectives shape who we are and what we bring to the table. It is our offering, for better or worse. To be truly seen is to feel safe enough to bring that full self forward, imperfections included.
+es: Cada uno de nosotros llega con una combinación única de código. Nuestro ADN, experiencias, predisposiciones, fortalezas, inseguridades, preferencias y perspectivas forman quiénes somos y lo que aportamos. Es nuestra ofrenda, para bien o para mal. Ser visto de verdad es sentirte lo suficientemente seguro para mostrarte completo, con todo e imperfecciones.
+
+en: Being seen is not the same as being acknowledged.
+es: Ser visto no es lo mismo que ser reconocido.
+
+en: It is being understood. It is having someone recognize not only what you do, but how you think. What energizes you. What challenges you. Where you thrive. Where you need support.
+es: Es ser comprendido. Es que alguien reconozca no solo lo que haces, sino cómo piensas. Qué te llena de energía. Qué te reta. Dónde floreces. Dónde necesitas apoyo.
+
+en: When someone truly sees you, they give you permission to operate from your <em>strengths</em>. They trust your judgment. They believe in your capability. At the same time, you trust them to help illuminate your blind spots and guide you in areas where their strengths exceed your own.
+es: Cuando alguien te ve de verdad, te da permiso de trabajar desde tus <em>fortalezas</em>. Confía en tu criterio. Cree en tu capacidad. Al mismo tiempo, tú confías en que te ayude a iluminar tus puntos ciegos y a guiarte en las áreas donde sus fortalezas superan las tuyas.
+
+en: That mutual trust creates something powerful. It creates the psychological safety to experiment. To test ideas without fear of failure. To challenge assumptions. To ask questions. To be curious. To push beyond what is comfortable. It creates the conditions where creativity flourishes and growth becomes possible.
+es: Esa confianza mutua crea algo poderoso. Crea la seguridad psicológica para experimentar. Para probar ideas sin miedo a fallar. Para cuestionar supuestos. Para hacer preguntas. Para ser curioso. Para ir más allá de lo cómodo. Crea las condiciones donde la creatividad florece y el crecimiento se vuelve posible.
+
+en: This is undoubtedly where our best work happens. When people have this, they shine.
+es: Sin duda, aquí es donde sucede nuestro mejor trabajo. Cuando las personas tienen esto, brillan.
+
+en: Rarely is great work the product of individual talent alone. More often, it emerges from symbiotic relationships where people see each other clearly and leverage one another's strengths. One person's vision complements another's execution. One person's curiosity fuels another's expertise. Finding these relationships is one of the most important pursuits in life.
+es: Rara vez un gran trabajo es producto solo del talento individual. Casi siempre surge de relaciones simbióticas donde las personas se ven con claridad y aprovechan las fortalezas de los demás. La visión de una persona complementa la ejecución de otra. La curiosidad de una alimenta la experiencia de otra. Encontrar estas relaciones es una de las búsquedas más importantes de la vida.
+
+en: The people who truly see us expand who we can become.
+es: Las personas que de verdad nos ven amplían quiénes podemos llegar a ser.
+
+en: Some of the people who have shaped my career most weren't on my team, and in some cases weren't even in my organization. They were the people who saw something in me before I fully saw it in myself. They challenged me when it would have been easier to agree. They pushed me to think bigger, lead better, and grow beyond what felt comfortable.
+es: Algunas de las personas que más han marcado mi carrera no estaban en mi equipo, y en algunos casos ni siquiera en mi organización. Fueron quienes vieron algo en mí antes de que yo lo viera por completo. Me retaron cuando habría sido más fácil darme la razón. Me empujaron a pensar en grande, a liderar mejor y a crecer más allá de lo cómodo.
+
+en: The longer I work, the more I believe that doing your best work is less about finding the perfect role and more about finding the right people. The ones who amplify your strengths, challenge your blind spots, and create the trust that allows you to flourish.
+es: Entre más tiempo trabajo, más creo que hacer tu mejor trabajo tiene menos que ver con encontrar el puesto perfecto y más con encontrar a las personas correctas. Las que amplifican tus fortalezas, retan tus puntos ciegos y crean la confianza que te permite florecer.
+
+en: Find those people. Invest in those relationships. Learn from them. And become that person for someone else. Those people make all the difference.
+es: Encuentra a esas personas. Invierte en esas relaciones. Aprende de ellas. Y conviértete en esa persona para alguien más. Esas personas hacen toda la diferencia.
+
+en: "To be loved but not known is comforting but superficial. To be known and not loved is our greatest fear. But to be fully known and truly loved is, well, a lot like being loved by God. It is what we need more than anything."
+es: "Ser amado pero no conocido es reconfortante pero superficial. Ser conocido y no amado es nuestro mayor temor. Pero ser plenamente conocido y verdaderamente amado es, bueno, muy parecido a ser amado por Dios. Es lo que más necesitamos."
+
+# ---------------------------------------------------------------- Post: The Decade That Was Actually a Year
+en: The Decade That Was Actually a Year | Ale Tamez
+es: La década que en realidad fue un año | Ale Tamez
+
+en: I was searching for a file the other day, the way you do, digging through old folders for something specific. Instead I found a handful of decks and documents from exactly one year ago.
+es: El otro día estaba buscando un archivo, como suele pasar, escarbando en carpetas viejas para encontrar algo específico. En cambio, encontré un puñado de presentaciones y documentos de hace exactamente un año.
+
+en: I opened them expecting a quick nostalgia hit. What I got instead was laughable. Not bad, exactly. Just distant. The content I was teaching, the way I was explaining things, the language I was using, it all felt like it belonged to a different decade, not a different year.
+es: Los abrí esperando un poquito de nostalgia. Lo que encontré me dio risa. No es que estuvieran mal, exactamente. Solo se sentían lejanos. El contenido que enseñaba, la forma en que explicaba las cosas, el lenguaje que usaba, todo parecía de otra década, no de otro año.
+
+en: That sent me down a rabbit hole. If a single year can make my own work look that outdated to me, what does that actually mean? It means the landscape moved. And if the landscape moved that much, the way I teach, the way I work, the way I show up in a room to explain any of this, all of it has to move too.
+es: Eso me llevó a darle muchas vueltas. Si un solo año puede hacer que mi propio trabajo me parezca así de anticuado, ¿qué significa realmente? Significa que el terreno se movió. Y si el terreno se movió tanto, la forma en que enseño, la forma en que trabajo, la forma en que me presento en una sala para explicar todo esto, también tiene que moverse.
+
+en: Here is the test I keep coming back to. If you are teaching the same content, building the same decks, and explaining things the same way you were a year ago, that is not neutral. That is a signal. It means you have not adjusted to the pace of the thing you are supposedly teaching people to adopt.
+es: Esta es la prueba a la que siempre regreso. Si estás enseñando el mismo contenido, haciendo las mismas presentaciones y explicando las cosas igual que hace un año, eso no es neutral. Es una señal. Significa que no te has ajustado al ritmo de aquello que supuestamente estás enseñando a adoptar.
+
+en: We cannot move at the speed of AI. Nobody can, and honestly nobody should try. But we can make sure we are growing and scaling in how we think, how we process, and what we prioritize. The question is what the right benchmark actually is. Three people working on exactly this problem gave me language I did not have a year ago.
+es: No podemos movernos a la velocidad de la IA. Nadie puede, y sinceramente nadie debería intentarlo. Pero sí podemos asegurarnos de estar creciendo en cómo pensamos, cómo procesamos y qué priorizamos. La pregunta es cuál es la vara de medir correcta. Tres personas que trabajan justo en este problema me dieron un lenguaje que hace un año no tenía.
+
+en: Stop counting logins
+es: Deja de contar inicios de sesión
+
+en: Jeremy Utley puts it plainly: in five years, nobody will care how many people logged into ChatGPT. They will care about who actually used it to transform their work. More use and better use are not the same thing, and most organizations are still only measuring the first one.
+es: Jeremy Utley lo dice sin rodeos: en cinco años, a nadie le va a importar cuántas personas iniciaron sesión en ChatGPT. Les va a importar quién lo usó de verdad para transformar su trabajo. Más uso y mejor uso no son lo mismo, y la mayoría de las organizaciones todavía solo miden lo primero.
+
+en: He also said something that stuck with me even harder. The language we use reveals our mindset. High performers do not "use" AI. They work with it. They coach it, give it feedback, have a real back and forth. Think about your legal counsel or your CMO. You do not "use" them. You work with them.
+es: También dijo algo que se me quedó todavía más grabado. El lenguaje que usamos revela nuestra mentalidad. Las personas de alto desempeño no "usan" la IA. Trabajan con ella. La entrenan, le dan retroalimentación, tienen un ida y vuelta real. Piensa en tu asesor legal o en tu directora de marketing. No los "usas." Trabajas con ellos.
+
+en: That single word swap, use versus work with, is a benchmark on its own. If you are still saying you "use" AI the same way you would use a stapler, that is worth noticing.
+es: Ese simple cambio de palabras, usar contra trabajar con, ya es una vara de medir por sí sola. Si todavía dices que "usas" la IA igual que usarías una engrapadora, vale la pena notarlo.
+
+en: Everyone is now a team of five
+es: Ahora todos somos un equipo de cinco
+
+en: Brice Challamel, who led AI transformation at Moderna before joining OpenAI, said something that reframed the whole conversation for me. There are no more individual contributors. Everyone is now a team of five: themselves, their AI assistant, their AI coach, their AI expert, and their AI creative partner.
+es: Brice Challamel, quien lideró la transformación con IA en Moderna antes de unirse a OpenAI, dijo algo que replanteó toda la conversación para mí. Ya no existen los contribuidores individuales. Ahora todos somos un equipo de cinco: uno mismo, su asistente de IA, su coach de IA, su experto de IA y su socio creativo de IA.
+
+en: Read that again next to your own job title. You are not just doing your job anymore. You are leading a small team, and the quality of that team's output depends on how well you delegate, direct, and review, the same skills that make any leader good at leading actual humans.
+es: Vuelve a leer eso junto a tu propio puesto. Ya no solo estás haciendo tu trabajo. Estás liderando un equipo pequeño, y la calidad de lo que produce ese equipo depende de qué tan bien delegas, diriges y revisas: las mismas habilidades que hacen buena a cualquier líder de personas de carne y hueso.
+
+en: This is where I think a lot of us are stuck without realizing it. We are still operating like solo contributors while quietly holding the job of a small team leader. The gap between those two mindsets is exactly the kind of thing that makes a deck from a year ago look outdated. A year ago, most of us were still solo. Now we are supposed to be managing four teammates who never sleep.
+es: Aquí es donde creo que muchos estamos atorados sin darnos cuenta. Seguimos operando como contribuidores individuales mientras, en silencio, ya tenemos el trabajo de liderar un equipo pequeño. La brecha entre esas dos mentalidades es justo lo que hace que una presentación de hace un año se vea anticuada. Hace un año, casi todos trabajábamos solos. Ahora se supone que dirigimos a cuatro compañeros que nunca duermen.
+
+en: Stop treating AI like a vending machine
+es: Deja de tratar a la IA como una máquina expendedora
+
+en: Eric Porres, Logitech's Head of AI, ran a survey across 7,000 employees and found something he called the vending machine problem. Most people treat AI like a vending machine. Put in a question, get out an answer, walk away. If the answer is not satisfying, they conclude the machine is broken.
+es: Eric Porres, Director de IA de Logitech, hizo una encuesta a 7,000 colaboradores y encontró algo que llamó el problema de la máquina expendedora. La mayoría de la gente trata a la IA como una máquina expendedora. Mete una pregunta, saca una respuesta y se va. Si la respuesta no le convence, concluye que la máquina está descompuesta.
+
+en: But buried in that same survey were 112 people doing something different. They were not treating it like a vending machine. They were treating it like a conversation. Asking again. Pushing back. Refining. Porres built an entire framework out of studying what those 112 people did differently.
+es: Pero escondidas en esa misma encuesta había 112 personas haciendo algo distinto. No la trataban como una máquina expendedora. La trataban como una conversación. Volvían a preguntar. Cuestionaban. Afinaban. Porres construyó todo un marco de trabajo estudiando qué hacían diferente esas 112 personas.
+
+en: He also gave a benchmark with real teeth to it. Consistency: are you showing up with it every day. Intensity: how deep does a single conversation actually go, are you having a real exchange or just one exchange. Creation: what have you actually built with it, not just asked it.
+es: También propuso una vara de medir con verdadero filo. Constancia: ¿trabajas con ella todos los días? Intensidad: ¿qué tan profunda es realmente una conversación?, ¿tienes un intercambio real o solo un intercambio? Creación: ¿qué has construido de verdad con ella, no solo qué le has preguntado?
+
+en: That is a benchmark you can apply to yourself this afternoon. Pull up your last week of conversations with any AI tool. Were they vending machine transactions, or were they actual back and forth conversations that got somewhere?
+es: Es una vara de medir que puedes aplicarte hoy mismo en la tarde. Abre tus conversaciones de la última semana con cualquier herramienta de IA. ¿Fueron transacciones de máquina expendedora, o fueron conversaciones reales de ida y vuelta que llegaron a algún lado?
+
+en: The real benchmark
+es: La verdadera vara de medir
+
+en: Put these three together and a pattern shows up. Utley says watch your language, because it reveals whether you are collaborating or just operating a tool. Challamel says recognize that you are already leading a team, whether you have noticed or not. Porres says look at your actual behavior, consistency, depth, and what you have built, not just what you have asked.
+es: Junta a estos tres y aparece un patrón. Utley dice: cuida tu lenguaje, porque revela si estás colaborando o solo operando una herramienta. Challamel dice: reconoce que ya estás liderando un equipo, te hayas dado cuenta o no. Porres dice: mira tu comportamiento real, la constancia, la profundidad y lo que has construido, no solo lo que has preguntado.
+
+en: None of these are about keeping pace with the model. They are about keeping pace with yourself. That is the benchmark. Not "is my AI smarter than it was a year ago." It obviously is, that part takes care of itself. The real question is, am I leading it differently than I was a year ago. Am I talking to it differently. Am I building something with it that I could not have built before.
+es: Ninguno se trata de seguirle el ritmo al modelo. Se trata de seguirte el ritmo a ti. Esa es la vara de medir. No "¿mi IA es más inteligente que hace un año?" Obviamente lo es; esa parte se resuelve sola. La verdadera pregunta es: ¿la estoy liderando de forma distinta a hace un año? ¿Le hablo diferente? ¿Estoy construyendo con ella algo que antes no habría podido construir?
+
+en: Go find your own version of that folder. The one from a year ago that makes you wince a little. That wince is not embarrassment. It is proof of a decade's worth of growth compressed into twelve months, and it is the most honest measurement you will find.
+es: Ve a buscar tu propia versión de esa carpeta. La de hace un año que te da un poquito de pena. Esa pena no es vergüenza. Es la prueba de una década de crecimiento comprimida en doce meses, y es la medición más honesta que vas a encontrar.
+
+# ---------------------------------------------------------------- Post: Forrester Keynote
+en: What a Forrester Keynote Taught Me About Saying Yes to Something New | Ale Tamez
+es: Lo que una conferencia en Forrester me enseñó sobre decirle que sí a algo nuevo | Ale Tamez
+
+en: <span class="read-time">October 21, 2026 &middot; 3 min read</span> &middot; Forrester IT Conference, September 14, 2026
+es: <span class="read-time">21 de octubre de 2026 &middot; 3 min de lectura</span> &middot; Forrester IT Conference, 14 de septiembre de 2026
+
+en: On stage at the Forrester IT conference, September 14, 2026, sharing ideas on how AI is reshaping the IT role.
+es: En el escenario de la conferencia de TI de Forrester, el 14 de septiembre de 2026, compartiendo ideas sobre cómo la IA está transformando el rol de TI.
+
+en: On September 14, 2026, I stepped onto the stage as a keynote speaker at the Forrester IT conference. I shared that stage with the CIO of SailPoint, whose headquarters sit right here in Austin, Texas. Together we explored how the IT role is changing and how quickly our work is evolving because of AI.
+es: El 14 de septiembre de 2026 subí al escenario como conferencista principal en la conferencia de TI de Forrester. Compartí ese escenario con el CIO de SailPoint, cuya sede está aquí mismo en Austin, Texas. Juntos exploramos cómo está cambiando el rol de TI y qué tan rápido evoluciona nuestro trabajo gracias a la IA.
+
+en: I felt nervous. I also felt curious, and curiosity won.
+es: Sentí nervios. También sentí curiosidad, y ganó la curiosidad.
+
+en: Here is what I learned.
+es: Esto es lo que aprendí.
+
+en: Different is where growth lives.
+es: Lo diferente es donde vive el crecimiento.
+
+en: Think of a musician sitting in with a band in an unfamiliar key. The first few bars feel intricate and new, then the ear adjusts and the whole room opens up. A new stage works the same way. The nerves were an invitation, and accepting it made the experience fabulous.
+es: Piensa en una música que se une a una banda en un tono que no conoce. Los primeros compases se sienten complejos y nuevos, luego el oído se ajusta y toda la sala se abre. Un escenario nuevo funciona igual. Los nervios eran una invitación, y aceptarla hizo que la experiencia fuera fabulosa.
+
+en: The questions were the best part.
+es: Las preguntas fueron lo mejor.
+
+en: The conversation with the audience felt like call and response in a great jazz set. People asked sharp questions, and afterwards they came to share feedback and ideas. Every exchange sent me home with something new to think about.
+es: La conversación con el público se sintió como el llamado y respuesta de un gran set de jazz. La gente hizo preguntas muy agudas, y después se acercaron a compartir comentarios e ideas. Cada intercambio me mandó a casa con algo nuevo en qué pensar.
+
+en: Two years of learning showed up on stage.
+es: Dos años de aprendizaje se hicieron presentes en el escenario.
+
+en: For the last two years I have followed the writers and leaders shaping the AI conversation. I read their books, listened to their ideas, and learned from their experiments. On stage, all of that came alive. I found myself quoting them and recommending what I had read because of them.
+es: Durante los últimos dos años he seguido a las autoras, autores y líderes que están dando forma a la conversación sobre IA. Leí sus libros, escuché sus ideas y aprendí de sus experimentos. En el escenario, todo eso cobró vida. Me encontré citándolos y recomendando lo que había leído gracias a ellos.
+
+en: One recommendation I shared is <em>Subtract</em> by Leidy Klotz, a book about the power of removing legacy systems before adding new solutions. <strong>Remove first.</strong> Sometimes the strongest ROI comes from making space, like clearing a closet before buying more shelves. In my own work, I begin every project with one question: what can we retire before we build anything new? A clear runway helps people adopt faster, because every old process we release gives the new one room to land.
+es: Una de las recomendaciones que compartí es <em>Subtract</em> de Leidy Klotz, un libro sobre el poder de quitar sistemas heredados antes de agregar soluciones nuevas. <strong>Primero, quita.</strong> A veces el mejor retorno viene de hacer espacio, como vaciar un clóset antes de comprar más repisas. En mi propio trabajo, empiezo cada proyecto con una pregunta: ¿qué podemos retirar antes de construir algo nuevo? Una pista despejada ayuda a que la gente adopte más rápido, porque cada proceso viejo que soltamos le da espacio al nuevo para aterrizar.
+
+en: I also pointed people to the <em>Beyond the Prompt</em> podcast, a fabulous companion for anyone curious about how AI changes the way we think and work. It felt like carrying a whole choir of voices into the room and letting each one sing.
+es: También recomendé el podcast <em>Beyond the Prompt</em>, un compañero fabuloso para cualquiera con curiosidad sobre cómo la IA cambia la forma en que pensamos y trabajamos. Se sintió como llevar todo un coro de voces a la sala y dejar que cada una cantara.
+
+en: Wisdom is a fabulous neighbor.
+es: La sabiduría es una vecina fabulosa.
+
+en: I spent the day surrounded by leaders years ahead of me in knowledge and experience. I listened closely, took notes like a student, and left with more questions than I arrived with. Learning beside them was a gift, and contributing my own view alongside theirs made it even sweeter.
+es: Pasé el día rodeada de líderes con años de ventaja en conocimiento y experiencia. Escuché con atención, tomé notas como estudiante y me fui con más preguntas de las que traía. Aprender a su lado fue un regalo, y aportar mi propia visión junto a la suya lo hizo todavía más dulce.
+
+en: I loved every part of it.
+es: Disfruté cada parte.
+
+en: The preparation, the butterflies, the hallway conversations, the stage. Moments like these are ephemeral, so I savored each one.
+es: La preparación, las mariposas en el estómago, las conversaciones en los pasillos, el escenario. Momentos así son efímeros, así que saboreé cada uno.
+
+en: <strong>My takeaway:</strong> when something feels different and a little scary, lean in. The room has space for you, and your voice may be the missing note.
+es: <strong>Lo que me llevo:</strong> cuando algo se sienta diferente y un poco aterrador, acércate. En la sala hay espacio para ti, y tu voz puede ser la nota que faltaba.
+
+en: Margin is where life happens, and this season gave me plenty to reflect on. What new room is calling your name?
+es: En los márgenes es donde sucede la vida, y esta temporada me dio mucho en qué reflexionar. ¿Qué sala nueva te está llamando por tu nombre?

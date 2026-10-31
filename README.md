@@ -4,7 +4,7 @@
 
 > *I translate complex systems into human possibility.*
 
-This repository is my personal website, portfolio, and working toolkit. It's live at **[alejandratamez.com](https://alejandratamez.com)**, hosted on GitHub Pages, and hand-built with plain HTML, CSS, and JavaScript, with no frameworks.
+This repository is my personal website, portfolio, and working toolkit, fully bilingual in **English and Spanish**. It's live at **[alejandratamez.com](https://alejandratamez.com)** ([en español](https://alejandratamez.com/es/)), hosted on GitHub Pages, and hand-built with plain HTML, CSS, and JavaScript, with no frameworks.
 
 I lead Generative AI enablement and change management, including taking Microsoft Copilot to **94% sustained adoption across 13,000+ seats** with a **~200-person Champions network** and **70+ training sessions**. This repo is where I build in public.
 
@@ -27,6 +27,20 @@ The four tools map to the **Enablement Flywheel** (Listen → Enable → Measure
 
 ---
 
+## 🌎 Bilingual by design: English + Español
+
+Every page has an **EN | ES** switch in the corner, and the full site exists in Spanish at [`/es/`](https://alejandratamez.com/es/), including the blog, the case study, and all four interactive tools.
+
+Rather than maintaining two copies of every page, the Spanish site is **generated**:
+
+- The English pages are the single source of truth for design and layout.
+- [`i18n/es.txt`](i18n/es.txt) is a plain-text translation dictionary (`en:` line → `es:` line).
+- [`scripts/build_spanish.py`](scripts/build_spanish.py) copies each page into `es/`, swaps in the Spanish text, points links at the Spanish pages and shared assets, adds `hreflang` tags for search engines, and places the language switch on every page.
+
+So a design change shows up in both languages automatically, and only new *text* needs translating. Interactive text inside the tools (results, recommendations, chart labels) switches with the page's language.
+
+---
+
 ## ⚙️ Automation
 
 Part of my 2026 learning goal: automate anything I do more than twice.
@@ -35,6 +49,7 @@ Part of my 2026 learning goal: automate anything I do more than twice.
 |---|---|
 | [`publish-blog-posts.yml`](.github/workflows/publish-blog-posts.yml) | When I upload a new post to `blog/`, a Python script ([`update_blog_index.py`](scripts/update_blog_index.py)) reads its title, tags, date, and excerpt, adds a card to the blog index, rebuilds the sitemap, and commits the result. Publishing is just an upload. |
 | [`site-quality.yml`](.github/workflows/site-quality.yml) | Runs on every pull request and push. [`check_site.py`](scripts/check_site.py) verifies that every internal link resolves and that every page has a title, meta description, viewport tag, language attribute, image alt text, and safe external links. It works like a spell checker for the website. |
+| [`build_spanish.py`](scripts/build_spanish.py) | Regenerates the Spanish site on every publish and reports any sentence that still needs translating (`--missing`). A page goes live in Spanish once 90% of it is translated. |
 | [`build_sitemap.py`](scripts/build_sitemap.py) | Generates `sitemap.xml` from every page, with real last-modified dates from git history, so search engines find new content automatically. |
 
 All scripts use only the Python standard library, with no dependencies to install or maintain.
@@ -42,6 +57,7 @@ All scripts use only the Python standard library, with no dependencies to instal
 ```bash
 python3 scripts/check_site.py      # run the quality check locally
 python3 scripts/build_sitemap.py   # regenerate the sitemap
+python3 scripts/build_spanish.py --missing   # rebuild es/ and list untranslated text
 python3 -m http.server             # preview the site at http://localhost:8000
 ```
 
@@ -56,7 +72,9 @@ python3 -m http.server             # preview the site at http://localhost:8000
 ├── case-studies/               Long-form project write-ups
 ├── blog/                       Writing on AI, people, and change
 ├── tools/                      The interactive Toolkit (4 tools + hub)
-├── scripts/                    Python automation (blog publishing, QA, sitemap)
+├── es/                         The Spanish site (generated, don't edit by hand)
+├── i18n/es.txt                 English → Spanish translation dictionary
+├── scripts/                    Python automation (blog publishing, Spanish build, QA, sitemap)
 ├── .github/workflows/          GitHub Actions that run the automation
 ├── 404.html                    A friendlier dead end
 └── Alejandra_Tamez_Resume.pdf

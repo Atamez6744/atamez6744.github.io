@@ -60,6 +60,21 @@
     @media (max-width: 900px) { .result-hero, .recs { grid-template-columns: 1fr; } }
     @media (max-width: 600px) { .scale { grid-template-columns: 1fr 1fr; } .phase-scores { grid-template-columns: 1fr 1fr; } }
   </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/tools/flywheel-readiness.html">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/tools/flywheel-readiness.html">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/tools/flywheel-readiness.html">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+  </style>
+  <!-- /i18n:head -->
 </head>
 <body>
   <nav id="navbar">
@@ -72,6 +87,7 @@
         <li><a href="../blog/">Blog</a></li>
         <li><a href="../index.html#contact">Contact</a></li>
       </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Language / Idioma"><span aria-current="true">EN</span><a href="../es/tools/flywheel-readiness.html" hreflang="es" lang="es" aria-label="Ver en español">ES</a></div><!-- /i18n:switch -->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -149,8 +165,9 @@
   <script>
   (function () {
     const STORE = 'toolkit.flywheel.v1';
-    const SCALE = ['Not yet', 'Starting', 'Mostly', 'Absolutely'];
-    const PHASES = [
+    const ES = document.documentElement.lang === 'es';
+    const SCALE = ES ? ['Aún no', 'Empezando', 'En su mayoría', 'Totalmente'] : ['Not yet', 'Starting', 'Mostly', 'Absolutely'];
+    const PHASES_EN = [
       { key: 'listen', name: 'Listen', color: '#1F4E8C', tagline: 'Understand the real barriers, not the assumed ones.',
         qs: [
           'We have asked employees directly where AI tools help or frustrate them (surveys, listening sessions, focus groups).',
@@ -200,7 +217,64 @@
           high: ['Let champions co-own the roadmap. Peer-led programs outlast program-led ones.', 'Build a champion-to-champion mentorship layer so the network renews itself.']
         } }
     ];
-    const STAGES = [
+    // Spanish version: same keys, so answers carry over if someone switches language mid-quiz.
+    const PHASES_ES = [
+      { key: 'listen', name: 'Escuchar', color: '#1F4E8C', tagline: 'Entender las barreras reales, no las que suponemos.',
+        qs: [
+          'Hemos preguntado directamente a las personas dónde las herramientas de IA les ayudan o las frustran (encuestas, sesiones de escucha, grupos de enfoque).',
+          'Sabemos qué roles o equipos tienen dificultades, y si la causa es la confianza, la relevancia o el acceso.',
+          'El liderazgo puede explicar en lenguaje sencillo por qué estamos adoptando la IA y qué significa para el trabajo de las personas.',
+          'Existe un espacio seguro para expresar miedos o dudas sobre la IA sin ser juzgado.'
+        ],
+        recs: {
+          low:  ['Organiza cinco sesiones de escucha de 30 minutos con distintos roles antes de crear más capacitación.', 'Haz una sola pregunta en todos lados: "¿Dónde te atoraste la última vez que intentaste usar IA?"', 'Pide a tu patrocinador ejecutivo que grabe un mensaje de 2 minutos sobre "por qué hacemos esto" que hable de frente sobre los miedos de perder el trabajo.'],
+          mid:  ['Separa lo que escuchaste: las brechas de confianza, de relevancia y de acceso necesitan soluciones distintas.', 'Cierra el ciclo: cuéntale a la gente lo que escuchaste y qué vas a cambiar gracias a eso.', 'Agrega un canal anónimo de preguntas en cada sesión de capacitación.'],
+          high: ['Haz que escuchar sea continuo: una encuesta trimestral de 3 preguntas, no un evento único.', 'Invita a los escépticos a diseñar la siguiente ola. Encontrarán las brechas que tus champions no ven.']
+        } },
+      { key: 'enable', name: 'Habilitar', color: '#D9951E', tagline: 'Llegar a las personas donde están, con capacitación relevante.',
+        qs: [
+          'La capacitación es específica por rol y se basa en flujos de trabajo reales, no en recorridos genéricos de funciones.',
+          'La gente puede recibir ayuda entre capacitaciones formales (horarios de consulta, preguntas frecuentes, una persona de referencia cercana).',
+          'Nuestra capacitación enseña que la IA es iterativa: una colaboradora que vas afinando, no una calculadora que acierta al primer intento.',
+          'Los gerentes dan a sus equipos tiempo protegido para practicar y experimentar.'
+        ],
+        recs: {
+          low:  ['Cambia un demo genérico por tres sesiones específicas por rol, usando los documentos y tareas reales de cada equipo.', 'Abre un horario de consulta semanal de 30 minutos. La constancia le gana a la perfección.', 'Enseña la mentalidad de "primer borrador, no respuesta final" en los primeros 5 minutos de cada sesión.'],
+          mid:  ['Construye unas preguntas frecuentes vivas con las dudas reales de la gente, y actualízalas cada semana.', 'Dale a los gerentes una guía de una página para hacer una "prueba de IA" de 15 minutos en sus juntas de equipo.', 'Crea paquetes de prompts iniciales por rol para que nadie se enfrente a una caja en blanco.'],
+          high: ['Pasa de capacitar a acompañar: junta a usuarios avanzados con equipos atorados para trabajar en tareas reales.', 'Ofrece un reto de 10 días para formar el hábito, y que la práctica se vuelva rutina.']
+        } },
+      { key: 'measure', name: 'Medir', color: '#2A8C82', tagline: 'Medir el cambio de comportamiento, no solo los inicios de sesión.',
+        qs: [
+          'Medimos el uso continuo y voluntario, no solo activaciones o inicios de sesión.',
+          'Recopilamos historias y ejemplos de cómo cambió realmente el trabajo.',
+          'Tenemos una línea base (tiempo, calidad, tiempo de ciclo) para al menos algunos flujos de trabajo clave.',
+          'Lo que medimos alimenta lo que capacitamos y corregimos después.'
+        ],
+        recs: {
+          low:  ['Redefine el éxito: cambia "% de activación" por "% que lo usó en 3 de las últimas 4 semanas."', 'Elige 3 flujos de trabajo y mide cuánto tardan hoy, antes de la IA, para tener contra qué comparar después.', 'Empieza un registro sencillo de logros donde la gente comparta en una oración algo que la IA le ayudó a hacer.'],
+          mid:  ['Acompaña cada número de uso con una historia. Los números convencen al director de finanzas; las historias convencen a todos los demás.', 'Busca los grupos que abandonan: ¿quién lo probó una vez y nunca regresó, y por qué?', 'Revisa las métricas cada mes con el equipo de habilitación y cambia una cosa cada vez.'],
+          high: ['Pasa del uso al valor: mide el tiempo reinvertido, las mejoras de calidad y las nuevas capacidades.', 'Publica un tablero interno de adopción para que los equipos aprendan de las prácticas de los demás.']
+        } },
+      { key: 'amplify', name: 'Amplificar', color: '#C2185B', tagline: 'Convertir las primeras victorias en impulso para toda la organización.',
+        qs: [
+          'Tenemos una red de champions entre pares en distintas áreas y ubicaciones.',
+          'Los logros y los buenos prompts se comparten de forma abierta y frecuente (demostraciones, boletines, canales).',
+          'Las prácticas exitosas se convierten en procedimientos o plantillas que otros equipos pueden reutilizar.',
+          'El reconocimiento o la gamificación hacen que la gente quiera seguir usándolo.'
+        ],
+        recs: {
+          low:  ['Recluta 1 champion por cada 50 personas: voluntarios curiosos, no solo los más técnicos.', 'Organiza cada mes una sesión de 20 minutos de "enséñame cómo lo hiciste."', 'Destaca un logro real cada semana en un canal que la gente ya lea.'],
+          mid:  ['Dale a tus champions infraestructura real: horarios de consulta, preguntas frecuentes compartidas y línea directa con el equipo central.', 'Convierte los 5 mejores logros en procedimientos o plantillas reutilizables.', 'Agrega gamificación ligera: insignias, rachas o retos por equipo ligados a trabajo real.'],
+          high: ['Deja que los champions sean dueños del plan junto contigo. Los programas liderados por pares duran más que los liderados por un programa.', 'Crea una capa de mentoría entre champions para que la red se renueve sola.']
+        } }
+    ];
+    const PHASES = ES ? PHASES_ES : PHASES_EN;
+    const STAGES = ES ? [
+      { min: 0,  name: 'Con licencia, pero sin hábito', desc: 'La herramienta ya se compró, pero el hábito todavía no existe. Es normal, y tiene arreglo. La mayoría de las organizaciones se estancan aquí porque confunden la emoción del lanzamiento con la adopción.' },
+      { min: 25, name: 'Primera chispa', desc: 'Ya aparecen focos de uso real, sobre todo entre los más curiosos. Ahora el trabajo es convertir esas chispas individuales en práctica compartida antes de que se pase la novedad.' },
+      { min: 50, name: 'Ganando impulso', desc: 'La rueda está girando. Ya tienes infraestructura real. El riesgo ahora es un giro disparejo: una fase débil puede drenar en silencio la energía de las otras tres.' },
+      { min: 75, name: 'Flywheel autosostenible', desc: 'La adopción se está volviendo cultura. La gente sigue eligiendo la IA cuando nadie la está mirando. Enfócate en pasar del uso al valor y en dejar que tus champions lideren.' }
+    ] : [
       { min: 0,  name: 'Licensed, Not Living It', desc: 'The tool is bought, but the habit isn’t there yet. That’s normal, and fixable. Most organizations stall here because launch-day energy gets mistaken for adoption.' },
       { min: 25, name: 'Early Spark', desc: 'Pockets of real use are showing up, mostly from the naturally curious. Now the job is turning individual sparks into shared practice before the novelty wears off.' },
       { min: 50, name: 'Gaining Momentum', desc: 'The wheel is turning. You have real infrastructure in place. The risk now is uneven spin: one weak phase can quietly drain the energy from the other three.' },
@@ -225,7 +299,7 @@
 
     function updateProgress() {
       const n = Object.keys(answers).length;
-      document.getElementById('progressText').textContent = `${n} of ${total} answered`;
+      document.getElementById('progressText').textContent = ES ? `${n} de ${total} respondidas` : `${n} of ${total} answered`;
       document.getElementById('progressBar').style.width = (n / total * 100) + '%';
     }
     form.addEventListener('change', e => {
@@ -244,7 +318,7 @@
       return Math.round(vals.reduce((a, b) => a + b, 0) / (p.qs.length * 3) * 100);
     }
     const level = s => s < 40 ? 'low' : s < 75 ? 'mid' : 'high';
-    const levelName = { low: 'Build the foundation', mid: 'Strengthen the habit', high: 'Scale what works' };
+    const levelName = ES ? { low: 'Construir la base', mid: 'Fortalecer el hábito', high: 'Escalar lo que funciona' } : { low: 'Build the foundation', mid: 'Strengthen the habit', high: 'Scale what works' };
 
     // ---------- flywheel chart ----------
     function polar(cx, cy, r, deg) { const a = (deg - 90) * Math.PI / 180; return [cx + r * Math.cos(a), cy + r * Math.sin(a)]; }
@@ -269,7 +343,7 @@
       // rotation arrows hint that it is a cycle
       svg += `<circle cx="${cx}" cy="${cy}" r="${inner - 8}" fill="#fff" stroke="#DFDCD8" stroke-width="2"/>
         <text x="${cx}" y="${cy + 6}" text-anchor="middle" style="font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;" fill="#1D1B18">${overall}%</text>
-        <text x="${cx}" y="${cy + 28}" text-anchor="middle" style="font-size:10px;letter-spacing:.14em;font-weight:700;" fill="#705148">MOMENTUM</text>`;
+        <text x="${cx}" y="${cy + 28}" text-anchor="middle" style="font-size:10px;letter-spacing:.14em;font-weight:700;" fill="#705148">${ES ? 'IMPULSO' : 'MOMENTUM'}</text>`;
       document.getElementById('wheel').setAttribute('viewBox', '-30 -10 400 360');
       document.getElementById('wheel').innerHTML = svg;
     }
@@ -292,13 +366,13 @@
       const w = PHASES[weakestIdx];
       const balanced = Math.max(...scores) - Math.min(...scores) < 10;
       document.getElementById('weakest').innerHTML = balanced
-        ? `<strong>Your wheel is balanced.</strong> No single phase is dragging the others down, so progress comes from lifting all four together. If you have to pick one, start with ${w.name}: ${w.tagline.charAt(0).toLowerCase() + w.tagline.slice(1)}`
-        : `<strong>Your wobble is in ${w.name}.</strong> ${w.tagline} Fixing it will likely do more for adoption than pushing harder on your strongest phase.`;
+        ? (ES ? `<strong>Tu rueda está equilibrada.</strong> Ninguna fase está frenando a las demás, así que el avance viene de mejorar las cuatro juntas. Si tienes que elegir una, empieza por ${w.name}: ${w.tagline.charAt(0).toLowerCase() + w.tagline.slice(1)}` : `<strong>Your wheel is balanced.</strong> No single phase is dragging the others down, so progress comes from lifting all four together. If you have to pick one, start with ${w.name}: ${w.tagline.charAt(0).toLowerCase() + w.tagline.slice(1)}`)
+        : (ES ? `<strong>Tu tambaleo está en ${w.name}.</strong> ${w.tagline} Arreglarlo probablemente hará más por la adopción que empujar más fuerte en tu fase más fuerte.` : `<strong>Your wobble is in ${w.name}.</strong> ${w.tagline} Fixing it will likely do more for adoption than pushing harder on your strongest phase.`);
       document.getElementById('recs').innerHTML = PHASES.map((p, i) => {
         const lv = level(scores[i]);
         return `<div class="rec ${i === weakestIdx ? 'focus' : ''}" style="--phase:${p.color}">
           <div class="lvl">${p.name} &middot; ${scores[i]}% &middot; ${levelName[lv]}</div>
-          <h3>${i === weakestIdx ? 'Start here: ' : ''}${p.tagline}</h3>
+          <h3>${i === weakestIdx ? (ES ? 'Empieza aquí: ' : 'Start here: ') : ''}${p.tagline}</h3>
           <ul>${p.recs[lv].map(r => `<li>${r}</li>`).join('')}</ul></div>`;
       }).join('');
       const res = document.getElementById('results');
@@ -308,7 +382,7 @@
 
     document.getElementById('seeResults').addEventListener('click', () => {
       const missing = total - Object.keys(answers).length;
-      if (missing > 0 && !confirm(`You have ${missing} unanswered question${missing > 1 ? 's' : ''}. Unanswered questions count as "Not yet." See results anyway?`)) {
+      if (missing > 0 && !confirm(ES ? `Te ${missing > 1 ? 'faltan' : 'falta'} ${missing} pregunta${missing > 1 ? 's' : ''} por responder. Las preguntas sin responder cuentan como "Aún no". ¿Ver resultados de todos modos?` : `You have ${missing} unanswered question${missing > 1 ? 's' : ''}. Unanswered questions count as "Not yet." See results anyway?`)) {
         const first = form.querySelector('fieldset:not(:has(input:checked))');
         if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
@@ -316,7 +390,7 @@
       renderResults(true);
     });
     document.getElementById('resetQuiz').addEventListener('click', () => {
-      if (!confirm('Clear all your answers?')) return;
+      if (!confirm(ES ? '¿Borrar todas tus respuestas?' : 'Clear all your answers?')) return;
       answers = {}; Toolkit.save(STORE, answers);
       form.querySelectorAll('input').forEach(i => i.checked = false);
       document.getElementById('results').classList.remove('show');
@@ -325,15 +399,15 @@
     document.getElementById('copySummary').addEventListener('click', () => {
       const { scores, overall, stage, weakestIdx } = computed();
       const lines = [
-        `AI Adoption Flywheel Check: ${overall}% momentum, "${stage.name}"`,
-        ...PHASES.map((p, i) => `• ${p.name}: ${scores[i]}%${i === weakestIdx ? '  ← start here' : ''}`),
+        ES ? `Diagnóstico Flywheel de Adopción de IA: ${overall}% de impulso, "${stage.name}"` : `AI Adoption Flywheel Check: ${overall}% momentum, "${stage.name}"`,
+        ...PHASES.map((p, i) => `• ${p.name}: ${scores[i]}%${i === weakestIdx ? (ES ? '  ← empieza aquí' : '  ← start here') : ''}`),
         '',
-        `Top moves for ${PHASES[weakestIdx].name}:`,
+        ES ? `Siguientes pasos para ${PHASES[weakestIdx].name}:` : `Top moves for ${PHASES[weakestIdx].name}:`,
         ...PHASES[weakestIdx].recs[level(scores[weakestIdx])].map(r => `  - ${r}`),
         '',
-        'Take the check: https://alejandratamez.com/tools/flywheel-readiness.html'
+        (ES ? 'Haz el diagnóstico: ' : 'Take the check: ') + location.href.split('#')[0]
       ];
-      Toolkit.copy(lines.join('\n'), 'Summary copied. Paste it into Teams or email');
+      Toolkit.copy(lines.join('\n'), ES ? 'Resumen copiado. Pégalo en Teams o en un correo' : 'Summary copied. Paste it into Teams or email');
     });
 
     updateProgress();

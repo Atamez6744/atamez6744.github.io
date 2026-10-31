@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <meta name="description" content="Tengo el privilegio de servir en la mesa directiva de Bags of Grace como Directora de Marketing y Recaudación de Fondos, y si alguna vez quieres ver lo mejor de Austin en un solo lugar, ven a un evento de empacado.">
+    <meta property="og:title" content="Lo que significa servir junto a personas que aman profundamente">
+    <meta property="og:description" content="Tengo el privilegio de servir en la mesa directiva de Bags of Grace como Directora de Marketing y Recaudación de Fondos, y si alguna vez quieres ver lo mejor de Austin en un solo lugar, ven a un evento de empacado.">
+    <meta property="og:url" content="https://alejandratamez.com/es/blog/bags-of-grace.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ale Tamez">
+    <meta property="og:image" content="https://alejandratamez.com/IMG_2428.JPG">
+    <title>Lo que significa servir junto a personas que aman profundamente | Ale Tamez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #C48B6F;
+            --terracotta-light: #D4A08A;
+            --navy: #5A9E8F;
+            --cream: #FFFFFF;
+            --cream-dark: #F5F5F3;
+            --sage: #C9A24D;
+            --white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-medium: #5A5A5A;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--cream-dark);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .nav-logo:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--navy);
+            transition: 0.3s;
+        }
+
+        .article-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .article-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-tags span {
+            background-color: var(--cream-dark);
+            color: var(--terracotta);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+
+        .article-meta .read-time {
+            color: var(--terracotta);
+            font-weight: 500;
+        }
+
+        .article-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--terracotta);
+            border: none;
+            margin: 2rem 0;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-body p:first-of-type::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+        }
+
+        .article-body em {
+            font-style: italic;
+        }
+
+        .article-image {
+            width: 100%;
+            border-radius: 12px;
+            margin: 0.5rem 0 2rem;
+            display: block;
+        }
+
+        .article-image-caption {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            text-align: center;
+            margin-top: -1.5rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .image-row {
+            display: flex;
+            gap: 0.75rem;
+            margin: 0.5rem 0 2rem;
+        }
+
+        .image-row img {
+            width: 50%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* Post Navigation */
+        .post-nav {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--cream-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .post-nav a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--terracotta);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .post-nav a:hover {
+            color: var(--terracotta-light);
+        }
+
+        .post-nav .back-link {
+            color: var(--text-medium);
+        }
+
+        .post-nav .back-link:hover {
+            color: var(--terracotta);
+        }
+
+        .post-nav .next-post {
+            text-align: right;
+        }
+
+        .post-nav .prev-post {
+            text-align: left;
+        }
+
+        .post-nav .next-post .label,
+        .post-nav .prev-post .label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            font-weight: 400;
+            margin-bottom: 0.2rem;
+        }
+
+        footer {
+            background-color: var(--navy);
+            color: var(--cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer .tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--cream-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        footer .copyright {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--cream-dark);
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-body p:first-of-type::first-letter {
+                font-size: 3rem;
+            }
+
+            .image-row {
+                flex-direction: column;
+            }
+
+            .image-row img {
+                width: 100%;
+            }
+
+            .post-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .post-nav .next-post {
+                text-align: left;
+            }
+        }
+    </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/blog/bags-of-grace.html">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/blog/bags-of-grace.html">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/blog/bags-of-grace.html">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+  </style>
+  <!-- /i18n:head -->
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">Ale Tamez</a>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../about.html">Sobre mí</a></li>
+                <li><a href="../projects.html">Proyectos</a></li>
+                <li><a href="../tools/">Herramientas</a></li>
+                <li><a href="./">Blog</a></li>
+                <li><a href="../index.html#contact">Contacto</a></li>
+            </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Idioma / Language"><a href="../../blog/bags-of-grace.html" hreflang="en" lang="en" aria-label="View in English">EN</a><span aria-current="true">ES</span></div><!-- /i18n:switch -->
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-tags">
+                <span>Bags of Grace</span>
+                <span>Comunidad</span>
+                <span>Fe</span>
+            </div>
+            <h1 class="article-title">Lo que significa servir junto a personas que aman profundamente</h1>
+            <p class="article-meta"><span class="read-time">30 de agosto de 2026 &middot; 3 min de lectura</span></p>
+        </header>
+
+        <hr class="article-divider">
+
+        <div class="article-body">
+            <p>Tengo el privilegio de servir en la mesa directiva de Bags of Grace como Directora de Marketing y Recaudación de Fondos, y si alguna vez quieres ver lo mejor de Austin en un solo lugar, ven a un evento de empacado. Niños pequeños junto a abuelos. Universitarios junto a personas que llevan décadas haciendo esto. Todos con la misma tarea: llenar una bolsa con lo que alguien va a necesitar, y llenarla con cariño.</p>
+
+            <img src="../../IMG_1711.jpg" alt="Voluntarios de todas las edades reunidos en un evento de empacado de Bags of Grace" class="article-image">
+
+            <p>Esa es la parte que me conmueve cada vez. Nadie en ese lugar está ahí porque se vea bien en el currículum. Están ahí porque creen que las personas merecen dignidad, y la dignidad se ve como una comida caliente, calcetines limpios y algo para leer, empacados por manos que pensaron en la persona que abriría esa bolsa.</p>
+
+            <div class="image-row">
+                <img src="../../IMG_1722.jpg" alt="Voluntario con el pulgar arriba junto a contenedores apilados de bolsas empacadas">
+                <img src="../../IMG_1724.jpg" alt="Dos mujeres abrazándose, una con una camiseta de Bags of Grace">
+            </div>
+            <p class="article-image-caption">Contenedores listos para salir, y dos de los corazones detrás de ellos.</p>
+
+            <p>Cada domingo, esas bolsas llegan a Church Under the Bridge y a un par de organizaciones aliadas más que las reparten por todo Austin. Me encanta saber que algo que empacamos un sábado por la tarde, rodeados de risas y de unos cientos de camisetas amarillas, está en las manos de alguien a la mañana siguiente.</p>
+
+            <p>Servir en esta mesa directiva me ha enseñado algo que intento llevar a cada lugar al que entro, incluido el trabajo. El amor, cuando es real, no es abstracto. Se nota en la logística. Se nota en contenedores apilados en un carrito, en gafetes y en gracias, en alguien enseñándole a un niño de nueve años a doblar bien una bolsa. La gracia es un sentimiento, pero Bags of Grace es una llamada de planeación el martes y un sábado lleno de cajas. Las dos partes importan.</p>
+
+            <p>Estoy infinitamente agradecida de ser parte de un grupo de personas que aman profundamente a los demás, y que lo demuestran con sus manos. Si estás en Austin y buscas una forma de servir, ven a buscarnos. Siempre hay una bolsa por empacar, y siempre hay lugar para un par de manos más.</p>
+        </div>
+
+        <div class="post-nav">
+            <a href="forrester-keynote.html" class="prev-post">
+                <span class="label">&larr; Publicación anterior</span>
+                Lo que una conferencia en Forrester me enseñó sobre decirle que sí a algo nuevo
+            </a>
+            <a href="./" class="back-link">Volver al blog</a>
+            <a href="decade-that-was-a-year.html" class="next-post">
+                <span class="label">Siguiente publicación &rarr;</span>
+                La década que en realidad fue un año
+            </a>
+        </div>
+    </article>
+
+    <footer>
+        <p class="tagline">"Haciendo que la tecnología sea deliciosamente satisfactoria."</p>
+        <p class="copyright">&copy; 2026 Ale Tamez. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
