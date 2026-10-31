@@ -14,14 +14,14 @@ I lead Generative AI enablement and change management, including taking Microsof
 
 The frameworks I use to drive AI adoption, rebuilt as free, interactive tools. No sign-up, no tracking, and nothing typed ever leaves the visitor's browser.
 
-| Tool | What it answers | Flywheel phase |
+| Tool | What it answers | Flywheel stage |
 |---|---|---|
-| **[AI Adoption Flywheel Check](https://alejandratamez.com/tools/flywheel-readiness.html)** | *"Is our AI rollout building momentum or quietly losing it?"* A 16-question assessment with a momentum score, a radial chart, and a phase-by-phase action plan. | Listen |
-| **[Prompt Builder (EN / ES)](https://alejandratamez.com/tools/prompt-builder.html)** | *"Why does Copilot keep giving me generic answers?"* A bilingual prompt coach using Goal, Context, Source, and Expectations, with live scoring, role templates, and follow-up prompts. | Enable |
-| **[AI Value Calculator](https://alejandratamez.com/tools/ai-value-calculator.html)** | *"We hit 92% adoption. Why can't we show ROI?"* Follows the money from licenses to value, and prices the gap between *activated* and *habitual* users. | Measure |
-| **[AI Use Case Prioritizer](https://alejandratamez.com/tools/use-case-prioritizer.html)** | *"We have 40 AI ideas. Which five first?"* Weighted scoring, an Impact vs. Ease map, editable weights, and CSV export. | Amplify |
+| **[AI Adoption Flywheel Check](https://alejandratamez.com/tools/flywheel-readiness.html)** | *"Is our AI rollout building momentum or quietly losing it?"* A 15-question assessment with a momentum score, a radial chart, and a phase-by-phase action plan. | All 5 stages |
+| **[Prompt Builder (EN / ES)](https://alejandratamez.com/tools/prompt-builder.html)** | *"Why does Copilot keep giving me generic answers?"* A bilingual prompt coach using Goal, Context, Source, and Expectations, with live scoring, role templates, and follow-up prompts. | Proficiency |
+| **[AI Value Calculator](https://alejandratamez.com/tools/ai-value-calculator.html)** | *"We hit 92% adoption. Why can't we show ROI?"* Follows the money from licenses to value, and prices the gap between *activated* and *habitual* users. | Adoption |
+| **[AI Use Case Prioritizer](https://alejandratamez.com/tools/use-case-prioritizer.html)** | *"We have 40 AI ideas. Which five first?"* Weighted scoring, an Impact vs. Ease map, editable weights, and CSV export. | New Ways of Working |
 
-The four tools map to the **Enablement Flywheel** (Listen → Enable → Measure → Amplify), the methodology behind my [Copilot Enablement at Scale case study](https://alejandratamez.com/case-studies/copilot-enablement-at-scale.html).
+The tools map to the **Enablement Flywheel**, five stages from Access → Adoption → Proficiency → New Ways of Working → Business Reengineering, the methodology behind my [Copilot Enablement at Scale case study](https://alejandratamez.com/case-studies/copilot-enablement-at-scale.html).
 
 **How they're built:** single-file pages that share one stylesheet and one helper script ([`tools/toolkit.css`](tools/toolkit.css), [`tools/toolkit.js`](tools/toolkit.js)). Charts are hand-drawn SVG. State is saved to `localStorage` so work survives a refresh. Every tool is responsive down to phone width, keyboard-accessible, and prints cleanly to PDF.
 

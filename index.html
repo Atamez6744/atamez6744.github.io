@@ -637,188 +637,6 @@
       margin-bottom: 16px;
     }
 
-    .flywheel-steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .flywheel-step {
-      text-align: center;
-      padding: 16px 8px;
-      background: var(--cream);
-      border-radius: 12px;
-    }
-
-    .flywheel-step .step-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--terracotta);
-    }
-
-    .flywheel-step .step-name {
-      font-weight: 600;
-      color: var(--navy);
-      font-size: 0.9rem;
-      margin-bottom: 4px;
-    }
-
-    .flywheel-step .step-desc {
-      font-size: 0.78rem;
-      color: var(--text-light);
-      line-height: 1.4;
-    }
-
-    /* ===== ORBIT FLYWHEEL (minimalist) ===== */
-    .flywheel-interactive {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 56px;
-      align-items: center;
-      margin-top: 32px;
-    }
-
-    .flywheel-orbit-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 320px;
-      margin: 0 auto;
-      aspect-ratio: 1;
-    }
-
-    .flywheel-orbit-svg {
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-    }
-
-    /* The rotating group of dots */
-    .flywheel-orbit {
-      transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1);
-      transform-origin: 200px 200px;
-    }
-
-    .flywheel-dot-orbit {
-      transition: r 0.8s ease, fill 0.8s ease, opacity 0.8s ease;
-    }
-
-    .flywheel-guide-ring {
-      fill: none;
-      stroke: rgba(29, 27, 24, 0.12);
-      stroke-width: 1;
-    }
-
-    /* Still center text */
-    .flywheel-center {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20% 15%;
-      pointer-events: none;
-    }
-
-    .flywheel-center-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--terracotta);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      transition: opacity 0.6s ease;
-    }
-
-    .flywheel-center-name {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.1;
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .flywheel-center.fading .flywheel-center-label,
-    .flywheel-center.fading .flywheel-center-name {
-      animation: centerFade 0.8s ease;
-    }
-
-    @keyframes centerFade {
-      0% { opacity: 0; transform: translateY(6px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Description panel (right side) */
-    .flywheel-phase-panel {
-      min-height: 160px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .flywheel-phase-eyebrow {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--text-light);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .flywheel-phase-desc {
-      font-size: 1.15rem;
-      color: var(--text-dark);
-      line-height: 1.6;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-weight: 400;
-      font-style: italic;
-    }
-
-    .flywheel-phase-panel.fading .flywheel-phase-desc {
-      animation: centerFade 0.8s ease;
-    }
-
-    .flywheel-progress {
-      display: flex;
-      gap: 24px;
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(29, 27, 24, 0.1);
-    }
-
-    .flywheel-progress-item {
-      background: none;
-      border: none;
-      padding: 0;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--text-light);
-      letter-spacing: 0.05em;
-      cursor: pointer;
-      transition: color 0.4s ease;
-      text-transform: uppercase;
-    }
-
-    .flywheel-progress-item:hover {
-      color: var(--text-medium);
-    }
-
-    .flywheel-progress-item.active {
-      color: var(--terracotta);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .flywheel-orbit { transition: none; }
-      .flywheel-dot-orbit { transition: r 0.3s ease, fill 0.3s ease; }
-      .flywheel-center.fading .flywheel-center-label,
-      .flywheel-center.fading .flywheel-center-name,
-      .flywheel-phase-panel.fading .flywheel-phase-desc { animation: none; }
-    }
-
     .competencies {
       margin-top: 40px;
     }
@@ -1025,39 +843,92 @@
 
     .do-card p { font-size: 0.95rem; color: var(--text-medium); line-height: 1.7; }
 
-    /* ===== HOW I WORK ===== */
+    /* ===== HOW I WORK: MY HUMAN MANIFESTO ===== */
     .work-section { padding: 60px 0 100px; background: var(--white); }
 
-    .work-title { font-size: 2.4rem; color: var(--navy); margin-bottom: 40px; }
-
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .work-card {
+    .human-manifesto {
       background: var(--cream);
       border: 1px solid rgba(29, 27, 24, 0.08);
-      border-radius: 16px;
-      padding: 28px;
+      border-radius: 20px;
+      padding: 56px 64px;
     }
 
-    .work-card h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.05rem;
+    .human-manifesto .section-label { margin-bottom: 12px; }
+
+    .work-title { font-size: 2.6rem; color: var(--navy); margin-bottom: 24px; }
+
+    .manifesto-lede {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      line-height: 1.45;
+      color: var(--navy);
+      max-width: 860px;
+      margin-bottom: 8px;
+    }
+
+    .manifesto-lede strong { font-weight: 700; color: var(--terracotta); }
+
+    .manifesto-intro { font-size: 1rem; color: var(--text-medium); margin-bottom: 28px; }
+
+    .manifesto-list { list-style: none; counter-reset: pledge; display: grid; gap: 0; }
+
+    .manifesto-list li {
+      counter-increment: pledge;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      padding: 20px 0;
+      border-top: 1px solid rgba(29, 27, 24, 0.12);
+      font-size: 1rem;
+      color: var(--text-medium);
+      line-height: 1.7;
+    }
+
+    .manifesto-list li::before {
+      content: counter(pledge);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
       font-weight: 700;
+      line-height: 1;
       color: var(--terracotta);
-      margin-bottom: 10px;
     }
 
-    .work-card p { font-size: 0.92rem; color: var(--text-medium); line-height: 1.65; margin-bottom: 10px; }
+    .manifesto-list strong { color: var(--navy); font-weight: 600; }
 
-    .work-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.9rem; color: var(--sage); }
+    .manifesto-promise {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .manifesto-promise div {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 22px 24px;
+      font-size: 0.98rem;
+      color: var(--text-medium);
+      line-height: 1.65;
+    }
+
+    .manifesto-promise strong {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 6px;
+    }
 
     @media (max-width: 768px) {
-      .do-grid, .work-grid { grid-template-columns: 1fr; }
+      .do-grid { grid-template-columns: 1fr; }
       .do-title, .work-title { font-size: 1.9rem; }
+      .human-manifesto { padding: 32px 22px; }
+      .manifesto-lede { font-size: 1.3rem; }
+      .manifesto-list li { grid-template-columns: 36px 1fr; gap: 10px; }
+      .manifesto-list li::before { font-size: 1.7rem; }
+      .manifesto-promise { grid-template-columns: 1fr; }
     }
 
     /* ===== PROJECTS PREVIEW ===== */
@@ -1279,12 +1150,6 @@
       .hero-grid { gap: 40px; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .experience-content { grid-template-columns: 1fr; }
-      .flywheel-steps { grid-template-columns: repeat(2, 1fr); }
-      .flywheel-interactive { grid-template-columns: 1fr; gap: 32px; }
-      .flywheel-orbit-wrapper { max-width: 260px; }
-      .flywheel-phase-panel { min-height: auto; text-align: center; align-items: center; }
-      .flywheel-progress { justify-content: center; flex-wrap: wrap; gap: 16px; }
-      .flywheel-center-name { font-size: 1.6rem; }
     }
 
     @media (max-width: 768px) {
@@ -1331,7 +1196,6 @@
       .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
       .stat-card { padding: 20px; }
       .stat-number { font-size: 2rem; }
-      .flywheel-steps { grid-template-columns: 1fr 1fr; }
       .contact-buttons { flex-direction: column; }
     }
 
@@ -1459,45 +1323,28 @@
     </div>
   </section>
 
-  <!-- HOW I WORK -->
-  <section class="work-section fade-in">
+  <!-- HOW I WORK: MY HUMAN MANIFESTO -->
+  <section class="work-section fade-in" id="how-i-work">
     <div class="container">
-      <h2 class="work-title">How I Work</h2>
-      <div class="work-grid">
-        <div class="work-card">
-          <h3>Embrace the paradox</h3>
-          <p>Life is short and life is long. Small and significant, all at once. What you choose to do with it matters radically.</p>
-          <p class="work-tagline">Choose joy. Choose growth.</p>
-        </div>
-        <div class="work-card">
-          <h3>Direct and authentic</h3>
-          <p>There's no gap between who I am and who you see. I expect the same from you &mdash; growth runs on honesty, not politics.</p>
-          <p class="work-tagline">Straight shooter. Zero filler.</p>
-        </div>
-        <div class="work-card">
-          <h3>Relationships matter most</h3>
-          <p>I remember the details about you because you matter. It's what makes me a better leader, partner, and builder.</p>
-          <p class="work-tagline">El que no vive para servir&hellip;</p>
-        </div>
-        <div class="work-card">
-          <h3>Perpetually curious</h3>
-          <p>I hate repetition, I love learning. This year it's depth: technical skills, automation, always building something new. I don't take shortcuts &mdash; I build rooms.</p>
-          <p class="work-tagline">Whiteboarding never stops.</p>
-        </div>
-        <div class="work-card">
-          <h3>Systems thinker</h3>
-          <p>I see how things fit together, how one small shift ripples across the whole. I build in parallel &mdash; AMAT, Bags of Grace, La Clave &mdash; different rooms, same values.</p>
-          <p class="work-tagline">See the whole. Build intentionally.</p>
-        </div>
-        <div class="work-card">
-          <h3>Faith informs action</h3>
-          <p>I pray like it depends on God, and I work like it depends on me. Faith isn't separate from my work &mdash; it's the operating system: justice, growth, care for the vulnerable.</p>
-          <p class="work-tagline">Pray. Work. Repeat.</p>
+      <div class="human-manifesto">
+        <span class="section-label">How I Work</span>
+        <h2 class="work-title">My Human Manifesto</h2>
+        <p class="manifesto-lede">Every person carries their own kind of magic. In the right environment, it shows up. <strong>My job is to build the environment where your magic shows up.</strong></p>
+        <p class="manifesto-intro">That means:</p>
+        <ol class="manifesto-list">
+          <li><span><strong>I meet you where you are.</strong> Your role, your pace, your starting point, in English or Spanish. Every path begins from wherever you&rsquo;re standing today.</span></li>
+          <li><span><strong>I start with what matters to you.</strong> Learning sticks when it solves a problem you already care about, so I find that problem first and build from there.</span></li>
+          <li><span><strong>I make it easy, fun, and sticky.</strong> Small wins early, real tools from day one, and enough play that people want to come back for more.</span></li>
+          <li><span><strong>I show, then I teach.</strong> I bring something real into the room, a working agent or a live demo, and once you&rsquo;re curious, I open the hood so you can build it yourself.</span></li>
+          <li><span><strong>I pay attention.</strong> I remember your project, your goals, the thing you mentioned three weeks ago. Caring about people means noticing them.</span></li>
+        </ol>
+        <div class="manifesto-promise">
+          <div><strong>Your part</strong>Your part is simple: bring your curiosity, try the thing, and tell me honestly what&rsquo;s working.</div>
+          <div><strong>What you can count on</strong>Directness, warmth, and walking away lighter than you arrived, with a skill that&rsquo;s truly yours.</div>
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- PROJECTS PREVIEW -->
   <section class="projects-preview" id="projects">
@@ -1541,7 +1388,6 @@
     </div>
   </section>
 
-
   <!-- TOOLKIT -->
   <section class="toolkit-band" id="toolkit">
     <div class="container">
@@ -1557,14 +1403,13 @@
         </a>
       </div>
       <div class="toolkit-grid fade-in">
-        <a href="tools/flywheel-readiness.html" class="toolkit-item" style="--tk:#1F4E8C"><span class="tk-phase">Listen</span><h3>Flywheel Check</h3><p>16 questions to find where your AI adoption is wobbling, and what to fix first.</p><span class="tk-go">Take the check &rarr;</span></a>
-        <a href="tools/prompt-builder.html" class="toolkit-item" style="--tk:#D9951E"><span class="tk-phase">Enable</span><h3>Prompt Builder</h3><p>Bilingual (EN/ES) Copilot prompt coach with live scoring and iteration prompts.</p><span class="tk-go">Build a prompt &rarr;</span></a>
-        <a href="tools/ai-value-calculator.html" class="toolkit-item" style="--tk:#2A8C82"><span class="tk-phase">Measure</span><h3>Value Calculator</h3><p>Adoption doesn't equal ROI. See the real return and the cost of the habit gap.</p><span class="tk-go">Run the numbers &rarr;</span></a>
-        <a href="tools/use-case-prioritizer.html" class="toolkit-item" style="--tk:#C2185B"><span class="tk-phase">Amplify</span><h3>Use Case Prioritizer</h3><p>Score AI ideas and map them on Impact vs. Ease to find your Quick Wins.</p><span class="tk-go">Prioritize &rarr;</span></a>
+        <a href="tools/flywheel-readiness.html" class="toolkit-item" style="--tk:#1F4E8C"><span class="tk-phase">All 5 stages</span><h3>Flywheel Check</h3><p>15 questions to find where your AI adoption is wobbling, and what to fix first.</p><span class="tk-go">Take the check &rarr;</span></a>
+        <a href="tools/prompt-builder.html" class="toolkit-item" style="--tk:#D9951E"><span class="tk-phase">Proficiency</span><h3>Prompt Builder</h3><p>Bilingual (EN/ES) Copilot prompt coach with live scoring and iteration prompts.</p><span class="tk-go">Build a prompt &rarr;</span></a>
+        <a href="tools/ai-value-calculator.html" class="toolkit-item" style="--tk:#2A8C82"><span class="tk-phase">Adoption</span><h3>Value Calculator</h3><p>Adoption doesn't equal ROI. See the real return and the cost of the habit gap.</p><span class="tk-go">Run the numbers &rarr;</span></a>
+        <a href="tools/use-case-prioritizer.html" class="toolkit-item" style="--tk:#C2185B"><span class="tk-phase">New Ways of Working</span><h3>Use Case Prioritizer</h3><p>Score AI ideas and map them on Impact vs. Ease to find your Quick Wins.</p><span class="tk-go">Prioritize &rarr;</span></a>
       </div>
     </div>
   </section>
-
 
   <!-- BLOG PREVIEW -->
   <section class="blog-preview" id="blog">
@@ -1620,7 +1465,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
@@ -1685,7 +1529,6 @@
     </div>
   </section>
 
-
   <!-- QUOTES RIBBON -->
   <section class="quotes-ribbon">
     <div class="container">
@@ -1705,7 +1548,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer>
@@ -1746,7 +1588,6 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
-
 
 </body>
 </html>

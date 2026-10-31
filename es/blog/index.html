@@ -361,6 +361,12 @@
             object-position: left center;
         }
 
+        /* Regular cards: keep photos at 16:9 instead of their pixel height */
+        .blog-card:not(.featured) .card-image {
+            height: auto;
+            object-position: center;
+        }
+
         .blog-card.featured.has-image {
             display: grid;
             grid-template-columns: 1.1fr 1fr;
@@ -548,7 +554,26 @@
     <div class="blog-grid">
 
         <!-- Post 1 - Featured -->
-        <a href="forrester-keynote.html" class="blog-card featured has-image">
+        <a href="austin-tech-week.html" class="blog-card featured has-image">
+            <div class="card-accent accent-terracotta"></div>
+            <img src="../../austin-tech-week.jpg" alt="Ale y otras dos asistentes sonriendo detrás de letras gigantes iluminadas que dicen Austin Tech Week" class="card-image" width="1600" height="1200" loading="lazy">
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Comunidad</span>
+                    <span class="card-tag">Aprendizaje</span>
+                    <span class="card-tag">Liderazgo</span>
+                </div>
+                <h2 class="card-title">Dime con quién andas: lecciones de Austin Tech Week</h2>
+                <p class="card-excerpt">En Austin Tech Week entré a salas llenas de desconocidos y salí con una comunidad. Por qué las personas que te rodean son la forma más rápida de aprender.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">31 de octubre de 2026 &middot; 3 min de lectura</span>
+                    <span class="card-link">Leer publicación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 2 -->
+        <a href="forrester-keynote.html" class="blog-card has-image">
             <div class="card-accent accent-navy"></div>
             <img src="../../forrester-keynote.jpg" alt="Tres panelistas sentados en sillas blancas sobre un escenario, a mitad de una conversación, frente a una gran pantalla verde y amarilla que dice Technology &amp; Innovation Forum." class="card-image" width="1600" height="888" loading="lazy">
             <div class="card-body">

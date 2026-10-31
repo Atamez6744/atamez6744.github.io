@@ -18,11 +18,12 @@
   --mushroom: #BEB4AA;
   --white: #FFFFFF;
 
-  /* Talavera accents — one per Flywheel phase */
-  --talavera: #1F4E8C;   /* Listen  */
-  --marigold: #D9951E;   /* Enable  */
-  --agave:    #2A8C82;   /* Measure */
-  --rosa:     #C2185B;   /* Amplify */
+  /* Talavera accents — one per Enablement Flywheel stage */
+  --talavera:  #1F4E8C;  /* Access                 */
+  --marigold:  #D9951E;  /* Adoption               */
+  --agave:     #2A8C82;  /* Proficiency            */
+  --rosa:      #C2185B;  /* New Ways of Working    */
+  --jacaranda: #6B4FA0;  /* Business Reengineering */
 
   --radius: 18px;
   --shadow: 0 4px 24px rgba(29, 27, 24, 0.07);
