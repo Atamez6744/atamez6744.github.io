@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Alejandra Tamez de la Garza</title>
-  <meta name="description" content="The person behind the strategy: my story, the Enablement Flywheel methodology, certifications, and the work I've done in AI enablement and community.">
+  <meta name="description" content="The person behind the strategy: my story, the Enablement Flywheel (Access to Business Reengineering), certifications, and the work I've done in AI enablement and community.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="About — Ale Tamez">
-  <meta property="og:description" content="The person behind the strategy: my story, the Enablement Flywheel methodology, certifications, and the work I've done in AI enablement and community.">
+  <meta property="og:description" content="The person behind the strategy: my story, the Enablement Flywheel (Access to Business Reengineering), certifications, and the work I've done in AI enablement and community.">
   <meta property="og:image" content="https://alejandratamez.com/New%20Headshot.png">
   <meta property="og:url" content="https://alejandratamez.com/about.html">
   <meta property="og:site_name" content="Ale Tamez">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About — Ale Tamez">
-  <meta name="twitter:description" content="The person behind the strategy: my story, the Enablement Flywheel methodology, certifications, and the work I've done in AI enablement and community.">
+  <meta name="twitter:description" content="The person behind the strategy: my story, the Enablement Flywheel (Access to Business Reengineering), certifications, and the work I've done in AI enablement and community.">
   <meta name="twitter:image" content="https://alejandratamez.com/New%20Headshot.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1241,6 +1241,10 @@
       transform: translateY(0);
     }
       .competencies + .competencies { margin-top: 28px; }
+    .flywheel-progress { flex-wrap: wrap; row-gap: 12px; }
+    .flywheel-center-name { font-size: 1.7rem; }
+    .flywheel-progress-item { color: var(--stone); }
+    .flywheel-progress-item.active { color: var(--terracotta); font-weight: 700; text-decoration: underline; text-underline-offset: 6px; }
     .comp-tag.human-tag { background: var(--terracotta); }
   </style>
   <link rel="stylesheet" href="assets/i18n.css">
@@ -1323,43 +1327,46 @@
 
       <div class="frameworks-section fade-in">
         <div class="framework-card">
-          <p style="font-size: 1.05rem; color: var(--text-medium); margin-bottom: 8px;"><span data-lang="en">A four phase methodology for sustainable technology adoption. Each phase has a human practice and a technical system behind it.</span><span data-lang="es">Una metodología de cuatro fases para una adopción tecnológica sostenible. Cada fase tiene una práctica humana y un sistema técnico que la respalda.</span></p>
+          <p style="font-size: 1.05rem; color: var(--text-medium); margin-bottom: 8px;"><span data-lang="en">A five stage journey from first access to a reengineered business. Each stage builds momentum for the next, and each pairs a human practice with a technical system.</span><span data-lang="es">Un recorrido de cinco etapas, desde el primer acceso hasta un negocio rediseñado. Cada etapa impulsa la siguiente, y cada una combina una práctica humana con un sistema técnico.</span></p>
 
           <div class="flywheel-interactive" id="flywheel">
             <div class="flywheel-orbit-wrapper">
               <svg class="flywheel-orbit-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enablement Flywheel phases">
                 <circle class="flywheel-guide-ring" cx="200" cy="200" r="150"/>
                 <g class="flywheel-orbit" id="flywheelOrbit">
-                  <circle class="flywheel-dot-orbit" data-phase="0" cx="200" cy="50" r="16" fill="#705148"/>
-                  <circle class="flywheel-dot-orbit" data-phase="1" cx="350" cy="200" r="8" fill="#BEB4AA"/>
-                  <circle class="flywheel-dot-orbit" data-phase="2" cx="200" cy="350" r="8" fill="#BEB4AA"/>
-                  <circle class="flywheel-dot-orbit" data-phase="3" cx="50" cy="200" r="8" fill="#BEB4AA"/>
+                  <circle class="flywheel-dot-orbit" data-phase="0" cx="200.00" cy="50.00" r="16" fill="#705148"/>
+                  <circle class="flywheel-dot-orbit" data-phase="1" cx="342.66" cy="153.65" r="8" fill="#BEB4AA"/>
+                  <circle class="flywheel-dot-orbit" data-phase="2" cx="288.17" cy="321.35" r="8" fill="#BEB4AA"/>
+                  <circle class="flywheel-dot-orbit" data-phase="3" cx="111.83" cy="321.35" r="8" fill="#BEB4AA"/>
+                  <circle class="flywheel-dot-orbit" data-phase="4" cx="57.34" cy="153.65" r="8" fill="#BEB4AA"/>
                 </g>
               </svg>
               <div class="flywheel-center" id="flywheelCenter">
                 <div class="flywheel-center-label" id="flywheelPhaseLabel">Phase 1</div>
-                <div class="flywheel-center-name" id="flywheelPhaseName">Listen</div>
+                <div class="flywheel-center-name" id="flywheelPhaseName">Access</div>
               </div>
             </div>
 
             <div class="flywheel-phase-panel" id="flywheelPanel" aria-live="polite">
               <div class="flywheel-phase-eyebrow">The Enablement Flywheel</div>
-              <div class="flywheel-phase-desc" id="flywheelPhaseDesc">Understand the real barriers, not the assumed ones.</div>
+              <div class="flywheel-phase-desc" id="flywheelPhaseDesc">Put the right tools in people's hands with clear guardrails: licenses, safe use guidance, and a place to ask questions.</div>
               <div class="flywheel-progress">
-                <button class="flywheel-progress-item active" data-jump="0">Listen</button>
-                <button class="flywheel-progress-item" data-jump="1">Enable</button>
-                <button class="flywheel-progress-item" data-jump="2">Measure</button>
-                <button class="flywheel-progress-item" data-jump="3">Amplify</button>
+                <button class="flywheel-progress-item active" data-jump="0">Access</button>
+                <button class="flywheel-progress-item" data-jump="1">Adoption</button>
+                <button class="flywheel-progress-item" data-jump="2">Proficiency</button>
+                <button class="flywheel-progress-item" data-jump="3">New Ways of Working</button>
+                <button class="flywheel-progress-item" data-jump="4">Business Reengineering</button>
               </div>
             </div>
           </div>
 
           <noscript>
             <ol style="margin-top: 20px; padding-left: 20px; color: var(--text-medium);">
-              <li><strong>Listen.</strong> Find the real barriers, beyond the assumed ones.</li>
-              <li><strong>Enable.</strong> Meet people where they are with relevant training and tools.</li>
-              <li><strong>Measure.</strong> Track behavior change and capability growth.</li>
-              <li><strong>Amplify.</strong> Turn early wins into organizational momentum.</li>
+              <li><strong>Access.</strong> The right tools in people's hands, with clear guardrails.</li>
+              <li><strong>Adoption.</strong> First use becomes regular use.</li>
+              <li><strong>Proficiency.</strong> Real skill: context, iteration, and judgment.</li>
+              <li><strong>New Ways of Working.</strong> Workflows redesigned with AI built in.</li>
+              <li><strong>Business Reengineering.</strong> Processes, roles, and operating models rethought around what AI makes possible.</li>
             </ol>
           </noscript>
         </div>
@@ -1557,20 +1564,23 @@
     (function() {
       const PHASES = {
         en: [
-          { name: 'Listen',  desc: 'Find the real barriers, beyond the assumed ones. Listening sessions, surveys, and usage data show where people actually get stuck.' },
-          { name: 'Enable',  desc: 'Meet people where they are with role based training, agents, and templates built around their real work.' },
-          { name: 'Measure', desc: 'Track behavior change and capability growth: redesigned workflows, use case quality, time returned.' },
-          { name: 'Amplify', desc: 'Turn early wins into organizational momentum through Champions, storytelling, and reusable playbooks.' }
+          { name: 'Access', desc: "Put the right tools in people's hands with clear guardrails: licenses, safe use guidance, and a place to ask questions." },
+          { name: 'Adoption', desc: 'Turn first use into regular use with role based training, Champions, open hours, and quick wins tied to real work.' },
+          { name: 'Proficiency', desc: 'Build real skill: context, iteration, and judgment. Measure capability and use case quality, well beyond logins.' },
+          { name: 'New Ways of Working', desc: 'Redesign workflows so AI is part of how the work gets done, with agents and automations where they earn their place.' },
+          { name: 'Business Reengineering', desc: 'Rethink processes, roles, and operating models around what AI makes possible. Then the flywheel turns again, from a higher starting point.' }
         ],
         es: [
-          { name: 'Escuchar', desc: 'Encontrar las barreras reales, más allá de las supuestas. Sesiones de escucha, encuestas y datos de uso muestran dónde se atora la gente.' },
-          { name: 'Habilitar', desc: 'Atender a cada persona donde está, con capacitación por rol, agentes y plantillas basadas en su trabajo real.' },
-          { name: 'Medir', desc: 'Medir el cambio de comportamiento y el crecimiento de capacidades: flujos rediseñados, calidad de casos de uso, tiempo recuperado.' },
-          { name: 'Amplificar', desc: 'Convertir los primeros logros en impulso organizacional con champions, historias y guías reutilizables.' }
+          { name: 'Acceso', desc: 'Poner las herramientas correctas en manos de las personas con reglas claras: licencias, guía de uso seguro y un lugar para preguntar.' },
+          { name: 'Adopción', desc: 'Convertir el primer uso en uso habitual con capacitación por rol, champions, horas abiertas y logros rápidos ligados al trabajo real.' },
+          { name: 'Dominio', desc: 'Desarrollar habilidad real: contexto, iteración y criterio. Medir capacidades y la calidad de los casos de uso, mucho más allá de los inicios de sesión.' },
+          { name: 'Nuevas formas de trabajar', desc: 'Rediseñar los flujos de trabajo para que la IA sea parte de cómo se hace el trabajo, con agentes y automatizaciones donde aportan valor.' },
+          { name: 'Reingeniería del negocio', desc: 'Repensar procesos, roles y modelos operativos a partir de lo que la IA hace posible. Y el ciclo vuelve a girar, desde un punto de partida más alto.' }
         ]
       };
       const lang = () => (window.siteLang && window.siteLang() === 'es') ? 'es' : 'en';
       let phases = PHASES[lang()];
+      const STEP = 360 / phases.length;
 
       const orbit = document.getElementById('flywheelOrbit');
       const dots = document.querySelectorAll('.flywheel-dot-orbit');
@@ -1597,7 +1607,7 @@
       function render(index) {
         // Rotate the orbit so the target dot lands at 12 o'clock (top)
         // Each step is 90 degrees clockwise
-        rotation -= 90;
+        rotation -= STEP;
         orbit.style.transform = 'rotate(' + rotation + 'deg)';
 
         // Update dot styling: active becomes big + pink, others small + gray
@@ -1645,7 +1655,7 @@
           if (i === currentPhase) return;
           const diff = i - currentPhase;
           // Pre-adjust rotation so render()'s -=90 lands on the correct position
-          rotation -= (diff - 1) * 90;
+          rotation -= (diff - 1) * STEP;
           render(i);
         });
       });
