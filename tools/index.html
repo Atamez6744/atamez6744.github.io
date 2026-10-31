@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Toolkit | Ale Tamez</title>
+  <meta name="description" content="Free, interactive tools for AI adoption and change management: prioritize AI use cases, assess adoption readiness, build better prompts in English or Spanish, and calculate real AI value.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Toolkit — Ale Tamez">
+  <meta property="og:description" content="Free tools for leaders turning AI licenses into lasting habits. No sign-up, no data collected.">
+  <meta property="og:image" content="https://alejandratamez.com/New%20Headshot.png">
+  <meta property="og:url" content="https://alejandratamez.com/tools/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="toolkit.css">
+  <style>
+    .tool-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .tool-card { display: flex; flex-direction: column; background: #fff; border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); border-top: 6px solid var(--c); color: var(--espresso); transition: transform .3s, box-shadow .3s; }
+    .tool-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); color: var(--espresso); }
+    .tool-icon { width: 54px; height: 54px; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--c) 14%, white); color: var(--c); margin-bottom: 18px; }
+    .tool-icon svg { width: 28px; height: 28px; }
+    .tool-card .tag { background: color-mix(in srgb, var(--c) 12%, white); color: var(--c); align-self: flex-start; margin-bottom: 10px; }
+    .tool-card h2 { font-size: 1.9rem; margin-bottom: 8px; }
+    .tool-card p { color: var(--espresso-soft); font-size: .98rem; flex: 1; }
+    .tool-card .q { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--espresso); margin: 14px 0 18px; }
+    .tool-card .go { font-weight: 600; color: var(--c); display: inline-flex; align-items: center; gap: 6px; }
+    .tool-card .go svg { width: 16px; height: 16px; transition: transform .25s; }
+    .tool-card:hover .go svg { transform: translateX(4px); }
+
+    .journey { margin-top: 56px; }
+    .journey h2 { font-size: 2.2rem; text-align: center; margin-bottom: 8px; }
+    .journey > p { text-align: center; color: var(--espresso-soft); max-width: 620px; margin: 0 auto 28px; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+    .step { text-align: center; padding: 0 12px; position: relative; }
+    .step .dot { width: 54px; height: 54px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; background: var(--c); position: relative; z-index: 1; }
+    .step:not(:last-child)::after { content: ''; position: absolute; top: 27px; left: 50%; width: 100%; height: 2px; background: var(--mushroom); }
+    .step h3 { font-size: 1.3rem; }
+    .step p { font-size: .88rem; color: var(--espresso-soft); }
+    .step a { font-size: .85rem; font-weight: 600; color: var(--c); }
+    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+    .principles div { background: rgba(255,255,255,.55); border-radius: 14px; padding: 18px 20px; font-size: .92rem; color: var(--espresso-soft); }
+    .principles strong { display: block; color: var(--espresso); font-size: 1rem; margin-bottom: 2px; }
+    @media (max-width: 860px) {
+      .tool-grid, .principles { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; row-gap: 28px; }
+      .step::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Ale Tamez</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="./" class="active">Toolkit</a></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <header class="tool-header">
+    <div class="container">
+      <p class="crumbs">The Toolkit</p>
+      <h1>Frameworks you can actually click.</h1>
+      <p class="lede">I've spent years helping thousands of people go from "I have a Copilot license" to "I can't imagine working without it." These are the tools I use to do it, rebuilt so anyone can use them. Free, no sign-up, and nothing you type ever leaves your browser.</p>
+      <div class="analogy"><span aria-hidden="true">🧰</span><div><strong>A framework on a slide is a recipe. A tool is the kitchen.</strong> Anyone can read about prioritization or readiness. These let you put in your own ingredients and see what comes out.</div></div>
+    </div>
+  </header>
+
+  <main class="tool-main">
+    <div class="container">
+      <div class="tool-grid">
+        <a class="tool-card" href="flywheel-readiness.html" style="--c: var(--talavera)">
+          <div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/></svg></div>
+          <span class="tag">Change Management · 3 min</span>
+          <h2>AI Adoption Flywheel Check</h2>
+          <p>16 questions across Listen, Enable, Measure, and Amplify. Get your momentum score, find your weakest phase, and leave with a specific plan.</p>
+          <div class="q">"Is our rollout building momentum or quietly losing it?"</div>
+          <span class="go">Take the check <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M13.5 4.5L21 12l-7.5 7.5M21 12H3"/></svg></span>
+        </a>
+        <a class="tool-card" href="use-case-prioritizer.html" style="--c: var(--agave)">
+          <div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h12M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/></svg></div>
+          <span class="tag">Strategy · 10 min</span>
+          <h2>AI Use Case Prioritizer</h2>
+          <p>Score your AI ideas on value, reach, data readiness, risk, and the factor everyone forgets: change effort. See them land on an Impact vs. Ease map and export your shortlist.</p>
+          <div class="q">"We have 40 AI ideas. Which five do we start with?"</div>
+          <span class="go">Prioritize your ideas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M13.5 4.5L21 12l-7.5 7.5M21 12H3"/></svg></span>
+        </a>
+        <a class="tool-card" href="prompt-builder.html" style="--c: var(--marigold)">
+          <div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg></div>
+          <span class="tag">Skills · English / Español</span>
+          <h2>Prompt Builder</h2>
+          <p>Build Copilot prompts with Goal, Context, Source, and Expectations. Live scoring, role templates, and follow-up prompts that teach the most important habit: iteration.</p>
+          <div class="q">"Why does Copilot keep giving me generic answers?"</div>
+          <span class="go">Build a prompt <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M13.5 4.5L21 12l-7.5 7.5M21 12H3"/></svg></span>
+        </a>
+        <a class="tool-card" href="ai-value-calculator.html" style="--c: var(--rosa)">
+          <div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z"/></svg></div>
+          <span class="tag">Measurement · 2 min</span>
+          <h2>AI Value Calculator</h2>
+          <p>Follow the money from licenses bought to value created. See your break-even point, your real return, and what closing the gap between "activated" and "habitual" is worth.</p>
+          <div class="q">"We hit 92% adoption. So why can't we show ROI?"</div>
+          <span class="go">Run the numbers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M13.5 4.5L21 12l-7.5 7.5M21 12H3"/></svg></span>
+        </a>
+      </div>
+
+      <section class="journey" aria-labelledby="journeyTitle">
+        <h2 id="journeyTitle">Use them together</h2>
+        <p>Each tool maps to a phase of the Enablement Flywheel, the methodology behind 97% Copilot adoption across 10,000+ people.</p>
+        <div class="steps">
+          <div class="step" style="--c: var(--talavera)"><div class="dot">1</div><h3>Listen</h3><p>Find where adoption is really stuck.</p><a href="flywheel-readiness.html">Flywheel Check</a></div>
+          <div class="step" style="--c: var(--marigold)"><div class="dot">2</div><h3>Enable</h3><p>Teach the skill that changes everything.</p><a href="prompt-builder.html">Prompt Builder</a></div>
+          <div class="step" style="--c: var(--agave)"><div class="dot">3</div><h3>Measure</h3><p>Track value, not vanity metrics.</p><a href="ai-value-calculator.html">Value Calculator</a></div>
+          <div class="step" style="--c: var(--rosa)"><div class="dot">4</div><h3>Amplify</h3><p>Pick the next wins to scale.</p><a href="use-case-prioritizer.html">Prioritizer</a></div>
+        </div>
+      </section>
+
+      <div class="principles">
+        <div><strong>Private by design</strong>No accounts, no tracking, no server. Everything runs and stays in your browser.</div>
+        <div><strong>Built for humans</strong>Plain language, real analogies, and a next step at the end of every tool.</div>
+        <div><strong>Hand-built</strong>Plain HTML, CSS, and JavaScript, with no frameworks. Fast on any device, and printable to PDF.</div>
+      </div>
+    </div>
+  </main>
+
+  <section class="tool-cta">
+    <div class="container">
+      <h2>Want these tools working inside your organization?</h2>
+      <p>I adapt these frameworks into full enablement programs, with workshops, champions networks, and measurement that holds up.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:hola@alejandratamez.com?subject=AI%20Enablement">Let's talk</a>
+        <a class="btn btn-ghost" href="../Alejandra_Tamez_Resume.pdf" download>Download my resume</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Alejandra Tamez de la Garza. All rights reserved.</p>
+      <p class="footer-tagline">"My superpower is connection. Everything else is just logistics."</p>
+    </div>
+  </footer>
+
+  <script src="toolkit.js"></script>
+</body>
+</html>

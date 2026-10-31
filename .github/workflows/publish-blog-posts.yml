@@ -1,10 +1,10 @@
-name: Publish new blog posts
+name: Publish new blog posts and update sitemap
 
 on:
   push:
     branches: [main]
     paths:
-      - "blog/*.html"
+      - "**.html"
   workflow_dispatch: {}
 
 permissions:
@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so the sitemap can use each page's real last-modified date
 
       - uses: actions/setup-python@v5
         with:
@@ -24,14 +26,21 @@ jobs:
         id: update
         run: python3 scripts/update_blog_index.py
 
-      - name: Commit and push if blog/index.html changed
+      - name: Rebuild sitemap.xml
+        run: python3 scripts/build_sitemap.py
+
+      - name: Commit and push if anything changed
         run: |
-          if git diff --quiet -- blog/index.html; then
+          if [ -z "$(git status --porcelain -- blog/index.html sitemap.xml)" ]; then
             echo "Nothing to publish."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add blog/index.html
-          git commit -m "Auto-publish new blog post(s): ${{ steps.update.outputs.published }}"
+          git add blog/index.html sitemap.xml
+          if git diff --cached --quiet -- blog/index.html; then
+            git commit -m "Auto-update sitemap.xml"
+          else
+            git commit -m "Auto-publish new blog post(s): ${{ steps.update.outputs.published }}"
+          fi
           git push

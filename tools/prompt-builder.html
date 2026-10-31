@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Builder | Ale Tamez</title>
+  <meta name="description" content="A free bilingual (English / Spanish) prompt builder for Microsoft Copilot and other AI assistants. Build better prompts with Goal, Context, Source, and Expectations.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prompt Builder (EN / ES) — Ale Tamez Toolkit">
+  <meta property="og:description" content="Stop typing one-line prompts. Build Copilot prompts that work the first time, and know how to iterate when they don't.">
+  <meta property="og:image" content="https://alejandratamez.com/New%20Headshot.png">
+  <meta property="og:url" content="https://alejandratamez.com/tools/prompt-builder.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="toolkit.css">
+  <style>
+    .lang-toggle { display: inline-flex; background: rgba(255,255,255,.7); border-radius: 50px; padding: 4px; margin-top: 22px; }
+    .lang-toggle button { font: inherit; font-weight: 600; font-size: .85rem; border: 0; background: transparent; padding: 8px 16px; border-radius: 50px; cursor: pointer; color: var(--espresso-soft); }
+    .lang-toggle button[aria-pressed=true] { background: var(--espresso); color: #fff; }
+    .part { position: relative; padding-left: 58px; margin-bottom: 22px; }
+    .part .letter { position: absolute; left: 0; top: 0; width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.5rem; color: #fff; background: var(--c); }
+    .part label { font-size: 1rem; }
+    .part .why { font-size: .84rem; color: var(--cocoa); margin: -2px 0 8px; }
+    .part textarea { min-height: 70px; }
+    .part.done .letter::after { content: '✓'; position: absolute; right: -6px; bottom: -6px; width: 18px; height: 18px; border-radius: 50%; background: #fff; color: var(--c); font-family: 'Outfit', sans-serif; font-size: .7rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+
+    .output { background: var(--espresso); color: #F4F2EF; border-radius: 14px; padding: 20px; font-size: .95rem; line-height: 1.7; white-space: pre-wrap; min-height: 160px; font-family: 'Outfit', sans-serif; }
+    .output .ph { color: rgba(255,255,255,.4); font-style: italic; }
+    .meter { margin: 18px 0 8px; }
+    .meter-top { display: flex; justify-content: space-between; font-size: .85rem; font-weight: 600; margin-bottom: 6px; }
+    .meter-bar { height: 10px; background: var(--linen); border-radius: 10px; overflow: hidden; }
+    .meter-bar span { display: block; height: 100%; width: 0; border-radius: 10px; transition: width .35s, background .35s; }
+    .tips { list-style: none; margin-top: 12px; }
+    .tips li { font-size: .88rem; padding: 8px 0 8px 26px; position: relative; color: var(--espresso-soft); border-bottom: 1px dashed var(--linen); }
+    .tips li::before { content: '→'; position: absolute; left: 4px; color: var(--marigold); font-weight: 700; }
+    .tips li.ok::before { content: '✓'; color: var(--agave); }
+    .iterate { margin-top: 22px; }
+    .iterate h3 { font-size: 1.3rem; margin-bottom: 4px; }
+    .iter-chip { display: block; width: 100%; text-align: left; font: inherit; font-size: .88rem; background: var(--paper); border: 1.5px solid transparent; border-radius: 12px; padding: 10px 14px; margin-top: 8px; cursor: pointer; color: var(--espresso); transition: border-color .2s; }
+    .iter-chip:hover { border-color: var(--mushroom); }
+    .iter-chip small { color: var(--cocoa); display: block; font-size: .76rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Ale Tamez</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="./" class="active">Toolkit</a></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <header class="tool-header">
+    <div class="container">
+      <p class="crumbs"><a href="./">Toolkit</a> &nbsp;/&nbsp; <span data-i18n="crumb">Skills</span></p>
+      <h1 data-i18n="title">Prompt Builder</h1>
+      <p class="lede" data-i18n="lede">Most bad AI answers come from one-line prompts. This builder walks you through the four parts of a prompt that works: Goal, Context, Source, and Expectations. It scores your prompt as you type and shows you how to iterate.</p>
+      <div class="analogy"><span aria-hidden="true">🧑‍🍳</span><div data-i18n-html="analogy"><strong>Prompting is like briefing a brilliant new teammate on their first day.</strong> They're smart, but they don't know your project, your audience, or what "good" looks like. The more you tell them, the better the first draft, and you'd never expect a new hire to nail it without one round of feedback.</div></div>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="es" aria-pressed="false">Español</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="tool-main">
+    <div class="container">
+      <div class="grid-sidebar">
+        <section class="card" aria-labelledby="buildTitle">
+          <h2 id="buildTitle" data-i18n="buildTitle">Build your prompt</h2>
+          <p class="sub" data-i18n="buildSub">Start from a template or a blank page. Every field is editable.</p>
+          <div class="chip-row" id="templates" style="margin-bottom: 26px;"></div>
+
+          <div class="part" style="--c: var(--talavera)" id="p_goal">
+            <span class="letter" aria-hidden="true">G</span>
+            <label for="f_goal" data-i18n="goal">Goal: what do you want?</label>
+            <p class="why" data-i18n="goalWhy">Start with a clear action verb: draft, summarize, compare, brainstorm, rewrite.</p>
+            <textarea id="f_goal"></textarea>
+          </div>
+          <div class="part" style="--c: var(--marigold)" id="p_context">
+            <span class="letter" aria-hidden="true">C</span>
+            <label for="f_context" data-i18n="context">Context: why, and for whom?</label>
+            <p class="why" data-i18n="contextWhy">Who is the audience? What's the situation? What role should the AI play?</p>
+            <textarea id="f_context"></textarea>
+          </div>
+          <div class="part" style="--c: var(--agave)" id="p_source">
+            <span class="letter" aria-hidden="true">S</span>
+            <label for="f_source" data-i18n="source">Source: what should it use?</label>
+            <p class="why" data-i18n="sourceWhy">Point to the file, email, meeting, or data. In Copilot, type "/" to reference a file.</p>
+            <textarea id="f_source"></textarea>
+          </div>
+          <div class="part" style="--c: var(--rosa)" id="p_expect">
+            <span class="letter" aria-hidden="true">E</span>
+            <label for="f_expect" data-i18n="expect">Expectations: what does "good" look like?</label>
+            <p class="why" data-i18n="expectWhy">Format, length, tone, and what to avoid. Bullets? A table? Under 200 words?</p>
+            <textarea id="f_expect"></textarea>
+          </div>
+          <button type="button" class="btn btn-ghost btn-small" id="clearBtn" data-i18n="clear">Clear all fields</button>
+        </section>
+
+        <section class="card sticky" aria-labelledby="outTitle">
+          <h2 id="outTitle" data-i18n="outTitle">Your prompt</h2>
+          <div class="output" id="output" aria-live="polite"></div>
+          <div class="btn-row" style="margin-top: 14px;">
+            <button class="btn btn-primary btn-small" id="copyBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+              <span data-i18n="copy">Copy prompt</span>
+            </button>
+          </div>
+          <div class="meter">
+            <div class="meter-top"><span data-i18n="strength">Prompt strength</span><span id="meterLabel"></span></div>
+            <div class="meter-bar"><span id="meterBar"></span></div>
+          </div>
+          <ul class="tips" id="tips"></ul>
+          <div class="iterate">
+            <h3 data-i18n="iterTitle">Then iterate</h3>
+            <p class="hint" data-i18n="iterSub">The first answer is a first draft. Click one to copy a follow-up prompt.</p>
+            <div id="iterList"></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="method-note" data-i18n-html="note"><strong>Why these four parts?</strong> Goal, Context, Source, and Expectations is the prompt structure Microsoft teaches for Copilot, and it works for any AI assistant. In 70+ training sessions, the biggest shift I saw wasn't a better first prompt. It was people learning to <em>keep the conversation going</em>. AI is a collaborator, not a calculator. Nothing you type here leaves your browser.</div>
+    </div>
+  </main>
+
+  <section class="tool-cta">
+    <div class="container">
+      <h2 data-i18n="ctaTitle">Want your whole team prompting like this?</h2>
+      <p data-i18n="ctaSub">I run hands-on, role-specific AI training in English and Spanish, built around your real workflows.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:hola@alejandratamez.com?subject=AI%20Prompting%20Training" data-i18n="ctaBtn">Let's talk</a>
+        <a class="btn btn-ghost" href="./" data-i18n="ctaBtn2">Explore the Toolkit</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Alejandra Tamez de la Garza. All rights reserved.</p>
+      <p class="footer-tagline">"My superpower is connection. Everything else is just logistics."</p>
+    </div>
+  </footer>
+
+  <script src="toolkit.js"></script>
+  <script>
+  (function () {
+    const STORE = 'toolkit.prompt.v1';
+    const FIELDS = ['goal', 'context', 'source', 'expect'];
+
+    const UI = {
+      en: {
+        crumb: 'Skills', title: 'Prompt Builder',
+        lede: 'Most bad AI answers come from one-line prompts. This builder walks you through the four parts of a prompt that works: Goal, Context, Source, and Expectations. It scores your prompt as you type and shows you how to iterate.',
+        analogy: '<strong>Prompting is like briefing a brilliant new teammate on their first day.</strong> They’re smart, but they don’t know your project, your audience, or what “good” looks like. The more you tell them, the better the first draft, and you’d never expect a new hire to nail it without one round of feedback.',
+        buildTitle: 'Build your prompt', buildSub: 'Start from a template or a blank page. Every field is editable.',
+        goal: 'Goal: what do you want?', goalWhy: 'Start with a clear action verb: draft, summarize, compare, brainstorm, rewrite.',
+        context: 'Context: why, and for whom?', contextWhy: 'Who is the audience? What’s the situation? What role should the AI play?',
+        source: 'Source: what should it use?', sourceWhy: 'Point to the file, email, meeting, or data. In Copilot, type “/” to reference a file.',
+        expect: 'Expectations: what does “good” look like?', expectWhy: 'Format, length, tone, and what to avoid. Bullets? A table? Under 200 words?',
+        clear: 'Clear all fields', outTitle: 'Your prompt', copy: 'Copy prompt', strength: 'Prompt strength',
+        iterTitle: 'Then iterate', iterSub: 'The first answer is a first draft. Click one to copy a follow-up prompt.',
+        note: '<strong>Why these four parts?</strong> Goal, Context, Source, and Expectations is the prompt structure Microsoft teaches for Copilot, and it works for any AI assistant. In 70+ training sessions, the biggest shift I saw wasn’t a better first prompt. It was people learning to <em>keep the conversation going</em>. AI is a collaborator, not a calculator. Nothing you type here leaves your browser.',
+        ctaTitle: 'Want your whole team prompting like this?', ctaSub: 'I run hands-on, role-specific AI training in English and Spanish, built around your real workflows.', ctaBtn: 'Let’s talk', ctaBtn2: 'Explore the Toolkit',
+        placeholder: 'Your prompt will appear here as you fill in the four parts…',
+        blank: 'Blank page', copied: 'Prompt copied. Paste it into Copilot', followCopied: 'Follow-up copied',
+        levels: ['Just getting started', 'Getting there', 'Solid', 'Excellent'],
+        tips: {
+          goalMissing: 'Add a Goal. What exactly should the AI produce?',
+          goalVerb: 'Start your Goal with an action verb (draft, summarize, compare…).',
+          goalOk: 'Clear goal with an action verb.',
+          contextMissing: 'Add Context. Who is this for, and why does it matter?',
+          contextThin: 'Your Context is thin. Mention the audience or the situation.',
+          contextOk: 'Context gives the AI an audience and a situation.',
+          sourceMissing: 'Add a Source so the answer is grounded in your real content, not the internet’s guess.',
+          sourceOk: 'Grounded in a specific source.',
+          expectMissing: 'Add Expectations. Format, length, and tone are the fastest wins.',
+          expectFormat: 'Name a format (bullets, table, email, slide outline…).',
+          expectLength: 'Set a length (e.g. “under 150 words” or “5 bullets”).',
+          expectOk: 'Expectations define format and length.'
+        },
+        assemble: { context: 'Context', source: 'Use this source', expect: 'Expectations' },
+        iterations: [
+          ['Sharpen', 'Make this more concise. Cut it by 30% without losing the key points.'],
+          ['Re-aim', 'Rewrite this for an executive audience who has 60 seconds to read it.'],
+          ['Pressure-test', 'What’s missing or weak in this draft? Ask me 3 questions that would make it better.'],
+          ['Reformat', 'Turn this into a table with clear column headers.'],
+          ['Check', 'List any claims in your answer that I should verify against the source.']
+        ],
+        templates: [
+          { label: 'Weekly status update', goal: 'Draft a weekly status update for my project.', context: 'I’m a program manager. The audience is my director and two peer teams who skim updates on Friday afternoons. The project is in week 6 of 10 and slightly behind on testing.', source: 'Use my meeting notes from this week and the project tracker spreadsheet: /Project Tracker', expect: 'Use three sections: Wins, Risks, and Asks. Bullets only, under 150 words, confident but honest tone. Flag anything that needs a decision in bold.' },
+          { label: 'Meeting recap', goal: 'Summarize this meeting and pull out every action item.', context: 'The summary goes to attendees and two stakeholders who missed the meeting and need to act on decisions.', source: 'Use the transcript from today’s project kickoff meeting.', expect: 'Start with a 2-sentence summary, then a table with columns: Action, Owner, Due date. Note any decisions that were left open.' },
+          { label: 'Explain a technical topic', goal: 'Explain this engineering test report in plain language.', context: 'I’m presenting to the HR and finance leaders, who are smart but not engineers. They need to understand why the delay matters for budget and hiring.', source: 'Use the attached report: /Q3 Reliability Test Results', expect: 'Use an everyday analogy, keep it under 200 words, and end with the 3 implications they should care about. Avoid acronyms.' },
+          { label: 'Job description', goal: 'Write a job description for an AI Enablement Specialist.', context: 'We are a 10,000-person manufacturing company early in our AI journey. We want someone who is part teacher, part change agent, not a pure engineer. We value inclusive language.', source: 'Use our existing job description template and the competencies in /AI Program Charter', expect: 'Include: About the role, What you’ll do (6 bullets), What you bring (5 bullets), and Nice to have (3 bullets). Warm, human tone. Avoid jargon and gendered language.' },
+          { label: 'Hard email', goal: 'Help me draft a reply declining a request from a senior stakeholder.', context: 'A VP asked my team to take on an extra project this quarter. We don’t have capacity, but I want to protect the relationship and offer an alternative.', source: 'Use the email thread from the VP and our team capacity plan.', expect: 'Under 120 words. Warm, direct, no over-apologizing. Offer one alternative (a later start date or a smaller scope).' }
+        ]
+      },
+      es: {
+        crumb: 'Habilidades', title: 'Constructor de Prompts',
+        lede: 'La mayoría de las malas respuestas de la IA vienen de prompts de una sola línea. Esta herramienta te guía por las cuatro partes de un prompt que funciona: Objetivo, Contexto, Fuente y Expectativas. Califica tu prompt mientras escribes y te enseña a iterar.',
+        analogy: '<strong>Escribir un prompt es como darle instrucciones a una compañera brillante en su primer día.</strong> Es inteligente, pero no conoce tu proyecto, tu audiencia ni cómo se ve un buen resultado. Entre más le cuentes, mejor será el primer borrador. Y nunca esperarías que lo hiciera perfecto sin una ronda de retroalimentación.',
+        buildTitle: 'Construye tu prompt', buildSub: 'Empieza con una plantilla o desde cero. Todos los campos se pueden editar.',
+        goal: 'Objetivo: ¿qué quieres?', goalWhy: 'Empieza con un verbo de acción claro: redacta, resume, compara, genera ideas, reescribe.',
+        context: 'Contexto: ¿por qué y para quién?', contextWhy: '¿Quién es la audiencia? ¿Cuál es la situación? ¿Qué papel debe tomar la IA?',
+        source: 'Fuente: ¿qué debe usar?', sourceWhy: 'Señala el archivo, correo, reunión o datos. En Copilot, escribe “/” para referenciar un archivo.',
+        expect: 'Expectativas: ¿cómo se ve un buen resultado?', expectWhy: 'Formato, extensión, tono y qué evitar. ¿Viñetas? ¿Una tabla? ¿Menos de 200 palabras?',
+        clear: 'Borrar todo', outTitle: 'Tu prompt', copy: 'Copiar prompt', strength: 'Fuerza del prompt',
+        iterTitle: 'Después, itera', iterSub: 'La primera respuesta es un borrador. Haz clic para copiar un prompt de seguimiento.',
+        note: '<strong>¿Por qué estas cuatro partes?</strong> Objetivo, Contexto, Fuente y Expectativas es la estructura que Microsoft enseña para Copilot, y funciona con cualquier asistente de IA. En más de 70 sesiones de capacitación, el mayor cambio que vi no fue un mejor primer prompt. Fue que la gente aprendiera a <em>seguir la conversación</em>. La IA es una colaboradora, no una calculadora. Nada de lo que escribes aquí sale de tu navegador.',
+        ctaTitle: '¿Quieres que todo tu equipo escriba prompts así?', ctaSub: 'Doy capacitaciones de IA prácticas y específicas por rol, en inglés y español, basadas en tus flujos de trabajo reales.', ctaBtn: 'Hablemos', ctaBtn2: 'Ver todas las herramientas',
+        placeholder: 'Tu prompt aparecerá aquí mientras llenas las cuatro partes…',
+        blank: 'Desde cero', copied: 'Prompt copiado. Pégalo en Copilot', followCopied: 'Seguimiento copiado',
+        levels: ['Apenas empezando', 'Vas bien', 'Sólido', 'Excelente'],
+        tips: {
+          goalMissing: 'Agrega un Objetivo. ¿Qué debe producir exactamente la IA?',
+          goalVerb: 'Empieza tu Objetivo con un verbo de acción (redacta, resume, compara…).',
+          goalOk: 'Objetivo claro con verbo de acción.',
+          contextMissing: 'Agrega Contexto. ¿Para quién es y por qué importa?',
+          contextThin: 'Tu Contexto es breve. Menciona la audiencia o la situación.',
+          contextOk: 'El Contexto le da a la IA una audiencia y una situación.',
+          sourceMissing: 'Agrega una Fuente para que la respuesta se base en tu contenido real, no en lo que adivine internet.',
+          sourceOk: 'Basado en una fuente específica.',
+          expectMissing: 'Agrega Expectativas. Formato, extensión y tono son las mejoras más rápidas.',
+          expectFormat: 'Indica un formato (viñetas, tabla, correo, esquema de diapositivas…).',
+          expectLength: 'Define una extensión (por ejemplo “menos de 150 palabras” o “5 viñetas”).',
+          expectOk: 'Las Expectativas definen formato y extensión.'
+        },
+        assemble: { context: 'Contexto', source: 'Usa esta fuente', expect: 'Expectativas' },
+        iterations: [
+          ['Afinar', 'Hazlo más conciso. Reduce un 30% sin perder los puntos clave.'],
+          ['Reenfocar', 'Reescríbelo para una audiencia ejecutiva que tiene 60 segundos para leerlo.'],
+          ['Poner a prueba', '¿Qué falta o está débil en este borrador? Hazme 3 preguntas que lo mejorarían.'],
+          ['Cambiar formato', 'Conviértelo en una tabla con encabezados claros.'],
+          ['Verificar', 'Enumera las afirmaciones de tu respuesta que debo verificar contra la fuente.']
+        ],
+        templates: [
+          { label: 'Reporte semanal', goal: 'Redacta un reporte semanal del estado de mi proyecto.', context: 'Soy gerente de programa. La audiencia es mi directora y dos equipos que leen los reportes rápido los viernes. El proyecto va en la semana 6 de 10 y un poco atrasado en pruebas.', source: 'Usa mis notas de reuniones de esta semana y la hoja de seguimiento: /Seguimiento del Proyecto', expect: 'Usa tres secciones: Logros, Riesgos y Peticiones. Solo viñetas, menos de 150 palabras, tono seguro pero honesto. Marca en negritas lo que requiera una decisión.' },
+          { label: 'Resumen de reunión', goal: 'Resume esta reunión y extrae todos los pendientes.', context: 'El resumen es para los asistentes y dos personas que no asistieron y necesitan actuar sobre las decisiones.', source: 'Usa la transcripción de la reunión de arranque de hoy.', expect: 'Empieza con un resumen de 2 oraciones y luego una tabla con columnas: Pendiente, Responsable, Fecha. Señala las decisiones que quedaron abiertas.' },
+          { label: 'Mi pequeño negocio', goal: 'Genera 5 ideas de publicaciones para Instagram para mi panadería.', context: 'Tengo una panadería familiar en Monterrey. Mis clientes son familias del barrio y quiero atraer a gente joven sin perder el toque tradicional. Se acerca el Día de Muertos.', source: 'Usa la lista de mis productos más vendidos y los precios que te pego abajo.', expect: 'Para cada idea: un título, el texto de la publicación (máximo 50 palabras) y 3 hashtags. Tono cálido y cercano, en español mexicano.' },
+          { label: 'Explicar algo técnico', goal: 'Explica este reporte de pruebas de ingeniería en lenguaje sencillo.', context: 'Voy a presentarlo a líderes de RH y finanzas, que son inteligentes pero no son ingenieros. Necesitan entender por qué el retraso afecta el presupuesto y las contrataciones.', source: 'Usa el reporte adjunto: /Resultados de Pruebas T3', expect: 'Usa una analogía cotidiana, menos de 200 palabras, y termina con las 3 implicaciones que les importan. Evita siglas.' },
+          { label: 'Correo difícil', goal: 'Ayúdame a redactar una respuesta para decir que no a una petición de un líder senior.', context: 'Un VP le pidió a mi equipo un proyecto extra este trimestre. No tenemos capacidad, pero quiero cuidar la relación y ofrecer una alternativa.', source: 'Usa el hilo de correo del VP y nuestro plan de capacidad del equipo.', expect: 'Menos de 120 palabras. Cálido, directo, sin disculparse de más. Ofrece una alternativa (una fecha posterior o un alcance menor).' }
+        ]
+      }
+    };
+
+    // Heuristics, per language
+    const VERBS = {
+      en: /^(draft|write|summarize|summarise|compare|create|brainstorm|rewrite|explain|list|generate|analyze|analyse|help|turn|translate|outline|review|build|plan|prepare|identify|find|suggest|edit|improve|convert|design|propose)\b/i,
+      es: /^(redacta|escribe|resume|compara|crea|genera|reescribe|explica|enumera|lista|analiza|ay[uú]dame|convierte|traduce|revisa|prepara|identifica|encuentra|sugiere|edita|mejora|dise[nñ]a|prop[oó]n|haz|elabora)\b/i
+    };
+    const FORMAT = /(bullet|table|email|list|section|slide|paragraph|outline|headline|column|vi[nñ]eta|tabla|correo|lista|secci[oó]n|diapositiva|p[aá]rrafo|esquema|t[ií]tulo|columna)/i;
+    const LENGTH = /(\d+|one|two|three|four|five|under|max|short|brief|concise|menos de|m[aá]ximo|breve|corto|conciso|una|dos|tres|cuatro|cinco)/i;
+
+    let lang = 'en';
+    let saved = Toolkit.load(STORE, null);
+    if (saved && saved.lang) lang = saved.lang;
+    const $ = id => document.getElementById(id);
+
+    function applyLang() {
+      const t = UI[lang];
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => { if (t[el.dataset.i18n]) el.textContent = t[el.dataset.i18n]; });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => { if (t[el.dataset.i18nHtml]) el.innerHTML = t[el.dataset.i18nHtml]; });
+      document.querySelectorAll('.lang-toggle button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+      renderTemplates(); renderIterations(); update();
+    }
+
+    function renderTemplates() {
+      const t = UI[lang];
+      $('templates').innerHTML = t.templates.map((tp, i) => `<button type="button" class="chip" data-tpl="${i}">${Toolkit.escape(tp.label)}</button>`).join('') +
+        `<button type="button" class="chip" data-tpl="blank">${t.blank}</button>`;
+      $('templates').querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
+        const tp = c.dataset.tpl === 'blank' ? { goal: '', context: '', source: '', expect: '' } : t.templates[+c.dataset.tpl];
+        FIELDS.forEach(f => $('f_' + f).value = tp[f]);
+        $('templates').querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', String(x === c)));
+        update();
+      }));
+    }
+
+    function renderIterations() {
+      $('iterList').innerHTML = UI[lang].iterations.map(([k, v]) => `<button type="button" class="iter-chip"><small>${k}</small>${v}</button>`).join('');
+      $('iterList').querySelectorAll('.iter-chip').forEach((b, i) => b.addEventListener('click', () => Toolkit.copy(UI[lang].iterations[i][1], UI[lang].followCopied)));
+    }
+
+    function values() { return Object.fromEntries(FIELDS.map(f => [f, $('f_' + f).value.trim()])); }
+
+    function assemble(v) {
+      const a = UI[lang].assemble;
+      const parts = [];
+      if (v.goal) parts.push(v.goal);
+      if (v.context) parts.push(`${a.context}: ${v.context}`);
+      if (v.source) parts.push(`${a.source}: ${v.source}`);
+      if (v.expect) parts.push(`${a.expect}: ${v.expect}`);
+      return parts.join('\n\n');
+    }
+
+    function evaluate(v) {
+      const t = UI[lang].tips; const tips = []; let pts = 0;
+      const words = s => s ? s.split(/\s+/).length : 0;
+      if (!v.goal) tips.push([t.goalMissing, false]);
+      else if (!VERBS[lang].test(v.goal)) { tips.push([t.goalVerb, false]); pts += 15; }
+      else { tips.push([t.goalOk, true]); pts += 25; }
+      if (!v.context) tips.push([t.contextMissing, false]);
+      else if (words(v.context) < 10) { tips.push([t.contextThin, false]); pts += 12; }
+      else { tips.push([t.contextOk, true]); pts += 25; }
+      if (!v.source) tips.push([t.sourceMissing, false]);
+      else { tips.push([t.sourceOk, true]); pts += 20; }
+      if (!v.expect) tips.push([t.expectMissing, false]);
+      else {
+        let e = 10; const f = FORMAT.test(v.expect), l = LENGTH.test(v.expect);
+        if (f) e += 10; else tips.push([t.expectFormat, false]);
+        if (l) e += 10; else tips.push([t.expectLength, false]);
+        if (f && l) tips.push([t.expectOk, true]);
+        pts += e;
+      }
+      // Show what to fix first, then what's already working.
+      tips.sort((a, b) => a[1] - b[1]);
+      return { pts: Math.min(100, pts), tips };
+    }
+
+    function update() {
+      const v = values(), t = UI[lang];
+      FIELDS.forEach(f => $('p_' + f).classList.toggle('done', !!v[f]));
+      const text = assemble(v);
+      $('output').innerHTML = text ? Toolkit.escape(text) : `<span class="ph">${t.placeholder}</span>`;
+      const { pts, tips } = evaluate(v);
+      const lv = pts < 35 ? 0 : pts < 65 ? 1 : pts < 90 ? 2 : 3;
+      const colors = ['#C2185B', '#D9951E', '#1F4E8C', '#2A8C82'];
+      $('meterBar').style.width = Math.max(pts, 3) + '%';
+      $('meterBar').style.background = colors[lv];
+      $('meterLabel').textContent = `${pts}/100 · ${t.levels[lv]}`;
+      $('meterLabel').style.color = colors[lv];
+      $('tips').innerHTML = tips.map(([m, ok]) => `<li class="${ok ? 'ok' : ''}">${m}</li>`).join('');
+      Toolkit.save(STORE, { lang, ...v });
+    }
+
+    FIELDS.forEach(f => $('f_' + f).addEventListener('input', update));
+    $('copyBtn').addEventListener('click', () => {
+      const text = assemble(values());
+      if (!text) return Toolkit.toast(UI[lang].placeholder);
+      Toolkit.copy(text, UI[lang].copied);
+    });
+    $('clearBtn').addEventListener('click', () => { FIELDS.forEach(f => $('f_' + f).value = ''); update(); });
+    document.querySelectorAll('.lang-toggle button').forEach(b => b.addEventListener('click', () => { lang = b.dataset.lang; applyLang(); }));
+
+    // Restore previous work, or start people off with a filled-in example.
+    if (saved && FIELDS.some(f => saved[f])) FIELDS.forEach(f => $('f_' + f).value = saved[f] || '');
+    else FIELDS.forEach(f => $('f_' + f).value = UI[lang].templates[0][f]);
+    applyLang();
+  })();
+  </script>
+</body>
+</html>
