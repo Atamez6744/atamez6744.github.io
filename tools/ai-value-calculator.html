@@ -48,6 +48,21 @@
     .gap-card .range-row label, .gap-card .range-row output { color: #fff; }
     @media (max-width: 600px) { .f-row { grid-template-columns: 100px 1fr 70px; font-size: .82rem; } .num-row { grid-template-columns: 1fr 110px; } }
   </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/tools/ai-value-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/tools/ai-value-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/tools/ai-value-calculator.html">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+  </style>
+  <!-- /i18n:head -->
 </head>
 <body>
   <nav id="navbar">
@@ -60,6 +75,7 @@
         <li><a href="../blog/">Blog</a></li>
         <li><a href="../index.html#contact">Contact</a></li>
       </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Language / Idioma"><span aria-current="true">EN</span><a href="../es/tools/ai-value-calculator.html" hreflang="es" lang="es" aria-label="Ver en español">ES</a></div><!-- /i18n:switch -->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -163,10 +179,11 @@
     const saved = Toolkit.load(STORE, {});
     IDS.forEach(id => { if (saved[id] !== undefined) $(id).value = saved[id]; });
 
+    const ES = document.documentElement.lang === 'es';
     const money = n => {
       const a = Math.abs(n);
-      if (a >= 1e6) return '$' + (n / 1e6).toFixed(a >= 1e7 ? 1 : 2).replace(/\.0+$/, '') + 'M';
-      if (a >= 1e3) return '$' + Math.round(n / 1e3).toLocaleString() + 'K';
+      if (a >= 1e6) return '$' + (n / 1e6).toFixed(a >= 1e7 ? 1 : 2).replace(/\.0+$/, '') + (ES ? ' M' : 'M');
+      if (a >= 1e3) return '$' + Math.round(n / 1e3).toLocaleString() + (ES ? ' mil' : 'K');
       return '$' + Math.round(n).toLocaleString();
     };
     const num = n => Math.round(n).toLocaleString();
@@ -193,10 +210,10 @@
 
       const r = calc();
       const rows = [
-        { label: 'Licensed', note: 'what you paid for', pct: 1, val: num(r.seats), color: '#AA9D8F' },
-        { label: 'Activated', note: 'the vanity metric', pct: r.act, val: Math.round(r.act * 100) + '%', color: '#1F4E8C' },
-        { label: 'Habitual', note: 'the real metric', pct: r.habit, val: Math.round(r.habit * 100) + '%', color: '#D9951E' },
-        { label: 'Value captured', note: 'habit × redeployment', pct: r.habit * r.redeploy, val: Math.round(r.habit * r.redeploy * 100) + '%', color: '#2A8C82' }
+        { label: ES ? 'Contratadas' : 'Licensed', note: ES ? 'lo que pagaste' : 'what you paid for', pct: 1, val: num(r.seats), color: '#AA9D8F' },
+        { label: ES ? 'Activados' : 'Activated', note: ES ? 'la métrica de vanidad' : 'the vanity metric', pct: r.act, val: Math.round(r.act * 100) + '%', color: '#1F4E8C' },
+        { label: ES ? 'Habituales' : 'Habitual', note: ES ? 'la métrica real' : 'the real metric', pct: r.habit, val: Math.round(r.habit * 100) + '%', color: '#D9951E' },
+        { label: ES ? 'Valor capturado' : 'Value captured', note: ES ? 'hábito × reinversión' : 'habit × redeployment', pct: r.habit * r.redeploy, val: Math.round(r.habit * r.redeploy * 100) + '%', color: '#2A8C82' }
       ];
       $('funnel').innerHTML = rows.map(x => `
         <div class="f-row"><div class="f-label">${x.label}<small>${x.note}</small></div>
@@ -205,28 +222,28 @@
 
       $('s_cost').textContent = money(r.cost);
       $('s_value').textContent = money(r.value);
-      $('s_roi').textContent = r.cost ? r.roi.toFixed(1) + '×' : 'n/a';
-      $('s_break').textContent = isFinite(r.breakEven) ? (r.breakEven < 1 ? '<1' : Math.ceil(r.breakEven)) : 'n/a';
+      $('s_roi').textContent = r.cost ? r.roi.toFixed(1) + '×' : (ES ? 'n/d' : 'n/a');
+      $('s_break').textContent = isFinite(r.breakEven) ? (r.breakEven < 1 ? '<1' : Math.ceil(r.breakEven)) : (ES ? 'n/d' : 'n/a');
 
       const gapPts = Math.round((r.act - r.habit) * 100);
       let cls, head, body;
-      if (r.roi >= 3) { cls = 'v-good'; head = 'Strong return.'; body = `Each $1 in licenses is producing about $${r.roi.toFixed(1)} in redeployed time. Protect it: keep measuring habit, not activation, and share what your power users do.`; }
-      else if (r.roi >= 1) { cls = 'v-mid'; head = 'Paying for itself, barely.'; body = `You're above break-even, but ${gapPts} points of your workforce activated without building a habit. That gap is your biggest lever, and it's an enablement problem, not a technology problem.`; }
-      else { cls = 'v-bad'; head = 'Activation is hiding a loss.'; body = `On paper, ${Math.round(r.act * 100)}% activation looks like success. In reality, the licenses cost more than the value they create. Habitual users would each need to save ${isFinite(r.breakEven) ? Math.ceil(r.breakEven) : '∞'} minutes a day to break even.`; }
+      if (r.roi >= 3) { cls = 'v-good'; head = ES ? 'Retorno sólido.' : 'Strong return.'; body = ES ? `Cada $1 en licencias está produciendo cerca de $${r.roi.toFixed(1)} en tiempo reinvertido. Protégelo: sigue midiendo el hábito, no la activación, y comparte lo que hacen tus usuarios más avanzados.` : `Each $1 in licenses is producing about $${r.roi.toFixed(1)} in redeployed time. Protect it: keep measuring habit, not activation, and share what your power users do.`; }
+      else if (r.roi >= 1) { cls = 'v-mid'; head = ES ? 'Se paga sola, apenas.' : 'Paying for itself, barely.'; body = ES ? `Estás por encima del punto de equilibrio, pero ${gapPts} puntos de tu plantilla activaron la herramienta sin formar el hábito. Esa brecha es tu mayor palanca, y es un problema de habilitación, no de tecnología.` : `You're above break-even, but ${gapPts} points of your workforce activated without building a habit. That gap is your biggest lever, and it's an enablement problem, not a technology problem.`; }
+      else { cls = 'v-bad'; head = ES ? 'La activación está escondiendo una pérdida.' : 'Activation is hiding a loss.'; const be = isFinite(r.breakEven) ? Math.ceil(r.breakEven) : '∞'; body = ES ? `En papel, ${Math.round(r.act * 100)}% de activación parece un éxito. En realidad, las licencias cuestan más que el valor que crean. Cada usuario habitual tendría que ahorrar ${be} minutos al día para llegar al punto de equilibrio.` : `On paper, ${Math.round(r.act * 100)}% activation looks like success. In reality, the licenses cost more than the value they create. Habitual users would each need to save ${be} minutes a day to break even.`; }
       $('verdict').className = 'verdict ' + cls;
       $('verdict').innerHTML = `<strong>${head}</strong>${body}`;
 
       // Habit gap: what if every activated user became habitual?
       const full = calc(r.act);
-      $('gapText').textContent = `${gapPts}% of your seats logged in but never built a habit. If every activated user became a habitual user, you'd unlock:`;
+      $('gapText').textContent = ES ? `El ${gapPts}% de tus licencias inició sesión pero nunca formó el hábito. Si cada usuario activado se volviera habitual, desbloquearías:` : `${gapPts}% of your seats logged in but never built a habit. If every activated user became a habitual user, you'd unlock:`;
       $('gapValue').textContent = money(full.value - r.value);
 
       const lift = v('lift') / 100;
       const lifted = calc(Math.min(r.act, r.habit + lift));
       const realLift = Math.round((Math.min(r.act, r.habit + lift) - r.habit) * 100);
       $('liftText').innerHTML = realLift > 0
-        ? `A <strong>${realLift}-point</strong> lift in habitual use (role-specific training, champions, office hours) adds <strong>${money(lifted.value - r.value)}</strong> a year and moves your return from <strong>${r.roi.toFixed(1)}×</strong> to <strong>${lifted.roi.toFixed(1)}×</strong>.`
-        : `Habitual use is already at your activation ceiling. The next lever is <strong>activation</strong> or <strong>redeployment</strong>.`;
+        ? (ES ? `Un aumento de <strong>${realLift} puntos</strong> en el uso habitual (capacitación por rol, champions, horarios de consulta) agrega <strong>${money(lifted.value - r.value)}</strong> al año y lleva tu retorno de <strong>${r.roi.toFixed(1)}×</strong> a <strong>${lifted.roi.toFixed(1)}×</strong>.` : `A <strong>${realLift}-point</strong> lift in habitual use (role-specific training, champions, office hours) adds <strong>${money(lifted.value - r.value)}</strong> a year and moves your return from <strong>${r.roi.toFixed(1)}×</strong> to <strong>${lifted.roi.toFixed(1)}×</strong>.`)
+        : (ES ? `El uso habitual ya llegó al techo de tu activación. La siguiente palanca es la <strong>activación</strong> o la <strong>reinversión</strong>.` : `Habitual use is already at your activation ceiling. The next lever is <strong>activation</strong> or <strong>redeployment</strong>.`);
 
       Toolkit.save(STORE, Object.fromEntries(IDS.map(id => [id, $(id).value])));
     }

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <meta name="description" content="Compartí el escenario de la conferencia de TI de Forrester con el CIO de SailPoint para hablar de cómo la IA está transformando el rol de TI. Sentí nervios. También sentí curiosidad, y ganó la curiosidad.">
+    <meta property="og:title" content="Lo que una conferencia en Forrester me enseñó sobre decirle que sí a algo nuevo">
+    <meta property="og:description" content="Compartí el escenario de la conferencia de TI de Forrester con el CIO de SailPoint para hablar de cómo la IA está transformando el rol de TI. Sentí nervios. También sentí curiosidad, y ganó la curiosidad.">
+    <meta property="og:url" content="https://alejandratamez.com/es/blog/forrester-keynote.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ale Tamez">
+    <meta property="og:image" content="https://alejandratamez.com/forrester-keynote.jpg">
+    <title>Lo que una conferencia en Forrester me enseñó sobre decirle que sí a algo nuevo | Ale Tamez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #C48B6F;
+            --terracotta-light: #D4A08A;
+            --navy: #5A9E8F;
+            --cream: #FFFFFF;
+            --cream-dark: #F5F5F3;
+            --sage: #C9A24D;
+            --white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-medium: #5A5A5A;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--cream-dark);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .nav-logo:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--navy);
+            transition: 0.3s;
+        }
+
+        .article-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .article-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-tags span {
+            background-color: var(--cream-dark);
+            color: var(--terracotta);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+
+        .article-meta .read-time {
+            color: var(--terracotta);
+            font-weight: 500;
+        }
+
+        .article-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--terracotta);
+            border: none;
+            margin: 2rem 0;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 2.25rem 0 1rem;
+        }
+
+        .article-body p:first-of-type::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+        }
+
+        .article-body em {
+            font-style: italic;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 0.5rem 0 2rem;
+            display: block;
+        }
+
+        .article-image-caption {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            text-align: center;
+            margin-top: -1.5rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .image-row {
+            display: flex;
+            gap: 0.75rem;
+            margin: 0.5rem 0 2rem;
+        }
+
+        .image-row img {
+            width: 50%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* Post Navigation */
+        .post-nav {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--cream-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .post-nav a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--terracotta);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .post-nav a:hover {
+            color: var(--terracotta-light);
+        }
+
+        .post-nav .back-link {
+            color: var(--text-medium);
+        }
+
+        .post-nav .back-link:hover {
+            color: var(--terracotta);
+        }
+
+        .post-nav .next-post {
+            text-align: right;
+        }
+
+        .post-nav .prev-post {
+            text-align: left;
+        }
+
+        .post-nav .next-post .label,
+        .post-nav .prev-post .label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            font-weight: 400;
+            margin-bottom: 0.2rem;
+        }
+
+        footer {
+            background-color: var(--navy);
+            color: var(--cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer .tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--cream-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        footer .copyright {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--cream-dark);
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-body p:first-of-type::first-letter {
+                font-size: 3rem;
+            }
+
+            .image-row {
+                flex-direction: column;
+            }
+
+            .image-row img {
+                width: 100%;
+            }
+
+            .post-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .post-nav .next-post {
+                text-align: left;
+            }
+        }
+    </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/blog/forrester-keynote.html">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/blog/forrester-keynote.html">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/blog/forrester-keynote.html">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+  </style>
+  <!-- /i18n:head -->
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">Ale Tamez</a>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../about.html">Sobre mí</a></li>
+                <li><a href="../projects.html">Proyectos</a></li>
+                <li><a href="../tools/">Herramientas</a></li>
+                <li><a href="./">Blog</a></li>
+                <li><a href="../index.html#contact">Contacto</a></li>
+            </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Idioma / Language"><a href="../../blog/forrester-keynote.html" hreflang="en" lang="en" aria-label="View in English">EN</a><span aria-current="true">ES</span></div><!-- /i18n:switch -->
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-tags">
+                <span>Conferencias</span>
+                <span>Aprendizaje</span>
+                <span>Liderazgo</span>
+            </div>
+            <h1 class="article-title">Lo que una conferencia en Forrester me enseñó sobre decirle que sí a algo nuevo</h1>
+            <p class="article-meta"><span class="read-time">21 de octubre de 2026 &middot; 3 min de lectura</span> &middot; Forrester IT Conference, 14 de septiembre de 2026</p>
+        </header>
+
+        <img src="../../forrester-keynote.jpg" alt="Tres panelistas sentados en sillas blancas sobre un escenario, a mitad de una conversación, frente a una gran pantalla verde y amarilla que dice Technology &amp; Innovation Forum." class="article-image" width="1600" height="888">
+        <p class="article-image-caption">En el escenario de la conferencia de TI de Forrester, el 14 de septiembre de 2026, compartiendo ideas sobre cómo la IA está transformando el rol de TI.</p>
+
+        <hr class="article-divider">
+
+        <div class="article-body">
+            <p>El 14 de septiembre de 2026 subí al escenario como conferencista principal en la conferencia de TI de Forrester. Compartí ese escenario con el CIO de SailPoint, cuya sede está aquí mismo en Austin, Texas. Juntos exploramos cómo está cambiando el rol de TI y qué tan rápido evoluciona nuestro trabajo gracias a la IA.</p>
+
+            <p>Sentí nervios. También sentí curiosidad, y ganó la curiosidad.</p>
+
+            <p>Esto es lo que aprendí.</p>
+
+            <h2>Lo diferente es donde vive el crecimiento.</h2>
+
+            <p>Piensa en una música que se une a una banda en un tono que no conoce. Los primeros compases se sienten complejos y nuevos, luego el oído se ajusta y toda la sala se abre. Un escenario nuevo funciona igual. Los nervios eran una invitación, y aceptarla hizo que la experiencia fuera fabulosa.</p>
+
+            <h2>Las preguntas fueron lo mejor.</h2>
+
+            <p>La conversación con el público se sintió como el llamado y respuesta de un gran set de jazz. La gente hizo preguntas muy agudas, y después se acercaron a compartir comentarios e ideas. Cada intercambio me mandó a casa con algo nuevo en qué pensar.</p>
+
+            <h2>Dos años de aprendizaje se hicieron presentes en el escenario.</h2>
+
+            <p>Durante los últimos dos años he seguido a las autoras, autores y líderes que están dando forma a la conversación sobre IA. Leí sus libros, escuché sus ideas y aprendí de sus experimentos. En el escenario, todo eso cobró vida. Me encontré citándolos y recomendando lo que había leído gracias a ellos.</p>
+
+            <p>Una de las recomendaciones que compartí es <em>Subtract</em> de Leidy Klotz, un libro sobre el poder de quitar sistemas heredados antes de agregar soluciones nuevas. <strong>Primero, quita.</strong> A veces el mejor retorno viene de hacer espacio, como vaciar un clóset antes de comprar más repisas. En mi propio trabajo, empiezo cada proyecto con una pregunta: ¿qué podemos retirar antes de construir algo nuevo? Una pista despejada ayuda a que la gente adopte más rápido, porque cada proceso viejo que soltamos le da espacio al nuevo para aterrizar.</p>
+
+            <p>También recomendé el podcast <em>Beyond the Prompt</em>, un compañero fabuloso para cualquiera con curiosidad sobre cómo la IA cambia la forma en que pensamos y trabajamos. Se sintió como llevar todo un coro de voces a la sala y dejar que cada una cantara.</p>
+
+            <h2>La sabiduría es una vecina fabulosa.</h2>
+
+            <p>Pasé el día rodeada de líderes con años de ventaja en conocimiento y experiencia. Escuché con atención, tomé notas como estudiante y me fui con más preguntas de las que traía. Aprender a su lado fue un regalo, y aportar mi propia visión junto a la suya lo hizo todavía más dulce.</p>
+
+            <h2>Disfruté cada parte.</h2>
+
+            <p>La preparación, las mariposas en el estómago, las conversaciones en los pasillos, el escenario. Momentos así son efímeros, así que saboreé cada uno.</p>
+
+            <p><strong>Lo que me llevo:</strong> cuando algo se sienta diferente y un poco aterrador, acércate. En la sala hay espacio para ti, y tu voz puede ser la nota que faltaba.</p>
+
+            <p>En los márgenes es donde sucede la vida, y esta temporada me dio mucho en qué reflexionar. ¿Qué sala nueva te está llamando por tu nombre?</p>
+        </div>
+
+        <div class="post-nav">
+            <a href="./" class="back-link">&larr; Volver al blog</a>
+            <a href="bags-of-grace.html" class="next-post">
+                <span class="label">Siguiente publicación &rarr;</span>
+                Lo que significa servir junto a personas que aman profundamente
+            </a>
+        </div>
+    </article>
+
+    <footer>
+        <p class="tagline">"Haciendo que la tecnología sea deliciosamente satisfactoria."</p>
+        <p class="copyright">&copy; 2026 Ale Tamez. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

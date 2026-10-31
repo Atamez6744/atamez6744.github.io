@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Ale Tamez</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <meta name="description" content="Pensando en voz alta sobre IA, personas y lo que pasa cuando juntas las dos cosas con intención.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog — Ale Tamez">
+    <meta property="og:description" content="Pensando en voz alta sobre IA, personas y lo que pasa cuando juntas las dos cosas con intención.">
+    <meta property="og:image" content="https://alejandratamez.com/New%20Headshot.png">
+    <meta property="og:site_name" content="Ale Tamez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #C48B6F;
+            --navy: #5A9E8F;
+            --cream: #FFFFFF;
+            --sage: #C9A24D;
+            --white: #FFFFFF;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--navy);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- NAV ---- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid rgba(90, 158, 143, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-logo:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--navy);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--terracotta);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--terracotta);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--navy);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* ---- HERO ---- */
+        .hero {
+            padding: 160px 2rem 80px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: rgba(90, 158, 143, 0.7);
+            line-height: 1.75;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        /* ---- FILTERS ---- */
+        .filters-section {
+            max-width: 1100px;
+            margin: 0 auto 3rem;
+            padding: 0 2rem;
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.5rem 1.25rem;
+            border-radius: 100px;
+            border: 1.5px solid rgba(90, 158, 143, 0.15);
+            background: var(--white);
+            color: var(--navy);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--terracotta);
+            color: var(--terracotta);
+        }
+
+        .filter-btn.active {
+            background: var(--terracotta);
+            border-color: var(--terracotta);
+            color: var(--white);
+        }
+
+        /* ---- BLOG GRID ---- */
+        .blog-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            box-shadow: 0 2px 12px rgba(90, 158, 143, 0.06);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .blog-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.35s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(90, 158, 143, 0.12);
+        }
+
+        .blog-card.visible:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-accent {
+            height: 4px;
+            width: 100%;
+        }
+
+        .accent-terracotta { background: var(--terracotta); }
+        .accent-navy { background: var(--navy); }
+        .accent-sage { background: var(--sage); }
+
+        .card-body {
+            padding: 2rem 2rem 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            background: rgba(196, 139, 111, 0.08);
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .card-excerpt {
+            font-size: 0.95rem;
+            color: rgba(90, 158, 143, 0.65);
+            line-height: 1.65;
+            flex: 1;
+            margin-bottom: 1.25rem;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(90, 158, 143, 0.06);
+            padding-top: 1rem;
+        }
+
+        .card-read-time {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: rgba(90, 158, 143, 0.45);
+        }
+
+        .card-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--terracotta);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: gap 0.25s ease;
+        }
+
+        .blog-card:hover .card-link {
+            gap: 0.65rem;
+        }
+
+        .card-link svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.25s ease;
+        }
+
+        .blog-card:hover .card-link svg {
+            transform: translateX(2px);
+        }
+
+        /* ---- FEATURED (first card) ---- */
+        .blog-card.featured {
+            grid-column: 1 / -1;
+        }
+
+        .blog-card.featured .card-body {
+            padding: 2.5rem 3rem 2rem;
+        }
+
+        .blog-card.featured .card-title {
+            font-size: 2rem;
+        }
+
+        .blog-card.featured .card-excerpt {
+            font-size: 1.05rem;
+            max-width: 680px;
+        }
+
+        .card-image {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: left center;
+        }
+
+        .blog-card.featured.has-image {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            grid-template-rows: auto 1fr;
+        }
+
+        .blog-card.featured.has-image .card-accent {
+            grid-column: 1 / -1;
+        }
+
+        .blog-card.featured.has-image .card-image {
+            height: 100%;
+            aspect-ratio: auto;
+            min-height: 320px;
+        }
+
+        /* ---- FOOTER ---- */
+        footer {
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-tagline {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.45);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* ---- MOBILE ---- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1.5rem 2rem 2rem;
+                gap: 1.25rem;
+                border-bottom: 1px solid rgba(90, 158, 143, 0.08);
+                box-shadow: 0 8px 24px rgba(90, 158, 143, 0.08);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero {
+                padding: 130px 1.5rem 50px;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1.25rem 4rem;
+                gap: 1.5rem;
+            }
+
+            .blog-card.featured .card-body {
+                padding: 1.75rem 1.5rem 1.25rem;
+            }
+
+            .blog-card.featured .card-title {
+                font-size: 1.5rem;
+            }
+
+            .blog-card.featured.has-image {
+                display: flex;
+            }
+
+            .blog-card.featured.has-image .card-image {
+                height: auto;
+                aspect-ratio: 16 / 9;
+                min-height: 0;
+            }
+
+            .card-body {
+                padding: 1.5rem 1.5rem 1.25rem;
+            }
+
+            .filters-section {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* ---- FADE-IN ANIMATION ---- */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/blog/">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/blog/">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/blog/">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+  </style>
+  <!-- /i18n:head -->
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">Ale Tamez</a>
+            <button class="nav-toggle" aria-label="Abrir o cerrar navegación" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../about.html">Sobre mí</a></li>
+                <li><a href="../projects.html">Proyectos</a></li>
+                <li><a href="../tools/">Herramientas</a></li>
+                <li><a href="./" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contacto</a></li>
+            </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Idioma / Language"><a href="../../blog/index.html" hreflang="en" lang="en" aria-label="View in English">EN</a><span aria-current="true">ES</span></div><!-- /i18n:switch -->
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero fade-in">
+        <span class="hero-label">El blog</span>
+        <h1>Pensando en voz alta</h1>
+        <p>Aquí es donde pienso en voz alta. Sobre IA, sobre personas y sobre lo que pasa cuando juntas las dos cosas con intención.</p>
+    </section>
+
+    <!-- FILTERS -->
+    <div class="filters-section fade-in">
+        <div class="filter-row">
+            <button class="filter-btn active">Todas</button>
+            <button class="filter-btn">Adopción de IA</button>
+            <button class="filter-btn">Liderazgo</button>
+            <button class="filter-btn">Gestión del Cambio</button>
+            <button class="filter-btn">Educación en IA</button>
+            <button class="filter-btn">Comunidad</button>
+            <button class="filter-btn">Futuro del Trabajo</button>
+            <button class="filter-btn">Estrategia de IA</button>
+            <button class="filter-btn">Aprendizaje</button>
+        </div>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-grid">
+
+        <!-- Post 1 - Featured -->
+        <a href="forrester-keynote.html" class="blog-card featured has-image">
+            <div class="card-accent accent-navy"></div>
+            <img src="../../forrester-keynote.jpg" alt="Tres panelistas sentados en sillas blancas sobre un escenario, a mitad de una conversación, frente a una gran pantalla verde y amarilla que dice Technology &amp; Innovation Forum." class="card-image" width="1600" height="888" loading="lazy">
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Conferencias</span>
+                    <span class="card-tag">Aprendizaje</span>
+                    <span class="card-tag">Liderazgo</span>
+                </div>
+                <h2 class="card-title">Lo que una conferencia en Forrester me enseñó sobre decirle que sí a algo nuevo</h2>
+                <p class="card-excerpt">Compartí el escenario de la conferencia de TI de Forrester con el CIO de SailPoint para hablar de cómo la IA está transformando el rol de TI. Sentí nervios. También sentí curiosidad, y ganó la curiosidad.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">21 de octubre de 2026 &middot; 3 min de lectura</span>
+                    <span class="card-link">Leer publicación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 2 -->
+        <a href="decade-that-was-a-year.html" class="blog-card">
+            <div class="card-accent accent-terracotta"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Adopción de IA</span>
+                    <span class="card-tag">Aprendizaje</span>
+                    <span class="card-tag">Liderazgo</span>
+                </div>
+                <h2 class="card-title">La década que en realidad fue un año</h2>
+                <p class="card-excerpt">Abrí una presentación de hace exactamente un año esperando nostalgia. Lo que encontré me hizo repensar cómo se ve realmente crecer con la IA, y cómo medirlo en mí misma.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">30 de agosto de 2026 &middot; 5 min de lectura</span>
+                    <span class="card-link">Leer publicación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 2 -->
+        <a href="the-adoption-lie.html" class="blog-card">
+            <div class="card-accent accent-terracotta"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Adopción de IA</span>
+                    <span class="card-tag">Gestión del Cambio</span>
+                    <span class="card-tag">Liderazgo</span>
+                </div>
+                <h2 class="card-title">Adopción no es igual a retorno</h2>
+                <p class="card-excerpt">Celebramos las tasas de adopción como si fueran la meta. Pero ¿la gente realmente la está usando, o solo hizo clic en el botón porque alguien se lo pidió?</p>
+                <div class="card-footer">
+                    <span class="card-read-time">14 de julio de 2025 &middot; 4 min de lectura</span>
+                    <span class="card-link">Leer publicación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 2 -->
+        <a href="ai-education-in-spanish.html" class="blog-card">
+            <div class="card-accent accent-sage"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">La Clave AI</span>
+                    <span class="card-tag">Educación en IA</span>
+                    <span class="card-tag">Comunidad</span>
+                    <span class="card-tag">Español</span>
+                </div>
+                <h2 class="card-title">Por qué estoy creando educación en IA en español</h2>
+                <p class="card-excerpt">Hay más de 500 millones de hispanohablantes en el mundo. La gran mayoría de la educación sobre IA existe solo en inglés. Eso no es una brecha. Es un muro.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">6 de octubre de 2025 &middot; 3 min de lectura</span>
+                    <span class="card-link">Leer publicación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 3 -->
+        <a href="humans-are-not-the-bottleneck.html" class="blog-card">
+            <div class="card-accent accent-navy"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Adopción de IA</span>
+                    <span class="card-tag">Liderazgo</span>
+                    <span class="card-tag">Cultura</span>
+                </div>
+                <h2 class="card-title">Las personas no son el cuello de botella</h2>
+                <p class="card-excerpt">Las personas no son el cuello de botella. El cuello de botella es la falta de confianza, contexto y relevancia.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">15 de diciembre de 2025 &middot; 3 min de lectura</span>
+                    <span class="card-link">Leer publicación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 4 -->
+        <a href="seven-books-ai-strategy.html" class="blog-card">
+            <div class="card-accent accent-terracotta"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Aprendizaje</span>
+                    <span class="card-tag">Estrategia de IA</span>
+                    <span class="card-tag">Autoconocimiento</span>
+                </div>
+                <h2 class="card-title">Lo que leer siete libros a la vez me enseñó sobre estrategia de IA</h2>
+                <p class="card-excerpt">La gente piensa que leer siete libros a la vez es caótico. Yo pienso que leer un libro a la vez es dejar patrones sobre la mesa.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">10 de febrero de 2026 &middot; 4 min de lectura</span>
+                    <span class="card-link">Leer publicación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 5 -->
+        <a href="hybrid-human-agent-teams.html" class="blog-card">
+            <div class="card-accent accent-sage"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Adopción de IA</span>
+                    <span class="card-tag">Futuro del Trabajo</span>
+                    <span class="card-tag">Manic Mondays</span>
+                </div>
+                <h2 class="card-title">Manic Monday: a favor de los equipos híbridos de personas y agentes</h2>
+                <p class="card-excerpt">El futuro del trabajo no es humano o máquina. Es humano y máquina, en roles que aprovechan las fortalezas de cada uno.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">4 de abril de 2026 &middot; 3 min de lectura</span>
+                    <span class="card-link">Leer publicación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 6 -->
+        <a href="to-be-seen.html" class="blog-card">
+            <div class="card-accent accent-navy"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Liderazgo</span>
+                    <span class="card-tag">Manic Mondays</span>
+                    <span class="card-tag">Cultura</span>
+                </div>
+                <h2 class="card-title">Manic Monday: ser vistos</h2>
+                <p class="card-excerpt">En el corazón de toda relación significativa hay un deseo humano muy simple: ser visto. Ser visto no es lo mismo que ser reconocido.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">15 de agosto de 2026 &middot; 3 min de lectura</span>
+                    <span class="card-link">Leer publicación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 7 -->
+        <a href="bags-of-grace.html" class="blog-card">
+            <div class="card-accent accent-terracotta"></div>
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Comunidad</span>
+                    <span class="card-tag">Fe</span>
+                </div>
+                <h2 class="card-title">Lo que significa servir junto a personas que aman profundamente</h2>
+                <p class="card-excerpt">Tengo el privilegio de servir en la mesa directiva de Bags of Grace como Directora de Marketing y Recaudación de Fondos, y si alguna vez quieres ver lo mejor de Austin en un solo lugar, ven a un evento de empacado.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">30 de agosto de 2026 &middot; 3 min de lectura</span>
+                    <span class="card-link">Leer publicación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">Ale Tamez</div>
+        <p class="footer-tagline">Que la IA trabaje para las personas, y no al revés.</p>
+        <p class="footer-copy">&copy; 2026 Ale Tamez. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger the animation for blog cards
+                    const delay = entry.target.classList.contains('blog-card')
+                        ? index * 120
+                        : 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, delay);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .blog-card').forEach(el => observer.observe(el));
+
+        // Filter posts by tag. The first button ("All Posts") shows everything.
+        // Matches the button's text against each card's tags, so it works in any language.
+        const filterBtns = [...document.querySelectorAll('.filter-btn')];
+        filterBtns.forEach((btn, i) => {
+            btn.setAttribute('aria-pressed', String(btn.classList.contains('active')));
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+                btn.classList.add('active');
+                btn.setAttribute('aria-pressed', 'true');
+                const tag = btn.textContent.trim().toLowerCase();
+                document.querySelectorAll('.blog-grid .blog-card').forEach(card => {
+                    const tags = [...card.querySelectorAll('.card-tag')].map(t => t.textContent.trim().toLowerCase());
+                    card.style.display = (i === 0 || tags.includes(tag)) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

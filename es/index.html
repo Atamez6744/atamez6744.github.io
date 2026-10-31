@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandra Tamez de la Garza | Convierto el valor en capacidad</title>
+  <meta name="description" content="Líder de Habilitación en IA Generativa, Catalizadora del Cambio, Constructora de Puentes. Ayudo a las personas a cambiar los atajos por crecimiento, y les muestro lo que es posible cuando de verdad se presentan.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alejandra Tamez de la Garza — Convierto el valor en capacidad">
+  <meta property="og:description" content="Líder de Habilitación en IA Generativa, Catalizadora del Cambio, Constructora de Puentes. Ayudo a las personas a cambiar los atajos por crecimiento, y les muestro lo que es posible cuando de verdad se presentan.">
+  <meta property="og:image" content="https://alejandratamez.com/New%20Headshot.png">
+  <meta property="og:url" content="https://alejandratamez.com/es/">
+  <meta property="og:site_name" content="Ale Tamez">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alejandra Tamez de la Garza — Convierto el valor en capacidad">
+  <meta name="twitter:description" content="Líder de Habilitación en IA Generativa, Catalizadora del Cambio, Constructora de Puentes. Ayudo a las personas a cambiar los atajos por crecimiento, y les muestro lo que es posible cuando de verdad se presentan.">
+  <meta name="twitter:image" content="https://alejandratamez.com/New%20Headshot.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== CSS RESET & VARIABLES ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Aesop-inspired palette: linen, taupes, cocoa, espresso */
+      --terracotta: #705148;          /* Cocoa (primary accent) */
+      --terracotta-light: #8A6A60;    /* Lighter cocoa for hovers */
+      --terracotta-dark: #523931;     /* Deeper cocoa */
+      --navy: #1D1B18;                /* Espresso (headlines, primary text) */
+      --navy-light: #3A3631;          /* Slightly softer espresso */
+      --cream: #DFDCD8;               /* Linen (main background) */
+      --cream-dark: #D2CEC8;          /* Slightly deeper linen */
+      --sage: #AA9D8F;                /* Stone (secondary text) */
+      --sage-light: #BEB4AA;          /* Mushroom (hairlines, soft elements) */
+      --text-dark: #1D1B18;
+      --text-medium: #3A3631;
+      --text-light: #705148;
+      --hairline: #BEB4AA;            /* Mushroom for borders */
+      --stone: #AA9D8F;
+      --white: #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--cream);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.005em;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--terracotta); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--terracotta-dark); }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(29, 27, 24, 0.08);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled { box-shadow: 0 2px 20px rgba(29, 27, 24, 0.1); }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--terracotta);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--navy); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--navy);
+      transition: all 0.3s;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 72px;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(228,0,124,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Subtle top frame on the hero */
+    .hero-frame {
+      position: absolute;
+      top: 72px;
+      left: 0;
+      right: 0;
+      height: 20px;
+      pointer-events: none;
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    .hero-frame svg { width: 100%; height: 100%; display: block; }
+
+    /* Talavera-inspired geometric motif, bottom-left corner of hero */
+    .talavera-accent {
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 260px;
+      height: 260px;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-frame { height: 16px; }
+      .talavera-accent { width: 180px; height: 180px; bottom: -40px; left: -40px; }
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 60px 0;
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: 3.8rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-tagline {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-style: normal;
+      font-weight: 500;
+      color: var(--terracotta);
+      margin-bottom: 28px;
+      line-height: 1.6;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+    }
+
+    .hero-text {
+      font-size: 1.1rem;
+      color: var(--text-medium);
+      margin-bottom: 24px;
+      max-width: 520px;
+    }
+
+    .role-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .role-tag {
+      background: var(--cream-dark);
+      color: var(--terracotta-dark);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(112, 81, 72, 0.15);
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--terracotta);
+      color: var(--white);
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(112, 81, 72, 0.3);
+    }
+
+    .hero-cta:hover {
+      background: var(--terracotta-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(112, 81, 72, 0.4);
+    }
+
+    .hero-cta svg { width: 18px; height: 18px; transition: transform 0.3s; }
+    .hero-cta:hover svg { transform: translateX(4px); }
+
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--navy);
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid var(--navy);
+      transition: all 0.3s;
+    }
+
+    .hero-cta-secondary:hover {
+      background: var(--navy);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .hero-cta-secondary svg { width: 18px; height: 18px; }
+
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image {
+      width: 420px;
+      height: 520px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(29, 27, 24, 0.15);
+    }
+
+    .hero-image-accent {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 200px;
+      height: 200px;
+      border: 3px solid var(--terracotta);
+      border-radius: 20px;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    /* ===== QUOTES RIBBON ===== */
+    .quotes-ribbon {
+      background: var(--navy);
+      padding: 48px 0;
+      overflow: hidden;
+    }
+
+    .quotes-track {
+      display: flex;
+      gap: 60px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .quote-item {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      max-width: 380px;
+      position: relative;
+      padding: 0 30px;
+    }
+
+    .quote-item::before {
+      content: '\201C';
+      font-size: 3rem;
+      color: var(--terracotta);
+      position: absolute;
+      top: -20px;
+      left: 0;
+      line-height: 1;
+    }
+
+    .quote-source {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-style: normal;
+      font-size: 0.75rem;
+      color: rgba(212, 200, 175, 0.7);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 14px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      padding: 120px 0;
+      background: var(--white);
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--terracotta);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 48px;
+      letter-spacing: -0.015em;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .manifesto p {
+      font-size: 1.05rem;
+      color: var(--text-medium);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .manifesto p:first-of-type::first-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      float: left;
+      color: var(--terracotta);
+      font-weight: 700;
+      line-height: 1;
+      margin-right: 8px;
+      margin-top: 4px;
+    }
+
+    .about-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .dogs-photo {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(29, 27, 24, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .dogs-caption {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--text-medium);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .care-about-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .care-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .care-tag {
+      background: var(--cream);
+      color: var(--text-medium);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid rgba(29, 27, 24, 0.08);
+    }
+
+    /* ===== EXPERIENCE SECTION ===== */
+    .experience {
+      padding: 120px 0;
+      background: var(--cream);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(29, 27, 24, 0.06);
+      border: 1px solid rgba(29, 27, 24, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(29, 27, 24, 0.1);
+    }
+
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--terracotta);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+      font-weight: 500;
+    }
+
+    .experience-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .exp-block { margin-bottom: 48px; }
+
+    /* ===== THREE PILLARS (replaces resume-style job blocks) ===== */
+    .pillars-intro {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 32px;
+    }
+
+    .pillar {
+      padding: 24px 0;
+      border-top: 1px solid rgba(29, 27, 24, 0.12);
+    }
+
+    .pillar:last-child {
+      border-bottom: 1px solid rgba(29, 27, 24, 0.12);
+    }
+
+    .pillar-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      margin-bottom: 10px;
+    }
+
+    .pillar-text {
+      font-size: 1rem;
+      color: var(--text-medium);
+      line-height: 1.7;
+    }
+
+    .pillar-text a {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--terracotta);
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .pillar-text a:hover {
+      color: var(--terracotta);
+    }
+
+    .exp-block h3 {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .exp-company {
+      font-weight: 600;
+      color: var(--terracotta);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .exp-block ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-block li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: var(--text-medium);
+    }
+
+    .exp-block li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .frameworks-section { margin-top: 60px; }
+
+    .framework-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(29, 27, 24, 0.06);
+      border-left: 4px solid var(--terracotta);
+    }
+
+    .framework-card h3 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .framework-card p {
+      font-size: 0.95rem;
+      color: var(--text-medium);
+      margin-bottom: 16px;
+    }
+
+    .flywheel-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .flywheel-step {
+      text-align: center;
+      padding: 16px 8px;
+      background: var(--cream);
+      border-radius: 12px;
+    }
+
+    .flywheel-step .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--terracotta);
+    }
+
+    .flywheel-step .step-name {
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .flywheel-step .step-desc {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      line-height: 1.4;
+    }
+
+    /* ===== ORBIT FLYWHEEL (minimalist) ===== */
+    .flywheel-interactive {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 56px;
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    .flywheel-orbit-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      aspect-ratio: 1;
+    }
+
+    .flywheel-orbit-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    /* The rotating group of dots */
+    .flywheel-orbit {
+      transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1);
+      transform-origin: 200px 200px;
+    }
+
+    .flywheel-dot-orbit {
+      transition: r 0.8s ease, fill 0.8s ease, opacity 0.8s ease;
+    }
+
+    .flywheel-guide-ring {
+      fill: none;
+      stroke: rgba(29, 27, 24, 0.12);
+      stroke-width: 1;
+    }
+
+    /* Still center text */
+    .flywheel-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20% 15%;
+      pointer-events: none;
+    }
+
+    .flywheel-center-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      transition: opacity 0.6s ease;
+    }
+
+    .flywheel-center-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .flywheel-center.fading .flywheel-center-label,
+    .flywheel-center.fading .flywheel-center-name {
+      animation: centerFade 0.8s ease;
+    }
+
+    @keyframes centerFade {
+      0% { opacity: 0; transform: translateY(6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Description panel (right side) */
+    .flywheel-phase-panel {
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .flywheel-phase-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-light);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .flywheel-phase-desc {
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      line-height: 1.6;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .flywheel-phase-panel.fading .flywheel-phase-desc {
+      animation: centerFade 0.8s ease;
+    }
+
+    .flywheel-progress {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(29, 27, 24, 0.1);
+    }
+
+    .flywheel-progress-item {
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-light);
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: color 0.4s ease;
+      text-transform: uppercase;
+    }
+
+    .flywheel-progress-item:hover {
+      color: var(--text-medium);
+    }
+
+    .flywheel-progress-item.active {
+      color: var(--terracotta);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .flywheel-orbit { transition: none; }
+      .flywheel-dot-orbit { transition: r 0.3s ease, fill 0.3s ease; }
+      .flywheel-center.fading .flywheel-center-label,
+      .flywheel-center.fading .flywheel-center-name,
+      .flywheel-phase-panel.fading .flywheel-phase-desc { animation: none; }
+    }
+
+    .competencies {
+      margin-top: 40px;
+    }
+
+    .competencies h3 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .comp-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .comp-tag {
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .certs {
+      margin-top: 40px;
+    }
+
+    .certs h3 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .cert-badges {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .cert-badge {
+      background: var(--white);
+      border: 2px solid var(--sage);
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+
+    /* ===== BLOG PREVIEW ===== */
+    .blog-preview {
+      padding: 120px 0;
+      background: var(--white);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+    }
+
+    .section-header .view-all {
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-header .view-all svg { width: 16px; height: 16px; }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .blog-card {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(29, 27, 24, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(29, 27, 24, 0.1);
+    }
+
+    .blog-card-tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .blog-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--terracotta);
+      background: rgba(112, 81, 72, 0.1);
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+
+    .blog-card h3 {
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .blog-card p {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .blog-card-footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .read-time {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .read-more {
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .read-more svg { width: 14px; height: 14px; transition: transform 0.3s; }
+    .read-more:hover svg { transform: translateX(4px); }
+
+    /* ===== WHAT I ACTUALLY DO ===== */
+    .do-section { padding: 100px 0 40px; background: var(--white); }
+
+    .do-title { font-size: 2.4rem; color: var(--navy); margin-bottom: 40px; }
+
+    .do-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .do-card {
+      background: var(--white);
+      border: 1px solid rgba(29, 27, 24, 0.08);
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .do-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(29, 27, 24, 0.08);
+    }
+
+    .do-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--cream-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .do-icon svg { width: 20px; height: 20px; color: var(--terracotta); }
+
+    .do-icon.diamond::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: var(--terracotta);
+      transform: rotate(45deg);
+      display: block;
+    }
+
+    .do-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .do-card p { font-size: 0.95rem; color: var(--text-medium); line-height: 1.7; }
+
+    /* ===== HOW I WORK ===== */
+    .work-section { padding: 60px 0 100px; background: var(--white); }
+
+    .work-title { font-size: 2.4rem; color: var(--navy); margin-bottom: 40px; }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .work-card {
+      background: var(--cream);
+      border: 1px solid rgba(29, 27, 24, 0.08);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .work-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      margin-bottom: 10px;
+    }
+
+    .work-card p { font-size: 0.92rem; color: var(--text-medium); line-height: 1.65; margin-bottom: 10px; }
+
+    .work-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.9rem; color: var(--sage); }
+
+    @media (max-width: 768px) {
+      .do-grid, .work-grid { grid-template-columns: 1fr; }
+      .do-title, .work-title { font-size: 1.9rem; }
+    }
+
+    /* ===== PROJECTS PREVIEW ===== */
+    .projects-preview {
+      padding: 120px 0;
+      background: var(--cream);
+    }
+
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      border: 1px solid rgba(29, 27, 24, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--terracotta), var(--sage));
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(29, 27, 24, 0.1);
+    }
+
+    .project-card .project-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--cream);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .project-card .project-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--terracotta);
+    }
+
+    .project-card h3 {
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: var(--text-medium);
+      line-height: 1.6;
+    }
+
+    .coming-soon-badge {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--sage);
+      background: rgba(201, 162, 77, 0.12);
+      padding: 4px 14px;
+      border-radius: 50px;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact {
+      padding: 120px 0;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .contact .section-label { color: var(--sage-light); }
+
+    .contact .section-title { color: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .contact-text {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--terracotta);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: var(--terracotta-light);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--white);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .contact-info { list-style: none; }
+
+    .contact-info li {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 1rem;
+    }
+
+    .contact-info li:last-child { border-bottom: none; }
+
+    .contact-info .info-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-info .info-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--sage-light);
+    }
+
+    .contact-info .info-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 2px;
+    }
+
+    .contact-info .info-value {
+      color: var(--white);
+    }
+
+    .contact-info a { color: var(--white); }
+    .contact-info a:hover { color: var(--sage-light); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 32px 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+    }
+
+    footer .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.25);
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero-title { font-size: 3rem; }
+      .hero-grid { gap: 40px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .experience-content { grid-template-columns: 1fr; }
+      .flywheel-steps { grid-template-columns: repeat(2, 1fr); }
+      .flywheel-interactive { grid-template-columns: 1fr; gap: 32px; }
+      .flywheel-orbit-wrapper { max-width: 260px; }
+      .flywheel-phase-panel { min-height: auto; text-align: center; align-items: center; }
+      .flywheel-progress { justify-content: center; flex-wrap: wrap; gap: 16px; }
+      .flywheel-center-name { font-size: 1.6rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid rgba(29, 27, 24, 0.1);
+        box-shadow: 0 10px 30px rgba(29, 27, 24, 0.1);
+      }
+      .hamburger { display: flex; }
+
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-content { order: 2; }
+      .hero-image-wrapper { order: 1; }
+      .hero-image { width: 280px; height: 350px; }
+      .hero-image-accent { display: none; }
+      .hero-title { font-size: 2.4rem; }
+      .hero-tagline { font-size: 0.75rem; letter-spacing: 0.18em; }
+      .hero-text { max-width: 100%; }
+
+      .quotes-track { flex-direction: column; align-items: center; gap: 32px; }
+
+      .section-title { font-size: 2rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-sidebar { position: static; }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-grid { grid-template-columns: 1fr; }
+      .project-cards { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .stat-card { padding: 20px; }
+      .stat-number { font-size: 2rem; }
+      .flywheel-steps { grid-template-columns: 1fr 1fr; }
+      .contact-buttons { flex-direction: column; }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* ===== TOOLKIT BAND ===== */
+    .toolkit-band { padding: 110px 0; background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
+    .toolkit-band::before { content: ''; position: absolute; left: -140px; bottom: -160px; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle, rgba(217,149,30,.18) 0%, transparent 70%); pointer-events: none; }
+    .toolkit-band .section-label { color: #E8B65A; }
+    .toolkit-band .section-title { color: var(--white); }
+    .toolkit-band .view-all { color: #E8B65A; }
+    .toolkit-band .view-all:hover { color: var(--white); }
+    .toolkit-intro { color: rgba(255,255,255,.72); font-size: 1rem; margin-top: -32px; max-width: 620px; }
+    .toolkit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+    .toolkit-item { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 28px 24px; color: var(--white); border-top: 4px solid var(--tk); transition: transform .3s, background .3s; display: flex; flex-direction: column; }
+    .toolkit-item:hover { transform: translateY(-4px); background: rgba(255,255,255,.1); color: var(--white); }
+    .toolkit-item .tk-phase { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--tk); filter: brightness(1.5); }
+    .toolkit-item h3 { font-size: 1.45rem; margin: 6px 0 10px; color: var(--white); }
+    .toolkit-item p { font-size: .9rem; color: rgba(255,255,255,.7); line-height: 1.6; flex: 1; }
+    .toolkit-item .tk-go { margin-top: 16px; font-weight: 600; font-size: .9rem; color: var(--white); }
+    @media (max-width: 1000px) { .toolkit-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .toolkit-grid { grid-template-columns: 1fr; } .toolkit-band { padding: 80px 0; } }
+  </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+  </style>
+  <!-- /i18n:head -->
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">Ale Tamez</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="tools/">Herramientas</a></li>
+        <li><a href="blog/">Blog</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Idioma / Language"><a href="../index.html" hreflang="en" lang="en" aria-label="View in English">EN</a><span aria-current="true">ES</span></div><!-- /i18n:switch -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir o cerrar menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in">
+          <h1 class="hero-title">Traduzco sistemas complejos en posibilidades humanas.</h1>
+          <p class="hero-text">La vida es lo que tú haces de ella. Ayudo a las personas a cambiar los atajos por crecimiento, y les muestro lo que es posible cuando de verdad se presentan.</p>
+          <div class="role-tags">
+            <span class="role-tag">Líder de Habilitación en IA</span> <span class="role-tag">Catalizadora del Cambio</span> <span class="role-tag">Constructora de Puentes</span>
+          </div>
+          <div class="hero-buttons">
+            <a href="#contact" class="hero-cta"> Trabajemos juntos
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+            <a href="../Alejandra_Tamez_Resume.pdf" download class="hero-cta-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+              Descargar CV (inglés) </a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper fade-in">
+          <img src="../New Headshot.png" alt="Alejandra Tamez de la Garza" class="hero-image">
+          <div class="hero-image-accent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I ACTUALLY DO -->
+  <section class="do-section fade-in">
+    <div class="container">
+      <h2 class="do-title">Lo que realmente hago</h2>
+      <div class="do-grid">
+        <div class="do-card">
+          <div class="do-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </div>
+          <h3>Ayudar a la gente a verlo</h3>
+          <p>Traduzco sistemas complejos de IA en posibilidades humanas. No es "aquí está la herramienta" &mdash; es "esto es lo que se vuelve posible cuando lo aprendes." Visión con los pies en la tierra.</p>
+        </div>
+        <div class="do-card">
+          <div class="do-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </div>
+          <h3>Medir lo que importa</h3>
+          <p>La adopción no se trata de uso. Se trata de rediseñar tu forma de trabajar. ¿Qué cambió en cómo haces tu trabajo? ¿Qué capacidades se volvieron posibles que antes no existían? ¿Qué fricción desapareció para liberar nuevo potencial e innovación?</p>
+        </div>
+        <div class="do-card">
+          <div class="do-icon diamond"></div>
+          <h3>Sin atajos</h3>
+          <p>No creo en ellos. Crecer requiere iterar, incomodarse y presentarse una y otra vez. Construyo sistemas y espacios que hacen que ese trabajo se sienta posible, no como un castigo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section class="work-section fade-in">
+    <div class="container">
+      <h2 class="work-title">Cómo trabajo</h2>
+      <div class="work-grid">
+        <div class="work-card">
+          <h3>Abrazar la paradoja</h3>
+          <p>La vida es corta y la vida es larga. Pequeña y significativa, todo al mismo tiempo. Lo que eliges hacer con ella importa radicalmente.</p>
+          <p class="work-tagline">Elige la alegría. Elige crecer.</p>
+        </div>
+        <div class="work-card">
+          <h3>Directa y auténtica</h3>
+          <p>No hay distancia entre quien soy y quien ves. Espero lo mismo de ti &mdash; el crecimiento funciona con honestidad, no con política.</p>
+          <p class="work-tagline">Al grano. Cero relleno.</p>
+        </div>
+        <div class="work-card">
+          <h3>Las relaciones son lo primero</h3>
+          <p>Recuerdo los detalles sobre ti porque me importas. Eso me hace mejor líder, socia y constructora.</p>
+          <p class="work-tagline">El que no vive para servir&hellip;</p>
+        </div>
+        <div class="work-card">
+          <h3>Curiosa por siempre</h3>
+          <p>Odio la repetición, amo aprender. Este año toca profundidad: habilidades técnicas, automatización, siempre construyendo algo nuevo. No tomo atajos &mdash; construyo espacios.</p>
+          <p class="work-tagline">El pizarrón nunca descansa.</p>
+        </div>
+        <div class="work-card">
+          <h3>Pensamiento sistémico</h3>
+          <p>Veo cómo encajan las piezas, cómo un pequeño cambio se expande por todo el sistema. Construyo en paralelo &mdash; AMAT, Bags of Grace, La Clave &mdash; espacios distintos, los mismos valores.</p>
+          <p class="work-tagline">Ver el todo. Construir con intención.</p>
+        </div>
+        <div class="work-card">
+          <h3>La fe guía la acción</h3>
+          <p>Oro como si dependiera de Dios y trabajo como si dependiera de mí. La fe no está separada de mi trabajo &mdash; es el sistema operativo: justicia, crecimiento y cuidado de los más vulnerables.</p>
+          <p class="work-tagline">Orar. Trabajar. Repetir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS PREVIEW -->
+  <section class="projects-preview" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-label">Proyectos</span>
+          <h2 class="section-title">Las pruebas</h2>
+        </div>
+        <a href="projects.html" class="view-all"> Ver todos los proyectos
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+      <div class="project-cards fade-in">
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          </div>
+          <h3>Habilitación de Copilot a escala</h3>
+          <p>La historia completa de cómo logramos 94% de adopción sostenida en más de 13,000 licencias: la red de Champions, la metodología Flywheel y el motor de capacitación. Este es el proyecto insignia.</p>
+          <a href="case-studies/copilot-enablement-at-scale.html" class="read-more" style="margin-top: 16px;">Leer el caso de estudio <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
+          </div>
+          <h3>Bootcamp de IA de 10 días</h3>
+          <p>Un bootcamp práctico para quien esté listo para empezar con la IA. Basado en principios de diseño de hábitos y en el marco "Team of Five". Práctica real de prompts, flujos de trabajo reales, habilidad real.</p>
+          <span class="coming-soon-badge">Caso de estudio muy pronto</span>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+          </div>
+          <h3>La Clave AI</h3>
+          <p>Educación en IA en español para más de 500 millones de hispanohablantes. Un proyecto basado en la convicción de que el acceso a la IA no debería depender del idioma que hablas.</p>
+          <span class="coming-soon-badge">En desarrollo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TOOLKIT -->
+  <section class="toolkit-band" id="toolkit">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-label">Herramientas</span>
+          <h2 class="section-title">Marcos de trabajo que puedes usar</h2>
+          <p class="toolkit-intro">Las herramientas que uso para convertir licencias de IA en hábitos duraderos, reconstruidas para que cualquiera pueda usarlas. Gratis, privadas y en tu navegador.</p>
+        </div>
+        <a href="tools/" class="view-all"> Ver las herramientas
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+      <div class="toolkit-grid fade-in">
+        <a href="tools/flywheel-readiness.html" class="toolkit-item" style="--tk:#1F4E8C"><span class="tk-phase">Escuchar</span><h3>Diagnóstico Flywheel</h3><p>16 preguntas para descubrir dónde se tambalea tu adopción de IA y qué arreglar primero.</p><span class="tk-go">Hacer el diagnóstico &rarr;</span></a> <a href="tools/prompt-builder.html" class="toolkit-item" style="--tk:#D9951E"><span class="tk-phase">Habilitar</span><h3>Constructor de Prompts</h3><p>Coach bilingüe (EN/ES) de prompts para Copilot, con calificación en vivo y prompts para iterar.</p><span class="tk-go">Construir un prompt &rarr;</span></a> <a href="tools/ai-value-calculator.html" class="toolkit-item" style="--tk:#2A8C82"><span class="tk-phase">Medir</span><h3>Calculadora de Valor</h3><p>Adopción no es igual a retorno. Descubre el retorno real y lo que te cuesta la brecha de hábito.</p><span class="tk-go">Hacer las cuentas &rarr;</span></a> <a href="tools/use-case-prioritizer.html" class="toolkit-item" style="--tk:#C2185B"><span class="tk-phase">Amplificar</span><h3>Priorizador de Casos de Uso</h3><p>Califica tus ideas de IA y ubícalas en un mapa de Impacto vs. Facilidad para encontrar tus Victorias Rápidas.</p><span class="tk-go">Priorizar &rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BLOG PREVIEW -->
+  <section class="blog-preview" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-label">Blog</span>
+          <h2 class="section-title">Ideas y aprendizajes sobre IA</h2>
+          <p style="color: var(--text-medium); font-size: 1rem; margin-top: -32px; margin-bottom: 0;">Aquí es donde pienso en voz alta. Sobre IA, sobre personas y sobre lo que pasa cuando juntas las dos cosas con intención.</p>
+        </div>
+        <a href="blog/" class="view-all"> Ver todas las publicaciones
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+      <div class="blog-grid fade-in">
+        <a href="blog/the-adoption-lie.html" class="blog-card" style="text-decoration:none;">
+          <div class="blog-card-tags">
+            <span class="blog-tag">Adopción de IA</span> <span class="blog-tag">Gestión del Cambio</span>
+          </div>
+          <h3>Adopción no es igual a retorno</h3>
+          <p>Celebramos las tasas de adopción como si fueran la meta. Pero ¿la gente realmente la está usando, o solo hizo clic en el botón porque alguien se lo pidió?</p>
+          <div class="blog-card-footer">
+            <span class="read-time">14 de julio de 2025 &middot; 4 min de lectura</span> <span class="read-more">Leer más <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+          </div>
+        </a>
+        <a href="blog/ai-education-in-spanish.html" class="blog-card" style="text-decoration:none;">
+          <div class="blog-card-tags">
+            <span class="blog-tag">La Clave AI</span> <span class="blog-tag">Comunidad</span>
+          </div>
+          <h3>Por qué estoy creando educación en IA en español</h3>
+          <p>Hay más de 500 millones de hispanohablantes en el mundo. La gran mayoría de la educación sobre IA existe solo en inglés. Eso no es una brecha. Es un muro.</p>
+          <div class="blog-card-footer">
+            <span class="read-time">6 de octubre de 2025 &middot; 3 min de lectura</span> <span class="read-more">Leer más <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+          </div>
+        </a>
+        <a href="blog/humans-are-not-the-bottleneck.html" class="blog-card" style="text-decoration:none;">
+          <div class="blog-card-tags">
+            <span class="blog-tag">Liderazgo</span> <span class="blog-tag">Cultura</span>
+          </div>
+          <h3>Las personas no son el cuello de botella</h3>
+          <p>Las personas no son el cuello de botella. Lo es la falta de confianza, contexto y relevancia. Cuando lanzas una herramienta sin explicar por qué importa, solo agregaste otra pestaña.</p>
+          <div class="blog-card-footer">
+            <span class="read-time">15 de diciembre de 2025 &middot; 3 min de lectura</span> <span class="read-more">Leer más <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="fade-in">
+          <span class="section-label">Hablemos</span>
+          <h2 class="section-title">Construyamos algo<br>que importe</h2>
+          <p class="contact-text">Ya sea que estés diseñando una estrategia de habilitación en IA, buscando una conferencista que de verdad hable en lenguaje humano, o simplemente quieras conectar con alguien que cree que las personas son lo más importante — me encantaría saber de ti. Me interesan especialmente las alianzas independientes, las conferencias y las colaboraciones que ponen a la comunidad y la valentía en el centro.</p>
+          <div class="contact-buttons">
+            <a href="mailto:hola@alejandratamez.com" class="btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              Escríbeme </a> <a href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener" class="btn-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              Conectemos en LinkedIn </a>
+          </div>
+        </div>
+        <div class="fade-in">
+          <ul class="contact-info">
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Correo</div>
+                <div class="info-value"><a href="mailto:hola@alejandratamez.com">hola@alejandratamez.com</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Ubicación</div>
+                <div class="info-value">Austin, Texas</div>
+              </div>
+            </li>
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Idiomas</div>
+                <div class="info-value">Inglés y español</div>
+              </div>
+            </li>
+            <li>
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>
+              </div>
+              <div>
+                <div class="info-label">Áreas de enfoque</div>
+                <div class="info-value">Habilitación en IA, Gestión del Cambio, Capacitación</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- QUOTES RIBBON -->
+  <section class="quotes-ribbon">
+    <div class="container">
+      <div class="quotes-track">
+        <div class="quote-item">
+          La grandeza está en la capacidad de acción de los demás. <span class="quote-source">Scott Galloway</span>
+        </div>
+        <div class="quote-item">
+          Todo lo que hagan, háganlo de corazón. <span class="quote-source">Colosenses 3:23</span>
+        </div>
+        <div class="quote-item">
+          No es porque las cosas sean difíciles que no nos atrevemos; es porque no nos atrevemos que son difíciles. <span class="quote-source">Séneca</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Alejandra Tamez de la Garza. Todos los derechos reservados.</p>
+      <p class="footer-tagline">"Mi superpoder es la conexión. Todo lo demás es pura logística."</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+
+</body>
+</html>

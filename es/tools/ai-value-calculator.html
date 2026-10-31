@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Valor de IA | Ale Tamez</title>
+  <meta name="description" content="Adopción no es igual a retorno. Esta calculadora gratuita muestra la brecha entre activar licencias de IA y crear valor real para el negocio, y cuánto vale cerrarla.">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calculadora de Valor de IA — Herramientas de Ale Tamez">
+  <meta property="og:description" content="Tu tasa de activación es una métrica de vanidad. Descubre cuánto valen realmente tus licencias de IA y qué desbloquearía cerrar la brecha de hábito.">
+  <meta property="og:image" content="https://alejandratamez.com/New%20Headshot.png">
+  <meta property="og:url" content="https://alejandratamez.com/es/tools/ai-value-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../tools/toolkit.css">
+  <style>
+    .group-title { font-size: .76rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--cocoa); margin: 6px 0 14px; padding-top: 14px; border-top: 1px solid var(--linen); }
+    .group-title:first-of-type { border-top: 0; padding-top: 0; }
+    .num-row { display: grid; grid-template-columns: 1fr 140px; gap: 12px; align-items: center; margin-bottom: 14px; }
+    .num-row label { margin: 0; }
+    .num-row input { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+    .honest { background: rgba(217,149,30,.12); border-radius: 14px; padding: 16px 16px 4px; margin-top: 8px; }
+    .honest .hint { display: block; margin: -8px 0 12px; }
+
+    .funnel { display: grid; gap: 10px; margin: 8px 0 4px; }
+    .f-row { display: grid; grid-template-columns: 150px 1fr 90px; gap: 12px; align-items: center; font-size: .9rem; }
+    .f-label { font-weight: 600; }
+    .f-label small { display: block; font-weight: 400; color: var(--cocoa); font-size: .76rem; }
+    .f-track { height: 30px; background: var(--paper); border-radius: 8px; overflow: hidden; }
+    .f-fill { height: 100%; border-radius: 8px; transition: width .4s; }
+    .f-val { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+    .verdict { margin-top: 18px; border-radius: 14px; padding: 18px 20px; font-size: .98rem; }
+    .verdict strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 4px; }
+    .v-good { background: rgba(42,140,130,.12); }
+    .v-mid  { background: rgba(217,149,30,.14); }
+    .v-bad  { background: rgba(194,24,91,.10); }
+
+    .gap-card { background: var(--espresso); color: #fff; border-radius: var(--radius); padding: 28px; margin-top: 24px; }
+    .gap-card h3 { color: #fff; font-size: 1.7rem; margin-bottom: 6px; }
+    .gap-card p { color: rgba(255,255,255,.75); }
+    .gap-card .big { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; color: var(--marigold); line-height: 1.1; margin: 10px 0 4px; font-variant-numeric: tabular-nums; }
+    .gap-card input[type=range] { background: rgba(255,255,255,.2); margin-top: 8px; }
+    .gap-card .range-row label, .gap-card .range-row output { color: #fff; }
+    @media (max-width: 600px) { .f-row { grid-template-columns: 100px 1fr 70px; font-size: .82rem; } .num-row { grid-template-columns: 1fr 110px; } }
+  </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/tools/ai-value-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/tools/ai-value-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/tools/ai-value-calculator.html">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+  </style>
+  <!-- /i18n:head -->
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Ale Tamez</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../about.html">Sobre mí</a></li>
+        <li><a href="../projects.html">Proyectos</a></li>
+        <li><a href="./" class="active">Herramientas</a></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../index.html#contact">Contacto</a></li>
+      </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Idioma / Language"><a href="../../tools/ai-value-calculator.html" hreflang="en" lang="en" aria-label="View in English">EN</a><span aria-current="true">ES</span></div><!-- /i18n:switch -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir o cerrar menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <header class="tool-header">
+    <div class="container">
+      <p class="crumbs"><a href="./">Herramientas</a> &nbsp;/&nbsp; Medición</p>
+      <h1>Calculadora de Valor de IA</h1>
+      <p class="lede">Celebramos las tasas de activación como si fueran la meta. Esta calculadora sigue el dinero desde "licencias compradas" hasta "valor realmente creado," y muestra lo que se pierde en cada paso intermedio.</p>
+      <div class="analogy"><span aria-hidden="true">🏋️</span><div><strong>La activación es la membresía del gimnasio. El valor es ponerte más fuerte.</strong> Todos los que se inscribieron en enero cuentan como "activados." El único número que cambia algo es cuántas personas siguen yendo en marzo, y qué hacen con la fuerza que construyeron.</div></div>
+    </div>
+  </header>
+
+  <main class="tool-main">
+    <div class="container">
+      <div class="grid-sidebar">
+        <section class="card" aria-labelledby="inTitle">
+          <h2 id="inTitle">Tus números</h2>
+          <p class="sub">Los valores iniciales son puntos de partida realistas. Cámbialos por los tuyos.</p>
+
+          <div class="group-title">La inversión</div>
+          <div class="num-row"><label for="seats">Licencias contratadas</label><input type="number" id="seats" min="1" step="50" value="1000"></div>
+          <div class="num-row"><label for="price">Costo por licencia / mes <span class="hint">($)</span></label><input type="number" id="price" min="0" step="1" value="30"></div>
+
+          <div class="group-title">Las personas</div>
+          <div class="range-row"><label for="activated">Activados <span class="hint">(iniciaron sesión al menos una vez)</span></label><output id="o_activated"></output><input type="range" id="activated" min="0" max="100" value="92"></div>
+          <div class="range-row"><label for="habit">Usuarios habituales <span class="hint">(lo usan 3 de cada 4 semanas)</span></label><output id="o_habit"></output><input type="range" id="habit" min="0" max="100" value="30"></div>
+          <div class="range-row"><label for="minutes">Minutos ahorrados por usuario habitual / día</label><output id="o_minutes"></output><input type="range" id="minutes" min="0" max="120" step="5" value="15"></div>
+
+          <div class="group-title">La economía</div>
+          <div class="num-row"><label for="rate">Costo total por hora <span class="hint">($)</span></label><input type="number" id="rate" min="0" step="5" value="65"></div>
+          <div class="num-row"><label for="days">Días laborales al año</label><input type="number" id="days" min="1" max="365" step="1" value="220"></div>
+
+          <div class="honest">
+            <div class="range-row"><label for="redeploy">El control honesto: tiempo reinvertido</label><output id="o_redeploy"></output><input type="range" id="redeploy" min="0" max="100" step="5" value="50"></div>
+            <span class="hint">El tiempo ahorrado solo crea valor si se usa en algo útil. ¿Qué parte de esos minutos se convierte en trabajo de mayor valor, en lugar de desaparecer en más correos?</span>
+          </div>
+        </section>
+
+        <div class="sticky">
+          <section class="card" aria-labelledby="outTitle" aria-live="polite">
+            <h2 id="outTitle">A dónde va el valor</h2>
+            <p class="sub">De licencias compradas a valor creado.</p>
+            <div class="funnel" id="funnel"></div>
+            <div class="stat-grid" style="margin-top: 22px;">
+              <div class="stat"><div class="label">Costo anual de licencias</div><div class="value" id="s_cost"></div></div>
+              <div class="stat"><div class="label">Valor creado / año</div><div class="value" id="s_value"></div></div>
+              <div class="stat"><div class="label">Retorno</div><div class="value" id="s_roi"></div><div class="note">valor ÷ costo de licencias</div></div>
+              <div class="stat"><div class="label">Punto de equilibrio</div><div class="value" id="s_break"></div><div class="note">minutos / usuario habitual / día</div></div>
+            </div>
+            <div class="verdict" id="verdict"></div>
+          </section>
+        </div>
+      </div>
+
+      <section class="gap-card" aria-labelledby="gapTitle">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <h3 id="gapTitle">La brecha de hábito</h3>
+            <p id="gapText"></p>
+            <div class="big" id="gapValue"></div>
+            <p style="font-size:.9rem;">en valor anual adicional, con las mismas licencias que ya pagas.</p>
+          </div>
+          <div>
+            <div class="range-row"><label for="lift">¿Y si la habilitación aumentara el uso habitual en…</label><output id="o_lift"></output><input type="range" id="lift" min="0" max="60" step="5" value="20"></div>
+            <p id="liftText" style="font-size: .95rem;"></p>
+          </div>
+        </div>
+      </section>
+
+      <div class="method-note">
+        <strong>Cómo se calcula:</strong> Valor = licencias × % habitual × minutos ahorrados ÷ 60 × días laborales × costo por hora × % reinvertido. Retorno = valor ÷ costo anual de licencias. Los usuarios activados pero no habituales se cuentan como sin valor medible. Es deliberadamente conservador, porque iniciar sesión una vez al mes no cambia la forma de trabajar. Úsalo para iniciar una conversación con tu director de finanzas, no como un caso de negocio auditado. <a href="../blog/the-adoption-lie.html">Leer la publicación que lo inspiró &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <section class="tool-cta">
+    <div class="container">
+      <h2>¿Lista o listo para cerrar la brecha de hábito?</h2>
+      <p>La brecha entre activado y habitual es donde la habilitación demuestra su valor. Diseñemos la tuya.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:hola@alejandratamez.com?subject=Closing%20the%20AI%20habit%20gap">Hablemos</a>
+        <a class="btn btn-ghost" href="flywheel-readiness.html">Hacer el Diagnóstico Flywheel</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Alejandra Tamez de la Garza. Todos los derechos reservados.</p>
+      <p class="footer-tagline">"Mi superpoder es la conexión. Todo lo demás es pura logística."</p>
+    </div>
+  </footer>
+
+  <script src="../../tools/toolkit.js"></script>
+  <script>
+  (function () {
+    const STORE = 'toolkit.value.v1';
+    const IDS = ['seats', 'price', 'activated', 'habit', 'minutes', 'rate', 'days', 'redeploy', 'lift'];
+    const $ = id => document.getElementById(id);
+    const saved = Toolkit.load(STORE, {});
+    IDS.forEach(id => { if (saved[id] !== undefined) $(id).value = saved[id]; });
+
+    const ES = document.documentElement.lang === 'es';
+    const money = n => {
+      const a = Math.abs(n);
+      if (a >= 1e6) return '$' + (n / 1e6).toFixed(a >= 1e7 ? 1 : 2).replace(/\.0+$/, '') + (ES ? ' M' : 'M');
+      if (a >= 1e3) return '$' + Math.round(n / 1e3).toLocaleString() + (ES ? ' mil' : 'K');
+      return '$' + Math.round(n).toLocaleString();
+    };
+    const num = n => Math.round(n).toLocaleString();
+    const v = id => Math.max(0, parseFloat($(id).value) || 0);
+
+    function calc(habitOverride) {
+      const seats = v('seats'), price = v('price'), act = Math.min(100, v('activated')) / 100;
+      // Habitual users can't exceed activated users.
+      const habit = Math.min(habitOverride !== undefined ? habitOverride : v('habit') / 100, act);
+      const minutes = v('minutes'), rate = v('rate'), days = Math.min(365, v('days')), redeploy = v('redeploy') / 100;
+      const cost = seats * price * 12;
+      const hours = seats * habit * minutes / 60 * days;
+      const value = hours * rate * redeploy;
+      const roi = cost ? value / cost : 0;
+      const denom = seats * habit * days * rate * redeploy;
+      const breakEven = denom ? (cost / denom) * 60 : Infinity;
+      return { seats, act, habit, minutes, hours, value, cost, roi, breakEven, redeploy };
+    }
+
+    function render() {
+      ['activated', 'habit', 'redeploy', 'lift'].forEach(id => $('o_' + id).textContent = $(id).value + '%');
+      $('o_minutes').textContent = $('minutes').value + ' min';
+      if (+$('habit').value > +$('activated').value) { $('habit').value = $('activated').value; $('o_habit').textContent = $('habit').value + '%'; }
+
+      const r = calc();
+      const rows = [
+        { label: ES ? 'Contratadas' : 'Licensed', note: ES ? 'lo que pagaste' : 'what you paid for', pct: 1, val: num(r.seats), color: '#AA9D8F' },
+        { label: ES ? 'Activados' : 'Activated', note: ES ? 'la métrica de vanidad' : 'the vanity metric', pct: r.act, val: Math.round(r.act * 100) + '%', color: '#1F4E8C' },
+        { label: ES ? 'Habituales' : 'Habitual', note: ES ? 'la métrica real' : 'the real metric', pct: r.habit, val: Math.round(r.habit * 100) + '%', color: '#D9951E' },
+        { label: ES ? 'Valor capturado' : 'Value captured', note: ES ? 'hábito × reinversión' : 'habit × redeployment', pct: r.habit * r.redeploy, val: Math.round(r.habit * r.redeploy * 100) + '%', color: '#2A8C82' }
+      ];
+      $('funnel').innerHTML = rows.map(x => `
+        <div class="f-row"><div class="f-label">${x.label}<small>${x.note}</small></div>
+        <div class="f-track"><div class="f-fill" style="width:${Math.max(x.pct * 100, 1)}%;background:${x.color}"></div></div>
+        <div class="f-val">${x.val}</div></div>`).join('');
+
+      $('s_cost').textContent = money(r.cost);
+      $('s_value').textContent = money(r.value);
+      $('s_roi').textContent = r.cost ? r.roi.toFixed(1) + '×' : (ES ? 'n/d' : 'n/a');
+      $('s_break').textContent = isFinite(r.breakEven) ? (r.breakEven < 1 ? '<1' : Math.ceil(r.breakEven)) : (ES ? 'n/d' : 'n/a');
+
+      const gapPts = Math.round((r.act - r.habit) * 100);
+      let cls, head, body;
+      if (r.roi >= 3) { cls = 'v-good'; head = ES ? 'Retorno sólido.' : 'Strong return.'; body = ES ? `Cada $1 en licencias está produciendo cerca de $${r.roi.toFixed(1)} en tiempo reinvertido. Protégelo: sigue midiendo el hábito, no la activación, y comparte lo que hacen tus usuarios más avanzados.` : `Each $1 in licenses is producing about $${r.roi.toFixed(1)} in redeployed time. Protect it: keep measuring habit, not activation, and share what your power users do.`; }
+      else if (r.roi >= 1) { cls = 'v-mid'; head = ES ? 'Se paga sola, apenas.' : 'Paying for itself, barely.'; body = ES ? `Estás por encima del punto de equilibrio, pero ${gapPts} puntos de tu plantilla activaron la herramienta sin formar el hábito. Esa brecha es tu mayor palanca, y es un problema de habilitación, no de tecnología.` : `You're above break-even, but ${gapPts} points of your workforce activated without building a habit. That gap is your biggest lever, and it's an enablement problem, not a technology problem.`; }
+      else { cls = 'v-bad'; head = ES ? 'La activación está escondiendo una pérdida.' : 'Activation is hiding a loss.'; const be = isFinite(r.breakEven) ? Math.ceil(r.breakEven) : '∞'; body = ES ? `En papel, ${Math.round(r.act * 100)}% de activación parece un éxito. En realidad, las licencias cuestan más que el valor que crean. Cada usuario habitual tendría que ahorrar ${be} minutos al día para llegar al punto de equilibrio.` : `On paper, ${Math.round(r.act * 100)}% activation looks like success. In reality, the licenses cost more than the value they create. Habitual users would each need to save ${be} minutes a day to break even.`; }
+      $('verdict').className = 'verdict ' + cls;
+      $('verdict').innerHTML = `<strong>${head}</strong>${body}`;
+
+      // Habit gap: what if every activated user became habitual?
+      const full = calc(r.act);
+      $('gapText').textContent = ES ? `El ${gapPts}% de tus licencias inició sesión pero nunca formó el hábito. Si cada usuario activado se volviera habitual, desbloquearías:` : `${gapPts}% of your seats logged in but never built a habit. If every activated user became a habitual user, you'd unlock:`;
+      $('gapValue').textContent = money(full.value - r.value);
+
+      const lift = v('lift') / 100;
+      const lifted = calc(Math.min(r.act, r.habit + lift));
+      const realLift = Math.round((Math.min(r.act, r.habit + lift) - r.habit) * 100);
+      $('liftText').innerHTML = realLift > 0
+        ? (ES ? `Un aumento de <strong>${realLift} puntos</strong> en el uso habitual (capacitación por rol, champions, horarios de consulta) agrega <strong>${money(lifted.value - r.value)}</strong> al año y lleva tu retorno de <strong>${r.roi.toFixed(1)}×</strong> a <strong>${lifted.roi.toFixed(1)}×</strong>.` : `A <strong>${realLift}-point</strong> lift in habitual use (role-specific training, champions, office hours) adds <strong>${money(lifted.value - r.value)}</strong> a year and moves your return from <strong>${r.roi.toFixed(1)}×</strong> to <strong>${lifted.roi.toFixed(1)}×</strong>.`)
+        : (ES ? `El uso habitual ya llegó al techo de tu activación. La siguiente palanca es la <strong>activación</strong> o la <strong>reinversión</strong>.` : `Habitual use is already at your activation ceiling. The next lever is <strong>activation</strong> or <strong>redeployment</strong>.`);
+
+      Toolkit.save(STORE, Object.fromEntries(IDS.map(id => [id, $(id).value])));
+    }
+
+    IDS.forEach(id => $(id).addEventListener('input', render));
+    render();
+  })();
+  </script>
+</body>
+</html>

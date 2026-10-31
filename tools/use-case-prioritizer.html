@@ -57,6 +57,21 @@
     .editing .editing-banner { display: block; }
     @media (max-width: 640px) { .hide-sm { display: none; } }
   </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/tools/use-case-prioritizer.html">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/tools/use-case-prioritizer.html">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/tools/use-case-prioritizer.html">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+  </style>
+  <!-- /i18n:head -->
 </head>
 <body>
   <nav id="navbar">
@@ -69,6 +84,7 @@
         <li><a href="../blog/">Blog</a></li>
         <li><a href="../index.html#contact">Contact</a></li>
       </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Language / Idioma"><span aria-current="true">EN</span><a href="../es/tools/use-case-prioritizer.html" hreflang="es" lang="es" aria-label="Ver en español">ES</a></div><!-- /i18n:switch -->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -180,29 +196,60 @@
   <script>
   (function () {
     const STORE = 'toolkit.prioritizer.v1';
+    const ES = document.documentElement.lang === 'es';
+    // Interface text in both languages; the page's <html lang> picks one.
+    const T = ES ? {
+      quick: 'Victorias Rápidas', bet: 'Grandes Apuestas', extra: 'Extras Fáciles', pit: 'Pozos sin Fondo',
+      quick1: 'Victoria Rápida', bet1: 'Gran Apuesta', extra1: 'Extra Fácil', pit1: 'Pozo sin Fondo',
+      ease: 'Facilidad', impact: 'Impacto', empty1: 'Agrega un caso de uso o carga el', empty2: 'portafolio de ejemplo para ver el mapa.',
+      emptyTable: 'Aún no hay casos de uso. Califica tu primera idea arriba o carga el portafolio de ejemplo.',
+      edit: 'Editar', remove: 'Quitar', add: 'Agregar al mapa', saveChanges: 'Guardar cambios',
+      updated: 'Caso de uso actualizado', added: 'Agregado al mapa', samples: 'Portafolio de ejemplo cargado',
+      confirmClear: '¿Quitar todos los casos de uso de la lista?', nothing: 'Aún no hay nada que exportar',
+      csv: ['Lugar', 'Caso de uso', 'Equipo'], csvEnd: ['Impacto', 'Facilidad', 'General', 'Cuadrante'], file: 'prioridades-casos-de-uso-ia.csv'
+    } : {
+      quick: 'Quick Wins', bet: 'Big Bets', extra: 'Easy Extras', pit: 'Money Pits',
+      quick1: 'Quick Win', bet1: 'Big Bet', extra1: 'Easy Extra', pit1: 'Money Pit',
+      ease: 'Ease', impact: 'Impact', empty1: 'Add a use case, or load the sample', empty2: 'portfolio to see the map come alive.',
+      emptyTable: 'No use cases yet. Score your first idea above, or load the sample portfolio.',
+      edit: 'Edit', remove: 'Remove', add: 'Add to the map', saveChanges: 'Save changes',
+      updated: 'Use case updated', added: 'Added to the map', samples: 'Sample portfolio loaded',
+      confirmClear: 'Remove every use case from the list?', nothing: 'Nothing to export yet',
+      csv: ['Rank', 'Use case', 'Team'], csvEnd: ['Impact', 'Ease', 'Overall', 'Quadrant'], file: 'ai-use-case-priorities.csv'
+    };
     const CRITERIA = [
-      { key: 'value',       label: 'Business value',     hint: 'Money saved, risk reduced, revenue, quality',  axis: 'impact', invert: false, weight: 5 },
-      { key: 'reach',       label: 'Reach & frequency',  hint: 'How many people, how often',                   axis: 'impact', invert: false, weight: 4 },
-      { key: 'data',        label: 'Data readiness',     hint: 'Is the content accessible, clean, permissioned?', axis: 'ease', invert: false, weight: 3 },
-      { key: 'feasibility', label: 'Technical feasibility', hint: 'Can today’s tools actually do this?',  axis: 'ease',   invert: false, weight: 3 },
-      { key: 'risk',        label: 'Risk',               hint: 'Compliance, IP, accuracy stakes (5 = high risk)', axis: 'ease', invert: true, weight: 3 },
-      { key: 'change',      label: 'Change effort',      hint: 'How much do habits need to shift? (5 = a lot)', axis: 'ease', invert: true, weight: 2 }
+      { key: 'value',       axis: 'impact', invert: false, weight: 5, label: ES ? 'Valor de negocio' : 'Business value', hint: ES ? 'Dinero ahorrado, riesgo reducido, ingresos, calidad' : 'Money saved, risk reduced, revenue, quality' },
+      { key: 'reach',       axis: 'impact', invert: false, weight: 4, label: ES ? 'Alcance y frecuencia' : 'Reach & frequency', hint: ES ? 'Cuántas personas, con qué frecuencia' : 'How many people, how often' },
+      { key: 'data',        axis: 'ease',   invert: false, weight: 3, label: ES ? 'Preparación de datos' : 'Data readiness', hint: ES ? '¿El contenido es accesible, está limpio y tiene permisos?' : 'Is the content accessible, clean, permissioned?' },
+      { key: 'feasibility', axis: 'ease',   invert: false, weight: 3, label: ES ? 'Viabilidad técnica' : 'Technical feasibility', hint: ES ? '¿Las herramientas de hoy realmente pueden hacerlo?' : 'Can today\u2019s tools actually do this?' },
+      { key: 'risk',        axis: 'ease',   invert: true,  weight: 3, label: ES ? 'Riesgo' : 'Risk', hint: ES ? 'Cumplimiento, propiedad intelectual, precisión (5 = riesgo alto)' : 'Compliance, IP, accuracy stakes (5 = high risk)' },
+      { key: 'change',      axis: 'ease',   invert: true,  weight: 2, label: ES ? 'Esfuerzo de cambio' : 'Change effort', hint: ES ? '¿Cuánto tienen que cambiar los hábitos? (5 = mucho)' : 'How much do habits need to shift? (5 = a lot)' }
     ];
     const DEFAULT_WEIGHTS = Object.fromEntries(CRITERIA.map(c => [c.key, c.weight]));
-    const SAMPLES = [
-      { name: 'Meeting recaps & action items', team: 'Everyone', value: 3, reach: 5, data: 5, feasibility: 5, risk: 1, change: 2 },
-      { name: 'Supplier contract first-pass review', team: 'Procurement', value: 5, reach: 2, data: 3, feasibility: 3, risk: 4, change: 3 },
-      { name: 'Engineering change notice drafting', team: 'Engineering', value: 4, reach: 3, data: 4, feasibility: 4, risk: 3, change: 3 },
-      { name: 'HR policy Q&A assistant', team: 'People Team', value: 3, reach: 4, data: 4, feasibility: 4, risk: 3, change: 2 },
-      { name: 'Autonomous customer quote pricing', team: 'Sales', value: 5, reach: 3, data: 2, feasibility: 2, risk: 5, change: 5 },
-      { name: 'Slide deck formatting cleanup', team: 'Marketing', value: 2, reach: 3, data: 5, feasibility: 4, risk: 1, change: 1 },
-      { name: 'AI-generated performance reviews', team: 'Managers', value: 2, reach: 3, data: 2, feasibility: 3, risk: 5, change: 4 }
-    ];
+    const SAMPLES = (ES ? [
+      ['Resúmenes de reuniones y pendientes', 'Todos'], ['Primera revisión de contratos con proveedores', 'Compras'],
+      ['Redacción de avisos de cambio de ingeniería', 'Ingeniería'], ['Asistente de preguntas sobre políticas de RR. HH.', 'Recursos Humanos'],
+      ['Cotizaciones autónomas para clientes', 'Ventas'], ['Limpieza de formato en presentaciones', 'Marketing'],
+      ['Evaluaciones de desempeño generadas por IA', 'Gerentes']
+    ] : [
+      ['Meeting recaps & action items', 'Everyone'], ['Supplier contract first-pass review', 'Procurement'],
+      ['Engineering change notice drafting', 'Engineering'], ['HR policy Q&A assistant', 'People Team'],
+      ['Autonomous customer quote pricing', 'Sales'], ['Slide deck formatting cleanup', 'Marketing'],
+      ['AI-generated performance reviews', 'Managers']
+    ]).map(([name, team], i) => ({ name, team, ...[
+      { value: 3, reach: 5, data: 5, feasibility: 5, risk: 1, change: 2 },
+      { value: 5, reach: 2, data: 3, feasibility: 3, risk: 4, change: 3 },
+      { value: 4, reach: 3, data: 4, feasibility: 4, risk: 3, change: 3 },
+      { value: 3, reach: 4, data: 4, feasibility: 4, risk: 3, change: 2 },
+      { value: 5, reach: 3, data: 2, feasibility: 2, risk: 5, change: 5 },
+      { value: 2, reach: 3, data: 5, feasibility: 4, risk: 1, change: 1 },
+      { value: 2, reach: 3, data: 2, feasibility: 3, risk: 5, change: 4 }
+    ][i] }));
     const Q = {
-      quick: { label: 'Quick Win', cls: 'q-quick', color: '#2A8C82' },
-      bet:   { label: 'Big Bet',   cls: 'q-bet',   color: '#1F4E8C' },
-      extra: { label: 'Easy Extra', cls: 'q-extra', color: '#D9951E' },
-      pit:   { label: 'Money Pit', cls: 'q-pit',   color: '#C2185B' }
+      quick: { label: T.quick1, cls: 'q-quick', color: '#2A8C82' },
+      bet:   { label: T.bet1,   cls: 'q-bet',   color: '#1F4E8C' },
+      extra: { label: T.extra1, cls: 'q-extra', color: '#D9951E' },
+      pit:   { label: T.pit1, cls: 'q-pit',   color: '#C2185B' }
     };
 
     let state = Toolkit.load(STORE, null) || { items: [], weights: { ...DEFAULT_WEIGHTS } };
@@ -270,14 +317,14 @@
         <line x1="${P + S/2}" y1="${P}" x2="${P + S/2}" y2="${P + S}" stroke="#BEB4AA" stroke-dasharray="4 4"/>
         <line x1="${P}" y1="${P + S/2}" x2="${P + S}" y2="${P + S/2}" stroke="#BEB4AA" stroke-dasharray="4 4"/>
         <rect x="${P}" y="${P}" width="${S}" height="${S}" fill="none" stroke="#BEB4AA"/>
-        <text class="quad-label" x="${P + S - 12}" y="${P + 24}" text-anchor="end" fill="#1D6B63">Quick Wins</text>
-        <text class="quad-label" x="${P + 12}" y="${P + 24}" fill="#1F4E8C">Big Bets</text>
-        <text class="quad-label" x="${P + S - 12}" y="${P + S - 14}" text-anchor="end" fill="#8A5C0E">Easy Extras</text>
-        <text class="quad-label" x="${P + 12}" y="${P + S - 14}" fill="#C2185B">Money Pits</text>
-        <text class="axis-label" x="${P + S/2}" y="${P + S + 26}" text-anchor="middle">Ease &rarr;</text>
-        <text class="axis-label" transform="translate(${P - 16} ${P + S/2}) rotate(-90)" text-anchor="middle">Impact &rarr;</text>`;
+        <text class="quad-label" x="${P + S - 12}" y="${P + 24}" text-anchor="end" fill="#1D6B63">${T.quick}</text>
+        <text class="quad-label" x="${P + 12}" y="${P + 24}" fill="#1F4E8C">${T.bet}</text>
+        <text class="quad-label" x="${P + S - 12}" y="${P + S - 14}" text-anchor="end" fill="#8A5C0E">${T.extra}</text>
+        <text class="quad-label" x="${P + 12}" y="${P + S - 14}" fill="#C2185B">${T.pit}</text>
+        <text class="axis-label" x="${P + S/2}" y="${P + S + 26}" text-anchor="middle">${T.ease} &rarr;</text>
+        <text class="axis-label" transform="translate(${P - 16} ${P + S/2}) rotate(-90)" text-anchor="middle">${T.impact} &rarr;</text>`;
       if (!list.length) {
-        svg += `<text x="${P + S/2}" y="${P + S/2 - 8}" text-anchor="middle" class="quad-sub">Add a use case, or load the sample</text><text x="${P + S/2}" y="${P + S/2 + 10}" text-anchor="middle" class="quad-sub">portfolio to see the map come alive.</text>`;
+        svg += `<text x="${P + S/2}" y="${P + S/2 - 8}" text-anchor="middle" class="quad-sub">${T.empty1}</text><text x="${P + S/2}" y="${P + S/2 + 10}" text-anchor="middle" class="quad-sub">${T.empty2}</text>`;
       }
       // Draw lowest-ranked first so the top picks sit on top.
       list.map((it, i) => ({ it, i })).reverse().forEach(({ it, i }) => {
@@ -293,7 +340,7 @@
     function renderTable(list) {
       const body = document.getElementById('rankBody');
       if (!list.length) {
-        body.innerHTML = `<tr><td colspan="7" class="empty">No use cases yet. Score your first idea above, or load the sample portfolio.</td></tr>`;
+        body.innerHTML = `<tr><td colspan="7" class="empty">${T.emptyTable}</td></tr>`;
         return;
       }
       body.innerHTML = list.map((it, i) => `
@@ -305,8 +352,8 @@
           <td class="hide-sm score">${it.ease}</td>
           <td><div style="display:flex;align-items:center;gap:10px;"><span class="score">${it.overall}</span><div class="bar" style="flex:1"><span style="width:${it.overall}%;background:${Q[it.quad].color}"></span></div></div></td>
           <td class="row-actions no-print">
-            <button class="icon-btn" data-edit="${it.id}" aria-label="Edit ${esc(it.name)}">Edit</button>
-            <button class="icon-btn" data-del="${it.id}" aria-label="Remove ${esc(it.name)}">Remove</button>
+            <button class="icon-btn" data-edit="${it.id}" aria-label="${T.edit} ${esc(it.name)}">${T.edit}</button>
+            <button class="icon-btn" data-del="${it.id}" aria-label="${T.remove} ${esc(it.name)}">${T.remove}</button>
           </td>
         </tr>`).join('');
       body.querySelectorAll('[data-edit]').forEach(b => b.addEventListener('click', () => startEdit(b.dataset.edit)));
@@ -329,7 +376,7 @@
       CRITERIA.forEach(c => { document.getElementById('c_' + c.key).value = 3; document.getElementById('o_' + c.key).textContent = 3; });
       editingId = null;
       formCard.classList.remove('editing');
-      document.querySelector('#saveBtn span').textContent = 'Add to the map';
+      document.querySelector('#saveBtn span').textContent = T.add;
       document.getElementById('cancelEdit').hidden = true;
     }
     function startEdit(id) {
@@ -340,7 +387,7 @@
       document.getElementById('ucTeam').value = it.team || '';
       CRITERIA.forEach(c => { document.getElementById('c_' + c.key).value = it[c.key]; document.getElementById('o_' + c.key).textContent = it[c.key]; });
       formCard.classList.add('editing');
-      document.querySelector('#saveBtn span').textContent = 'Save changes';
+      document.querySelector('#saveBtn span').textContent = T.saveChanges;
       document.getElementById('cancelEdit').hidden = false;
       formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
       document.getElementById('ucName').focus({ preventScroll: true });
@@ -353,10 +400,10 @@
       CRITERIA.forEach(c => item[c.key] = +document.getElementById('c_' + c.key).value);
       if (editingId) {
         Object.assign(state.items.find(x => x.id === editingId), item);
-        Toolkit.toast('Use case updated');
+        Toolkit.toast(T.updated);
       } else {
         state.items.push({ id: uid(), ...item });
-        Toolkit.toast('Added to the map');
+        Toolkit.toast(T.added);
       }
       persist(); resetForm(); render();
     });
@@ -366,10 +413,10 @@
     document.getElementById('loadSamples').addEventListener('click', () => {
       const existing = new Set(state.items.map(i => i.name));
       SAMPLES.filter(s => !existing.has(s.name)).forEach(s => state.items.push({ id: uid(), ...s }));
-      persist(); render(); Toolkit.toast('Sample portfolio loaded');
+      persist(); render(); Toolkit.toast(T.samples);
     });
     document.getElementById('clearAll').addEventListener('click', () => {
-      if (!state.items.length || !confirm('Remove every use case from the list?')) return;
+      if (!state.items.length || !confirm(T.confirmClear)) return;
       state.items = []; resetForm(); persist(); render();
     });
     document.getElementById('resetWeights').addEventListener('click', () => {
@@ -377,11 +424,11 @@
     });
     document.getElementById('exportCsv').addEventListener('click', () => {
       const list = ranked();
-      if (!list.length) return Toolkit.toast('Nothing to export yet');
+      if (!list.length) return Toolkit.toast(T.nothing);
       const q = v => `"${String(v).replace(/"/g, '""')}"`;
-      const header = ['Rank', 'Use case', 'Team', ...CRITERIA.map(c => c.label), 'Impact', 'Ease', 'Overall', 'Quadrant'];
+      const header = [...T.csv, ...CRITERIA.map(c => c.label), ...T.csvEnd];
       const rows = list.map((it, i) => [i + 1, it.name, it.team || '', ...CRITERIA.map(c => it[c.key]), it.impact, it.ease, it.overall, Q[it.quad].label]);
-      Toolkit.download('ai-use-case-priorities.csv', [header, ...rows].map(r => r.map(q).join(',')).join('\n'), 'text/csv');
+      Toolkit.download(T.file, [header, ...rows].map(r => r.map(q).join(',')).join('\n'), 'text/csv');
     });
 
     renderWeights();

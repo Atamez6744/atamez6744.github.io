@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <meta name="description" content="Abrí una presentación de hace exactamente un año esperando nostalgia. Lo que encontré me hizo repensar cómo se ve realmente crecer con la IA, y cómo medirlo en mí misma.">
+    <meta property="og:title" content="La década que en realidad fue un año">
+    <meta property="og:description" content="Abrí una presentación de hace exactamente un año esperando nostalgia. Lo que encontré me hizo repensar cómo se ve realmente crecer con la IA, y cómo medirlo en mí misma.">
+    <meta property="og:url" content="https://alejandratamez.com/es/blog/decade-that-was-a-year.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ale Tamez">
+    <meta property="og:image" content="https://alejandratamez.com/IMG_2428.JPG">
+    <title>La década que en realidad fue un año | Ale Tamez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #C48B6F;
+            --terracotta-light: #D4A08A;
+            --navy: #5A9E8F;
+            --cream: #FFFFFF;
+            --cream-dark: #F5F5F3;
+            --sage: #C9A24D;
+            --white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-medium: #5A5A5A;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--cream-dark);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .nav-logo:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--navy);
+            transition: 0.3s;
+        }
+
+        /* Article */
+        .article-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .article-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-tags span {
+            background-color: var(--cream-dark);
+            color: var(--terracotta);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+
+        .article-meta .read-time {
+            color: var(--terracotta);
+            font-weight: 500;
+        }
+
+        .article-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--terracotta);
+            border: none;
+            margin: 2rem 0;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 2.25rem 0 1rem;
+        }
+
+        .article-body p:first-of-type::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+        }
+
+        .article-body em {
+            font-style: italic;
+        }
+
+        /* Post Navigation */
+        .post-nav {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--cream-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .post-nav a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--terracotta);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .post-nav a:hover {
+            color: var(--terracotta-light);
+        }
+
+        .post-nav .back-link {
+            color: var(--text-medium);
+        }
+
+        .post-nav .back-link:hover {
+            color: var(--terracotta);
+        }
+
+        .post-nav .next-post {
+            text-align: right;
+        }
+
+        .post-nav .next-post .label,
+        .post-nav .prev-post .label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            font-weight: 400;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--navy);
+            color: var(--cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer .tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--cream-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        footer .copyright {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--cream-dark);
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-body p:first-of-type::first-letter {
+                font-size: 3rem;
+            }
+
+            .post-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .post-nav .next-post {
+                text-align: left;
+            }
+        }
+    </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/blog/decade-that-was-a-year.html">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/blog/decade-that-was-a-year.html">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/blog/decade-that-was-a-year.html">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+  </style>
+  <!-- /i18n:head -->
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">Ale Tamez</a>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../about.html">Sobre mí</a></li>
+                <li><a href="../projects.html">Proyectos</a></li>
+                <li><a href="../tools/">Herramientas</a></li>
+                <li><a href="./">Blog</a></li>
+                <li><a href="../index.html#contact">Contacto</a></li>
+            </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Idioma / Language"><a href="../../blog/decade-that-was-a-year.html" hreflang="en" lang="en" aria-label="View in English">EN</a><span aria-current="true">ES</span></div><!-- /i18n:switch -->
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-tags">
+                <span>Adopción de IA</span>
+                <span>Aprendizaje</span>
+                <span>Liderazgo</span>
+            </div>
+            <h1 class="article-title">La década que en realidad fue un año</h1>
+            <p class="article-meta"><span class="read-time">30 de agosto de 2026 &middot; 5 min de lectura</span></p>
+        </header>
+
+        <hr class="article-divider">
+
+        <div class="article-body">
+            <p>El otro día estaba buscando un archivo, como suele pasar, escarbando en carpetas viejas para encontrar algo específico. En cambio, encontré un puñado de presentaciones y documentos de hace exactamente un año.</p>
+
+            <p>Los abrí esperando un poquito de nostalgia. Lo que encontré me dio risa. No es que estuvieran mal, exactamente. Solo se sentían lejanos. El contenido que enseñaba, la forma en que explicaba las cosas, el lenguaje que usaba, todo parecía de otra década, no de otro año.</p>
+
+            <p>Eso me llevó a darle muchas vueltas. Si un solo año puede hacer que mi propio trabajo me parezca así de anticuado, ¿qué significa realmente? Significa que el terreno se movió. Y si el terreno se movió tanto, la forma en que enseño, la forma en que trabajo, la forma en que me presento en una sala para explicar todo esto, también tiene que moverse.</p>
+
+            <p>Esta es la prueba a la que siempre regreso. Si estás enseñando el mismo contenido, haciendo las mismas presentaciones y explicando las cosas igual que hace un año, eso no es neutral. Es una señal. Significa que no te has ajustado al ritmo de aquello que supuestamente estás enseñando a adoptar.</p>
+
+            <p>No podemos movernos a la velocidad de la IA. Nadie puede, y sinceramente nadie debería intentarlo. Pero sí podemos asegurarnos de estar creciendo en cómo pensamos, cómo procesamos y qué priorizamos. La pregunta es cuál es la vara de medir correcta. Tres personas que trabajan justo en este problema me dieron un lenguaje que hace un año no tenía.</p>
+
+            <h2>Deja de contar inicios de sesión</h2>
+
+            <p>Jeremy Utley lo dice sin rodeos: en cinco años, a nadie le va a importar cuántas personas iniciaron sesión en ChatGPT. Les va a importar quién lo usó de verdad para transformar su trabajo. Más uso y mejor uso no son lo mismo, y la mayoría de las organizaciones todavía solo miden lo primero.</p>
+
+            <p>También dijo algo que se me quedó todavía más grabado. El lenguaje que usamos revela nuestra mentalidad. Las personas de alto desempeño no "usan" la IA. Trabajan con ella. La entrenan, le dan retroalimentación, tienen un ida y vuelta real. Piensa en tu asesor legal o en tu directora de marketing. No los "usas." Trabajas con ellos.</p>
+
+            <p>Ese simple cambio de palabras, usar contra trabajar con, ya es una vara de medir por sí sola. Si todavía dices que "usas" la IA igual que usarías una engrapadora, vale la pena notarlo.</p>
+
+            <h2>Ahora todos somos un equipo de cinco</h2>
+
+            <p>Brice Challamel, quien lideró la transformación con IA en Moderna antes de unirse a OpenAI, dijo algo que replanteó toda la conversación para mí. Ya no existen los contribuidores individuales. Ahora todos somos un equipo de cinco: uno mismo, su asistente de IA, su coach de IA, su experto de IA y su socio creativo de IA.</p>
+
+            <p>Vuelve a leer eso junto a tu propio puesto. Ya no solo estás haciendo tu trabajo. Estás liderando un equipo pequeño, y la calidad de lo que produce ese equipo depende de qué tan bien delegas, diriges y revisas: las mismas habilidades que hacen buena a cualquier líder de personas de carne y hueso.</p>
+
+            <p>Aquí es donde creo que muchos estamos atorados sin darnos cuenta. Seguimos operando como contribuidores individuales mientras, en silencio, ya tenemos el trabajo de liderar un equipo pequeño. La brecha entre esas dos mentalidades es justo lo que hace que una presentación de hace un año se vea anticuada. Hace un año, casi todos trabajábamos solos. Ahora se supone que dirigimos a cuatro compañeros que nunca duermen.</p>
+
+            <h2>Deja de tratar a la IA como una máquina expendedora</h2>
+
+            <p>Eric Porres, Director de IA de Logitech, hizo una encuesta a 7,000 colaboradores y encontró algo que llamó el problema de la máquina expendedora. La mayoría de la gente trata a la IA como una máquina expendedora. Mete una pregunta, saca una respuesta y se va. Si la respuesta no le convence, concluye que la máquina está descompuesta.</p>
+
+            <p>Pero escondidas en esa misma encuesta había 112 personas haciendo algo distinto. No la trataban como una máquina expendedora. La trataban como una conversación. Volvían a preguntar. Cuestionaban. Afinaban. Porres construyó todo un marco de trabajo estudiando qué hacían diferente esas 112 personas.</p>
+
+            <p>También propuso una vara de medir con verdadero filo. Constancia: ¿trabajas con ella todos los días? Intensidad: ¿qué tan profunda es realmente una conversación?, ¿tienes un intercambio real o solo un intercambio? Creación: ¿qué has construido de verdad con ella, no solo qué le has preguntado?</p>
+
+            <p>Es una vara de medir que puedes aplicarte hoy mismo en la tarde. Abre tus conversaciones de la última semana con cualquier herramienta de IA. ¿Fueron transacciones de máquina expendedora, o fueron conversaciones reales de ida y vuelta que llegaron a algún lado?</p>
+
+            <h2>La verdadera vara de medir</h2>
+
+            <p>Junta a estos tres y aparece un patrón. Utley dice: cuida tu lenguaje, porque revela si estás colaborando o solo operando una herramienta. Challamel dice: reconoce que ya estás liderando un equipo, te hayas dado cuenta o no. Porres dice: mira tu comportamiento real, la constancia, la profundidad y lo que has construido, no solo lo que has preguntado.</p>
+
+            <p>Ninguno se trata de seguirle el ritmo al modelo. Se trata de seguirte el ritmo a ti. Esa es la vara de medir. No "¿mi IA es más inteligente que hace un año?" Obviamente lo es; esa parte se resuelve sola. La verdadera pregunta es: ¿la estoy liderando de forma distinta a hace un año? ¿Le hablo diferente? ¿Estoy construyendo con ella algo que antes no habría podido construir?</p>
+
+            <p>Ve a buscar tu propia versión de esa carpeta. La de hace un año que te da un poquito de pena. Esa pena no es vergüenza. Es la prueba de una década de crecimiento comprimida en doce meses, y es la medición más honesta que vas a encontrar.</p>
+        </div>
+
+        <div class="post-nav">
+            <a href="bags-of-grace.html" class="prev-post">
+                <span class="label">&larr; Publicación anterior</span>
+                Lo que significa servir junto a personas que aman profundamente
+            </a>
+            <a href="./" class="back-link">Volver al blog</a>
+            <a href="hybrid-human-agent-teams.html" class="next-post">
+                <span class="label">Siguiente publicación &rarr;</span>
+                Manic Monday: a favor de los equipos híbridos de personas y agentes
+            </a>
+        </div>
+    </article>
+
+    <footer>
+        <p class="tagline">"Haciendo que la tecnología sea deliciosamente satisfactoria."</p>
+        <p class="copyright">&copy; 2026 Ale Tamez. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
