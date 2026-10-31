@@ -6,7 +6,7 @@
 
 This repository is my personal website, portfolio, and working toolkit. It's live at **[alejandratamez.com](https://alejandratamez.com)**, hosted on GitHub Pages, and hand-built with plain HTML, CSS, and JavaScript, with no frameworks.
 
-I lead Generative AI enablement and change management, including taking Microsoft Copilot to **97% adoption across 10,000+ users** with a **200+ person Champions network** and **70+ training sessions**. This repo is where I build in public.
+I lead Generative AI enablement and change management, including taking Microsoft Copilot to **94% sustained adoption across 13,000+ seats** with a **~200-person Champions network** and **70+ training sessions**. This repo is where I build in public.
 
 ---
 
