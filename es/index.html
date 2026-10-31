@@ -637,188 +637,6 @@
       margin-bottom: 16px;
     }
 
-    .flywheel-steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .flywheel-step {
-      text-align: center;
-      padding: 16px 8px;
-      background: var(--cream);
-      border-radius: 12px;
-    }
-
-    .flywheel-step .step-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--terracotta);
-    }
-
-    .flywheel-step .step-name {
-      font-weight: 600;
-      color: var(--navy);
-      font-size: 0.9rem;
-      margin-bottom: 4px;
-    }
-
-    .flywheel-step .step-desc {
-      font-size: 0.78rem;
-      color: var(--text-light);
-      line-height: 1.4;
-    }
-
-    /* ===== ORBIT FLYWHEEL (minimalist) ===== */
-    .flywheel-interactive {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 56px;
-      align-items: center;
-      margin-top: 32px;
-    }
-
-    .flywheel-orbit-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 320px;
-      margin: 0 auto;
-      aspect-ratio: 1;
-    }
-
-    .flywheel-orbit-svg {
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-    }
-
-    /* The rotating group of dots */
-    .flywheel-orbit {
-      transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1);
-      transform-origin: 200px 200px;
-    }
-
-    .flywheel-dot-orbit {
-      transition: r 0.8s ease, fill 0.8s ease, opacity 0.8s ease;
-    }
-
-    .flywheel-guide-ring {
-      fill: none;
-      stroke: rgba(29, 27, 24, 0.12);
-      stroke-width: 1;
-    }
-
-    /* Still center text */
-    .flywheel-center {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20% 15%;
-      pointer-events: none;
-    }
-
-    .flywheel-center-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--terracotta);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      transition: opacity 0.6s ease;
-    }
-
-    .flywheel-center-name {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.1;
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .flywheel-center.fading .flywheel-center-label,
-    .flywheel-center.fading .flywheel-center-name {
-      animation: centerFade 0.8s ease;
-    }
-
-    @keyframes centerFade {
-      0% { opacity: 0; transform: translateY(6px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Description panel (right side) */
-    .flywheel-phase-panel {
-      min-height: 160px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .flywheel-phase-eyebrow {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--text-light);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .flywheel-phase-desc {
-      font-size: 1.15rem;
-      color: var(--text-dark);
-      line-height: 1.6;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-weight: 400;
-      font-style: italic;
-    }
-
-    .flywheel-phase-panel.fading .flywheel-phase-desc {
-      animation: centerFade 0.8s ease;
-    }
-
-    .flywheel-progress {
-      display: flex;
-      gap: 24px;
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(29, 27, 24, 0.1);
-    }
-
-    .flywheel-progress-item {
-      background: none;
-      border: none;
-      padding: 0;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--text-light);
-      letter-spacing: 0.05em;
-      cursor: pointer;
-      transition: color 0.4s ease;
-      text-transform: uppercase;
-    }
-
-    .flywheel-progress-item:hover {
-      color: var(--text-medium);
-    }
-
-    .flywheel-progress-item.active {
-      color: var(--terracotta);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .flywheel-orbit { transition: none; }
-      .flywheel-dot-orbit { transition: r 0.3s ease, fill 0.3s ease; }
-      .flywheel-center.fading .flywheel-center-label,
-      .flywheel-center.fading .flywheel-center-name,
-      .flywheel-phase-panel.fading .flywheel-phase-desc { animation: none; }
-    }
-
     .competencies {
       margin-top: 40px;
     }
@@ -1279,12 +1097,6 @@
       .hero-grid { gap: 40px; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .experience-content { grid-template-columns: 1fr; }
-      .flywheel-steps { grid-template-columns: repeat(2, 1fr); }
-      .flywheel-interactive { grid-template-columns: 1fr; gap: 32px; }
-      .flywheel-orbit-wrapper { max-width: 260px; }
-      .flywheel-phase-panel { min-height: auto; text-align: center; align-items: center; }
-      .flywheel-progress { justify-content: center; flex-wrap: wrap; gap: 16px; }
-      .flywheel-center-name { font-size: 1.6rem; }
     }
 
     @media (max-width: 768px) {
@@ -1331,7 +1143,6 @@
       .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
       .stat-card { padding: 20px; }
       .stat-number { font-size: 2rem; }
-      .flywheel-steps { grid-template-columns: 1fr 1fr; }
       .contact-buttons { flex-direction: column; }
     }
 
@@ -1494,7 +1305,6 @@
     </div>
   </section>
 
-
   <!-- PROJECTS PREVIEW -->
   <section class="projects-preview" id="projects">
     <div class="container">
@@ -1536,7 +1346,6 @@
     </div>
   </section>
 
-
   <!-- TOOLKIT -->
   <section class="toolkit-band" id="toolkit">
     <div class="container">
@@ -1555,7 +1364,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- BLOG PREVIEW -->
   <section class="blog-preview" id="blog">
@@ -1604,7 +1412,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
@@ -1666,7 +1473,6 @@
     </div>
   </section>
 
-
   <!-- QUOTES RIBBON -->
   <section class="quotes-ribbon">
     <div class="container">
@@ -1683,7 +1489,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer>
@@ -1724,7 +1529,6 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
-
 
 </body>
 </html>

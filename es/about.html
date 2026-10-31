@@ -655,154 +655,9 @@
       line-height: 1.4;
     }
 
-    /* ===== ORBIT FLYWHEEL (minimalist) ===== */
-    .flywheel-interactive {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 56px;
-      align-items: center;
-      margin-top: 32px;
-    }
-
-    .flywheel-orbit-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 320px;
-      margin: 0 auto;
-      aspect-ratio: 1;
-    }
-
-    .flywheel-orbit-svg {
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-    }
-
-    /* The rotating group of dots */
-    .flywheel-orbit {
-      transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1);
-      transform-origin: 200px 200px;
-    }
-
-    .flywheel-dot-orbit {
-      transition: r 0.8s ease, fill 0.8s ease, opacity 0.8s ease;
-    }
-
-    .flywheel-guide-ring {
-      fill: none;
-      stroke: rgba(29, 27, 24, 0.12);
-      stroke-width: 1;
-    }
-
-    /* Still center text */
-    .flywheel-center {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20% 15%;
-      pointer-events: none;
-    }
-
-    .flywheel-center-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--terracotta);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      transition: opacity 0.6s ease;
-    }
-
-    .flywheel-center-name {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.1;
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .flywheel-center.fading .flywheel-center-label,
-    .flywheel-center.fading .flywheel-center-name {
-      animation: centerFade 0.8s ease;
-    }
-
-    @keyframes centerFade {
-      0% { opacity: 0; transform: translateY(6px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Description panel (right side) */
-    .flywheel-phase-panel {
-      min-height: 160px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .flywheel-phase-eyebrow {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--text-light);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .flywheel-phase-desc {
-      font-size: 1.15rem;
-      color: var(--text-dark);
-      line-height: 1.6;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-weight: 400;
-      font-style: italic;
-    }
-
-    .flywheel-phase-panel.fading .flywheel-phase-desc {
-      animation: centerFade 0.8s ease;
-    }
-
-    .flywheel-progress {
-      display: flex;
-      gap: 24px;
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(29, 27, 24, 0.1);
-    }
-
-    .flywheel-progress-item {
-      background: none;
-      border: none;
-      padding: 0;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--text-light);
-      letter-spacing: 0.05em;
-      cursor: pointer;
-      transition: color 0.4s ease;
-      text-transform: uppercase;
-    }
-
-    .flywheel-progress-item:hover {
-      color: var(--text-medium);
-    }
-
-    .flywheel-progress-item.active {
-      color: var(--terracotta);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .flywheel-orbit { transition: none; }
-      .flywheel-dot-orbit { transition: r 0.3s ease, fill 0.3s ease; }
-      .flywheel-center.fading .flywheel-center-label,
-      .flywheel-center.fading .flywheel-center-name,
-      .flywheel-phase-panel.fading .flywheel-phase-desc { animation: none; }
-    }
+    /* ===== FLYWHEEL CALL TO ACTION ===== */
+    .flywheel-cta { margin-top: 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--hairline, #BEB4AA); }
+    .flywheel-cta p { margin: 0; color: var(--text-medium); max-width: 520px; }
 
     .competencies {
       margin-top: 40px;
@@ -1174,11 +1029,6 @@
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .experience-content { grid-template-columns: 1fr; }
       .flywheel-steps { grid-template-columns: repeat(2, 1fr); }
-      .flywheel-interactive { grid-template-columns: 1fr; gap: 32px; }
-      .flywheel-orbit-wrapper { max-width: 260px; }
-      .flywheel-phase-panel { min-height: auto; text-align: center; align-items: center; }
-      .flywheel-progress { justify-content: center; flex-wrap: wrap; gap: 16px; }
-      .flywheel-center-name { font-size: 1.6rem; }
     }
 
     @media (max-width: 768px) {
@@ -1301,8 +1151,6 @@
     </div>
   </section>
 
-
-
   <!-- ENABLEMENT FLYWHEEL (standalone section, moved up from Experience) -->
   <section class="experience" id="flywheel-section" style="padding-top: 80px; padding-bottom: 60px;">
     <div class="container">
@@ -1314,56 +1162,17 @@
         <div class="framework-card">
           <p style="font-size: 1.05rem; color: var(--text-medium); margin-bottom: 8px;">Una metodología de cuatro fases para una adopción tecnológica sostenible.</p>
 
-          <div class="flywheel-interactive" id="flywheel">
-            <!-- The orbit wheel -->
-            <div class="flywheel-orbit-wrapper">
-              <svg class="flywheel-orbit-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fases del Enablement Flywheel">
-                <!-- Guide ring: subtle circle that shows the orbit path -->
-                <circle class="flywheel-guide-ring" cx="200" cy="200" r="150"/>
-
-                <!-- Rotating group of four dots, one at each cardinal position -->
-                <g class="flywheel-orbit" id="flywheelOrbit">
-                  <!-- Dot at 12 o'clock (top) = active by default -->
-                  <circle class="flywheel-dot-orbit" data-phase="0" cx="200" cy="50" r="16" fill="#705148"/>
-                  <!-- Dot at 3 o'clock (right) -->
-                  <circle class="flywheel-dot-orbit" data-phase="1" cx="350" cy="200" r="8" fill="#BEB4AA"/>
-                  <!-- Dot at 6 o'clock (bottom) -->
-                  <circle class="flywheel-dot-orbit" data-phase="2" cx="200" cy="350" r="8" fill="#BEB4AA"/>
-                  <!-- Dot at 9 o'clock (left) -->
-                  <circle class="flywheel-dot-orbit" data-phase="3" cx="50" cy="200" r="8" fill="#BEB4AA"/>
-                </g>
-              </svg>
-
-              <!-- Still center, does NOT rotate -->
-              <div class="flywheel-center" id="flywheelCenter">
-                <div class="flywheel-center-label" id="flywheelPhaseLabel">Fase 1</div>
-                <div class="flywheel-center-name" id="flywheelPhaseName">Escuchar</div>
-              </div>
-            </div>
-
-            <!-- Right side: description + progress -->
-            <div class="flywheel-phase-panel" id="flywheelPanel" aria-live="polite">
-              <div class="flywheel-phase-eyebrow">El Enablement Flywheel</div>
-              <div class="flywheel-phase-desc" id="flywheelPhaseDesc">Entender las barreras reales, no las que suponemos.</div>
-
-              <div class="flywheel-progress">
-                <button class="flywheel-progress-item active" data-jump="0">Escuchar</button>
-                <button class="flywheel-progress-item" data-jump="1">Habilitar</button>
-                <button class="flywheel-progress-item" data-jump="2">Medir</button>
-                <button class="flywheel-progress-item" data-jump="3">Amplificar</button>
-              </div>
-            </div>
+          <div class="flywheel-steps" style="margin-top: 24px;">
+            <div class="flywheel-step"><div class="step-num">1</div><div class="step-name">Escuchar</div><div class="step-desc">Entender las barreras reales, no las que suponemos.</div></div>
+            <div class="flywheel-step"><div class="step-num">2</div><div class="step-name">Habilitar</div><div class="step-desc">Llegar a las personas donde están, con capacitación relevante.</div></div>
+            <div class="flywheel-step"><div class="step-num">3</div><div class="step-name">Medir</div><div class="step-desc">Medir el cambio de comportamiento, no solo los inicios de sesión.</div></div>
+            <div class="flywheel-step"><div class="step-num">4</div><div class="step-name">Amplificar</div><div class="step-desc">Convertir las primeras victorias en impulso para toda la organización.</div></div>
           </div>
 
-          <!-- Fallback for no-JS users -->
-          <noscript>
-            <ol style="margin-top: 20px; padding-left: 20px; color: var(--text-medium);">
-              <li><strong>Listen.</strong> Understand the real barriers, not the assumed ones.</li>
-              <li><strong>Enable.</strong> Meet people where they are with relevant training.</li>
-              <li><strong>Measure.</strong> Track behavior change, not just login counts.</li>
-              <li><strong>Amplify.</strong> Turn early wins into organizational momentum.</li>
-            </ol>
-          </noscript>
+          <div class="flywheel-cta">
+            <p>Descubre dónde está tu organización: 16 preguntas, unos 3 minutos y un plan para tu fase más débil.</p>
+            <a href="tools/flywheel-readiness.html" class="hero-cta">Hacer el Diagnóstico Flywheel &rarr;</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1467,7 +1276,6 @@
     </div>
   </section>
 
-
   <!-- QUOTES RIBBON -->
   <section class="quotes-ribbon">
     <div class="container">
@@ -1484,7 +1292,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer>
@@ -1524,117 +1331,6 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
-
-  <!-- ===== ORBIT FLYWHEEL SCRIPT ===== -->
-  <script>
-    (function() {
-      const phases = [
-        { name: 'Listen',   desc: 'Understand the real barriers, not the assumed ones.' },
-        { name: 'Enable',   desc: 'Meet people where they are with relevant training.' },
-        { name: 'Measure',  desc: 'Track behavior change, not just login counts.' },
-        { name: 'Amplify',  desc: 'Turn early wins into organizational momentum.' }
-      ];
-
-      const orbit = document.getElementById('flywheelOrbit');
-      const dots = document.querySelectorAll('.flywheel-dot-orbit');
-      const center = document.getElementById('flywheelCenter');
-      const panel = document.getElementById('flywheelPanel');
-      const nameEl = document.getElementById('flywheelPhaseName');
-      const labelEl = document.getElementById('flywheelPhaseLabel');
-      const descEl = document.getElementById('flywheelPhaseDesc');
-      const progressBtns = document.querySelectorAll('.flywheel-progress-item');
-      const container = document.getElementById('flywheel');
-
-      if (!orbit || !container) return;
-
-      const ACTIVE_COLOR = '#705148';
-      const INACTIVE_COLOR = '#BEB4AA';
-      const ACTIVE_RADIUS = 16;
-      const INACTIVE_RADIUS = 8;
-
-      let currentPhase = 0;
-      let rotation = 0;
-      let timerId = null;
-      let isPaused = false;
-
-      function render(index) {
-        // Rotate the orbit so the target dot lands at 12 o'clock (top)
-        // Each step is 90 degrees clockwise
-        rotation -= 90;
-        orbit.style.transform = 'rotate(' + rotation + 'deg)';
-
-        // Update dot styling: active becomes big + pink, others small + gray
-        dots.forEach(dot => {
-          const phase = parseInt(dot.dataset.phase, 10);
-          if (phase === index) {
-            dot.setAttribute('r', ACTIVE_RADIUS);
-            dot.setAttribute('fill', ACTIVE_COLOR);
-          } else {
-            dot.setAttribute('r', INACTIVE_RADIUS);
-            dot.setAttribute('fill', INACTIVE_COLOR);
-          }
-        });
-
-        // Update progress buttons
-        progressBtns.forEach((btn, i) => {
-          btn.classList.toggle('active', i === index);
-        });
-
-        // Swap center + description text with fade
-        const phase = phases[index];
-        center.classList.remove('fading');
-        panel.classList.remove('fading');
-        void center.offsetWidth; // Force reflow to restart animation
-        labelEl.textContent = 'Phase ' + (index + 1);
-        nameEl.textContent = phase.name;
-        descEl.textContent = phase.desc;
-        center.classList.add('fading');
-        panel.classList.add('fading');
-
-        currentPhase = index;
-      }
-
-      function advance() {
-        render((currentPhase + 1) % phases.length);
-      }
-
-      // Pause on hover (desktop)
-      container.addEventListener('mouseenter', () => { isPaused = true; });
-      container.addEventListener('mouseleave', () => { isPaused = false; });
-
-      // Click progress items to jump to a phase
-      progressBtns.forEach((btn, i) => {
-        btn.addEventListener('click', () => {
-          if (i === currentPhase) return;
-          const diff = i - currentPhase;
-          // Pre-adjust rotation so render()'s -=90 lands on the correct position
-          rotation -= (diff - 1) * 90;
-          render(i);
-        });
-      });
-
-      // Only animate when visible (saves battery, feels intentional)
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            if (!timerId) {
-              timerId = setInterval(() => { if (!isPaused) advance(); }, 4000);
-            }
-          } else if (timerId) {
-            clearInterval(timerId);
-            timerId = null;
-          }
-        });
-      }, { threshold: 0.3 });
-
-      io.observe(container);
-
-      // Respect reduce-motion preference
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        io.disconnect();
-      }
-    })();
   </script>
 
 </body>

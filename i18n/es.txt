@@ -1698,3 +1698,10 @@ es: <strong>Lo que me llevo:</strong> cuando algo se sienta diferente y un poco 
 
 en: Margin is where life happens, and this season gave me plenty to reflect on. What new room is calling your name?
 es: En los márgenes es donde sucede la vida, y esta temporada me dio mucho en qué reflexionar. ¿Qué sala nueva te está llamando por tu nombre?
+
+# ---------------------------------------------------------------- About: Flywheel card
+en: See where your own organization stands: 16 questions, about 3 minutes, and a plan for your weakest phase.
+es: Descubre dónde está tu organización: 16 preguntas, unos 3 minutos y un plan para tu fase más débil.
+
+en: Take the Flywheel Check &rarr;
+es: Hacer el Diagnóstico Flywheel &rarr;
