@@ -1,0 +1,26 @@
+name: Site quality check
+
+# Runs on every pull request and every push to main.
+# Think of it as a spell checker for the website: it fails loudly
+# if a link is broken or a page is missing the basics.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Check links, metadata, and accessibility basics
+        run: python3 scripts/check_site.py

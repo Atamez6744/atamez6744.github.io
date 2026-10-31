@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Adoption Flywheel Check | Ale Tamez</title>
+  <meta name="description" content="A free 3-minute assessment that shows how ready your organization is to turn AI licenses into lasting habits, built on the Enablement Flywheel: Listen, Enable, Measure, Amplify.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Adoption Flywheel Check — Ale Tamez Toolkit">
+  <meta property="og:description" content="16 questions. 3 minutes. Find the phase where your AI adoption is wobbling, and what to do next.">
+  <meta property="og:image" content="https://alejandratamez.com/New%20Headshot.png">
+  <meta property="og:url" content="https://alejandratamez.com/tools/flywheel-readiness.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="toolkit.css">
+  <style>
+    .progress-wrap { position: sticky; top: 72px; z-index: 50; background: rgba(223,220,216,.94); backdrop-filter: blur(6px); padding: 12px 0; }
+    .progress-inner { display: flex; align-items: center; gap: 14px; font-size: .85rem; font-weight: 600; color: var(--cocoa); }
+    .progress { flex: 1; height: 8px; background: rgba(255,255,255,.7); border-radius: 8px; overflow: hidden; }
+    .progress > span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--talavera), var(--marigold), var(--agave), var(--rosa)); transition: width .35s; }
+
+    .phase-card { border-top: 6px solid var(--phase); }
+    .phase-head { display: flex; gap: 16px; align-items: center; margin-bottom: 8px; }
+    .phase-num { width: 46px; height: 46px; border-radius: 14px; background: var(--phase); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.4rem; flex-shrink: 0; }
+    .phase-head h2 { margin: 0; }
+    .phase-head .sub { margin: 0; }
+    .q { padding: 18px 0; border-bottom: 1px solid var(--linen); }
+    .q:last-child { border-bottom: 0; padding-bottom: 0; }
+    .q legend { font-weight: 500; font-size: 1rem; margin-bottom: 12px; color: var(--espresso); }
+    fieldset { border: 0; }
+    .scale { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .scale input { position: absolute; opacity: 0; pointer-events: none; }
+    .scale label { margin: 0; text-align: center; font-weight: 500; font-size: .86rem; padding: 10px 6px; border-radius: 10px; background: var(--paper); cursor: pointer; border: 1.5px solid transparent; transition: all .2s; color: var(--espresso-soft); }
+    .scale label:hover { border-color: var(--mushroom); }
+    .scale input:checked + label { background: var(--phase); color: #fff; border-color: var(--phase); }
+    .scale input:focus-visible + label { outline: 3px solid var(--espresso); outline-offset: 2px; }
+
+    #results { display: none; scroll-margin-top: 90px; }
+    #results.show { display: block; }
+    .result-hero { display: grid; grid-template-columns: 340px 1fr; gap: 32px; align-items: center; }
+    #wheel { width: 100%; max-width: 340px; height: auto; margin: 0 auto; display: block; }
+    .stage-name { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 700; line-height: 1.05; margin: 4px 0 10px; }
+    .phase-scores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 22px; }
+    .ps { background: var(--paper); border-radius: 14px; padding: 14px; border-top: 4px solid var(--phase); }
+    .ps .n { font-size: .72rem; letter-spacing: .1em; font-weight: 700; text-transform: uppercase; color: var(--phase); }
+    .ps .v { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .weakest { margin-top: 18px; background: rgba(217,149,30,.14); border-radius: 12px; padding: 14px 16px; font-size: .95rem; }
+    .recs { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .rec { border-radius: 16px; padding: 22px; background: var(--paper); border-left: 5px solid var(--phase); }
+    .rec h3 { font-size: 1.35rem; margin-bottom: 4px; }
+    .rec .lvl { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--phase); }
+    .rec ul { margin: 10px 0 0 18px; font-size: .93rem; color: var(--espresso-soft); }
+    .rec li { margin-bottom: 6px; }
+    .rec.focus { background: #fff; box-shadow: 0 0 0 2px var(--phase); }
+    .wheel-label { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    @media (max-width: 900px) { .result-hero, .recs { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .scale { grid-template-columns: 1fr 1fr; } .phase-scores { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Ale Tamez</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="./" class="active">Toolkit</a></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <header class="tool-header">
+    <div class="container">
+      <p class="crumbs"><a href="./">Toolkit</a> &nbsp;/&nbsp; Change Management</p>
+      <h1>AI Adoption Flywheel Check</h1>
+      <p class="lede">16 honest questions, about 3 minutes. Find out whether your AI rollout is building momentum or quietly losing it, and which phase to fix first. Based on the four-phase Enablement Flywheel I used to take Microsoft Copilot to 94% sustained adoption across 13,000+ seats.</p>
+      <div class="analogy"><span aria-hidden="true">🎠</span><div><strong>A flywheel is like a merry-go-round.</strong> The first pushes are the hardest. Every push after that adds momentum, until it almost spins on its own. But if one section is broken, the whole ride wobbles. This check finds the wobble.</div></div>
+    </div>
+  </header>
+
+  <div class="progress-wrap no-print" aria-hidden="true">
+    <div class="container progress-inner"><span id="progressText">0 of 16 answered</span><div class="progress"><span id="progressBar"></span></div></div>
+  </div>
+
+  <main class="tool-main">
+    <div class="container">
+      <form id="quiz"></form>
+      <div class="btn-row no-print" style="margin-top: 24px; justify-content: center;">
+        <button class="btn btn-primary" id="seeResults" type="button">See my results</button>
+        <button class="btn btn-ghost" id="resetQuiz" type="button">Start over</button>
+      </div>
+
+      <section id="results" aria-live="polite" style="margin-top: 32px;">
+        <div class="card">
+          <div class="result-hero">
+            <svg id="wheel" viewBox="0 0 340 340" role="img" aria-label="Flywheel chart of your scores by phase"></svg>
+            <div>
+              <span class="tag" style="background: var(--paper); color: var(--cocoa);">Your stage</span>
+              <div class="stage-name" id="stageName"></div>
+              <p id="stageDesc" style="color: var(--espresso-soft);"></p>
+              <div class="phase-scores" id="phaseScores"></div>
+              <div class="weakest" id="weakest"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Your next moves</h2>
+          <p class="sub">Start with the highlighted phase. A flywheel only spins as well as its weakest section.</p>
+          <div class="recs" id="recs"></div>
+          <div class="btn-row no-print" style="margin-top: 24px;">
+            <button class="btn btn-primary btn-small" id="copySummary">Copy summary</button>
+            <button class="btn btn-ghost btn-small" onclick="window.print()">Print / Save PDF</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="method-note">
+        <strong>About this assessment:</strong> It's a conversation starter, not a scientific instrument. It works best when 3–5 people from different levels take it separately and compare answers. The gaps between a VP's score and a frontline employee's score are often the most useful finding. Answers are stored only in your browser.
+      </div>
+    </div>
+  </main>
+
+  <section class="tool-cta">
+    <div class="container">
+      <h2>Want help getting the wheel spinning?</h2>
+      <p>I design enablement programs that turn "we bought the licenses" into "this is how we work now."</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:hola@alejandratamez.com?subject=AI%20Adoption%20Flywheel">Let's talk</a>
+        <a class="btn btn-ghost" href="../case-studies/copilot-enablement-at-scale.html">Read the case study</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Alejandra Tamez de la Garza. All rights reserved.</p>
+      <p class="footer-tagline">"My superpower is connection. Everything else is just logistics."</p>
+    </div>
+  </footer>
+
+  <script src="toolkit.js"></script>
+  <script>
+  (function () {
+    const STORE = 'toolkit.flywheel.v1';
+    const SCALE = ['Not yet', 'Starting', 'Mostly', 'Absolutely'];
+    const PHASES = [
+      { key: 'listen', name: 'Listen', color: '#1F4E8C', tagline: 'Understand the real barriers, not the assumed ones.',
+        qs: [
+          'We have asked employees directly where AI tools help or frustrate them (surveys, listening sessions, focus groups).',
+          'We know which roles or teams are struggling, and whether the cause is confidence, relevance, or access.',
+          'Leaders can explain in plain language why we are adopting AI and what it means for people’s jobs.',
+          'There is a safe place to raise fears or concerns about AI without being judged.'
+        ],
+        recs: {
+          low:  ['Run five 30-minute listening sessions across different roles before building any more training.', 'Ask one question everywhere: "Where did you get stuck the last time you tried AI?"', 'Have your executive sponsor record a 2-minute "why we’re doing this" message that addresses job fears head-on.'],
+          mid:  ['Segment what you heard: confidence gaps, relevance gaps, and access gaps each need different fixes.', 'Close the loop: tell people what you heard and what you’re changing because of it.', 'Add an anonymous question channel to every training session.'],
+          high: ['Make listening continuous: a quarterly pulse survey with 3 questions, not a one-time event.', 'Bring skeptics into the design of the next wave. They’ll find the gaps your champions miss.']
+        } },
+      { key: 'enable', name: 'Enable', color: '#D9951E', tagline: 'Meet people where they are with relevant training.',
+        qs: [
+          'Training is role-specific and built around real workflows, not generic feature tours.',
+          'People can get help between formal trainings (office hours, FAQs, a go-to person nearby).',
+          'Our training teaches that AI is iterative, a collaborator you refine, not a calculator that is right on the first try.',
+          'Managers give their teams protected time to practice and experiment.'
+        ],
+        recs: {
+          low:  ['Swap one generic demo for three role-specific sessions using each team’s actual documents and tasks.', 'Open a weekly 30-minute drop-in office hour. Consistency beats polish.', 'Teach the "first draft, not final answer" mindset in the first 5 minutes of every session.'],
+          mid:  ['Build a living FAQ from the real questions people ask, and update it weekly.', 'Give managers a one-page guide to running a 15-minute "AI try-it" in their team meetings.', 'Create prompt starter packs per role so nobody faces a blank box.'],
+          high: ['Move from training to coaching: pair advanced users with stuck teams for real work sessions.', 'Offer a 10-day habit-building challenge so practice becomes routine.']
+        } },
+      { key: 'measure', name: 'Measure', color: '#2A8C82', tagline: 'Track behavior change, not just login counts.',
+        qs: [
+          'We track continued, voluntary use, not just activations or logins.',
+          'We collect stories and examples of how work actually changed.',
+          'We have a baseline (time, quality, cycle time) for at least a few key workflows.',
+          'What we measure feeds back into what we train and fix next.'
+        ],
+        recs: {
+          low:  ['Redefine success: replace "% activated" with "% who used it in 3 of the last 4 weeks."', 'Pick 3 workflows and time them today, before AI, so you have something to compare against later.', 'Start a simple "win log" where people submit one sentence about something AI helped them do.'],
+          mid:  ['Pair every usage number with a story. Numbers persuade the CFO, stories persuade everyone else.', 'Look for drop-off cohorts: who tried it once and never came back, and why?', 'Review metrics monthly with the enablement team and change one thing each time.'],
+          high: ['Graduate from usage to value: track time redeployed, quality gains, and new capabilities.', 'Publish an internal adoption scorecard so teams can learn from each other’s practices.']
+        } },
+      { key: 'amplify', name: 'Amplify', color: '#C2185B', tagline: 'Turn early wins into organizational momentum.',
+        qs: [
+          'We have a network of peer champions across functions and locations.',
+          'Wins and great prompts are shared openly and regularly (showcases, newsletters, channels).',
+          'Successful practices get turned into SOPs or templates other teams can reuse.',
+          'Recognition or gamification makes continued use something people want to do.'
+        ],
+        recs: {
+          low:  ['Recruit 1 champion per 50 people: curious volunteers, not just the most technical.', 'Host a monthly 20-minute "show me how you did that" showcase.', 'Spotlight one real win per week in an existing channel people already read.'],
+          mid:  ['Give champions real infrastructure: office hours, a shared FAQ, and a direct line to the core team.', 'Turn the top 5 wins into reusable SOPs or templates.', 'Add light gamification: badges, streaks, or team challenges tied to real work.'],
+          high: ['Let champions co-own the roadmap. Peer-led programs outlast program-led ones.', 'Build a champion-to-champion mentorship layer so the network renews itself.']
+        } }
+    ];
+    const STAGES = [
+      { min: 0,  name: 'Licensed, Not Living It', desc: 'The tool is bought, but the habit isn’t there yet. That’s normal, and fixable. Most organizations stall here because launch-day energy gets mistaken for adoption.' },
+      { min: 25, name: 'Early Spark', desc: 'Pockets of real use are showing up, mostly from the naturally curious. Now the job is turning individual sparks into shared practice before the novelty wears off.' },
+      { min: 50, name: 'Gaining Momentum', desc: 'The wheel is turning. You have real infrastructure in place. The risk now is uneven spin: one weak phase can quietly drain the energy from the other three.' },
+      { min: 75, name: 'Self-Sustaining Flywheel', desc: 'Adoption is becoming culture. People keep choosing AI when no one is watching. Focus on shifting from usage to value and letting your champions lead.' }
+    ];
+
+    let answers = Toolkit.load(STORE, {});
+    const total = PHASES.reduce((n, p) => n + p.qs.length, 0);
+
+    // ---------- build quiz ----------
+    const form = document.getElementById('quiz');
+    form.innerHTML = PHASES.map((p, pi) => `
+      <section class="card phase-card" style="--phase:${p.color}">
+        <div class="phase-head"><div class="phase-num">${pi + 1}</div><div><h2>${p.name}</h2><p class="sub">${p.tagline}</p></div></div>
+        ${p.qs.map((q, qi) => {
+          const id = `${p.key}_${qi}`;
+          return `<fieldset class="q"><legend>${q}</legend><div class="scale">
+            ${SCALE.map((s, si) => `<input type="radio" name="${id}" id="${id}_${si}" value="${si}" ${answers[id] === si ? 'checked' : ''}><label for="${id}_${si}">${s}</label>`).join('')}
+          </div></fieldset>`;
+        }).join('')}
+      </section>`).join('');
+
+    function updateProgress() {
+      const n = Object.keys(answers).length;
+      document.getElementById('progressText').textContent = `${n} of ${total} answered`;
+      document.getElementById('progressBar').style.width = (n / total * 100) + '%';
+    }
+    form.addEventListener('change', e => {
+      if (e.target.type !== 'radio') return;
+      answers[e.target.name] = +e.target.value;
+      Toolkit.save(STORE, answers);
+      updateProgress();
+      if (document.getElementById('results').classList.contains('show')) renderResults(false);
+    });
+
+    // ---------- scoring ----------
+    function phaseScore(p) {
+      const vals = p.qs.map((_, qi) => answers[`${p.key}_${qi}`]).filter(v => v !== undefined);
+      if (!vals.length) return 0;
+      // Unanswered questions count as "Not yet" so a half-finished quiz never looks rosier than reality.
+      return Math.round(vals.reduce((a, b) => a + b, 0) / (p.qs.length * 3) * 100);
+    }
+    const level = s => s < 40 ? 'low' : s < 75 ? 'mid' : 'high';
+    const levelName = { low: 'Build the foundation', mid: 'Strengthen the habit', high: 'Scale what works' };
+
+    // ---------- flywheel chart ----------
+    function polar(cx, cy, r, deg) { const a = (deg - 90) * Math.PI / 180; return [cx + r * Math.cos(a), cy + r * Math.sin(a)]; }
+    function arc(cx, cy, r1, r2, a0, a1) {
+      const large = a1 - a0 > 180 ? 1 : 0;
+      const [x0, y0] = polar(cx, cy, r2, a0), [x1, y1] = polar(cx, cy, r2, a1);
+      const [x2, y2] = polar(cx, cy, r1, a1), [x3, y3] = polar(cx, cy, r1, a0);
+      return `M${x0},${y0} A${r2},${r2} 0 ${large} 1 ${x1},${y1} L${x2},${y2} A${r1},${r1} 0 ${large} 0 ${x3},${y3} Z`;
+    }
+    function renderWheel(scores, overall) {
+      const cx = 170, cy = 170, inner = 78, maxR = 140, gap = 3;
+      let svg = '';
+      PHASES.forEach((p, i) => {
+        const a0 = i * 90 + gap, a1 = (i + 1) * 90 - gap;
+        const r = inner + (maxR - inner) * Math.max(scores[i], 4) / 100;
+        svg += `<path d="${arc(cx, cy, inner, maxR, a0, a1)}" fill="${p.color}" opacity=".12"/>`;
+        svg += `<path d="${arc(cx, cy, inner, r, a0, a1)}" fill="${p.color}"><title>${p.name}: ${scores[i]}%</title></path>`;
+        const [lx, ly] = polar(cx, cy, maxR + 14, (a0 + a1) / 2);
+        const anchor = lx > cx + 5 ? 'start' : lx < cx - 5 ? 'end' : 'middle';
+        svg += `<text class="wheel-label" x="${lx}" y="${ly + 4}" text-anchor="${anchor}" fill="${p.color}">${p.name}</text>`;
+      });
+      // rotation arrows hint that it is a cycle
+      svg += `<circle cx="${cx}" cy="${cy}" r="${inner - 8}" fill="#fff" stroke="#DFDCD8" stroke-width="2"/>
+        <text x="${cx}" y="${cy + 6}" text-anchor="middle" style="font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;" fill="#1D1B18">${overall}%</text>
+        <text x="${cx}" y="${cy + 28}" text-anchor="middle" style="font-size:10px;letter-spacing:.14em;font-weight:700;" fill="#705148">MOMENTUM</text>`;
+      document.getElementById('wheel').setAttribute('viewBox', '-30 -10 400 360');
+      document.getElementById('wheel').innerHTML = svg;
+    }
+
+    // ---------- results ----------
+    function computed() {
+      const scores = PHASES.map(phaseScore);
+      const overall = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+      const stage = [...STAGES].reverse().find(s => overall >= s.min);
+      const weakestIdx = scores.indexOf(Math.min(...scores));
+      return { scores, overall, stage, weakestIdx };
+    }
+    function renderResults(scroll) {
+      const { scores, overall, stage, weakestIdx } = computed();
+      renderWheel(scores, overall);
+      document.getElementById('stageName').textContent = stage.name;
+      document.getElementById('stageDesc').textContent = stage.desc;
+      document.getElementById('phaseScores').innerHTML = PHASES.map((p, i) =>
+        `<div class="ps" style="--phase:${p.color}"><div class="n">${p.name}</div><div class="v">${scores[i]}%</div></div>`).join('');
+      const w = PHASES[weakestIdx];
+      const balanced = Math.max(...scores) - Math.min(...scores) < 10;
+      document.getElementById('weakest').innerHTML = balanced
+        ? `<strong>Your wheel is balanced.</strong> No single phase is dragging the others down, so progress comes from lifting all four together. If you have to pick one, start with ${w.name}: ${w.tagline.charAt(0).toLowerCase() + w.tagline.slice(1)}`
+        : `<strong>Your wobble is in ${w.name}.</strong> ${w.tagline} Fixing it will likely do more for adoption than pushing harder on your strongest phase.`;
+      document.getElementById('recs').innerHTML = PHASES.map((p, i) => {
+        const lv = level(scores[i]);
+        return `<div class="rec ${i === weakestIdx ? 'focus' : ''}" style="--phase:${p.color}">
+          <div class="lvl">${p.name} &middot; ${scores[i]}% &middot; ${levelName[lv]}</div>
+          <h3>${i === weakestIdx ? 'Start here: ' : ''}${p.tagline}</h3>
+          <ul>${p.recs[lv].map(r => `<li>${r}</li>`).join('')}</ul></div>`;
+      }).join('');
+      const res = document.getElementById('results');
+      res.classList.add('show');
+      if (scroll) res.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.getElementById('seeResults').addEventListener('click', () => {
+      const missing = total - Object.keys(answers).length;
+      if (missing > 0 && !confirm(`You have ${missing} unanswered question${missing > 1 ? 's' : ''}. Unanswered questions count as "Not yet." See results anyway?`)) {
+        const first = form.querySelector('fieldset:not(:has(input:checked))');
+        if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      renderResults(true);
+    });
+    document.getElementById('resetQuiz').addEventListener('click', () => {
+      if (!confirm('Clear all your answers?')) return;
+      answers = {}; Toolkit.save(STORE, answers);
+      form.querySelectorAll('input').forEach(i => i.checked = false);
+      document.getElementById('results').classList.remove('show');
+      updateProgress(); window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    document.getElementById('copySummary').addEventListener('click', () => {
+      const { scores, overall, stage, weakestIdx } = computed();
+      const lines = [
+        `AI Adoption Flywheel Check: ${overall}% momentum, "${stage.name}"`,
+        ...PHASES.map((p, i) => `• ${p.name}: ${scores[i]}%${i === weakestIdx ? '  ← start here' : ''}`),
+        '',
+        `Top moves for ${PHASES[weakestIdx].name}:`,
+        ...PHASES[weakestIdx].recs[level(scores[weakestIdx])].map(r => `  - ${r}`),
+        '',
+        'Take the check: https://alejandratamez.com/tools/flywheel-readiness.html'
+      ];
+      Toolkit.copy(lines.join('\n'), 'Summary copied. Paste it into Teams or email');
+    });
+
+    updateProgress();
+    if (Object.keys(answers).length === total) renderResults(false);
+  })();
+  </script>
+</body>
+</html>

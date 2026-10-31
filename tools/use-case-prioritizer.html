@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Use Case Prioritizer | Ale Tamez</title>
+  <meta name="description" content="A free, interactive weighted-scoring tool that helps teams move from 'we should use AI' to 'here's exactly where to start and why.' Built by Alejandra Tamez de la Garza.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Use Case Prioritizer — Ale Tamez Toolkit">
+  <meta property="og:description" content="Score your AI ideas, see them on an Impact vs. Ease map, and find your Quick Wins.">
+  <meta property="og:image" content="https://alejandratamez.com/New%20Headshot.png">
+  <meta property="og:url" content="https://alejandratamez.com/tools/use-case-prioritizer.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="toolkit.css">
+  <style>
+    .criteria-list { display: grid; gap: 4px; }
+    .crit-meta { font-size: .8rem; color: var(--cocoa); margin: -10px 0 14px; }
+    .axis-label { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; fill: var(--cocoa); }
+    .quad-label { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 700; }
+    .quad-sub { font-size: 10.5px; fill: var(--espresso-soft); }
+    .dot-num { font-size: 11px; font-weight: 700; fill: #fff; pointer-events: none; }
+    .dot { cursor: pointer; transition: r .2s; stroke: #fff; stroke-width: 2; }
+    .dot:hover { r: 15; }
+    #matrix { width: 100%; height: auto; display: block; }
+
+    .rank-table { width: 100%; border-collapse: collapse; font-size: .93rem; }
+    .rank-table th { text-align: left; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--cocoa); padding: 10px 8px; border-bottom: 1.5px solid var(--linen); font-weight: 600; }
+    .rank-table td { padding: 14px 8px; border-bottom: 1px solid var(--linen); vertical-align: middle; }
+    .rank-num { width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: .85rem; color: #fff; }
+    .uc-name { font-weight: 600; }
+    .uc-team { font-size: .8rem; color: var(--cocoa); }
+    .bar { height: 8px; background: var(--linen); border-radius: 8px; overflow: hidden; min-width: 80px; }
+    .bar > span { display: block; height: 100%; border-radius: 8px; }
+    .score { font-weight: 700; font-variant-numeric: tabular-nums; }
+    .row-actions { white-space: nowrap; text-align: right; }
+    .icon-btn { background: none; border: none; cursor: pointer; padding: 6px; border-radius: 8px; color: var(--cocoa); font: inherit; font-size: .82rem; font-weight: 600; }
+    .icon-btn:hover { background: var(--paper); color: var(--espresso); }
+    .q-quick { background: rgba(42,140,130,.14); color: #1D6B63; }
+    .q-bet   { background: rgba(31,78,140,.12); color: var(--talavera); }
+    .q-extra { background: rgba(217,149,30,.16); color: #8A5C0E; }
+    .q-pit   { background: rgba(194,24,91,.10); color: var(--rosa); }
+    .empty { text-align: center; color: var(--cocoa); padding: 36px 12px; }
+    .table-wrap { overflow-x: auto; }
+    .legend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 18px; }
+    .legend-grid div { background: var(--paper); border-radius: 12px; padding: 14px 16px; font-size: .88rem; color: var(--espresso-soft); }
+    .legend-grid strong { display: block; margin-bottom: 2px; color: var(--espresso); }
+    details.weights summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    details.weights summary::-webkit-details-marker { display: none; }
+    details.weights summary::after { content: '+'; font-size: 1.4rem; color: var(--cocoa); }
+    details.weights[open] summary::after { content: '–'; }
+    .editing-banner { display: none; background: rgba(217,149,30,.14); color: #8A5C0E; padding: 8px 14px; border-radius: 10px; font-size: .88rem; font-weight: 600; margin-bottom: 14px; }
+    .editing .editing-banner { display: block; }
+    @media (max-width: 640px) { .hide-sm { display: none; } }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Ale Tamez</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="./" class="active">Toolkit</a></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <header class="tool-header">
+    <div class="container">
+      <p class="crumbs"><a href="./">Toolkit</a> &nbsp;/&nbsp; Strategy</p>
+      <h1>AI Use Case Prioritizer</h1>
+      <p class="lede">Every organization has a list of 40 "we should use AI for…" ideas. This tool helps you find the five worth starting with: score each idea, tune the weights to your priorities, and see where it lands on an Impact vs. Ease map.</p>
+      <div class="analogy"><span aria-hidden="true">🧭</span><div><strong>Think of it like house hunting.</strong> You don't buy the first house you see. You decide what matters (location, price, space), weight it, and compare. Same with AI: the shiniest idea isn't always the right first move.</div></div>
+    </div>
+  </header>
+
+  <main class="tool-main">
+    <div class="container">
+      <div class="grid-sidebar">
+
+        <!-- LEFT: input -->
+        <div>
+          <section class="card" id="formCard" aria-labelledby="formTitle">
+            <div class="editing-banner">Editing a use case. Save to update it.</div>
+            <h2 id="formTitle">Score a use case</h2>
+            <p class="sub">Rate each factor from 1 (low) to 5 (high). Use your gut first; you can always refine.</p>
+            <form id="ucForm" autocomplete="off">
+              <div class="grid-2">
+                <div class="field"><label for="ucName">Use case</label><input type="text" id="ucName" placeholder="e.g. Draft meeting recaps" required maxlength="80"></div>
+                <div class="field"><label for="ucTeam">Team / owner <span class="hint">(optional)</span></label><input type="text" id="ucTeam" placeholder="e.g. Program Mgmt" maxlength="40"></div>
+              </div>
+              <div class="criteria-list" id="criteriaInputs"></div>
+              <div class="btn-row" style="margin-top: 8px;">
+                <button type="submit" class="btn btn-primary" id="saveBtn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+                  <span>Add to the map</span>
+                </button>
+                <button type="button" class="btn btn-ghost" id="cancelEdit" hidden>Cancel</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="card">
+            <details class="weights">
+              <summary><span><span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;">Tune the weights</span><br><span class="hint">What matters most to <em>your</em> organization right now?</span></span></summary>
+              <div style="margin-top: 20px;" id="weightInputs"></div>
+              <button type="button" class="btn btn-ghost btn-small" id="resetWeights">Reset to recommended</button>
+            </details>
+          </section>
+        </div>
+
+        <!-- RIGHT: matrix -->
+        <section class="card sticky" aria-labelledby="mapTitle">
+          <h2 id="mapTitle">Impact vs. Ease map</h2>
+          <p class="sub">Up and to the right is where you start.</p>
+          <svg id="matrix" viewBox="0 0 420 440" role="img" aria-label="Scatter plot of use cases by impact and ease"></svg>
+          <div class="btn-row no-print" style="margin-top: 16px;">
+            <button class="btn btn-ghost btn-small" id="loadSamples">Load sample portfolio</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- RANKING -->
+      <section class="card" style="margin-top: 24px;" aria-labelledby="rankTitle">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap; margin-bottom: 12px;">
+          <div><h2 id="rankTitle">Your ranked shortlist</h2><p class="sub" style="margin:0;">Overall score blends every factor using your weights (0–100).</p></div>
+          <div class="btn-row no-print">
+            <button class="btn btn-ghost btn-small" id="exportCsv">Export CSV</button>
+            <button class="btn btn-ghost btn-small" onclick="window.print()">Print / Save PDF</button>
+            <button class="btn btn-ghost btn-small" id="clearAll">Clear all</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="rank-table">
+            <thead><tr><th>#</th><th>Use case</th><th>Quadrant</th><th class="hide-sm">Impact</th><th class="hide-sm">Ease</th><th>Overall</th><th class="no-print"><span class="sr-only">Actions</span></th></tr></thead>
+            <tbody id="rankBody"></tbody>
+          </table>
+        </div>
+        <div class="legend-grid">
+          <div><strong style="color:#1D6B63;">Quick Wins</strong>High impact, easy to land. Start here to build momentum and trust.</div>
+          <div><strong style="color:var(--talavera);">Big Bets</strong>High impact, hard to land. Plan them deliberately with a sponsor and a pilot.</div>
+          <div><strong style="color:#8A5C0E;">Easy Extras</strong>Easy but modest. Great for training exercises and Champion demos.</div>
+          <div><strong style="color:var(--rosa);">Money Pits</strong>Hard and low value. Park these, however exciting the demo looked.</div>
+        </div>
+      </section>
+
+      <div class="method-note">
+        <strong>How the math works:</strong> <em>Impact</em> combines Business Value and Reach. <em>Ease</em> combines Data Readiness, Feasibility, low Risk, and low Change Effort. Each factor is weighted by your sliders and normalized to 0–100. Change Effort is in here on purpose. In my experience, the people side is the factor teams most often forget to score. Your data is saved only in your browser and never leaves your device.
+      </div>
+    </div>
+  </main>
+
+  <section class="tool-cta">
+    <div class="container">
+      <h2>Have a list of 40 ideas and no idea where to start?</h2>
+      <p>I help teams turn AI ambition into a prioritized roadmap people actually adopt.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:hola@alejandratamez.com?subject=AI%20Use%20Case%20Prioritization">Let's talk</a>
+        <a class="btn btn-ghost" href="./">Explore the Toolkit</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Alejandra Tamez de la Garza. All rights reserved.</p>
+      <p class="footer-tagline">"My superpower is connection. Everything else is just logistics."</p>
+    </div>
+  </footer>
+
+  <script src="toolkit.js"></script>
+  <script>
+  (function () {
+    const STORE = 'toolkit.prioritizer.v1';
+    const CRITERIA = [
+      { key: 'value',       label: 'Business value',     hint: 'Money saved, risk reduced, revenue, quality',  axis: 'impact', invert: false, weight: 5 },
+      { key: 'reach',       label: 'Reach & frequency',  hint: 'How many people, how often',                   axis: 'impact', invert: false, weight: 4 },
+      { key: 'data',        label: 'Data readiness',     hint: 'Is the content accessible, clean, permissioned?', axis: 'ease', invert: false, weight: 3 },
+      { key: 'feasibility', label: 'Technical feasibility', hint: 'Can today’s tools actually do this?',  axis: 'ease',   invert: false, weight: 3 },
+      { key: 'risk',        label: 'Risk',               hint: 'Compliance, IP, accuracy stakes (5 = high risk)', axis: 'ease', invert: true, weight: 3 },
+      { key: 'change',      label: 'Change effort',      hint: 'How much do habits need to shift? (5 = a lot)', axis: 'ease', invert: true, weight: 2 }
+    ];
+    const DEFAULT_WEIGHTS = Object.fromEntries(CRITERIA.map(c => [c.key, c.weight]));
+    const SAMPLES = [
+      { name: 'Meeting recaps & action items', team: 'Everyone', value: 3, reach: 5, data: 5, feasibility: 5, risk: 1, change: 2 },
+      { name: 'Supplier contract first-pass review', team: 'Procurement', value: 5, reach: 2, data: 3, feasibility: 3, risk: 4, change: 3 },
+      { name: 'Engineering change notice drafting', team: 'Engineering', value: 4, reach: 3, data: 4, feasibility: 4, risk: 3, change: 3 },
+      { name: 'HR policy Q&A assistant', team: 'People Team', value: 3, reach: 4, data: 4, feasibility: 4, risk: 3, change: 2 },
+      { name: 'Autonomous customer quote pricing', team: 'Sales', value: 5, reach: 3, data: 2, feasibility: 2, risk: 5, change: 5 },
+      { name: 'Slide deck formatting cleanup', team: 'Marketing', value: 2, reach: 3, data: 5, feasibility: 4, risk: 1, change: 1 },
+      { name: 'AI-generated performance reviews', team: 'Managers', value: 2, reach: 3, data: 2, feasibility: 3, risk: 5, change: 4 }
+    ];
+    const Q = {
+      quick: { label: 'Quick Win', cls: 'q-quick', color: '#2A8C82' },
+      bet:   { label: 'Big Bet',   cls: 'q-bet',   color: '#1F4E8C' },
+      extra: { label: 'Easy Extra', cls: 'q-extra', color: '#D9951E' },
+      pit:   { label: 'Money Pit', cls: 'q-pit',   color: '#C2185B' }
+    };
+
+    let state = Toolkit.load(STORE, null) || { items: [], weights: { ...DEFAULT_WEIGHTS } };
+    let editingId = null;
+
+    // ---------- build inputs ----------
+    const critHost = document.getElementById('criteriaInputs');
+    critHost.innerHTML = CRITERIA.map(c => `
+      <div class="range-row">
+        <label for="c_${c.key}">${c.label}</label><output id="o_${c.key}">3</output>
+        <input type="range" id="c_${c.key}" min="1" max="5" step="1" value="3" aria-describedby="h_${c.key}">
+      </div>
+      <p class="crit-meta" id="h_${c.key}">${c.hint}</p>`).join('');
+    CRITERIA.forEach(c => {
+      const input = document.getElementById('c_' + c.key);
+      input.addEventListener('input', () => document.getElementById('o_' + c.key).textContent = input.value);
+    });
+
+    const wHost = document.getElementById('weightInputs');
+    function renderWeights() {
+      wHost.innerHTML = CRITERIA.map(c => `
+        <div class="range-row">
+          <label for="w_${c.key}">${c.label}</label><output id="wo_${c.key}">${state.weights[c.key]}</output>
+          <input type="range" id="w_${c.key}" min="0" max="5" step="1" value="${state.weights[c.key]}">
+        </div>`).join('');
+      CRITERIA.forEach(c => {
+        const input = document.getElementById('w_' + c.key);
+        input.addEventListener('input', () => {
+          state.weights[c.key] = +input.value;
+          document.getElementById('wo_' + c.key).textContent = input.value;
+          persist(); render();
+        });
+      });
+    }
+
+    // ---------- scoring ----------
+    // Each factor becomes 0..1 where 1 is always "good" (risk & change are inverted).
+    const norm = (item, c) => { const v = (item[c.key] - 1) / 4; return c.invert ? 1 - v : v; };
+    function weighted(item, filter) {
+      let sum = 0, wsum = 0;
+      CRITERIA.filter(filter).forEach(c => { const w = state.weights[c.key]; sum += norm(item, c) * w; wsum += w; });
+      return wsum ? Math.round((sum / wsum) * 100) : 50;
+    }
+    function score(item) {
+      const impact = weighted(item, c => c.axis === 'impact');
+      const ease = weighted(item, c => c.axis === 'ease');
+      const overall = weighted(item, () => true);
+      const quad = impact >= 50 ? (ease >= 50 ? 'quick' : 'bet') : (ease >= 50 ? 'extra' : 'pit');
+      return { impact, ease, overall, quad };
+    }
+    function ranked() {
+      return state.items.map(it => ({ ...it, ...score(it) })).sort((a, b) => b.overall - a.overall);
+    }
+
+    // ---------- render ----------
+    const esc = Toolkit.escape;
+    function renderMatrix(list) {
+      const P = 40, S = 360; // padding, plot size
+      const x = e => P + (e / 100) * S;
+      const y = i => P + S - (i / 100) * S;
+      const quad = (qx, qy, fill) => `<rect x="${qx}" y="${qy}" width="${S/2}" height="${S/2}" fill="${fill}"/>`;
+      let svg = `
+        ${quad(P, P, 'rgba(31,78,140,.06)')}${quad(P + S/2, P, 'rgba(42,140,130,.09)')}
+        ${quad(P, P + S/2, 'rgba(194,24,91,.05)')}${quad(P + S/2, P + S/2, 'rgba(217,149,30,.08)')}
+        <line x1="${P + S/2}" y1="${P}" x2="${P + S/2}" y2="${P + S}" stroke="#BEB4AA" stroke-dasharray="4 4"/>
+        <line x1="${P}" y1="${P + S/2}" x2="${P + S}" y2="${P + S/2}" stroke="#BEB4AA" stroke-dasharray="4 4"/>
+        <rect x="${P}" y="${P}" width="${S}" height="${S}" fill="none" stroke="#BEB4AA"/>
+        <text class="quad-label" x="${P + S - 12}" y="${P + 24}" text-anchor="end" fill="#1D6B63">Quick Wins</text>
+        <text class="quad-label" x="${P + 12}" y="${P + 24}" fill="#1F4E8C">Big Bets</text>
+        <text class="quad-label" x="${P + S - 12}" y="${P + S - 14}" text-anchor="end" fill="#8A5C0E">Easy Extras</text>
+        <text class="quad-label" x="${P + 12}" y="${P + S - 14}" fill="#C2185B">Money Pits</text>
+        <text class="axis-label" x="${P + S/2}" y="${P + S + 26}" text-anchor="middle">Ease &rarr;</text>
+        <text class="axis-label" transform="translate(${P - 16} ${P + S/2}) rotate(-90)" text-anchor="middle">Impact &rarr;</text>`;
+      if (!list.length) {
+        svg += `<text x="${P + S/2}" y="${P + S/2 - 8}" text-anchor="middle" class="quad-sub">Add a use case, or load the sample</text><text x="${P + S/2}" y="${P + S/2 + 10}" text-anchor="middle" class="quad-sub">portfolio to see the map come alive.</text>`;
+      }
+      // Draw lowest-ranked first so the top picks sit on top.
+      list.map((it, i) => ({ it, i })).reverse().forEach(({ it, i }) => {
+        const cx = x(Math.min(97, Math.max(3, it.ease))), cy = y(Math.min(97, Math.max(3, it.impact)));
+        svg += `<g><title>${esc(it.name)}: Impact ${it.impact}, Ease ${it.ease}</title>
+          <circle class="dot" cx="${cx}" cy="${cy}" r="12" fill="${Q[it.quad].color}" data-id="${it.id}"/>
+          <text class="dot-num" x="${cx}" y="${cy + 4}" text-anchor="middle">${i + 1}</text></g>`;
+      });
+      document.getElementById('matrix').innerHTML = svg;
+      document.querySelectorAll('#matrix .dot').forEach(d => d.addEventListener('click', () => startEdit(d.dataset.id)));
+    }
+
+    function renderTable(list) {
+      const body = document.getElementById('rankBody');
+      if (!list.length) {
+        body.innerHTML = `<tr><td colspan="7" class="empty">No use cases yet. Score your first idea above, or load the sample portfolio.</td></tr>`;
+        return;
+      }
+      body.innerHTML = list.map((it, i) => `
+        <tr>
+          <td><span class="rank-num" style="background:${Q[it.quad].color}">${i + 1}</span></td>
+          <td><div class="uc-name">${esc(it.name)}</div>${it.team ? `<div class="uc-team">${esc(it.team)}</div>` : ''}</td>
+          <td><span class="tag ${Q[it.quad].cls}">${Q[it.quad].label}</span></td>
+          <td class="hide-sm score">${it.impact}</td>
+          <td class="hide-sm score">${it.ease}</td>
+          <td><div style="display:flex;align-items:center;gap:10px;"><span class="score">${it.overall}</span><div class="bar" style="flex:1"><span style="width:${it.overall}%;background:${Q[it.quad].color}"></span></div></div></td>
+          <td class="row-actions no-print">
+            <button class="icon-btn" data-edit="${it.id}" aria-label="Edit ${esc(it.name)}">Edit</button>
+            <button class="icon-btn" data-del="${it.id}" aria-label="Remove ${esc(it.name)}">Remove</button>
+          </td>
+        </tr>`).join('');
+      body.querySelectorAll('[data-edit]').forEach(b => b.addEventListener('click', () => startEdit(b.dataset.edit)));
+      body.querySelectorAll('[data-del]').forEach(b => b.addEventListener('click', () => {
+        state.items = state.items.filter(x => x.id !== b.dataset.del);
+        if (editingId === b.dataset.del) resetForm();
+        persist(); render();
+      }));
+    }
+
+    function render() { const list = ranked(); renderMatrix(list); renderTable(list); }
+    function persist() { Toolkit.save(STORE, state); }
+    const uid = () => Math.random().toString(36).slice(2, 10);
+
+    // ---------- form ----------
+    const form = document.getElementById('ucForm');
+    const formCard = document.getElementById('formCard');
+    function resetForm() {
+      form.reset();
+      CRITERIA.forEach(c => { document.getElementById('c_' + c.key).value = 3; document.getElementById('o_' + c.key).textContent = 3; });
+      editingId = null;
+      formCard.classList.remove('editing');
+      document.querySelector('#saveBtn span').textContent = 'Add to the map';
+      document.getElementById('cancelEdit').hidden = true;
+    }
+    function startEdit(id) {
+      const it = state.items.find(x => x.id === id);
+      if (!it) return;
+      editingId = id;
+      document.getElementById('ucName').value = it.name;
+      document.getElementById('ucTeam').value = it.team || '';
+      CRITERIA.forEach(c => { document.getElementById('c_' + c.key).value = it[c.key]; document.getElementById('o_' + c.key).textContent = it[c.key]; });
+      formCard.classList.add('editing');
+      document.querySelector('#saveBtn span').textContent = 'Save changes';
+      document.getElementById('cancelEdit').hidden = false;
+      formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('ucName').focus({ preventScroll: true });
+    }
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('ucName').value.trim();
+      if (!name) return;
+      const item = { name, team: document.getElementById('ucTeam').value.trim() };
+      CRITERIA.forEach(c => item[c.key] = +document.getElementById('c_' + c.key).value);
+      if (editingId) {
+        Object.assign(state.items.find(x => x.id === editingId), item);
+        Toolkit.toast('Use case updated');
+      } else {
+        state.items.push({ id: uid(), ...item });
+        Toolkit.toast('Added to the map');
+      }
+      persist(); resetForm(); render();
+    });
+    document.getElementById('cancelEdit').addEventListener('click', resetForm);
+
+    // ---------- toolbar ----------
+    document.getElementById('loadSamples').addEventListener('click', () => {
+      const existing = new Set(state.items.map(i => i.name));
+      SAMPLES.filter(s => !existing.has(s.name)).forEach(s => state.items.push({ id: uid(), ...s }));
+      persist(); render(); Toolkit.toast('Sample portfolio loaded');
+    });
+    document.getElementById('clearAll').addEventListener('click', () => {
+      if (!state.items.length || !confirm('Remove every use case from the list?')) return;
+      state.items = []; resetForm(); persist(); render();
+    });
+    document.getElementById('resetWeights').addEventListener('click', () => {
+      state.weights = { ...DEFAULT_WEIGHTS }; persist(); renderWeights(); render();
+    });
+    document.getElementById('exportCsv').addEventListener('click', () => {
+      const list = ranked();
+      if (!list.length) return Toolkit.toast('Nothing to export yet');
+      const q = v => `"${String(v).replace(/"/g, '""')}"`;
+      const header = ['Rank', 'Use case', 'Team', ...CRITERIA.map(c => c.label), 'Impact', 'Ease', 'Overall', 'Quadrant'];
+      const rows = list.map((it, i) => [i + 1, it.name, it.team || '', ...CRITERIA.map(c => it[c.key]), it.impact, it.ease, it.overall, Q[it.quad].label]);
+      Toolkit.download('ai-use-case-priorities.csv', [header, ...rows].map(r => r.map(q).join(',')).join('\n'), 'text/csv');
+    });
+
+    renderWeights();
+    render();
+  })();
+  </script>
+</body>
+</html>

@@ -1346,6 +1346,23 @@
       opacity: 1;
       transform: translateY(0);
     }
+    /* ===== TOOLKIT BAND ===== */
+    .toolkit-band { padding: 110px 0; background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
+    .toolkit-band::before { content: ''; position: absolute; left: -140px; bottom: -160px; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle, rgba(217,149,30,.18) 0%, transparent 70%); pointer-events: none; }
+    .toolkit-band .section-label { color: #E8B65A; }
+    .toolkit-band .section-title { color: var(--white); }
+    .toolkit-band .view-all { color: #E8B65A; }
+    .toolkit-band .view-all:hover { color: var(--white); }
+    .toolkit-intro { color: rgba(255,255,255,.72); font-size: 1rem; margin-top: -32px; max-width: 620px; }
+    .toolkit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+    .toolkit-item { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 28px 24px; color: var(--white); border-top: 4px solid var(--tk); transition: transform .3s, background .3s; display: flex; flex-direction: column; }
+    .toolkit-item:hover { transform: translateY(-4px); background: rgba(255,255,255,.1); color: var(--white); }
+    .toolkit-item .tk-phase { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--tk); filter: brightness(1.5); }
+    .toolkit-item h3 { font-size: 1.45rem; margin: 6px 0 10px; color: var(--white); }
+    .toolkit-item p { font-size: .9rem; color: rgba(255,255,255,.7); line-height: 1.6; flex: 1; }
+    .toolkit-item .tk-go { margin-top: 16px; font-weight: 600; font-size: .9rem; color: var(--white); }
+    @media (max-width: 1000px) { .toolkit-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .toolkit-grid { grid-template-columns: 1fr; } .toolkit-band { padding: 80px 0; } }
   </style>
 </head>
 <body>
@@ -1357,6 +1374,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="tools/">Toolkit</a></li>
         <li><a href="blog/">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -1484,7 +1502,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
           </div>
           <h3>Copilot Enablement at Scale</h3>
-          <p>The full story of driving 97% adoption across 10,000+ users: the Champions network, the Flywheel methodology, the training engine. This is the flagship.</p>
+          <p>The full story of driving 94% sustained adoption across 13,000+ seats: the Champions network, the Flywheel methodology, the training engine. This is the flagship.</p>
           <a href="case-studies/copilot-enablement-at-scale.html" class="read-more" style="margin-top: 16px;">Read the Case Study <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
         </div>
         <div class="project-card">
@@ -1503,6 +1521,30 @@
           <p>Spanish-language AI education for 500M+ Spanish speakers. A venture built on the belief that AI access shouldn't depend on what language you speak.</p>
           <span class="coming-soon-badge">In Development</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TOOLKIT -->
+  <section class="toolkit-band" id="toolkit">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-label">The Toolkit</span>
+          <h2 class="section-title">Frameworks You Can Click</h2>
+          <p class="toolkit-intro">The tools I use to turn AI licenses into lasting habits, rebuilt so anyone can use them. Free, private, and in your browser.</p>
+        </div>
+        <a href="tools/" class="view-all">
+          Open the Toolkit
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+      <div class="toolkit-grid fade-in">
+        <a href="tools/flywheel-readiness.html" class="toolkit-item" style="--tk:#1F4E8C"><span class="tk-phase">Listen</span><h3>Flywheel Check</h3><p>16 questions to find where your AI adoption is wobbling, and what to fix first.</p><span class="tk-go">Take the check &rarr;</span></a>
+        <a href="tools/prompt-builder.html" class="toolkit-item" style="--tk:#D9951E"><span class="tk-phase">Enable</span><h3>Prompt Builder</h3><p>Bilingual (EN/ES) Copilot prompt coach with live scoring and iteration prompts.</p><span class="tk-go">Build a prompt &rarr;</span></a>
+        <a href="tools/ai-value-calculator.html" class="toolkit-item" style="--tk:#2A8C82"><span class="tk-phase">Measure</span><h3>Value Calculator</h3><p>Adoption doesn't equal ROI. See the real return and the cost of the habit gap.</p><span class="tk-go">Run the numbers &rarr;</span></a>
+        <a href="tools/use-case-prioritizer.html" class="toolkit-item" style="--tk:#C2185B"><span class="tk-phase">Amplify</span><h3>Use Case Prioritizer</h3><p>Score AI ideas and map them on Impact vs. Ease to find your Quick Wins.</p><span class="tk-go">Prioritize &rarr;</span></a>
       </div>
     </div>
   </section>
