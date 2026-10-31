@@ -27,7 +27,7 @@ CARD_TEMPLATE = """        <!-- Post (auto-published) -->
                 <p class="card-excerpt">{excerpt}</p>
                 <div class="card-footer">
                     <span class="card-read-time">{read_time}</span>
-                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    <span class="card-link"><span data-lang="en">Read post</span><span data-lang="es">Leer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </div>
             </div>
         </a>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="About | Alejandra Tamez de la Garza" data-title-es="Sobre mí | Alejandra Tamez de la Garza">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1240,7 +1240,11 @@
       opacity: 1;
       transform: translateY(0);
     }
+      .competencies + .competencies { margin-top: 28px; }
+    .comp-tag.human-tag { background: var(--terracotta); }
   </style>
+  <link rel="stylesheet" href="assets/i18n.css">
+  <script src="assets/i18n.js"></script>
 </head>
 <body>
 
@@ -1248,94 +1252,99 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Ale Tamez</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog/">Blog</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="about.html" class="active"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a></li>
+          <li><a href="projects.html"><span data-lang="en">Projects</span><span data-lang="es">Proyectos</span></a></li>
+          <li><a href="blog/">Blog</a></li>
+          <li><a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
+
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="container">
-      <span class="section-label">About Me</span>
-      <h2 class="section-title">The Person Behind the Strategy</h2>
+      <span class="section-label"><span data-lang="en">About Me</span><span data-lang="es">Sobre mí</span></span>
+      <h2 class="section-title" data-lang="en">The Person Behind the Strategy</h2>
+      <h2 class="section-title" data-lang="es">La persona detrás de la estrategia</h2>
       <div class="about-grid">
-        <div class="manifesto fade-in">
-          <p>I believe the most powerful technology in any organization is the person who refuses to accept "that's just how we do things." I've spent my career standing in the gap between what technology can do and what people are willing to try, and my job has always been the same: make the unfamiliar feel possible. I didn't stumble into AI enablement. I chased it. I saw a world where Copilot and generative AI could transform how people work, and I built the playbook, the training, and the champions network to make it real. Not because someone asked me to, but because I couldn't sit still knowing the potential was right there, untouched.</p>
+        <div class="manifesto fade-in" data-lang="en">
+          <p>I believe the most powerful technology in any organization is the person who refuses to accept "that's just how we do things." I've spent my career standing in the gap between what technology can do and what people are willing to try, and my job has always been the same: make the unfamiliar feel possible. I didn't stumble into AI enablement. I chased it. I saw a world where Copilot and generative AI could transform how people work, and I built the playbook, the training, the Champions network, and the agents to make it real. Nobody had to ask. I couldn't sit still knowing the potential was right there, untouched.</p>
 
-          <p>Beyond the resume, I'm an ENFP who believes the best way to understand the world is to stay curious. Whether I'm playing piano (with more heart than skill) or hosting a weekly Bible study to stay grounded, I'm driven by a "learn-it-all" spirit that AI has only accelerated. Growing up between two cultures and languages gave me a dual perspective — a gift that turned into a professional toolkit of empathy, compassion, and a relentless drive to evolve. I bring that duality into every strategy I build and every workshop I lead. And while I might lead the room, my two Shih Tzus, Leo and Santi, remain the undisputed CEOs of my home.</p>
+          <p>I also build. I design Copilot Studio agents, write automations, prototype dashboards, and architect how AI connects to the systems people already use. I teach what I build, and I build what I teach, because the best way to help someone trust a tool is to show them something real you made with it.</p>
 
-          <p>This is what I know to be true: People are the transformation or the detractors. The organizations that will win the next decade are the ones brave enough to invest in the humans using them. I want to work with leaders and teams who believe that too, who understand that adoption without empowerment is just compliance wearing a smile. If you're building something that puts people at the center, I want to be in the room. Let's connect!</p>
+          <p>Beyond the resume, I'm an ENFP who believes the best way to understand the world is to stay curious. Whether I'm playing piano (with more heart than skill) or hosting a weekly Bible study to stay grounded, I'm driven by a "learn it all" spirit that AI has only accelerated. Growing up between two cultures and languages gave me a dual perspective, a gift that turned into a professional toolkit of empathy, compassion, and a relentless drive to evolve. And while I might lead the room, my two Shih Tzus, Leo and Santi, remain the undisputed CEOs of my home.</p>
+
+          <p>This is what I know to be true: people are the transformation. The organizations that will win the next decade are the ones wise enough to invest in the humans using the technology. If you're building something that puts people at the center, I want to be in the room. Let's connect!</p>
+        </div>
+        <div class="manifesto fade-in" data-lang="es">
+          <p>Creo que la tecnología más poderosa de cualquier organización es la persona que se niega a aceptar el "así se ha hecho siempre". He pasado mi carrera en el espacio entre lo que la tecnología puede hacer y lo que las personas están dispuestas a intentar, y mi trabajo siempre ha sido el mismo: hacer que lo desconocido se sienta posible. No llegué a la habilitación en IA por casualidad. La busqué. Vi un mundo donde Copilot y la IA generativa podían transformar la forma de trabajar, y construí el plan, la capacitación, la red de champions y los agentes para hacerlo realidad. Nadie me lo pidió. Simplemente no podía quedarme quieta sabiendo que todo ese potencial estaba ahí, esperando.</p>
+
+          <p>También construyo. Diseño agentes en Copilot Studio, escribo automatizaciones, hago prototipos de tableros y diseño cómo la IA se conecta con los sistemas que la gente ya usa. Enseño lo que construyo y construyo lo que enseño, porque la mejor manera de ayudar a alguien a confiar en una herramienta es mostrarle algo real que hiciste con ella.</p>
+
+          <p>Más allá del currículum, soy ENFP y creo que la mejor forma de entender el mundo es mantener la curiosidad. Ya sea tocando el piano (con más corazón que técnica) o dirigiendo un estudio bíblico semanal para mantenerme centrada, me impulsa un espíritu de aprenderlo todo que la IA solo ha acelerado. Crecer entre dos culturas y dos idiomas me dio una doble perspectiva, un regalo que se convirtió en una caja de herramientas profesional de empatía, compasión y ganas constantes de evolucionar. Y aunque yo dirija la sala, mis dos Shih Tzus, Leo y Santi, siguen siendo los indiscutibles directores generales de mi casa.</p>
+
+          <p>Esto es lo que sé con certeza: las personas son la transformación. Las organizaciones que ganarán la próxima década serán las que tengan la sabiduría de invertir en quienes usan la tecnología. Si estás construyendo algo que pone a las personas en el centro, quiero estar en esa conversación. ¡Conectemos!</p>
         </div>
         <div class="about-sidebar fade-in">
-          <img src="IMG_3417.jpeg" alt="Leo and Santi — the real CEOs" class="dogs-photo">
-          <p class="dogs-caption">Leo & Santi — the real CEOs</p>
-          <p class="care-about-title">What I Care About</p>
+          <img src="IMG_3417.jpeg" alt="Leo and Santi, the real CEOs" class="dogs-photo">
+          <p class="dogs-caption"><span data-lang="en">Leo &amp; Santi, the real CEOs</span><span data-lang="es">Leo y Santi, los verdaderos directores</span></p>
+          <p class="care-about-title"><span data-lang="en">What I Care About</span><span data-lang="es">Lo que me importa</span></p>
           <div class="care-tags">
-            <span class="care-tag">People</span>
-            <span class="care-tag">Dogs</span>
-            <span class="care-tag">Travel</span>
-            <span class="care-tag">Faith</span>
-            <span class="care-tag">AI</span>
-            <span class="care-tag">Culture</span>
-            <span class="care-tag">Self-Awareness</span>
-            <span class="care-tag">Community</span>
+            <span class="care-tag"><span data-lang="en">People</span><span data-lang="es">Las personas</span></span>
+            <span class="care-tag"><span data-lang="en">Dogs</span><span data-lang="es">Los perros</span></span>
+            <span class="care-tag"><span data-lang="en">Travel</span><span data-lang="es">Viajar</span></span>
+            <span class="care-tag"><span data-lang="en">Faith</span><span data-lang="es">La fe</span></span>
+            <span class="care-tag"><span data-lang="en">AI</span><span data-lang="es">La IA</span></span>
+            <span class="care-tag"><span data-lang="en">Building</span><span data-lang="es">Construir</span></span>
+            <span class="care-tag"><span data-lang="en">Culture</span><span data-lang="es">La cultura</span></span>
+            <span class="care-tag"><span data-lang="en">Self Awareness</span><span data-lang="es">El autoconocimiento</span></span>
+            <span class="care-tag"><span data-lang="en">Community</span><span data-lang="es">La comunidad</span></span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-
-
-  <!-- ENABLEMENT FLYWHEEL (standalone section, moved up from Experience) -->
+  <!-- ENABLEMENT FLYWHEEL -->
   <section class="experience" id="flywheel-section" style="padding-top: 80px; padding-bottom: 60px;">
     <div class="container">
-      <span class="section-label">My Methodology</span>
+      <span class="section-label"><span data-lang="en">My Methodology</span><span data-lang="es">Mi metodología</span></span>
       <h2 class="section-title">The Enablement Flywheel</h2>
 
-      <!-- Frameworks -->
       <div class="frameworks-section fade-in">
         <div class="framework-card">
-          <p style="font-size: 1.05rem; color: var(--text-medium); margin-bottom: 8px;">A four-phase methodology for sustainable technology adoption.</p>
+          <p style="font-size: 1.05rem; color: var(--text-medium); margin-bottom: 8px;"><span data-lang="en">A four phase methodology for sustainable technology adoption. Each phase has a human practice and a technical system behind it.</span><span data-lang="es">Una metodología de cuatro fases para una adopción tecnológica sostenible. Cada fase tiene una práctica humana y un sistema técnico que la respalda.</span></p>
 
           <div class="flywheel-interactive" id="flywheel">
-            <!-- The orbit wheel -->
             <div class="flywheel-orbit-wrapper">
               <svg class="flywheel-orbit-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enablement Flywheel phases">
-                <!-- Guide ring: subtle circle that shows the orbit path -->
                 <circle class="flywheel-guide-ring" cx="200" cy="200" r="150"/>
-
-                <!-- Rotating group of four dots, one at each cardinal position -->
                 <g class="flywheel-orbit" id="flywheelOrbit">
-                  <!-- Dot at 12 o'clock (top) = active by default -->
                   <circle class="flywheel-dot-orbit" data-phase="0" cx="200" cy="50" r="16" fill="#705148"/>
-                  <!-- Dot at 3 o'clock (right) -->
                   <circle class="flywheel-dot-orbit" data-phase="1" cx="350" cy="200" r="8" fill="#BEB4AA"/>
-                  <!-- Dot at 6 o'clock (bottom) -->
                   <circle class="flywheel-dot-orbit" data-phase="2" cx="200" cy="350" r="8" fill="#BEB4AA"/>
-                  <!-- Dot at 9 o'clock (left) -->
                   <circle class="flywheel-dot-orbit" data-phase="3" cx="50" cy="200" r="8" fill="#BEB4AA"/>
                 </g>
               </svg>
-
-              <!-- Still center, does NOT rotate -->
               <div class="flywheel-center" id="flywheelCenter">
                 <div class="flywheel-center-label" id="flywheelPhaseLabel">Phase 1</div>
                 <div class="flywheel-center-name" id="flywheelPhaseName">Listen</div>
               </div>
             </div>
 
-            <!-- Right side: description + progress -->
             <div class="flywheel-phase-panel" id="flywheelPanel" aria-live="polite">
               <div class="flywheel-phase-eyebrow">The Enablement Flywheel</div>
               <div class="flywheel-phase-desc" id="flywheelPhaseDesc">Understand the real barriers, not the assumed ones.</div>
-
               <div class="flywheel-progress">
                 <button class="flywheel-progress-item active" data-jump="0">Listen</button>
                 <button class="flywheel-progress-item" data-jump="1">Enable</button>
@@ -1345,157 +1354,169 @@
             </div>
           </div>
 
-          <!-- Fallback for no-JS users -->
           <noscript>
             <ol style="margin-top: 20px; padding-left: 20px; color: var(--text-medium);">
-              <li><strong>Listen.</strong> Understand the real barriers, not the assumed ones.</li>
-              <li><strong>Enable.</strong> Meet people where they are with relevant training.</li>
-              <li><strong>Measure.</strong> Track behavior change, not just login counts.</li>
+              <li><strong>Listen.</strong> Find the real barriers, beyond the assumed ones.</li>
+              <li><strong>Enable.</strong> Meet people where they are with relevant training and tools.</li>
+              <li><strong>Measure.</strong> Track behavior change and capability growth.</li>
               <li><strong>Amplify.</strong> Turn early wins into organizational momentum.</li>
             </ol>
           </noscript>
         </div>
       </div>
     </div>
-    </div>
   </section>
 
   <!-- EXPERIENCE -->
   <section class="experience" id="experience">
     <div class="container">
-      <span class="section-label">Experience & Skills</span>
-      <h2 class="section-title">Where Ideas Meet Impact</h2>
+      <span class="section-label"><span data-lang="en">Experience &amp; Skills</span><span data-lang="es">Experiencia y habilidades</span></span>
+      <h2 class="section-title" data-lang="en">Where Ideas Meet Impact</h2>
+      <h2 class="section-title" data-lang="es">Donde las ideas se convierten en impacto</h2>
 
-      <!-- Stats -->
       <div class="stats-grid fade-in">
         <div class="stat-card">
-          <div class="stat-number">10,000+</div>
-          <div class="stat-label">Users Enabled on Copilot</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">97%</div>
-          <div class="stat-label">Adoption Rate Achieved</div>
+          <div class="stat-number">13,000+</div>
+          <div class="stat-label"><span data-lang="en">Copilot Seats Enabled</span><span data-lang="es">Licencias de Copilot habilitadas</span></div>
         </div>
         <div class="stat-card">
           <div class="stat-number">70+</div>
-          <div class="stat-label">Training Sessions Delivered</div>
+          <div class="stat-label"><span data-lang="en">Geographies Reached</span><span data-lang="es">Geografías alcanzadas</span></div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">200+</div>
-          <div class="stat-label">Champions Network Built</div>
+          <div class="stat-number">80+</div>
+          <div class="stat-label"><span data-lang="en">Curated AI Trainings</span><span data-lang="es">Capacitaciones de IA</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">200</div>
+          <div class="stat-label"><span data-lang="en">Champions in the Network</span><span data-lang="es">Champions en la red</span></div>
         </div>
       </div>
 
-      <!-- Work History -->
       <div class="experience-content fade-in">
         <div>
-          <p class="pillars-intro">Three threads run through every role I've held.</p>
+          <p class="pillars-intro"><span data-lang="en">Three threads run through every role I've held.</span><span data-lang="es">Tres hilos recorren cada rol que he tenido.</span></p>
 
           <div class="pillar">
-            <h3 class="pillar-name">Enablement</h3>
-            <p class="pillar-text">I build adoption engines that move past compliance into actual capability. At Applied Materials, that meant a Copilot program reaching 10,000+ users, a 200+ person Champions network running open office hours, FAQs, SOPs, and AI gamification, and the Enablement Flywheel methodology that holds it all together.</p>
+            <h3 class="pillar-name"><span data-lang="en">Enablement</span><span data-lang="es">Habilitación</span></h3>
+            <p class="pillar-text" data-lang="en">I build adoption engines that move past compliance into actual capability. At Applied Materials, that means Copilot across 13,000+ seats in 70+ geographies, enablement for Claude, GitHub Copilot, and Cursor, a 200 person Champions network, hackathons with business units, and the Enablement Flywheel that holds it all together.</p>
+            <p class="pillar-text" data-lang="es">Construyo motores de adopción que van más allá del cumplimiento y llegan a la capacidad real. En Applied Materials eso significa Copilot en más de 13,000 licencias y más de 70 geografías, habilitación para Claude, GitHub Copilot y Cursor, una red de 200 champions, hackathons con unidades de negocio y el Enablement Flywheel que lo sostiene todo.</p>
           </div>
 
           <div class="pillar">
-            <h3 class="pillar-name">Community</h3>
-            <p class="pillar-text">The instinct to build <em>with</em> people, not for them, has shaped every chapter. Amazon's SNAP last-mile pilot serving food-insecure communities. A retail venture partnering with indigenous women artisans across Latin America. Most recently, board service as Director of Marketing and Fundraising for <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener">Bags of Grace</a>.</p>
+            <h3 class="pillar-name"><span data-lang="en">Building</span><span data-lang="es">Construcción</span></h3>
+            <p class="pillar-text" data-lang="en">I default to building. A Copilot Studio agent that briefs Champions on what AI can do today. Claude Projects and custom commands that run my own work. An MCP server design for personalized, role based learning. A prioritization framework with a React dashboard. Even this website publishes its blog through a GitHub Actions workflow and a Python script.</p>
+            <p class="pillar-text" data-lang="es">Mi instinto es construir. Un agente en Copilot Studio que mantiene a los champions al día sobre lo que la IA puede hacer hoy. Claude Projects y comandos personalizados que organizan mi propio trabajo. El diseño de un servidor MCP para aprendizaje personalizado por rol. Un marco de priorización con un tablero en React. Hasta este sitio publica su blog con un flujo de GitHub Actions y un script en Python.</p>
           </div>
 
           <div class="pillar">
-            <h3 class="pillar-name">Founder</h3>
-            <p class="pillar-text">Whether it's a business, a methodology, or a movement, I default to building. La Clave AI is the next chapter, an effort to bring AI fluency to the 500M+ Spanish speakers the industry has overlooked.</p>
+            <h3 class="pillar-name"><span data-lang="en">Community</span><span data-lang="es">Comunidad</span></h3>
+            <p class="pillar-text" data-lang="en">The instinct to build <em>with</em> people has shaped every chapter. Amazon's SNAP pilot, which scaled to all 50 states by partnering with nonprofits, universities, and churches. A retail venture partnering with Indigenous women artisans across Latin America. Board service as Director of Marketing and Fundraising for <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener">Bags of Grace</a>.</p>
+            <p class="pillar-text" data-lang="es">El instinto de construir <em>con</em> las personas ha marcado cada etapa. El piloto de SNAP en Amazon, que llegó a los 50 estados gracias a alianzas con organizaciones sin fines de lucro, universidades e iglesias. Un negocio de venta en alianza con mujeres artesanas indígenas de América Latina. Mi servicio en la mesa directiva como Directora de Marketing y Recaudación de Fondos de <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener">Bags of Grace</a>.</p>
           </div>
         </div>
 
         <div>
-          <!-- Certifications -->
+          <div class="competencies">
+            <h3><span data-lang="en">Technical Skills</span><span data-lang="es">Habilidades técnicas</span></h3>
+            <div class="comp-grid">
+              <span class="comp-tag">Copilot Studio</span>
+              <span class="comp-tag">Microsoft 365 Copilot</span>
+              <span class="comp-tag">Claude Projects &amp; Skills</span>
+              <span class="comp-tag">GitHub Copilot &amp; Cursor</span>
+              <span class="comp-tag"><span data-lang="en">Agent Design</span><span data-lang="es">Diseño de agentes</span></span>
+              <span class="comp-tag"><span data-lang="en">Context Engineering</span><span data-lang="es">Ingeniería de contexto</span></span>
+              <span class="comp-tag"><span data-lang="en">MCP Architecture</span><span data-lang="es">Arquitectura MCP</span></span>
+              <span class="comp-tag">GitHub Actions</span>
+              <span class="comp-tag">Python</span>
+              <span class="comp-tag"><span data-lang="en">React Prototyping</span><span data-lang="es">Prototipos en React</span></span>
+              <span class="comp-tag"><span data-lang="en">AI Use Case &amp; ROI Scoring</span><span data-lang="es">Casos de uso y retorno</span></span>
+              <span class="comp-tag"><span data-lang="en">Responsible AI</span><span data-lang="es">IA responsable</span></span>
+            </div>
+          </div>
+
+          <div class="competencies">
+            <h3><span data-lang="en">Human Skills</span><span data-lang="es">Habilidades humanas</span></h3>
+            <div class="comp-grid">
+              <span class="comp-tag human-tag"><span data-lang="en">Change Management (ADKAR)</span><span data-lang="es">Gestión del cambio (ADKAR)</span></span>
+              <span class="comp-tag human-tag"><span data-lang="en">Champions Networks</span><span data-lang="es">Redes de champions</span></span>
+              <span class="comp-tag human-tag"><span data-lang="en">Learning Design</span><span data-lang="es">Diseño de aprendizaje</span></span>
+              <span class="comp-tag human-tag"><span data-lang="en">Hackathon Facilitation</span><span data-lang="es">Facilitación de hackathons</span></span>
+              <span class="comp-tag human-tag"><span data-lang="en">Executive Communication</span><span data-lang="es">Comunicación ejecutiva</span></span>
+              <span class="comp-tag human-tag"><span data-lang="en">Proficiency Measurement</span><span data-lang="es">Medición de dominio</span></span>
+              <span class="comp-tag human-tag"><span data-lang="en">Data Storytelling</span><span data-lang="es">Narrativa con datos</span></span>
+              <span class="comp-tag human-tag"><span data-lang="en">Bilingual EN/ES</span><span data-lang="es">Bilingüe inglés y español</span></span>
+            </div>
+          </div>
+
           <div class="certs">
-            <h3>Certifications</h3>
+            <h3><span data-lang="en">Certifications</span><span data-lang="es">Certificaciones</span></h3>
             <div class="cert-badges">
               <span class="cert-badge">Prosci Change Management</span>
+              <span class="cert-badge">Section AI Advanced AI Accelerator</span>
+              <span class="cert-badge">Artificial Intelligence: Implications for Business Strategy (MIT)</span>
               <span class="cert-badge">IBM AI/Technology</span>
               <span class="cert-badge">Microsoft Certified</span>
-              <span class="cert-badge">Artificial Intelligence: Implications for Business Strategy (MIT)</span>
-              <span class="cert-badge">Section.AI Advanced AI Accelerator</span>
             </div>
           </div>
 
-          <!-- Competencies -->
-          <div class="competencies">
-            <h3>Core Competencies</h3>
-            <div class="comp-grid">
-              <span class="comp-tag">GenAI Enablement</span>
-              <span class="comp-tag">Change Management</span>
-              <span class="comp-tag">Training Design</span>
-              <span class="comp-tag">Executive Communication</span>
-              <span class="comp-tag">Microsoft Copilot</span>
-              <span class="comp-tag">Champions Networks</span>
-              <span class="comp-tag">Bilingual EN/ES</span>
-              <span class="comp-tag">Data Storytelling</span>
-              <span class="comp-tag">Community Building</span>
-            </div>
-          </div>
-
-          <!-- Speaking -->
           <div class="exp-block" style="margin-top: 40px;">
-            <h3>Speaking</h3>
+            <h3><span data-lang="en">Speaking</span><span data-lang="es">Conferencias</span></h3>
             <ul>
-              <li><a href="blog/forrester-keynote.html" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Keynote Speaker, Forrester IT Conference, September 14, 2026.</a> Shared the stage with the CIO of SailPoint to discuss how AI is reshaping the IT role.</li>
+              <li data-lang="en"><a href="blog/forrester-keynote.html" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Keynote Speaker, Forrester IT Conference, September 14, 2026.</a> Shared the stage with the CIO of SailPoint to discuss how AI is reshaping the IT role.</li>
+              <li data-lang="es"><a href="blog/forrester-keynote.html" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Conferencista principal, Conferencia de TI de Forrester, 14 de septiembre de 2026.</a> Compartí el escenario con el CIO de SailPoint para hablar de cómo la IA está transformando el rol de TI.</li>
             </ul>
           </div>
 
-          <!-- Community -->
           <div class="exp-block">
-            <h3>Community & Advocacy</h3>
+            <h3><span data-lang="en">Community &amp; Advocacy</span><span data-lang="es">Comunidad y causas</span></h3>
             <ul>
-              <li>Board Member, Director of Marketing and Fundraising, <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Bags of Grace</a></li>
-              <li>Data center impact research and policy advocacy in Central Texas</li>
-              <li>Prepared formal recommendations for Austin's Technology Commission</li>
-              <li>Mission and nonprofit work overseas in Central and South America</li>
-              <li>Founder, La Clave AI: Spanish-language AI education venture</li>
+              <li><span data-lang="en">Board Member, Director of Marketing and Fundraising,</span><span data-lang="es">Miembro de la mesa directiva, Directora de Marketing y Recaudación de Fondos,</span> <a href="https://www.bagsofgrace.org" target="_blank" rel="noopener" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Bags of Grace</a></li>
+              <li><span data-lang="en">Data center impact research and policy advocacy in Central Texas</span><span data-lang="es">Investigación e incidencia sobre el impacto de los centros de datos en el centro de Texas</span></li>
+              <li><span data-lang="en">Prepared formal recommendations for Austin's Technology Commission</span><span data-lang="es">Recomendaciones formales para la Comisión de Tecnología de Austin</span></li>
+              <li><span data-lang="en">Mission and nonprofit work in Central and South America</span><span data-lang="es">Trabajo misionero y comunitario en Centroamérica y Sudamérica</span></li>
             </ul>
           </div>
         </div>
       </div>
+    </div>
   </section>
 
   <!-- ABOUT PAGE CTA -->
   <section style="padding: 60px 0 100px; text-align: center;">
     <div class="container">
       <a href="index.html#contact" class="hero-cta" style="margin: 0 auto;">
-        Work With Me
+        <span data-lang="en">Work With Me</span><span data-lang="es">Trabajemos juntos</span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
       </a>
     </div>
   </section>
-
 
   <!-- QUOTES RIBBON -->
   <section class="quotes-ribbon">
     <div class="container">
       <div class="quotes-track">
         <div class="quote-item">
-          Greatness is in the agency of others.
+          <span data-lang="en">Greatness is in the agency of others.</span><span data-lang="es">La grandeza está en la agencia de los demás.</span>
           <span class="quote-source">Scott Galloway</span>
         </div>
         <div class="quote-item">
-          Whatever you do, do from the heart.
-          <span class="quote-source">Colossians 3:23</span>
+          <span data-lang="en">Whatever you do, do from the heart.</span><span data-lang="es">Todo lo que hagan, háganlo de corazón.</span>
+          <span class="quote-source"><span data-lang="en">Colossians 3:23</span><span data-lang="es">Colosenses 3:23</span></span>
         </div>
         <div class="quote-item">
-          It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult.
-          <span class="quote-source">Seneca</span>
+          <span data-lang="en">It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult.</span><span data-lang="es">No es porque las cosas sean difíciles que no nos atrevemos; es porque no nos atrevemos que son difíciles.</span>
+          <span class="quote-source"><span data-lang="en">Seneca</span><span data-lang="es">Séneca</span></span>
         </div>
       </div>
     </div>
   </section>
 
-
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Alejandra Tamez de la Garza. All rights reserved.</p>
-      <p class="footer-tagline">"My superpower is connection. Everything else is just logistics."</p>
+      <p><span data-lang="en">&copy; 2026 Alejandra Tamez de la Garza. All rights reserved.</span><span data-lang="es">&copy; 2026 Alejandra Tamez de la Garza. Todos los derechos reservados.</span></p>
+      <p class="footer-tagline"><span data-lang="en">"My superpower is connection. Everything else is just logistics."</span><span data-lang="es">"Mi superpoder es la conexión. Todo lo demás es logística."</span></p>
     </div>
   </footer>
 
@@ -1534,12 +1555,22 @@
   <!-- ===== ORBIT FLYWHEEL SCRIPT ===== -->
   <script>
     (function() {
-      const phases = [
-        { name: 'Listen',   desc: 'Understand the real barriers, not the assumed ones.' },
-        { name: 'Enable',   desc: 'Meet people where they are with relevant training.' },
-        { name: 'Measure',  desc: 'Track behavior change, not just login counts.' },
-        { name: 'Amplify',  desc: 'Turn early wins into organizational momentum.' }
-      ];
+      const PHASES = {
+        en: [
+          { name: 'Listen',  desc: 'Find the real barriers, beyond the assumed ones. Listening sessions, surveys, and usage data show where people actually get stuck.' },
+          { name: 'Enable',  desc: 'Meet people where they are with role based training, agents, and templates built around their real work.' },
+          { name: 'Measure', desc: 'Track behavior change and capability growth: redesigned workflows, use case quality, time returned.' },
+          { name: 'Amplify', desc: 'Turn early wins into organizational momentum through Champions, storytelling, and reusable playbooks.' }
+        ],
+        es: [
+          { name: 'Escuchar', desc: 'Encontrar las barreras reales, más allá de las supuestas. Sesiones de escucha, encuestas y datos de uso muestran dónde se atora la gente.' },
+          { name: 'Habilitar', desc: 'Atender a cada persona donde está, con capacitación por rol, agentes y plantillas basadas en su trabajo real.' },
+          { name: 'Medir', desc: 'Medir el cambio de comportamiento y el crecimiento de capacidades: flujos rediseñados, calidad de casos de uso, tiempo recuperado.' },
+          { name: 'Amplificar', desc: 'Convertir los primeros logros en impulso organizacional con champions, historias y guías reutilizables.' }
+        ]
+      };
+      const lang = () => (window.siteLang && window.siteLang() === 'es') ? 'es' : 'en';
+      let phases = PHASES[lang()];
 
       const orbit = document.getElementById('flywheelOrbit');
       const dots = document.querySelectorAll('.flywheel-dot-orbit');
@@ -1591,7 +1622,7 @@
         center.classList.remove('fading');
         panel.classList.remove('fading');
         void center.offsetWidth; // Force reflow to restart animation
-        labelEl.textContent = 'Phase ' + (index + 1);
+        labelEl.textContent = (lang() === 'es' ? 'Fase ' : 'Phase ') + (index + 1);
         nameEl.textContent = phase.name;
         descEl.textContent = phase.desc;
         center.classList.add('fading');
@@ -1632,6 +1663,16 @@
           }
         });
       }, { threshold: 0.3 });
+
+      function relabel() {
+        phases = PHASES[lang()];
+        progressBtns.forEach((btn, i) => { btn.textContent = phases[i].name; });
+        labelEl.textContent = (lang() === 'es' ? 'Fase ' : 'Phase ') + (currentPhase + 1);
+        nameEl.textContent = phases[currentPhase].name;
+        descEl.textContent = phases[currentPhase].desc;
+      }
+      document.addEventListener('langchange', relabel);
+      relabel();
 
       io.observe(container);
 

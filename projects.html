@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="Projects | Alejandra Tamez de la Garza" data-title-es="Proyectos | Alejandra Tamez de la Garza">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects — Ale Tamez</title>
+  <title>Projects | Alejandra Tamez de la Garza</title>
   <meta name="description" content="Portfolio of projects in AI enablement, change management, and community impact by Alejandra Tamez de la Garza.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="favicon.png">
@@ -169,26 +169,35 @@
       .project-highlights { grid-template-columns: 1fr 1fr; }
     }
   </style>
+  <link rel="stylesheet" href="assets/i18n.css">
+  <script src="assets/i18n.js"></script>
 </head>
 <body>
   <nav id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Ale Tamez</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="blog/">Blog</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="about.html"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a></li>
+          <li><a href="projects.html" class="active"><span data-lang="en">Projects</span><span data-lang="es">Proyectos</span></a></li>
+          <li><a href="blog/">Blog</a></li>
+          <li><a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </nav>
 
   <header class="page-header">
     <div class="container">
-      <span class="section-label">Projects & Portfolio</span>
-      <h1>Where Ideas Meet Impact</h1>
-      <p>Here's where ideas meet impact. Each project tells a story: what was broken, what I did, and what changed because of it.</p>
+      <span class="section-label"><span data-lang="en">Projects &amp; Portfolio</span><span data-lang="es">Proyectos y portafolio</span></span>
+      <h1><span data-lang="en">Where Ideas Meet Impact</span><span data-lang="es">Donde las ideas se convierten en impacto</span></h1>
+      <p data-lang="en">Each project tells a story: what was broken, what I built, and what changed because of it. Some are technical systems, some are human systems. The best ones are both.</p>
+      <p data-lang="es">Cada proyecto cuenta una historia: qué no funcionaba, qué construí y qué cambió gracias a eso. Algunos son sistemas técnicos, otros son sistemas humanos. Los mejores son las dos cosas.</p>
     </div>
   </header>
 
@@ -202,97 +211,144 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
           </div>
           <div>
-            <h2>Copilot Enablement at Scale</h2>
-            <span class="status-badge badge-flagship">Flagship Project</span>
+            <h2><span data-lang="en">Copilot Enablement at Scale</span><span data-lang="es">Habilitación de Copilot a gran escala</span></h2>
+            <span class="status-badge badge-flagship"><span data-lang="en">Flagship Project</span><span data-lang="es">Proyecto insignia</span></span>
           </div>
         </div>
-        <p class="project-desc">The full story of driving 97% adoption across 10,000+ users at Applied Materials. This project encompassed building a 200+ person Champions network running open office hours, FAQs, SOPs, and AI gamification, designing the Enablement Flywheel methodology, and creating a training engine that met people where they were — not where the org chart said they should be.</p>
+        <p class="project-desc" data-lang="en">Taking Microsoft Copilot from a licensed tool to a daily habit at Applied Materials, now across 13,000+ seats in 70+ geographies, with enablement extending to Claude, GitHub Copilot, and Cursor. The work combined a 200 person Champions network, the Enablement Flywheel, hackathons with business units, and a training engine that meets people where they are.</p>
+        <p class="project-desc" data-lang="es">Llevar Microsoft Copilot de ser una licencia a ser un hábito diario en Applied Materials, hoy en más de 13,000 licencias y más de 70 geografías, con habilitación que se extiende a Claude, GitHub Copilot y Cursor. El trabajo combinó una red de 200 champions, el Enablement Flywheel, hackathons con unidades de negocio y un motor de capacitación que atiende a cada persona donde está.</p>
         <div class="project-highlights">
-          <div class="highlight-item"><div class="hl-label">Adoption Rate</div><div class="hl-value">97% across 10,000+ users</div></div>
-          <div class="highlight-item"><div class="hl-label">Champions Network</div><div class="hl-value">200+ peer-driven enablers</div></div>
-          <div class="highlight-item"><div class="hl-label">Training Sessions</div><div class="hl-value">70+ delivered</div></div>
-          <div class="highlight-item"><div class="hl-label">Methodology</div><div class="hl-value">Enablement Flywheel</div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Scale</span><span data-lang="es">Escala</span></div><div class="hl-value"><span data-lang="en">13,000+ seats, 70+ geographies</span><span data-lang="es">13,000+ licencias, 70+ geografías</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Champions Network</span><span data-lang="es">Red de champions</span></div><div class="hl-value"><span data-lang="en">200 peer enablers</span><span data-lang="es">200 personas que enseñan a sus colegas</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Training</span><span data-lang="es">Capacitación</span></div><div class="hl-value"><span data-lang="en">80+ curated sessions</span><span data-lang="es">80+ sesiones curadas</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Methodology</span><span data-lang="es">Metodología</span></div><div class="hl-value">Enablement Flywheel</div></div>
         </div>
-        <p style="margin-top: 24px; margin-bottom: 0;"><a href="case-studies/copilot-enablement-at-scale.html" style="font-weight: 600;">Read the full case study &rarr;</a></p>
+        <p style="margin-top: 24px; margin-bottom: 0;"><a href="case-studies/copilot-enablement-at-scale.html" style="font-weight: 600;"><span data-lang="en">Read the full case study &rarr;</span><span data-lang="es">Leer el caso de estudio completo &rarr;</span></a></p>
       </div>
 
-      <!-- Project 2: AI Framework -->
+      <!-- Project 2: Briefing Agent -->
+      <div class="project-feature fade-in">
+        <div class="project-header">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+          </div>
+          <div>
+            <h2><span data-lang="en">AI Briefing Agent</span><span data-lang="es">Agente de actualizaciones de IA</span></h2>
+            <span class="status-badge badge-active"><span data-lang="en">Live and Expanding</span><span data-lang="es">En uso y creciendo</span></span>
+          </div>
+        </div>
+        <p class="project-desc" data-lang="en"><strong>The problem:</strong> AI tools change weekly, and a Champions network is only as good as what it knows today. <strong>What I built:</strong> a Copilot Studio agent that gathers Copilot and Claude updates, model releases, UI changes, and training resources, then delivers a briefing to a Teams chat every other day. It started as a declarative agent focused on Copilot and is growing into an agentic version that pulls from multiple internal and external sources.</p>
+        <p class="project-desc" data-lang="es"><strong>El problema:</strong> las herramientas de IA cambian cada semana, y una red de champions vale tanto como lo que sabe hoy. <strong>Lo que construí:</strong> un agente en Copilot Studio que reúne novedades de Copilot y Claude, lanzamientos de modelos, cambios de interfaz y recursos de capacitación, y envía un resumen a un chat de Teams cada dos días. Empezó como un agente declarativo enfocado en Copilot y está creciendo hacia una versión agéntica que consulta varias fuentes internas y externas.</p>
+        <div class="project-highlights">
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Stack</span><span data-lang="es">Tecnología</span></div><div class="hl-value">Copilot Studio, Microsoft Teams</div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Cadence</span><span data-lang="es">Frecuencia</span></div><div class="hl-value"><span data-lang="en">Every other day</span><span data-lang="es">Cada dos días</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Audience</span><span data-lang="es">Audiencia</span></div><div class="hl-value"><span data-lang="en">Champions and AI team</span><span data-lang="es">Champions y equipo de IA</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Next</span><span data-lang="es">Siguiente paso</span></div><div class="hl-value"><span data-lang="en">Multi source agentic version</span><span data-lang="es">Versión agéntica con varias fuentes</span></div></div>
+        </div>
+      </div>
+
+      <!-- Project 3: MCP -->
+      <div class="project-feature fade-in">
+        <div class="project-header">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z"/></svg>
+          </div>
+          <div>
+            <h2><span data-lang="en">Learning MCP Server</span><span data-lang="es">Servidor MCP de aprendizaje</span></h2>
+            <span class="status-badge badge-concept"><span data-lang="en">Architecture Designed</span><span data-lang="es">Arquitectura diseñada</span></span>
+          </div>
+        </div>
+        <p class="project-desc" data-lang="en">An MCP server designed as the backbone of enterprise AI enablement, moving the goal from "teach people to use Copilot" to "build an organization that thinks differently about AI." It sits in the middle of the Enablement Flywheel, so every learning completion and feature use feeds back as data.</p>
+        <p class="project-desc" data-lang="es">Un servidor MCP diseñado como la columna vertebral de la habilitación en IA de una empresa, que cambia la meta de "enseñar a usar Copilot" a "construir una organización que piense distinto sobre la IA". Vive en el centro del Enablement Flywheel, así que cada curso completado y cada función utilizada regresa como dato.</p>
+        <div class="project-highlights">
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Use Case 1</span><span data-lang="es">Caso de uso 1</span></div><div class="hl-value"><span data-lang="en">Personalized learning by role</span><span data-lang="es">Aprendizaje personalizado por rol</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Use Case 2</span><span data-lang="es">Caso de uso 2</span></div><div class="hl-value"><span data-lang="en">Match pain points to proven use cases</span><span data-lang="es">Conectar problemas con casos probados</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Use Case 3</span><span data-lang="es">Caso de uso 3</span></div><div class="hl-value"><span data-lang="en">Capability tracking by team</span><span data-lang="es">Medición de capacidades por equipo</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Use Case 4</span><span data-lang="es">Caso de uso 4</span></div><div class="hl-value"><span data-lang="en">Bilingual content registry</span><span data-lang="es">Contenido bilingüe</span></div></div>
+        </div>
+      </div>
+
+      <!-- Project 4: AI Framework -->
       <div class="project-feature fade-in">
         <div class="project-header">
           <div class="project-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
           </div>
           <div>
-            <h2>AI Use Case Prioritization Framework</h2>
-            <span class="status-badge badge-active">Active Tool</span>
+            <h2><span data-lang="en">AI Use Case Prioritization Framework</span><span data-lang="es">Marco de priorización de casos de uso de IA</span></h2>
+            <span class="status-badge badge-active"><span data-lang="en">Active Tool</span><span data-lang="es">Herramienta activa</span></span>
           </div>
         </div>
-        <p class="project-desc">A weighted scoring system that helps organizations move from "we should use AI" to "here's exactly where to start and why." Built to cut through AI hype and give decision-makers a clear, data-driven path forward. Includes a scoring matrix, Excel workbook, and interactive React dashboard.</p>
+        <p class="project-desc" data-lang="en">A weighted scoring system that moves organizations from "we should use AI" to "here's exactly where to start and why." Built to cut through hype and give decision makers a clear, data driven path forward. Includes a scoring matrix, an Excel workbook, and an interactive React dashboard.</p>
+        <p class="project-desc" data-lang="es">Un sistema de puntuación ponderada que lleva a las organizaciones de "deberíamos usar IA" a "aquí es exactamente donde empezamos y por qué". Hecho para atravesar el ruido y darles a quienes deciden un camino claro basado en datos. Incluye una matriz de puntuación, un libro de Excel y un tablero interactivo en React.</p>
         <div class="project-highlights">
-          <div class="highlight-item"><div class="hl-label">Deliverables</div><div class="hl-value">Scoring matrix + Dashboard</div></div>
-          <div class="highlight-item"><div class="hl-label">Format</div><div class="hl-value">Excel + React app</div></div>
-          <div class="highlight-item"><div class="hl-label">Purpose</div><div class="hl-value">Prioritize AI use cases</div></div>
-          <div class="highlight-item"><div class="hl-label">Audience</div><div class="hl-value">Enterprise leadership</div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Stack</span><span data-lang="es">Tecnología</span></div><div class="hl-value">Excel, React</div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Deliverables</span><span data-lang="es">Entregables</span></div><div class="hl-value"><span data-lang="en">Scoring matrix + dashboard</span><span data-lang="es">Matriz + tablero</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Purpose</span><span data-lang="es">Propósito</span></div><div class="hl-value"><span data-lang="en">Prioritize AI use cases</span><span data-lang="es">Priorizar casos de uso</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Audience</span><span data-lang="es">Audiencia</span></div><div class="hl-value"><span data-lang="en">Enterprise leadership</span><span data-lang="es">Alta dirección</span></div></div>
         </div>
       </div>
 
-      <!-- Project 3: La Clave -->
+      <!-- Project 5: This site -->
       <div class="project-feature fade-in">
         <div class="project-header">
           <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
           </div>
           <div>
-            <h2>La Clave AI</h2>
-            <span class="status-badge badge-concept">In Development</span>
+            <h2><span data-lang="en">This Website</span><span data-lang="es">Este sitio web</span></h2>
+            <span class="status-badge badge-active"><span data-lang="en">Live</span><span data-lang="es">En línea</span></span>
           </div>
         </div>
-        <p class="project-desc">Spanish-language AI education for 500M+ Spanish speakers worldwide. La Clave ("The Key") is built on the belief that AI access shouldn't depend on what language you speak. Designed for small business owners in Mexico, first-generation professionals in the U.S., and communities in Latin America who deserve a seat at the table.</p>
+        <p class="project-desc" data-lang="en">Built and maintained with AI as a teammate. Hand written HTML and CSS on GitHub Pages, an animated Flywheel in JavaScript, a bilingual EN/ES switch, and a GitHub Actions workflow that runs a Python script to publish new blog posts automatically.</p>
+        <p class="project-desc" data-lang="es">Construido y mantenido con la IA como compañera de equipo. HTML y CSS hechos a mano en GitHub Pages, un Flywheel animado en JavaScript, un selector bilingüe inglés y español, y un flujo de GitHub Actions que ejecuta un script en Python para publicar nuevas entradas del blog de forma automática.</p>
         <div class="project-highlights">
-          <div class="highlight-item"><div class="hl-label">Target Market</div><div class="hl-value">500M+ Spanish speakers</div></div>
-          <div class="highlight-item"><div class="hl-label">Focus</div><div class="hl-value">Culturally-contextual AI ed</div></div>
-          <div class="highlight-item"><div class="hl-label">Status</div><div class="hl-value">Business plan + 90-day roadmap</div></div>
-          <div class="highlight-item"><div class="hl-label">Mission</div><div class="hl-value">Access & equity in AI</div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Stack</span><span data-lang="es">Tecnología</span></div><div class="hl-value">HTML, CSS, JavaScript</div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Automation</span><span data-lang="es">Automatización</span></div><div class="hl-value">GitHub Actions, Python</div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Hosting</span><span data-lang="es">Hospedaje</span></div><div class="hl-value">GitHub Pages</div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Languages</span><span data-lang="es">Idiomas</span></div><div class="hl-value"><span data-lang="en">English and Spanish</span><span data-lang="es">Inglés y español</span></div></div>
         </div>
       </div>
 
-      <!-- Project 4: Data Center -->
+      <!-- Project 6: Data Center -->
       <div class="project-feature fade-in">
         <div class="project-header">
           <div class="project-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
           </div>
           <div>
-            <h2>Data Center Impact Research</h2>
-            <span class="status-badge badge-active">Policy Advocacy</span>
+            <h2><span data-lang="en">Data Center Impact Research</span><span data-lang="es">Investigación sobre centros de datos</span></h2>
+            <span class="status-badge badge-active"><span data-lang="en">Policy Advocacy</span><span data-lang="es">Incidencia en políticas</span></span>
           </div>
         </div>
-        <p class="project-desc">Policy advocacy work examining the water, energy, equity, and labor impacts of data centers in Central Texas. Prepared formal recommendation documents for Austin's Technology Commission, demonstrating a different dimension of how technology intersects with community wellbeing.</p>
+        <p class="project-desc" data-lang="en">Research on the water, energy, equity, and labor impacts of data centers in Central Texas, with a focus on Latino communities along the I-35 corridor. Prepared formal recommendations for Austin's Technology Commission: the infrastructure behind AI, seen through the lens of community wellbeing.</p>
+        <p class="project-desc" data-lang="es">Investigación sobre el impacto de los centros de datos en el agua, la energía, la equidad y el empleo en el centro de Texas, con enfoque en las comunidades latinas del corredor de la I-35. Preparé recomendaciones formales para la Comisión de Tecnología de Austin: la infraestructura detrás de la IA, vista desde el bienestar de la comunidad.</p>
         <div class="project-highlights">
-          <div class="highlight-item"><div class="hl-label">Focus Areas</div><div class="hl-value">Water, energy, equity, labor</div></div>
-          <div class="highlight-item"><div class="hl-label">Audience</div><div class="hl-value">Austin Tech Commission</div></div>
-          <div class="highlight-item"><div class="hl-label">Deliverables</div><div class="hl-value">Policy recommendations</div></div>
-          <div class="highlight-item"><div class="hl-label">Region</div><div class="hl-value">Central Texas</div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Focus Areas</span><span data-lang="es">Enfoque</span></div><div class="hl-value"><span data-lang="en">Water, energy, equity, labor</span><span data-lang="es">Agua, energía, equidad, empleo</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Audience</span><span data-lang="es">Audiencia</span></div><div class="hl-value"><span data-lang="en">Austin Tech Commission</span><span data-lang="es">Comisión de Tecnología de Austin</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Deliverables</span><span data-lang="es">Entregables</span></div><div class="hl-value"><span data-lang="en">Policy recommendations</span><span data-lang="es">Recomendaciones de política</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Region</span><span data-lang="es">Región</span></div><div class="hl-value"><span data-lang="en">Central Texas</span><span data-lang="es">Centro de Texas</span></div></div>
         </div>
       </div>
 
-      <!-- Project 5: Eureka -->
+      <!-- Project 7: Eureka -->
       <div class="project-feature fade-in">
         <div class="project-header">
           <div class="project-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
           </div>
           <div>
-            <h2>Eureka Innovation Platform</h2>
-            <span class="status-badge badge-concept">Concept / Pitched</span>
+            <h2><span data-lang="en">Eureka Innovation Platform</span><span data-lang="es">Plataforma de innovación Eureka</span></h2>
+            <span class="status-badge badge-concept"><span data-lang="en">Concept / Pitched</span><span data-lang="es">Concepto presentado</span></span>
           </div>
         </div>
-        <p class="project-desc">An employee innovation platform concept pitched to HR leadership at Applied Materials. Eureka was designed to connect culture to business outcomes by giving every employee a voice in how AI tools are applied to real work challenges. Received positive executive reception.</p>
+        <p class="project-desc" data-lang="en">An employee innovation platform pitched to HR leadership at Applied Materials. The insight: reinventing the wheel is a visibility problem, and AI will multiply ideas faster than anyone can track them. Eureka gives every employee a voice in how AI is applied to real work, and gives leaders a way to see ideas before they're duplicated.</p>
+        <p class="project-desc" data-lang="es">Una plataforma de innovación para colaboradores presentada a la dirección de Recursos Humanos de Applied Materials. La idea central: reinventar la rueda es un problema de visibilidad, y la IA va a multiplicar las ideas más rápido de lo que cualquiera puede seguirlas. Eureka le da voz a cada persona sobre cómo aplicar la IA a su trabajo real, y les da a los líderes una forma de ver las ideas antes de que se dupliquen.</p>
         <div class="project-highlights">
-          <div class="highlight-item"><div class="hl-label">Concept</div><div class="hl-value">Employee innovation platform</div></div>
-          <div class="highlight-item"><div class="hl-label">Pitched To</div><div class="hl-value">HR Leadership</div></div>
-          <div class="highlight-item"><div class="hl-label">Goal</div><div class="hl-value">Culture → business outcomes</div></div>
-          <div class="highlight-item"><div class="hl-label">Reception</div><div class="hl-value">Positive executive response</div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Concept</span><span data-lang="es">Concepto</span></div><div class="hl-value"><span data-lang="en">Employee innovation platform</span><span data-lang="es">Plataforma de innovación</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Pitched To</span><span data-lang="es">Presentado a</span></div><div class="hl-value"><span data-lang="en">HR Leadership</span><span data-lang="es">Dirección de RR. HH.</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Goal</span><span data-lang="es">Meta</span></div><div class="hl-value"><span data-lang="en">Culture to business outcomes</span><span data-lang="es">De la cultura a los resultados</span></div></div>
+          <div class="highlight-item"><div class="hl-label"><span data-lang="en">Reception</span><span data-lang="es">Recepción</span></div><div class="hl-value"><span data-lang="en">Positive executive response</span><span data-lang="es">Respuesta ejecutiva positiva</span></div></div>
         </div>
       </div>
 
@@ -302,10 +358,11 @@
   <!-- CTA -->
   <section class="projects-cta">
     <div class="container">
-      <h2>Want to Build Something Together?</h2>
-      <p>I'm always looking for collaborations that put people at the center. Let's talk.</p>
+      <h2><span data-lang="en">Want to Build Something Together?</span><span data-lang="es">¿Construimos algo juntos?</span></h2>
+      <p data-lang="en">I'm always looking for collaborations that put people at the center. Let's talk.</p>
+      <p data-lang="es">Siempre busco colaboraciones que pongan a las personas en el centro. Hablemos.</p>
       <a href="index.html#contact" class="btn-primary">
-        Get In Touch
+        <span data-lang="en">Get In Touch</span><span data-lang="es">Contáctame</span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
       </a>
     </div>
@@ -313,8 +370,8 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Alejandra Tamez de la Garza. All rights reserved.</p>
-      <p class="footer-tagline">"My superpower is connection. Everything else is just logistics."</p>
+      <p><span data-lang="en">&copy; 2026 Alejandra Tamez de la Garza. All rights reserved.</span><span data-lang="es">&copy; 2026 Alejandra Tamez de la Garza. Todos los derechos reservados.</span></p>
+      <p class="footer-tagline"><span data-lang="en">"My superpower is connection. Everything else is just logistics."</span><span data-lang="es">"Mi superpoder es la conexión. Todo lo demás es logística."</span></p>
     </div>
   </footer>
 

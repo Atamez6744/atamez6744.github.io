@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="Blog | Ale Tamez" data-title-es="Blog | Ale Tamez">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -485,6 +485,9 @@
             transform: translateY(0);
         }
     </style>
+    <link rel="stylesheet" href="../assets/i18n.css">
+    <style>.lang-li{display:flex;align-items:center}.lang-li .lang-switch{margin-left:0}</style>
+    <script src="../assets/i18n.js"></script>
 </head>
 <body>
 
@@ -496,33 +499,35 @@
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../about.html"><span data-lang="en">About</span><span data-lang="es">Sobre mí</span></a></li>
+                <li><a href="../projects.html"><span data-lang="en">Projects</span><span data-lang="es">Proyectos</span></a></li>
                 <li><a href="./" class="active">Blog</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../index.html#contact"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
+                <li class="lang-li"><div class="lang-switch" role="group" aria-label="Language / Idioma"><button type="button" data-set-lang="en" aria-pressed="true">EN</button><button type="button" data-set-lang="es" aria-pressed="false">ES</button></div></li>
             </ul>
         </div>
     </nav>
 
     <!-- HERO -->
     <section class="hero fade-in">
-        <span class="hero-label">The Blog</span>
-        <h1>Thinking Out Loud</h1>
-        <p>This is where I think out loud. About AI, about people, about what happens when you put the two together with intention.</p>
+        <span class="hero-label"><span data-lang="en">The Blog</span><span data-lang="es">El blog</span></span>
+        <h1><span data-lang="en">Thinking Out Loud</span><span data-lang="es">Pensando en voz alta</span></h1>
+        <p data-lang="en">This is where I think out loud. About AI, about people, about what happens when you put the two together with intention.</p>
+        <p data-lang="es">Aquí pienso en voz alta. Sobre la IA, sobre las personas y sobre lo que pasa cuando las unes con intención. Por ahora, las publicaciones están escritas en inglés.</p>
     </section>
 
     <!-- FILTERS -->
     <div class="filters-section fade-in">
         <div class="filter-row">
-            <button class="filter-btn active">All Posts</button>
-            <button class="filter-btn">AI Adoption</button>
-            <button class="filter-btn">Leadership</button>
-            <button class="filter-btn">Change Management</button>
-            <button class="filter-btn">AI Education</button>
-            <button class="filter-btn">Community</button>
-            <button class="filter-btn">Future of Work</button>
-            <button class="filter-btn">AI Strategy</button>
-            <button class="filter-btn">Learning</button>
+            <button class="filter-btn active"><span data-lang="en">All Posts</span><span data-lang="es">Todas</span></button>
+            <button class="filter-btn"><span data-lang="en">AI Adoption</span><span data-lang="es">Adopción de IA</span></button>
+            <button class="filter-btn"><span data-lang="en">Leadership</span><span data-lang="es">Liderazgo</span></button>
+            <button class="filter-btn"><span data-lang="en">Change Management</span><span data-lang="es">Gestión del cambio</span></button>
+            <button class="filter-btn"><span data-lang="en">AI Education</span><span data-lang="es">Educación en IA</span></button>
+            <button class="filter-btn"><span data-lang="en">Community</span><span data-lang="es">Comunidad</span></button>
+            <button class="filter-btn"><span data-lang="en">Future of Work</span><span data-lang="es">Futuro del trabajo</span></button>
+            <button class="filter-btn"><span data-lang="en">AI Strategy</span><span data-lang="es">Estrategia de IA</span></button>
+            <button class="filter-btn"><span data-lang="en">Learning</span><span data-lang="es">Aprendizaje</span></button>
         </div>
     </div>
 
@@ -543,7 +548,7 @@
                 <p class="card-excerpt">I shared the Forrester IT conference stage with the CIO of SailPoint to talk about how AI is reshaping the IT role. I felt nervous. I also felt curious, and curiosity won.</p>
                 <div class="card-footer">
                     <span class="card-read-time">October 21, 2026 &middot; 3 min read</span>
-                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    <span class="card-link"><span data-lang="en">Read post</span><span data-lang="es">Leer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </div>
             </div>
         </a>
@@ -561,7 +566,7 @@
                 <p class="card-excerpt">I opened a deck from exactly one year ago expecting nostalgia. What I found instead made me rethink what growth with AI actually looks like, and how to measure it in myself.</p>
                 <div class="card-footer">
                     <span class="card-read-time">August 30, 2026 &middot; 5 min read</span>
-                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    <span class="card-link"><span data-lang="en">Read post</span><span data-lang="es">Leer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </div>
             </div>
         </a>
@@ -579,7 +584,7 @@
                 <p class="card-excerpt">We celebrate adoption rates like they're the finish line. But are people actually using it, or did they just click the button because someone told them to?</p>
                 <div class="card-footer">
                     <span class="card-read-time">July 14, 2025 &middot; 4 min read</span>
-                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    <span class="card-link"><span data-lang="en">Read post</span><span data-lang="es">Leer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </div>
             </div>
         </a>
@@ -598,7 +603,7 @@
                 <p class="card-excerpt">There are over 500 million Spanish speakers in the world. The vast majority of AI education exists only in English. That's not a gap. That's a wall.</p>
                 <div class="card-footer">
                     <span class="card-read-time">October 6, 2025 &middot; 3 min read</span>
-                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    <span class="card-link"><span data-lang="en">Read post</span><span data-lang="es">Leer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </div>
             </div>
         </a>
@@ -616,7 +621,7 @@
                 <p class="card-excerpt">People are not the bottleneck. The absence of trust, context, and relevance is the bottleneck.</p>
                 <div class="card-footer">
                     <span class="card-read-time">December 15, 2025 &middot; 3 min read</span>
-                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    <span class="card-link"><span data-lang="en">Read post</span><span data-lang="es">Leer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </div>
             </div>
         </a>
@@ -634,7 +639,7 @@
                 <p class="card-excerpt">People think reading seven books at once is chaotic. I think reading one book at a time is leaving patterns on the table.</p>
                 <div class="card-footer">
                     <span class="card-read-time">February 10, 2026 &middot; 4 min read</span>
-                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    <span class="card-link"><span data-lang="en">Read post</span><span data-lang="es">Leer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </div>
             </div>
         </a>
@@ -652,7 +657,7 @@
                 <p class="card-excerpt">The future of work isn't human or machine. It's human and machine, working in roles that play to their respective strengths.</p>
                 <div class="card-footer">
                     <span class="card-read-time">April 4, 2026 &middot; 3 min read</span>
-                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    <span class="card-link"><span data-lang="en">Read post</span><span data-lang="es">Leer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </div>
             </div>
         </a>
@@ -670,7 +675,7 @@
                 <p class="card-excerpt">At the heart of every meaningful relationship is a simple human desire: to be seen. Being seen is not the same as being acknowledged.</p>
                 <div class="card-footer">
                     <span class="card-read-time">August 15, 2026 &middot; 3 min read</span>
-                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    <span class="card-link"><span data-lang="en">Read post</span><span data-lang="es">Leer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </div>
             </div>
         </a>
@@ -687,7 +692,7 @@
                 <p class="card-excerpt">I get to serve on the board of Bags of Grace as Director of Marketing and Fundraising, and if you ever want to see the best of Austin in one room, come to a packing event.</p>
                 <div class="card-footer">
                     <span class="card-read-time">August 30, 2026 &middot; 3 min read</span>
-                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    <span class="card-link"><span data-lang="en">Read post</span><span data-lang="es">Leer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </div>
             </div>
         </a>
