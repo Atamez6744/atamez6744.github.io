@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diagnóstico Flywheel de Adopción de IA | Ale Tamez</title>
-  <meta name="description" content="Un diagnóstico gratuito de 3 minutos que muestra qué tan lista está tu organización para convertir licencias de IA en hábitos duraderos, basado en el Enablement Flywheel: Escuchar, Habilitar, Medir, Amplificar.">
+  <meta name="description" content="Un diagnóstico gratuito de 3 minutos que muestra qué tan lista está tu organización para convertir licencias de IA en hábitos duraderos, basado en las cinco etapas del Enablement Flywheel, del Acceso a la Reingeniería del negocio.">
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
   <link rel="icon" type="image/png" href="../../favicon.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Diagnóstico Flywheel de Adopción de IA — Herramientas de Ale Tamez">
-  <meta property="og:description" content="16 preguntas. 3 minutos. Descubre en qué fase se tambalea tu adopción de IA y qué hacer después.">
+  <meta property="og:description" content="15 preguntas. 3 minutos. Descubre en qué etapa se tambalea tu adopción de IA y qué hacer después.">
   <meta property="og:image" content="https://alejandratamez.com/New%20Headshot.png">
   <meta property="og:url" content="https://alejandratamez.com/es/tools/flywheel-readiness.html">
   <meta name="twitter:card" content="summary_large_image">
@@ -21,7 +21,7 @@
     .progress-wrap { position: sticky; top: 72px; z-index: 50; background: rgba(223,220,216,.94); backdrop-filter: blur(6px); padding: 12px 0; }
     .progress-inner { display: flex; align-items: center; gap: 14px; font-size: .85rem; font-weight: 600; color: var(--cocoa); }
     .progress { flex: 1; height: 8px; background: rgba(255,255,255,.7); border-radius: 8px; overflow: hidden; }
-    .progress > span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--talavera), var(--marigold), var(--agave), var(--rosa)); transition: width .35s; }
+    .progress > span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--talavera), var(--marigold), var(--agave), var(--rosa), var(--jacaranda)); transition: width .35s; }
 
     .phase-card { border-top: 6px solid var(--phase); }
     .phase-head { display: flex; gap: 16px; align-items: center; margin-bottom: 8px; }
@@ -44,7 +44,7 @@
     .result-hero { display: grid; grid-template-columns: 340px 1fr; gap: 32px; align-items: center; }
     #wheel { width: 100%; max-width: 340px; height: auto; margin: 0 auto; display: block; }
     .stage-name { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 700; line-height: 1.05; margin: 4px 0 10px; }
-    .phase-scores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 22px; }
+    .phase-scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 10px; margin-top: 22px; }
     .ps { background: var(--paper); border-radius: 14px; padding: 14px; border-top: 4px solid var(--phase); }
     .ps .n { font-size: .72rem; letter-spacing: .1em; font-weight: 700; text-transform: uppercase; color: var(--phase); }
     .ps .v { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; font-variant-numeric: tabular-nums; }
@@ -58,7 +58,7 @@
     .rec.focus { background: #fff; box-shadow: 0 0 0 2px var(--phase); }
     .wheel-label { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     @media (max-width: 900px) { .result-hero, .recs { grid-template-columns: 1fr; } }
-    @media (max-width: 600px) { .scale { grid-template-columns: 1fr 1fr; } .phase-scores { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .scale { grid-template-columns: 1fr 1fr; } }
   </style>
 
   <!-- i18n:head -->
@@ -96,13 +96,13 @@
     <div class="container">
       <p class="crumbs"><a href="./">Herramientas</a> &nbsp;/&nbsp; Gestión del cambio</p>
       <h1>Diagnóstico Flywheel de Adopción de IA</h1>
-      <p class="lede">16 preguntas honestas, unos 3 minutos. Descubre si tu lanzamiento de IA está ganando impulso o perdiéndolo en silencio, y qué fase arreglar primero. Basado en el Enablement Flywheel de cuatro fases que usé para llevar Microsoft Copilot a un 94% de adopción sostenida en más de 13,000 licencias.</p>
+      <p class="lede">15 preguntas honestas, unos 3 minutos. Descubre si tu lanzamiento de IA está ganando impulso o perdiéndolo en silencio, y qué etapa arreglar primero. Basado en el Enablement Flywheel que usé para llevar Microsoft Copilot a un 94% de adopción sostenida en más de 13,000 licencias: cinco etapas, del Acceso a la Reingeniería del negocio.</p>
       <div class="analogy"><span aria-hidden="true">🎠</span><div><strong>Un flywheel es como un carrusel.</strong> Los primeros empujones son los más difíciles. Cada empujón después suma impulso, hasta que casi gira solo. Pero si una sección está rota, todo el juego se tambalea. Este diagnóstico encuentra ese tambaleo.</div></div>
     </div>
   </header>
 
   <div class="progress-wrap no-print" aria-hidden="true">
-    <div class="container progress-inner"><span id="progressText">0 de 16 respondidas</span><div class="progress"><span id="progressBar"></span></div></div>
+    <div class="container progress-inner"><span id="progressText">0 de 15 respondidas</span><div class="progress"><span id="progressBar"></span></div></div>
   </div>
 
   <main class="tool-main">
@@ -116,7 +116,7 @@
       <section id="results" aria-live="polite" style="margin-top: 32px;">
         <div class="card">
           <div class="result-hero">
-            <svg id="wheel" viewBox="0 0 340 340" role="img" aria-label="Gráfica Flywheel de tus resultados por fase"></svg>
+            <svg id="wheel" viewBox="0 0 340 340" role="img" aria-label="Gráfica Flywheel de tus resultados por etapa"></svg>
             <div>
               <span class="tag" style="background: var(--paper); color: var(--cocoa);">Tu etapa</span>
               <div class="stage-name" id="stageName"></div>
@@ -128,7 +128,7 @@
         </div>
         <div class="card">
           <h2>Tus siguientes pasos</h2>
-          <p class="sub">Empieza por la fase resaltada. Un flywheel solo gira tan bien como su sección más débil.</p>
+          <p class="sub">Empieza por la etapa resaltada. Un flywheel solo gira tan bien como su sección más débil.</p>
           <div class="recs" id="recs"></div>
           <div class="btn-row no-print" style="margin-top: 24px;">
             <button class="btn btn-primary btn-small" id="copySummary">Copiar resumen</button>
@@ -164,120 +164,135 @@
   <script src="../../tools/toolkit.js"></script>
   <script>
   (function () {
-    const STORE = 'toolkit.flywheel.v1';
+    const STORE = 'toolkit.flywheel.v2';
     const ES = document.documentElement.lang === 'es';
     const SCALE = ES ? ['Aún no', 'Empezando', 'En su mayoría', 'Totalmente'] : ['Not yet', 'Starting', 'Mostly', 'Absolutely'];
+    // The five stages of the Enablement Flywheel. Keys are shared across languages,
+    // so answers carry over if someone switches language mid-quiz.
     const PHASES_EN = [
-      { key: 'listen', name: 'Listen', color: '#1F4E8C', tagline: 'Understand the real barriers, not the assumed ones.',
+      { key: 'access', name: 'Access', short: 'Access', color: '#1F4E8C', tagline: 'Get the right tools into the right hands, with clear guardrails and a clear why.',
         qs: [
-          'We have asked employees directly where AI tools help or frustrate them (surveys, listening sessions, focus groups).',
-          'We know which roles or teams are struggling, and whether the cause is confidence, relevance, or access.',
-          'Leaders can explain in plain language why we are adopting AI and what it means for people’s jobs.',
-          'There is a safe place to raise fears or concerns about AI without being judged.'
+          'Everyone who could benefit from AI tools has a license or an approved tool they can use today.',
+          'People know which AI tools are approved, what data they can use, and where the guardrails are.',
+          'Leaders have explained in plain language why we are investing in AI and what it means for people’s jobs.'
         ],
         recs: {
-          low:  ['Run five 30-minute listening sessions across different roles before building any more training.', 'Ask one question everywhere: "Where did you get stuck the last time you tried AI?"', 'Have your executive sponsor record a 2-minute "why we’re doing this" message that addresses job fears head-on.'],
-          mid:  ['Segment what you heard: confidence gaps, relevance gaps, and access gaps each need different fixes.', 'Close the loop: tell people what you heard and what you’re changing because of it.', 'Add an anonymous question channel to every training session.'],
-          high: ['Make listening continuous: a quarterly pulse survey with 3 questions, not a one-time event.', 'Bring skeptics into the design of the next wave. They’ll find the gaps your champions miss.']
+          low:  ['Map who has access today and who doesn’t. Gaps in access quietly become gaps in opportunity.', 'Publish a one-page "what you can use, and with what data" guide. Uncertainty about the rules stops more people than the tools do.', 'Have your executive sponsor record a 2-minute "why we’re doing this" message that addresses job fears head-on.'],
+          mid:  ['Run five 30-minute listening sessions across roles to find where people get stuck: confidence, relevance, or simply not knowing where to start.', 'Add an anonymous question channel so people can raise concerns without being judged.', 'Close the loop: tell people what you heard and what you’re changing because of it.'],
+          high: ['Review access every quarter as new tools arrive, so the people closest to the work get them first.', 'Bring skeptics into the design of the next wave. They’ll find the gaps your champions miss.']
         } },
-      { key: 'enable', name: 'Enable', color: '#D9951E', tagline: 'Meet people where they are with relevant training.',
+      { key: 'adoption', name: 'Adoption', short: 'Adoption', color: '#D9951E', tagline: 'Turn first logins into weekly habits people choose on their own.',
         qs: [
-          'Training is role-specific and built around real workflows, not generic feature tours.',
-          'People can get help between formal trainings (office hours, FAQs, a go-to person nearby).',
-          'Our training teaches that AI is iterative, a collaborator you refine, not a calculator that is right on the first try.',
-          'Managers give their teams protected time to practice and experiment.'
+          'Most licensed people use AI in a typical week because they choose to, not because they were told to.',
+          'Training is role-specific and built around real workflows, with help available between sessions (office hours, FAQs, champions).',
+          'We track continued, voluntary use, not just activations or logins.'
         ],
         recs: {
-          low:  ['Swap one generic demo for three role-specific sessions using each team’s actual documents and tasks.', 'Open a weekly 30-minute drop-in office hour. Consistency beats polish.', 'Teach the "first draft, not final answer" mindset in the first 5 minutes of every session.'],
-          mid:  ['Build a living FAQ from the real questions people ask, and update it weekly.', 'Give managers a one-page guide to running a 15-minute "AI try-it" in their team meetings.', 'Create prompt starter packs per role so nobody faces a blank box.'],
-          high: ['Move from training to coaching: pair advanced users with stuck teams for real work sessions.', 'Offer a 10-day habit-building challenge so practice becomes routine.']
+          low:  ['Swap one generic demo for three role-specific sessions using each team’s actual documents and tasks.', 'Redefine success: replace "% activated" with "% who used it in 3 of the last 4 weeks."', 'Open a weekly 30-minute drop-in office hour. Consistency beats polish.'],
+          mid:  ['Recruit 1 champion per 50 people: curious volunteers, not just the most technical.', 'Look for drop-off cohorts: who tried it once and never came back, and why?', 'Build a living FAQ from the real questions people ask, and update it weekly.'],
+          high: ['Pair every usage number with a story. Numbers persuade the CFO, stories persuade everyone else.', 'Offer a 10-day habit-building challenge so practice becomes routine for late adopters.']
         } },
-      { key: 'measure', name: 'Measure', color: '#2A8C82', tagline: 'Track behavior change, not just login counts.',
+      { key: 'proficiency', name: 'Proficiency', short: 'Proficiency', color: '#2A8C82', tagline: 'Build real skill: iterating with AI like you would with a colleague.',
         qs: [
-          'We track continued, voluntary use, not just activations or logins.',
-          'We collect stories and examples of how work actually changed.',
-          'We have a baseline (time, quality, cycle time) for at least a few key workflows.',
-          'What we measure feeds back into what we train and fix next.'
+          'People treat AI as iterative: they refine, push back, and add context instead of expecting a perfect first answer.',
+          'We have role-specific prompt libraries, templates, or examples that people actually reuse.',
+          'Managers give their teams protected time to practice, experiment, and share what they learn.'
         ],
         recs: {
-          low:  ['Redefine success: replace "% activated" with "% who used it in 3 of the last 4 weeks."', 'Pick 3 workflows and time them today, before AI, so you have something to compare against later.', 'Start a simple "win log" where people submit one sentence about something AI helped them do.'],
-          mid:  ['Pair every usage number with a story. Numbers persuade the CFO, stories persuade everyone else.', 'Look for drop-off cohorts: who tried it once and never came back, and why?', 'Review metrics monthly with the enablement team and change one thing each time.'],
-          high: ['Graduate from usage to value: track time redeployed, quality gains, and new capabilities.', 'Publish an internal adoption scorecard so teams can learn from each other’s practices.']
+          low:  ['Teach the "first draft, not final answer" mindset in the first 5 minutes of every session.', 'Create prompt starter packs per role so nobody faces a blank box.', 'Give managers a one-page guide to running a 15-minute "AI try-it" in their team meetings.'],
+          mid:  ['Host a monthly 20-minute "show me how you did that" session where people walk through a real conversation with AI.', 'Pair advanced users with stuck teams for coaching on real work, not demos.', 'Turn your best prompts into a shared, searchable library with owners.'],
+          high: ['Move from prompting to building: teach agents, automations, and connected workflows.', 'Certify internal coaches so skill keeps spreading without the core team.']
         } },
-      { key: 'amplify', name: 'Amplify', color: '#C2185B', tagline: 'Turn early wins into organizational momentum.',
+      { key: 'ways', name: 'New Ways of Working', short: 'New Ways', color: '#C2185B', tagline: 'Redesign everyday workflows around what people and AI each do best.',
         qs: [
-          'We have a network of peer champions across functions and locations.',
-          'Wins and great prompts are shared openly and regularly (showcases, newsletters, channels).',
-          'Successful practices get turned into SOPs or templates other teams can reuse.',
-          'Recognition or gamification makes continued use something people want to do.'
+          'Teams have redesigned at least a few recurring workflows around what people and AI each do best.',
+          'Successful practices get turned into SOPs or templates that other teams adopt.',
+          'We measure the outcomes of changed workflows (time, quality, cycle time), not just tool usage.'
         ],
         recs: {
-          low:  ['Recruit 1 champion per 50 people: curious volunteers, not just the most technical.', 'Host a monthly 20-minute "show me how you did that" showcase.', 'Spotlight one real win per week in an existing channel people already read.'],
-          mid:  ['Give champions real infrastructure: office hours, a shared FAQ, and a direct line to the core team.', 'Turn the top 5 wins into reusable SOPs or templates.', 'Add light gamification: badges, streaks, or team challenges tied to real work.'],
-          high: ['Let champions co-own the roadmap. Peer-led programs outlast program-led ones.', 'Build a champion-to-champion mentorship layer so the network renews itself.']
+          low:  ['Pick 3 recurring workflows and time them today, before AI, so you have something to compare against later.', 'Ask each team: "What would we stop doing if AI handled the first draft?" Start there.', 'Use the Use Case Prioritizer to choose your first Quick Wins.'],
+          mid:  ['Turn the top 5 wins into reusable SOPs or templates, and give each one an owner.', 'Give champions a direct line to the core team so workflow changes spread fast.', 'Publish before-and-after stories that show the work changing, not just the tool being used.'],
+          high: ['Let champions co-own the roadmap. Peer-led change outlasts program-led change.', 'Design hybrid human-agent workflows deliberately: AI keeps the rhythm, people improvise.']
+        } },
+      { key: 'reengineering', name: 'Business Reengineering', short: 'Reengineering', color: '#6B4FA0', tagline: 'Rethink processes, roles, and value end to end, not just speed up the old ones.',
+        qs: [
+          'Leaders use a clear framework to decide where AI should change processes, roles, or products.',
+          'We have retired old steps, tools, or approvals because AI made them unnecessary, not just faster.',
+          'AI investments are tied to business value, with owners, governance, and a roadmap beyond individual productivity.'
+        ],
+        recs: {
+          low:  ['Before adding anything new, ask: what can we retire? Subtraction is often the fastest return.', 'Score your AI ideas on value, reach, risk, and change effort so leaders invest where it matters.', 'Name an executive owner for AI value, not just AI tools.'],
+          mid:  ['Map one end-to-end process and redesign it with AI from scratch, instead of bolting AI onto each step.', 'Set up light governance: who decides, what’s off-limits, and how value gets measured.', 'Track time redeployed to higher-value work, not just time saved.'],
+          high: ['Rethink roles and team structures around the new workflows, with the people in those roles at the table.', 'Publish an internal AI value scorecard so every function can learn from the others.']
         } }
     ];
-    // Spanish version: same keys, so answers carry over if someone switches language mid-quiz.
     const PHASES_ES = [
-      { key: 'listen', name: 'Escuchar', color: '#1F4E8C', tagline: 'Entender las barreras reales, no las que suponemos.',
+      { key: 'access', name: 'Acceso', short: 'Acceso', color: '#1F4E8C', tagline: 'Poner las herramientas correctas en las manos correctas, con reglas claras y un porqué claro.',
         qs: [
-          'Hemos preguntado directamente a las personas dónde las herramientas de IA les ayudan o las frustran (encuestas, sesiones de escucha, grupos de enfoque).',
-          'Sabemos qué roles o equipos tienen dificultades, y si la causa es la confianza, la relevancia o el acceso.',
-          'El liderazgo puede explicar en lenguaje sencillo por qué estamos adoptando la IA y qué significa para el trabajo de las personas.',
-          'Existe un espacio seguro para expresar miedos o dudas sobre la IA sin ser juzgado.'
+          'Todas las personas que podrían beneficiarse de la IA tienen una licencia o una herramienta aprobada que pueden usar hoy.',
+          'La gente sabe qué herramientas de IA están aprobadas, qué datos puede usar y cuáles son los límites.',
+          'El liderazgo ha explicado en lenguaje sencillo por qué invertimos en IA y qué significa para el trabajo de las personas.'
         ],
         recs: {
-          low:  ['Organiza cinco sesiones de escucha de 30 minutos con distintos roles antes de crear más capacitación.', 'Haz una sola pregunta en todos lados: "¿Dónde te atoraste la última vez que intentaste usar IA?"', 'Pide a tu patrocinador ejecutivo que grabe un mensaje de 2 minutos sobre "por qué hacemos esto" que hable de frente sobre los miedos de perder el trabajo.'],
-          mid:  ['Separa lo que escuchaste: las brechas de confianza, de relevancia y de acceso necesitan soluciones distintas.', 'Cierra el ciclo: cuéntale a la gente lo que escuchaste y qué vas a cambiar gracias a eso.', 'Agrega un canal anónimo de preguntas en cada sesión de capacitación.'],
-          high: ['Haz que escuchar sea continuo: una encuesta trimestral de 3 preguntas, no un evento único.', 'Invita a los escépticos a diseñar la siguiente ola. Encontrarán las brechas que tus champions no ven.']
+          low:  ['Mapea quién tiene acceso hoy y quién no. Las brechas de acceso se convierten en silencio en brechas de oportunidad.', 'Publica una guía de una página de "qué puedes usar y con qué datos". La incertidumbre sobre las reglas frena a más gente que las herramientas.', 'Pide a tu patrocinador ejecutivo que grabe un mensaje de 2 minutos sobre "por qué hacemos esto" que hable de frente sobre los miedos de perder el trabajo.'],
+          mid:  ['Organiza cinco sesiones de escucha de 30 minutos con distintos roles para descubrir dónde se atora la gente: confianza, relevancia o simplemente no saber por dónde empezar.', 'Agrega un canal anónimo de preguntas para que la gente pueda expresar sus dudas sin ser juzgada.', 'Cierra el ciclo: cuéntale a la gente lo que escuchaste y qué vas a cambiar gracias a eso.'],
+          high: ['Revisa el acceso cada trimestre conforme llegan herramientas nuevas, para que las reciban primero quienes están más cerca del trabajo.', 'Invita a los escépticos a diseñar la siguiente ola. Encontrarán las brechas que tus champions no ven.']
         } },
-      { key: 'enable', name: 'Habilitar', color: '#D9951E', tagline: 'Llegar a las personas donde están, con capacitación relevante.',
+      { key: 'adoption', name: 'Adopción', short: 'Adopción', color: '#D9951E', tagline: 'Convertir los primeros inicios de sesión en hábitos semanales que la gente elige por sí misma.',
         qs: [
-          'La capacitación es específica por rol y se basa en flujos de trabajo reales, no en recorridos genéricos de funciones.',
-          'La gente puede recibir ayuda entre capacitaciones formales (horarios de consulta, preguntas frecuentes, una persona de referencia cercana).',
-          'Nuestra capacitación enseña que la IA es iterativa: una colaboradora que vas afinando, no una calculadora que acierta al primer intento.',
-          'Los gerentes dan a sus equipos tiempo protegido para practicar y experimentar.'
+          'La mayoría de las personas con licencia usa IA en una semana normal porque así lo elige, no porque se lo pidieron.',
+          'La capacitación es específica por rol y se basa en flujos de trabajo reales, con ayuda disponible entre sesiones (horarios de consulta, preguntas frecuentes, champions).',
+          'Medimos el uso continuo y voluntario, no solo activaciones o inicios de sesión.'
         ],
         recs: {
-          low:  ['Cambia un demo genérico por tres sesiones específicas por rol, usando los documentos y tareas reales de cada equipo.', 'Abre un horario de consulta semanal de 30 minutos. La constancia le gana a la perfección.', 'Enseña la mentalidad de "primer borrador, no respuesta final" en los primeros 5 minutos de cada sesión.'],
-          mid:  ['Construye unas preguntas frecuentes vivas con las dudas reales de la gente, y actualízalas cada semana.', 'Dale a los gerentes una guía de una página para hacer una "prueba de IA" de 15 minutos en sus juntas de equipo.', 'Crea paquetes de prompts iniciales por rol para que nadie se enfrente a una caja en blanco.'],
-          high: ['Pasa de capacitar a acompañar: junta a usuarios avanzados con equipos atorados para trabajar en tareas reales.', 'Ofrece un reto de 10 días para formar el hábito, y que la práctica se vuelva rutina.']
+          low:  ['Cambia un demo genérico por tres sesiones específicas por rol, usando los documentos y tareas reales de cada equipo.', 'Redefine el éxito: cambia "% de activación" por "% que lo usó en 3 de las últimas 4 semanas."', 'Abre un horario de consulta semanal de 30 minutos. La constancia le gana a la perfección.'],
+          mid:  ['Recluta 1 champion por cada 50 personas: voluntarios curiosos, no solo los más técnicos.', 'Busca los grupos que abandonan: ¿quién lo probó una vez y nunca regresó, y por qué?', 'Construye unas preguntas frecuentes vivas con las dudas reales de la gente, y actualízalas cada semana.'],
+          high: ['Acompaña cada número de uso con una historia. Los números convencen al director de finanzas; las historias convencen a todos los demás.', 'Ofrece un reto de 10 días para formar el hábito entre quienes adoptan más tarde.']
         } },
-      { key: 'measure', name: 'Medir', color: '#2A8C82', tagline: 'Medir el cambio de comportamiento, no solo los inicios de sesión.',
+      { key: 'proficiency', name: 'Dominio', short: 'Dominio', color: '#2A8C82', tagline: 'Desarrollar habilidad real: iterar con la IA como lo harías con un colega.',
         qs: [
-          'Medimos el uso continuo y voluntario, no solo activaciones o inicios de sesión.',
-          'Recopilamos historias y ejemplos de cómo cambió realmente el trabajo.',
-          'Tenemos una línea base (tiempo, calidad, tiempo de ciclo) para al menos algunos flujos de trabajo clave.',
-          'Lo que medimos alimenta lo que capacitamos y corregimos después.'
+          'La gente trata a la IA como algo iterativo: afina, cuestiona y agrega contexto en lugar de esperar una respuesta perfecta a la primera.',
+          'Tenemos bibliotecas de prompts, plantillas o ejemplos por rol que la gente realmente reutiliza.',
+          'Los gerentes dan a sus equipos tiempo protegido para practicar, experimentar y compartir lo que aprenden.'
         ],
         recs: {
-          low:  ['Redefine el éxito: cambia "% de activación" por "% que lo usó en 3 de las últimas 4 semanas."', 'Elige 3 flujos de trabajo y mide cuánto tardan hoy, antes de la IA, para tener contra qué comparar después.', 'Empieza un registro sencillo de logros donde la gente comparta en una oración algo que la IA le ayudó a hacer.'],
-          mid:  ['Acompaña cada número de uso con una historia. Los números convencen al director de finanzas; las historias convencen a todos los demás.', 'Busca los grupos que abandonan: ¿quién lo probó una vez y nunca regresó, y por qué?', 'Revisa las métricas cada mes con el equipo de habilitación y cambia una cosa cada vez.'],
-          high: ['Pasa del uso al valor: mide el tiempo reinvertido, las mejoras de calidad y las nuevas capacidades.', 'Publica un tablero interno de adopción para que los equipos aprendan de las prácticas de los demás.']
+          low:  ['Enseña la mentalidad de "primer borrador, no respuesta final" en los primeros 5 minutos de cada sesión.', 'Crea paquetes de prompts iniciales por rol para que nadie se enfrente a una caja en blanco.', 'Dale a los gerentes una guía de una página para hacer una "prueba de IA" de 15 minutos en sus juntas de equipo.'],
+          mid:  ['Organiza cada mes una sesión de 20 minutos de "enséñame cómo lo hiciste," donde alguien muestre una conversación real con la IA.', 'Junta a usuarios avanzados con equipos atorados para acompañarlos en trabajo real, no en demos.', 'Convierte tus mejores prompts en una biblioteca compartida, fácil de buscar y con responsables.'],
+          high: ['Pasa de escribir prompts a construir: enseña agentes, automatizaciones y flujos conectados.', 'Certifica coaches internos para que la habilidad se siga extendiendo sin depender del equipo central.']
         } },
-      { key: 'amplify', name: 'Amplificar', color: '#C2185B', tagline: 'Convertir las primeras victorias en impulso para toda la organización.',
+      { key: 'ways', name: 'Nuevas formas de trabajar', short: 'Nuevas formas', color: '#C2185B', tagline: 'Rediseñar el trabajo diario alrededor de lo que las personas y la IA hacen mejor.',
         qs: [
-          'Tenemos una red de champions entre pares en distintas áreas y ubicaciones.',
-          'Los logros y los buenos prompts se comparten de forma abierta y frecuente (demostraciones, boletines, canales).',
-          'Las prácticas exitosas se convierten en procedimientos o plantillas que otros equipos pueden reutilizar.',
-          'El reconocimiento o la gamificación hacen que la gente quiera seguir usándolo.'
+          'Los equipos han rediseñado al menos algunos flujos de trabajo recurrentes alrededor de lo que las personas y la IA hacen mejor.',
+          'Las prácticas exitosas se convierten en procedimientos o plantillas que otros equipos adoptan.',
+          'Medimos los resultados de los flujos de trabajo que cambiaron (tiempo, calidad, tiempo de ciclo), no solo el uso de la herramienta.'
         ],
         recs: {
-          low:  ['Recluta 1 champion por cada 50 personas: voluntarios curiosos, no solo los más técnicos.', 'Organiza cada mes una sesión de 20 minutos de "enséñame cómo lo hiciste."', 'Destaca un logro real cada semana en un canal que la gente ya lea.'],
-          mid:  ['Dale a tus champions infraestructura real: horarios de consulta, preguntas frecuentes compartidas y línea directa con el equipo central.', 'Convierte los 5 mejores logros en procedimientos o plantillas reutilizables.', 'Agrega gamificación ligera: insignias, rachas o retos por equipo ligados a trabajo real.'],
-          high: ['Deja que los champions sean dueños del plan junto contigo. Los programas liderados por pares duran más que los liderados por un programa.', 'Crea una capa de mentoría entre champions para que la red se renueve sola.']
+          low:  ['Elige 3 flujos de trabajo recurrentes y mide cuánto tardan hoy, antes de la IA, para tener contra qué comparar después.', 'Pregunta a cada equipo: "¿Qué dejaríamos de hacer si la IA hiciera el primer borrador?" Empieza por ahí.', 'Usa el Priorizador de Casos de Uso para elegir tus primeras Victorias Rápidas.'],
+          mid:  ['Convierte los 5 mejores logros en procedimientos o plantillas reutilizables, y dale un responsable a cada uno.', 'Dale a tus champions línea directa con el equipo central para que los cambios en el trabajo se extiendan rápido.', 'Publica historias de antes y después que muestren cómo cambia el trabajo, no solo cómo se usa la herramienta.'],
+          high: ['Deja que los champions sean dueños del plan junto contigo. El cambio liderado por pares dura más que el liderado por un programa.', 'Diseña con intención flujos híbridos de personas y agentes: la IA lleva el ritmo y las personas improvisan.']
+        } },
+      { key: 'reengineering', name: 'Reingeniería del negocio', short: 'Reingeniería', color: '#6B4FA0', tagline: 'Repensar procesos, roles y valor de principio a fin, no solo acelerar los de siempre.',
+        qs: [
+          'El liderazgo usa un marco claro para decidir dónde la IA debe cambiar procesos, roles o productos.',
+          'Hemos eliminado pasos, herramientas o aprobaciones porque la IA los volvió innecesarios, no solo más rápidos.',
+          'Las inversiones en IA están ligadas al valor del negocio, con responsables, gobernanza y una hoja de ruta más allá de la productividad individual.'
+        ],
+        recs: {
+          low:  ['Antes de agregar algo nuevo, pregunta: ¿qué podemos retirar? Quitar suele ser el retorno más rápido.', 'Califica tus ideas de IA por valor, alcance, riesgo y esfuerzo de cambio para que el liderazgo invierta donde importa.', 'Nombra a un responsable ejecutivo del valor de la IA, no solo de las herramientas.'],
+          mid:  ['Mapea un proceso de principio a fin y rediséñalo con IA desde cero, en lugar de agregar IA a cada paso.', 'Establece una gobernanza ligera: quién decide, qué está fuera de los límites y cómo se mide el valor.', 'Mide el tiempo reinvertido en trabajo de mayor valor, no solo el tiempo ahorrado.'],
+          high: ['Repensar roles y estructuras de equipo alrededor de los nuevos flujos, con las personas de esos roles en la mesa.', 'Publica un tablero interno de valor de la IA para que cada área aprenda de las demás.']
         } }
     ];
     const PHASES = ES ? PHASES_ES : PHASES_EN;
     const STAGES = ES ? [
       { min: 0,  name: 'Con licencia, pero sin hábito', desc: 'La herramienta ya se compró, pero el hábito todavía no existe. Es normal, y tiene arreglo. La mayoría de las organizaciones se estancan aquí porque confunden la emoción del lanzamiento con la adopción.' },
       { min: 25, name: 'Primera chispa', desc: 'Ya aparecen focos de uso real, sobre todo entre los más curiosos. Ahora el trabajo es convertir esas chispas individuales en práctica compartida antes de que se pase la novedad.' },
-      { min: 50, name: 'Ganando impulso', desc: 'La rueda está girando. Ya tienes infraestructura real. El riesgo ahora es un giro disparejo: una fase débil puede drenar en silencio la energía de las otras tres.' },
+      { min: 50, name: 'Ganando impulso', desc: 'La rueda está girando. Ya tienes infraestructura real. El riesgo ahora es un giro disparejo: una etapa débil puede drenar en silencio la energía de las demás.' },
       { min: 75, name: 'Flywheel autosostenible', desc: 'La adopción se está volviendo cultura. La gente sigue eligiendo la IA cuando nadie la está mirando. Enfócate en pasar del uso al valor y en dejar que tus champions lideren.' }
     ] : [
       { min: 0,  name: 'Licensed, Not Living It', desc: 'The tool is bought, but the habit isn’t there yet. That’s normal, and fixable. Most organizations stall here because launch-day energy gets mistaken for adoption.' },
       { min: 25, name: 'Early Spark', desc: 'Pockets of real use are showing up, mostly from the naturally curious. Now the job is turning individual sparks into shared practice before the novelty wears off.' },
-      { min: 50, name: 'Gaining Momentum', desc: 'The wheel is turning. You have real infrastructure in place. The risk now is uneven spin: one weak phase can quietly drain the energy from the other three.' },
+      { min: 50, name: 'Gaining Momentum', desc: 'The wheel is turning. You have real infrastructure in place. The risk now is uneven spin: one weak stage can quietly drain the energy from the others.' },
       { min: 75, name: 'Self-Sustaining Flywheel', desc: 'Adoption is becoming culture. People keep choosing AI when no one is watching. Focus on shifting from usage to value and letting your champions lead.' }
     ];
 
@@ -332,19 +347,19 @@
       const cx = 170, cy = 170, inner = 78, maxR = 140, gap = 3;
       let svg = '';
       PHASES.forEach((p, i) => {
-        const a0 = i * 90 + gap, a1 = (i + 1) * 90 - gap;
+        const seg = 360 / PHASES.length, a0 = i * seg + gap, a1 = (i + 1) * seg - gap;
         const r = inner + (maxR - inner) * Math.max(scores[i], 4) / 100;
         svg += `<path d="${arc(cx, cy, inner, maxR, a0, a1)}" fill="${p.color}" opacity=".12"/>`;
         svg += `<path d="${arc(cx, cy, inner, r, a0, a1)}" fill="${p.color}"><title>${p.name}: ${scores[i]}%</title></path>`;
         const [lx, ly] = polar(cx, cy, maxR + 14, (a0 + a1) / 2);
         const anchor = lx > cx + 5 ? 'start' : lx < cx - 5 ? 'end' : 'middle';
-        svg += `<text class="wheel-label" x="${lx}" y="${ly + 4}" text-anchor="${anchor}" fill="${p.color}">${p.name}</text>`;
+        svg += `<text class="wheel-label" x="${lx}" y="${ly + 4}" text-anchor="${anchor}" fill="${p.color}">${p.short}</text>`;
       });
       // rotation arrows hint that it is a cycle
       svg += `<circle cx="${cx}" cy="${cy}" r="${inner - 8}" fill="#fff" stroke="#DFDCD8" stroke-width="2"/>
         <text x="${cx}" y="${cy + 6}" text-anchor="middle" style="font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;" fill="#1D1B18">${overall}%</text>
         <text x="${cx}" y="${cy + 28}" text-anchor="middle" style="font-size:10px;letter-spacing:.14em;font-weight:700;" fill="#705148">${ES ? 'IMPULSO' : 'MOMENTUM'}</text>`;
-      document.getElementById('wheel').setAttribute('viewBox', '-30 -10 400 360');
+      document.getElementById('wheel').setAttribute('viewBox', '-80 -14 500 366');
       document.getElementById('wheel').innerHTML = svg;
     }
 
@@ -353,7 +368,9 @@
       const scores = PHASES.map(phaseScore);
       const overall = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
       const stage = [...STAGES].reverse().find(s => overall >= s.min);
-      const weakestIdx = scores.indexOf(Math.min(...scores));
+      // Stages build on each other, so point to the earliest stage under 50%; otherwise the lowest one.
+      const firstWeak = scores.findIndex(v => v < 50);
+      const weakestIdx = firstWeak >= 0 ? firstWeak : scores.indexOf(Math.min(...scores));
       return { scores, overall, stage, weakestIdx };
     }
     function renderResults(scroll) {
@@ -366,8 +383,8 @@
       const w = PHASES[weakestIdx];
       const balanced = Math.max(...scores) - Math.min(...scores) < 10;
       document.getElementById('weakest').innerHTML = balanced
-        ? (ES ? `<strong>Tu rueda está equilibrada.</strong> Ninguna fase está frenando a las demás, así que el avance viene de mejorar las cuatro juntas. Si tienes que elegir una, empieza por ${w.name}: ${w.tagline.charAt(0).toLowerCase() + w.tagline.slice(1)}` : `<strong>Your wheel is balanced.</strong> No single phase is dragging the others down, so progress comes from lifting all four together. If you have to pick one, start with ${w.name}: ${w.tagline.charAt(0).toLowerCase() + w.tagline.slice(1)}`)
-        : (ES ? `<strong>Tu tambaleo está en ${w.name}.</strong> ${w.tagline} Arreglarlo probablemente hará más por la adopción que empujar más fuerte en tu fase más fuerte.` : `<strong>Your wobble is in ${w.name}.</strong> ${w.tagline} Fixing it will likely do more for adoption than pushing harder on your strongest phase.`);
+        ? (ES ? `<strong>Tu rueda está equilibrada.</strong> Ninguna etapa está frenando a las demás, así que el avance viene de mejorar todas juntas. Si tienes que elegir una, empieza por ${w.name}: ${w.tagline.charAt(0).toLowerCase() + w.tagline.slice(1)}` : `<strong>Your wheel is balanced.</strong> No single stage is dragging the others down, so progress comes from lifting them all together. If you have to pick one, start with ${w.name}: ${w.tagline.charAt(0).toLowerCase() + w.tagline.slice(1)}`)
+        : (ES ? `<strong>Tu tambaleo está en ${w.name}.</strong> ${w.tagline} Arreglarlo probablemente hará más por la adopción que empujar más fuerte en tu etapa más fuerte.` : `<strong>Your wobble is in ${w.name}.</strong> ${w.tagline} Fixing it will likely do more for adoption than pushing harder on your strongest stage.`);
       document.getElementById('recs').innerHTML = PHASES.map((p, i) => {
         const lv = level(scores[i]);
         return `<div class="rec ${i === weakestIdx ? 'focus' : ''}" style="--phase:${p.color}">

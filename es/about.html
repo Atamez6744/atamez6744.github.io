@@ -624,7 +624,7 @@
 
     .flywheel-steps {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 16px;
     }
 
@@ -1028,7 +1028,6 @@
       .hero-grid { gap: 40px; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .experience-content { grid-template-columns: 1fr; }
-      .flywheel-steps { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
@@ -1075,7 +1074,6 @@
       .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
       .stat-card { padding: 20px; }
       .stat-number { font-size: 2rem; }
-      .flywheel-steps { grid-template-columns: 1fr 1fr; }
       .contact-buttons { flex-direction: column; }
     }
 
@@ -1160,17 +1158,18 @@
       <!-- Frameworks -->
       <div class="frameworks-section fade-in">
         <div class="framework-card">
-          <p style="font-size: 1.05rem; color: var(--text-medium); margin-bottom: 8px;">Una metodología de cuatro fases para una adopción tecnológica sostenible.</p>
+          <p style="font-size: 1.05rem; color: var(--text-medium); margin-bottom: 8px;">Un camino de cinco etapas que lleva la IA de una licencia en las manos de alguien a un negocio rediseñado.</p>
 
           <div class="flywheel-steps" style="margin-top: 24px;">
-            <div class="flywheel-step"><div class="step-num">1</div><div class="step-name">Escuchar</div><div class="step-desc">Entender las barreras reales, no las que suponemos.</div></div>
-            <div class="flywheel-step"><div class="step-num">2</div><div class="step-name">Habilitar</div><div class="step-desc">Llegar a las personas donde están, con capacitación relevante.</div></div>
-            <div class="flywheel-step"><div class="step-num">3</div><div class="step-name">Medir</div><div class="step-desc">Medir el cambio de comportamiento, no solo los inicios de sesión.</div></div>
-            <div class="flywheel-step"><div class="step-num">4</div><div class="step-name">Amplificar</div><div class="step-desc">Convertir las primeras victorias en impulso para toda la organización.</div></div>
+            <div class="flywheel-step"><div class="step-num">1</div><div class="step-name">Acceso</div><div class="step-desc">Poner las herramientas correctas en las manos correctas, con reglas claras y un porqué claro.</div></div>
+            <div class="flywheel-step"><div class="step-num">2</div><div class="step-name">Adopción</div><div class="step-desc">Convertir los primeros inicios de sesión en hábitos semanales que la gente elige por sí misma.</div></div>
+            <div class="flywheel-step"><div class="step-num">3</div><div class="step-name">Dominio</div><div class="step-desc">Desarrollar habilidad real: iterar con la IA como lo harías con un colega.</div></div>
+            <div class="flywheel-step"><div class="step-num">4</div><div class="step-name">Nuevas formas de trabajar</div><div class="step-desc">Rediseñar el trabajo diario alrededor de lo que las personas y la IA hacen mejor.</div></div>
+            <div class="flywheel-step"><div class="step-num">5</div><div class="step-name">Reingeniería del negocio</div><div class="step-desc">Repensar procesos, roles y valor de principio a fin, no solo acelerar los de siempre.</div></div>
           </div>
 
           <div class="flywheel-cta">
-            <p>Descubre dónde está tu organización: 16 preguntas, unos 3 minutos y un plan para tu fase más débil.</p>
+            <p>Descubre dónde está tu organización: 15 preguntas, unos 3 minutos y un plan para la etapa que más te necesita.</p>
             <a href="tools/flywheel-readiness.html" class="hero-cta">Hacer el Diagnóstico Flywheel &rarr;</a>
           </div>
         </div>

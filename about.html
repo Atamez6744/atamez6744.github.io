@@ -624,7 +624,7 @@
 
     .flywheel-steps {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 16px;
     }
 
@@ -1028,7 +1028,6 @@
       .hero-grid { gap: 40px; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .experience-content { grid-template-columns: 1fr; }
-      .flywheel-steps { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
@@ -1075,7 +1074,6 @@
       .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
       .stat-card { padding: 20px; }
       .stat-number { font-size: 2rem; }
-      .flywheel-steps { grid-template-columns: 1fr 1fr; }
       .contact-buttons { flex-direction: column; }
     }
 
@@ -1167,17 +1165,18 @@
       <!-- Frameworks -->
       <div class="frameworks-section fade-in">
         <div class="framework-card">
-          <p style="font-size: 1.05rem; color: var(--text-medium); margin-bottom: 8px;">A four-phase methodology for sustainable technology adoption.</p>
+          <p style="font-size: 1.05rem; color: var(--text-medium); margin-bottom: 8px;">A five-stage path that takes AI from a license in someone's hands to a redesigned business.</p>
 
           <div class="flywheel-steps" style="margin-top: 24px;">
-            <div class="flywheel-step"><div class="step-num">1</div><div class="step-name">Listen</div><div class="step-desc">Understand the real barriers, not the assumed ones.</div></div>
-            <div class="flywheel-step"><div class="step-num">2</div><div class="step-name">Enable</div><div class="step-desc">Meet people where they are with relevant training.</div></div>
-            <div class="flywheel-step"><div class="step-num">3</div><div class="step-name">Measure</div><div class="step-desc">Track behavior change, not just login counts.</div></div>
-            <div class="flywheel-step"><div class="step-num">4</div><div class="step-name">Amplify</div><div class="step-desc">Turn early wins into organizational momentum.</div></div>
+            <div class="flywheel-step"><div class="step-num">1</div><div class="step-name">Access</div><div class="step-desc">Get the right tools into the right hands, with clear guardrails and a clear why.</div></div>
+            <div class="flywheel-step"><div class="step-num">2</div><div class="step-name">Adoption</div><div class="step-desc">Turn first logins into weekly habits people choose on their own.</div></div>
+            <div class="flywheel-step"><div class="step-num">3</div><div class="step-name">Proficiency</div><div class="step-desc">Build real skill: iterating with AI like you would with a colleague.</div></div>
+            <div class="flywheel-step"><div class="step-num">4</div><div class="step-name">New Ways of Working</div><div class="step-desc">Redesign everyday workflows around what people and AI each do best.</div></div>
+            <div class="flywheel-step"><div class="step-num">5</div><div class="step-name">Business Reengineering</div><div class="step-desc">Rethink processes, roles, and value end to end, not just speed up the old ones.</div></div>
           </div>
 
           <div class="flywheel-cta">
-            <p>See where your own organization stands: 16 questions, about 3 minutes, and a plan for your weakest phase.</p>
+            <p>See where your own organization stands: 15 questions, about 3 minutes, and a plan for the stage that needs you most.</p>
             <a href="tools/flywheel-readiness.html" class="hero-cta">Take the Flywheel Check &rarr;</a>
           </div>
         </div>

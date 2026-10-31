@@ -361,6 +361,12 @@
             object-position: left center;
         }
 
+        /* Regular cards: keep photos at 16:9 instead of their pixel height */
+        .blog-card:not(.featured) .card-image {
+            height: auto;
+            object-position: center;
+        }
+
         .blog-card.featured.has-image {
             display: grid;
             grid-template-columns: 1.1fr 1fr;
@@ -548,7 +554,26 @@
     <div class="blog-grid">
 
         <!-- Post 1 - Featured -->
-        <a href="forrester-keynote.html" class="blog-card featured has-image">
+        <a href="austin-tech-week.html" class="blog-card featured has-image">
+            <div class="card-accent accent-terracotta"></div>
+            <img src="../austin-tech-week.jpg" alt="Ale and two fellow attendees smiling behind giant lit marquee letters that spell Austin Tech Week" class="card-image" width="1600" height="1200" loading="lazy">
+            <div class="card-body">
+                <div class="card-tags">
+                    <span class="card-tag">Community</span>
+                    <span class="card-tag">Learning</span>
+                    <span class="card-tag">Leadership</span>
+                </div>
+                <h2 class="card-title">The Company You Keep: Lessons from Austin Tech Week</h2>
+                <p class="card-excerpt">At Austin Tech Week I walked into rooms full of strangers and walked out with a community. Why the people around you are the fastest way to learn.</p>
+                <div class="card-footer">
+                    <span class="card-read-time">October 31, 2026 &middot; 3 min read</span>
+                    <span class="card-link">Read post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Post 2 -->
+        <a href="forrester-keynote.html" class="blog-card has-image">
             <div class="card-accent accent-navy"></div>
             <img src="../forrester-keynote.jpg" alt="Three panelists seated in white chairs on a stage, mid conversation, in front of a large green and yellow screen that reads Technology &amp; Innovation Forum." class="card-image" width="1600" height="888" loading="lazy">
             <div class="card-body">

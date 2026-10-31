@@ -1705,3 +1705,226 @@ es: Descubre dónde está tu organización: 16 preguntas, unos 3 minutos y un pl
 
 en: Take the Flywheel Check &rarr;
 es: Hacer el Diagnóstico Flywheel &rarr;
+
+# ---------------------------------------------------------------- Enablement Flywheel: five stages (October 2026)
+en: Access
+es: Acceso
+
+en: Adoption
+es: Adopción
+
+en: Proficiency
+es: Dominio
+
+en: New Ways of Working
+es: Nuevas formas de trabajar
+
+en: Business Reengineering
+es: Reingeniería del negocio
+
+en: All 5 stages
+es: Las 5 etapas
+
+en: Get the right tools into the right hands, with clear guardrails and a clear why.
+es: Poner las herramientas correctas en las manos correctas, con reglas claras y un porqué claro.
+
+en: Turn first logins into weekly habits people choose on their own.
+es: Convertir los primeros inicios de sesión en hábitos semanales que la gente elige por sí misma.
+
+en: Build real skill: iterating with AI like you would with a colleague.
+es: Desarrollar habilidad real: iterar con la IA como lo harías con un colega.
+
+en: Redesign everyday workflows around what people and AI each do best.
+es: Rediseñar el trabajo diario alrededor de lo que las personas y la IA hacen mejor.
+
+en: Rethink processes, roles, and value end to end, not just speed up the old ones.
+es: Repensar procesos, roles y valor de principio a fin, no solo acelerar los de siempre.
+
+en: A five-stage path that takes AI from a license in someone's hands to a redesigned business.
+es: Un camino de cinco etapas que lleva la IA de una licencia en las manos de alguien a un negocio rediseñado.
+
+en: See where your own organization stands: 15 questions, about 3 minutes, and a plan for the stage that needs you most.
+es: Descubre dónde está tu organización: 15 preguntas, unos 3 minutos y un plan para la etapa que más te necesita.
+
+en: 15 questions to find where your AI adoption is wobbling, and what to fix first.
+es: 15 preguntas para descubrir dónde se tambalea tu adopción de IA y qué arreglar primero.
+
+en: 15 questions across all five stages, from Access to Business Reengineering. Get your momentum score, find the stage holding you back, and leave with a specific plan.
+es: 15 preguntas sobre las cinco etapas, del Acceso a la Reingeniería del negocio. Obtén tu puntaje de impulso, descubre qué etapa te está frenando y llévate un plan concreto.
+
+en: Pick the workflows to redesign first.
+es: Elige qué flujos de trabajo rediseñar primero.
+
+en: Tie AI investment to how the business creates value.
+es: Liga la inversión en IA a cómo el negocio crea valor.
+
+en: A free 3-minute assessment that shows how ready your organization is to turn AI licenses into lasting habits, built on the five stages of the Enablement Flywheel, from Access to Business Reengineering.
+es: Un diagnóstico gratuito de 3 minutos que muestra qué tan lista está tu organización para convertir licencias de IA en hábitos duraderos, basado en las cinco etapas del Enablement Flywheel, del Acceso a la Reingeniería del negocio.
+
+en: 15 questions. 3 minutes. Find the stage where your AI adoption is wobbling, and what to do next.
+es: 15 preguntas. 3 minutos. Descubre en qué etapa se tambalea tu adopción de IA y qué hacer después.
+
+en: 15 honest questions, about 3 minutes. Find out whether your AI rollout is building momentum or quietly losing it, and which stage to fix first. Based on the Enablement Flywheel I used to take Microsoft Copilot to 94% sustained adoption across 13,000+ seats: five stages from Access to Business Reengineering.
+es: 15 preguntas honestas, unos 3 minutos. Descubre si tu lanzamiento de IA está ganando impulso o perdiéndolo en silencio, y qué etapa arreglar primero. Basado en el Enablement Flywheel que usé para llevar Microsoft Copilot a un 94% de adopción sostenida en más de 13,000 licencias: cinco etapas, del Acceso a la Reingeniería del negocio.
+
+en: 0 of 15 answered
+es: 0 de 15 respondidas
+
+en: Flywheel chart of your scores by stage
+es: Gráfica Flywheel de tus resultados por etapa
+
+en: Start with the highlighted stage. A flywheel only spins as well as its weakest section.
+es: Empieza por la etapa resaltada. Un flywheel solo gira tan bien como su sección más débil.
+
+en: That's what the Enablement Flywheel is built to solve. Access first: get the tools into people's hands, with a clear why and clear guardrails. Adoption next: meet them in their workflow, not in a generic training deck, and measure behavior change, not login counts. Then Proficiency: build the skill to iterate instead of expecting a perfect first answer. From there, New Ways of Working: redesign the work itself around what people and AI each do best. And finally Business Reengineering: rethink how the business creates value, not just how fast it runs.
+es: Eso es lo que el Enablement Flywheel está diseñado para resolver. Primero, Acceso: poner las herramientas en las manos de la gente, con un porqué claro y reglas claras. Después, Adopción: llegar a las personas en su flujo de trabajo, no en una presentación genérica de capacitación, y medir el cambio de comportamiento, no los inicios de sesión. Luego, Dominio: desarrollar la habilidad de iterar en lugar de esperar una respuesta perfecta a la primera. A partir de ahí, Nuevas formas de trabajar: rediseñar el trabajo mismo alrededor de lo que las personas y la IA hacen mejor. Y finalmente, Reingeniería del negocio: repensar cómo el negocio crea valor, no solo qué tan rápido funciona.
+
+# ---------------------------------------------------------------- Case study: five stages
+en: How a 200-person Champions network and a five-stage enablement methodology took Microsoft Copilot from a licensed tool to daily habit across 13,000+ seats at Applied Materials.
+es: Cómo una red de 200 Champions y una metodología de habilitación de cinco etapas convirtieron a Microsoft Copilot de una licencia más en un hábito diario en más de 13,000 licencias en Applied Materials.
+
+en: Rather than a single training push, the rollout ran on a five-stage methodology designed to build momentum instead of spending it in one launch event. Each stage makes the next one possible, and the momentum from the later stages feeds back into the first.
+es: En lugar de una sola ola de capacitación, el lanzamiento funcionó con una metodología de cinco etapas diseñada para generar impulso, en vez de gastarlo todo en un solo evento de lanzamiento. Cada etapa hace posible la siguiente, y el impulso de las últimas regresa a alimentar la primera.
+
+en: Stage 1
+es: Etapa 1
+
+en: Stage 2
+es: Etapa 2
+
+en: Stage 3
+es: Etapa 3
+
+en: Stage 4
+es: Etapa 4
+
+en: Stage 5
+es: Etapa 5
+
+en: Get the right tools into the right hands, with clear guardrails and a clear why. Copilot scaled to more than 13,000 seats across 70+ geographies. But access is more than a license. Before designing any training, the work started with finding out where people actually got stuck with AI tools, whether that was confidence, relevance to their specific role, or simply not knowing where to start, rather than guessing from the top down.
+es: Poner las herramientas correctas en las manos correctas, con reglas claras y un porqué claro. Copilot llegó a más de 13,000 licencias en más de 70 geografías. Pero el acceso es más que una licencia. Antes de diseñar cualquier capacitación, el trabajo empezó por descubrir dónde se atoraba realmente la gente con las herramientas de IA, ya fuera por confianza, por relevancia para su rol o simplemente por no saber por dónde empezar, en lugar de adivinar desde arriba.
+
+en: Turn first logins into weekly habits people choose on their own. This is where the 70+ training sessions came in: role-specific, hands-on, and built around real workflows instead of generic feature tours. Activation numbers are easy to celebrate and easy to misread, so the program measured continued, voluntary use, the signal that people were actually finding Copilot useful rather than just compliant.
+es: Convertir los primeros inicios de sesión en hábitos semanales que la gente elige por sí misma. Aquí entraron las más de 70 sesiones de capacitación: específicas por rol, prácticas y construidas alrededor de flujos de trabajo reales en lugar de recorridos genéricos de funciones. Los números de activación son fáciles de celebrar y fáciles de malinterpretar, así que el programa midió el uso continuo y voluntario: la señal de que la gente realmente encontraba útil a Copilot, y no solo estaba cumpliendo.
+
+en: Build real skill. A recurring theme in those sessions: people expected AI to get things right on the first try, the same way they'd judge a piece of software. Once training reframed working with Copilot as iterative, more like collaborating with a colleague than querying a calculator, the friction dropped and people kept coming back.
+es: Desarrollar habilidad real. Un tema recurrente en esas sesiones: la gente esperaba que la IA acertara al primer intento, igual que juzgaría cualquier software. Cuando la capacitación replanteó el trabajo con Copilot como algo iterativo, más parecido a colaborar con un colega que a consultar una calculadora, la fricción bajó y la gente siguió regresando.
+
+en: Redesign everyday workflows around what people and AI each do best. This is where the Champions network did its work, turning one person's discovery into a repeatable practice for their whole team, and taking adoption from a program run by one team to a habit sustained by peers across the org.
+es: Rediseñar el trabajo diario alrededor de lo que las personas y la IA hacen mejor. Aquí es donde la red de Champions hizo su trabajo: convirtió el descubrimiento de una persona en una práctica repetible para todo su equipo, y llevó la adopción de ser un programa de un solo equipo a un hábito sostenido entre colegas en toda la organización.
+
+en: Rethink processes, roles, and value end to end, not just speed up the old ones. This is where the work is heading now: an AI Use Case Prioritization Framework that ties AI investment to business value, and advising business and IT leaders on AI roadmap, safety, and governance.
+es: Repensar procesos, roles y valor de principio a fin, no solo acelerar los de siempre. Hacia aquí va el trabajo ahora: un Marco de Priorización de Casos de Uso de IA que liga la inversión en IA al valor del negocio, y la asesoría a líderes de negocio y de TI sobre la hoja de ruta, la seguridad y la gobernanza de la IA.
+
+en: The program reached 94% adoption across 13,000+ seats, not as a launch-day spike, but as sustained, voluntary use tracked through the Adoption stage of the Flywheel. The 200-person Champions network continues to run the open hours, FAQs, SOPs, and gamification infrastructure that keeps that number holding, well past the initial rollout.
+es: El programa alcanzó 94% de adopción en más de 13,000 licencias, no como un pico del día de lanzamiento, sino como un uso sostenido y voluntario medido en la etapa de Adopción del Flywheel. La red de 200 Champions sigue operando los horarios de consulta, las preguntas frecuentes, los procedimientos y la gamificación que mantienen ese número firme, mucho después del lanzamiento inicial.
+
+# ---------------------------------------------------------------- Home: My Human Manifesto
+en: How I Work
+es: Cómo trabajo
+
+en: My Human Manifesto
+es: Mi manifiesto humano
+
+en: Every person carries their own kind of magic. In the right environment, it shows up. <strong>My job is to build the environment where your magic shows up.</strong>
+es: Cada persona lleva consigo su propia magia. En el ambiente correcto, aparece. <strong>Mi trabajo es construir el ambiente donde tu magia aparezca.</strong>
+
+en: That means:
+es: Eso significa:
+
+en: <span><strong>I meet you where you are.</strong> Your role, your pace, your starting point, in English or Spanish. Every path begins from wherever you&rsquo;re standing today.</span>
+es: <span><strong>Te encuentro donde estás.</strong> Tu rol, tu ritmo, tu punto de partida, en inglés o en español. Todo camino empieza desde donde estás parado hoy.</span>
+
+en: <span><strong>I start with what matters to you.</strong> Learning sticks when it solves a problem you already care about, so I find that problem first and build from there.</span>
+es: <span><strong>Empiezo por lo que te importa.</strong> El aprendizaje se queda cuando resuelve un problema que ya te importa, así que primero encuentro ese problema y construyo a partir de ahí.</span>
+
+en: <span><strong>I make it easy, fun, and sticky.</strong> Small wins early, real tools from day one, and enough play that people want to come back for more.</span>
+es: <span><strong>Lo hago fácil, divertido y memorable.</strong> Pequeñas victorias desde el inicio, herramientas reales desde el primer día y suficiente juego para que la gente quiera regresar por más.</span>
+
+en: <span><strong>I show, then I teach.</strong> I bring something real into the room, a working agent or a live demo, and once you&rsquo;re curious, I open the hood so you can build it yourself.</span>
+es: <span><strong>Primero muestro, luego enseño.</strong> Traigo algo real a la sala, un agente funcionando o un demo en vivo, y cuando ya tienes curiosidad, abro el cofre para que puedas construirlo tú.</span>
+
+en: <span><strong>I pay attention.</strong> I remember your project, your goals, the thing you mentioned three weeks ago. Caring about people means noticing them.</span>
+es: <span><strong>Pongo atención.</strong> Recuerdo tu proyecto, tus metas, eso que mencionaste hace tres semanas. Que te importen las personas significa notarlas.</span>
+
+en: <strong>Your part</strong>Your part is simple: bring your curiosity, try the thing, and tell me honestly what&rsquo;s working.
+es: <strong>Tu parte</strong>Tu parte es sencilla: trae tu curiosidad, pruébalo y dime con honestidad qué está funcionando.
+
+en: <strong>What you can count on</strong>Directness, warmth, and walking away lighter than you arrived, with a skill that&rsquo;s truly yours.
+es: <strong>Con lo que puedes contar</strong>Franqueza, calidez y que te vayas más ligero de lo que llegaste, con una habilidad que de verdad es tuya.
+
+# ---------------------------------------------------------------- Post: The Company You Keep (Austin Tech Week)
+en: The Company You Keep: Lessons from Austin Tech Week
+es: Dime con quién andas: lecciones de Austin Tech Week
+
+en: The Company You Keep: Lessons from Austin Tech Week | Ale Tamez
+es: Dime con quién andas: lecciones de Austin Tech Week | Ale Tamez
+
+en: At Austin Tech Week I walked into rooms full of strangers and walked out with a community. Why the people around you are the fastest way to learn.
+es: En Austin Tech Week entré a salas llenas de desconocidos y salí con una comunidad. Por qué las personas que te rodean son la forma más rápida de aprender.
+
+en: October 31, 2026 &middot; 3 min read
+es: 31 de octubre de 2026 &middot; 3 min de lectura
+
+en: A week full of open doors
+es: Una semana llena de puertas abiertas
+
+en: This past week at Austin Tech Week, I walked into rooms full of strangers and walked out with a community. I met founders building brave new things, operators solving intricate problems, and neighbors in this city who show up for each other simply because they can.
+es: Esta semana, en Austin Tech Week, entré a salas llenas de desconocidos y salí con una comunidad. Conocí a fundadores construyendo cosas nuevas y valientes, a operadores resolviendo problemas complejos y a vecinos de esta ciudad que se apoyan unos a otros simplemente porque pueden.
+
+en: Ale and two fellow attendees smiling behind giant lit marquee letters that spell Austin Tech Week
+es: Ale y otras dos asistentes sonriendo detrás de letras gigantes iluminadas que dicen Austin Tech Week
+
+en: What struck me most was the generosity. Every conversation came with an offer: an introduction, a resource, a story about what worked and what flopped. These were people who measure success by how many others they lift along the way.
+es: Lo que más me impresionó fue la generosidad. Cada conversación venía con un ofrecimiento: una presentación, un recurso, una historia sobre lo que funcionó y lo que fracasó. Eran personas que miden el éxito por cuántos otros levantan en el camino.
+
+en: Community is a learning accelerator
+es: La comunidad acelera el aprendizaje
+
+en: Think of a forest. A single tree can grow on its own, slowly. In a forest, roots connect underground and pass nutrients to whoever needs them most. The young trees grow faster because the older ones share what they have gathered.
+es: Piensa en un bosque. Un árbol solo puede crecer por su cuenta, despacio. En un bosque, las raíces se conectan bajo tierra y pasan nutrientes a quien más los necesita. Los árboles jóvenes crecen más rápido porque los mayores comparten lo que han reunido.
+
+en: That is what a good community does for learning. You borrow someone else's hard won lessons and skip a year of trial and error. You hear a question you never thought to ask. You see a version of what is possible, and suddenly your own ceiling rises.
+es: Eso es lo que una buena comunidad hace por el aprendizaje. Tomas prestadas las lecciones que a alguien más le costaron trabajo y te ahorras un año de prueba y error. Escuchas una pregunta que nunca se te había ocurrido hacer. Ves una versión de lo que es posible, y de pronto tu propio techo sube.
+
+en: Four women speaking on a panel in front of a large Capital Factory gear sign during Austin Tech Week
+es: Cuatro mujeres hablando en un panel frente a un gran letrero de engrane de Capital Factory durante Austin Tech Week
+
+en: Learning from the women on stage at Capital Factory.
+es: Aprendiendo de las mujeres en el escenario de Capital Factory.
+
+en: We become like the people we spend time with. So choose people who are curious, generous, and building toward something bigger than themselves.
+es: Nos volvemos como las personas con las que pasamos el tiempo. Así que elige a personas curiosas, generosas y que estén construyendo algo más grande que ellas mismas.
+
+en: Tuning back to my own frequency
+es: Volver a sintonizar mi propia frecuencia
+
+en: The right community works like a tuning fork. When you stand near something that resonates clearly, you start to hum in your own true note.
+es: La comunidad correcta funciona como un diapasón. Cuando estás cerca de algo que resuena con claridad, empiezas a vibrar en tu propia nota verdadera.
+
+en: That is how this week felt. Being around people who build with purpose propelled me to search deeper and ask better questions about my own path. Where does my curiosity want to go next? How do I use what I know to serve others well?
+es: Así se sintió esta semana. Estar rodeada de personas que construyen con propósito me impulsó a buscar más hondo y a hacerme mejores preguntas sobre mi propio camino. ¿A dónde quiere ir mi curiosidad ahora? ¿Cómo uso lo que sé para servir bien a los demás?
+
+en: My mother always said, <em>"El que no vive para servir, no sirve para vivir."</em> Austin Tech Week reminded me that service and innovation belong together. The most fabulous builders I met were also the most generous.
+es: Mi mamá siempre decía: <em>"El que no vive para servir, no sirve para vivir."</em> Austin Tech Week me recordó que el servicio y la innovación van de la mano. Las personas más fabulosas que conocí construyendo cosas también eran las más generosas.
+
+en: Your turn
+es: Te toca
+
+en: So here is my invitation. Look around at the people you learn from. Who sharpens your thinking? Who makes you braver just by being in the room?
+es: Así que esta es mi invitación. Mira a tu alrededor, a las personas de quienes aprendes. ¿Quién afila tu forma de pensar? ¿Quién te hace más valiente solo con estar en la sala?
+
+en: Then go find more of them. Say yes to the meetup, send the follow up note, buy someone a coffee and ask about their story. Community is built one generous conversation at a time.
+es: Después, ve a buscar más personas así. Dile que sí al meetup, manda el mensaje de seguimiento, invítale un café a alguien y pregúntale por su historia. La comunidad se construye una conversación generosa a la vez.
+
+en: Thank you, Austin. I left this week lighter, fuller, and more myself.
+es: Gracias, Austin. Terminé esta semana más ligera, más plena y más yo.
+
+en: Take the check &rarr;
+es: Hacer el diagnóstico &rarr;
+
+en: Build a prompt &rarr;
+es: Construir un prompt &rarr;
+
+en: Run the numbers &rarr;
+es: Hacer las cuentas &rarr;
