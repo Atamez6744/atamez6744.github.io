@@ -219,10 +219,18 @@
             margin: 2.25rem 0 1rem;
         }
 
-        .article-image.portrait {
-            max-width: 440px;
+        /* Photos in this post: smaller, centered, and never stretched.
+           height: auto keeps each photo's real shape; the two widths give
+           both photos the same height (about 340px) so they look balanced. */
+        .article-image.photo {
+            height: auto;
+            max-width: 460px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .article-image.photo.portrait {
+            max-width: 255px;
         }
 
 
@@ -398,7 +406,7 @@
 
             <p>This past week at Austin Tech Week, I walked into rooms full of strangers and walked out with a community. I met founders building brave new things, operators solving intricate problems, and neighbors in this city who show up for each other simply because they can.</p>
 
-            <img src="../austin-tech-week.jpg" alt="Ale and two fellow attendees smiling behind giant lit marquee letters that spell Austin Tech Week" class="article-image" width="1600" height="1200">
+            <img src="../austin-tech-week.jpg" alt="Ale and two fellow attendees smiling behind giant lit marquee letters that spell Austin Tech Week" class="article-image photo" width="1600" height="1200">
 
             <p>What struck me most was the generosity. Every conversation came with an offer: an introduction, a resource, a story about what worked and what flopped. These were people who measure success by how many others they lift along the way.</p>
 
@@ -408,7 +416,7 @@
 
             <p>That is what a good community does for learning. You borrow someone else's hard won lessons and skip a year of trial and error. You hear a question you never thought to ask. You see a version of what is possible, and suddenly your own ceiling rises.</p>
 
-            <img src="../austin-tech-week-panel.jpg" alt="Four women speaking on a panel in front of a large Capital Factory gear sign during Austin Tech Week" class="article-image portrait" width="1200" height="1600" loading="lazy">
+            <img src="../austin-tech-week-panel.jpg" alt="Four women speaking on a panel in front of a large Capital Factory gear sign during Austin Tech Week" class="article-image photo portrait" width="1200" height="1600" loading="lazy">
             <p class="article-image-caption">Learning from the women on stage at Capital Factory.</p>
 
             <p>We become like the people we spend time with. So choose people who are curious, generous, and building toward something bigger than themselves.</p>
