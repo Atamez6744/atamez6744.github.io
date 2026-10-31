@@ -1928,3 +1928,196 @@ es: Construir un prompt &rarr;
 
 en: Run the numbers &rarr;
 es: Hacer las cuentas &rarr;
+
+# ---- Case study: The 10-Day AI Bootcamp ----
+en: How a 10-day, 15-minutes-a-day email bootcamp at Applied Materials spread by word of mouth to 48 people, starting with the obvious first steps everyone skips: setting up instructions and personalizing AI to you.
+es: Cómo un bootcamp por correo de 10 días y 15 minutos al día en Applied Materials llegó a 48 personas de boca en boca, empezando por los primeros pasos obvios que todos se saltan: configurar instrucciones y personalizar la IA para ti.
+
+en: The 10-Day AI Bootcamp | Ale Tamez
+es: El Bootcamp de IA de 10 días | Ale Tamez
+
+en: The 10-Day AI Bootcamp: 48 Sign-Ups by Word of Mouth | Ale Tamez
+es: El Bootcamp de IA de 10 días: 48 inscripciones de boca en boca | Ale Tamez
+
+en: <span class="section-label">Case Study &middot; AI Enablement</span>
+es: <span class="section-label">Caso de estudio &middot; Habilitación en IA</span>
+
+en: The 10-Day AI Bootcamp
+es: El Bootcamp de IA de 10 días
+
+en: How one short email a day took people from "I opened Copilot once" to treating AI like a teammate, and spread across Applied Materials by word of mouth.
+es: Cómo un correo corto al día llevó a las personas de "abrí Copilot una vez" a tratar a la IA como parte del equipo, y se extendió por Applied Materials de boca en boca.
+
+en: <span><strong>Organization:</strong> Applied Materials</span> <span><strong>Role:</strong> Designer, Writer &amp; Facilitator</span> <span><strong>Focus:</strong> Habit Design, GenAI Proficiency, Microsoft Copilot</span>
+es: <span><strong>Organización:</strong> Applied Materials</span> <span><strong>Rol:</strong> Diseñadora, Autora y Facilitadora</span> <span><strong>Enfoque:</strong> Diseño de Hábitos, Dominio de IA Generativa, Microsoft Copilot</span>
+
+en: Organic Sign-Ups
+es: Inscripciones orgánicas
+
+en: Days, One Drill Each
+es: Días, un ejercicio por día
+
+en: Minutes a Day
+es: Minutos al día
+
+en: Mandates
+es: Obligaciones
+
+en: Everyone had Copilot. Hardly anyone had a teammate. People typed a question into a blank window, got something generic back, and decided AI "wasn't that useful for my job."
+es: Todos tenían Copilot. Casi nadie tenía un compañero de equipo. La gente escribía una pregunta en una ventana en blanco, recibía algo genérico y concluía que la IA "no era tan útil para mi trabajo".
+
+en: The gap wasn't access, and it wasn't features. It was habit. Nobody had shown people the obvious first steps that make everything else work, and a one-hour training session, however good, rarely survives the rest of the week.
+es: El problema no era el acceso ni las funciones. Era el hábito. Nadie les había mostrado los primeros pasos obvios que hacen que todo lo demás funcione, y una capacitación de una hora, por buena que sea, rara vez sobrevive al resto de la semana.
+
+en: The Approach: Onboard AI Like a New Hire
+es: El enfoque: integra a la IA como a una nueva contratación
+
+en: The bootcamp was built around one idea: you don't learn AI like software. You onboard it like a brilliant new hire who knows nothing about you yet. Inspired by Jeremy Utley's Gen AI Bootcamp, I rebuilt the model for our people, our tools, and our work: one short email a day, one drill, one thing to try before lunch.
+es: El bootcamp se construyó alrededor de una idea: la IA no se aprende como un software. Se integra como a una nueva contratación brillante que todavía no sabe nada de ti. Inspirada en el Gen AI Bootcamp de Jeremy Utley, rediseñé el modelo para nuestra gente, nuestras herramientas y nuestro trabajo: un correo corto al día, un ejercicio, una cosa que probar antes del almuerzo.
+
+en: It starts with what everyone skips
+es: Empieza con lo que todos se saltan
+
+en: Day 1 isn't a prompt trick. It's introducing yourself: setting up your instructions and telling the tool who you are, what you do, and what great looks like in your role. It's so obvious that almost everyone skips it, and it quietly changes every answer that comes after. Hyper-personalizing the tool to you is the difference between a generic chatbot and a teammate who already knows your work.
+es: El día 1 no es un truco de prompts. Es presentarte: configurar tus instrucciones y decirle a la herramienta quién eres, qué haces y cómo se ve un gran resultado en tu rol. Es tan obvio que casi todos se lo saltan, y en silencio cambia cada respuesta que viene después. Hiperpersonalizar la herramienta es la diferencia entre un chatbot genérico y un compañero que ya conoce tu trabajo.
+
+en: The people who get the most from AI are not the ones with the best technology. They are the ones who invest three minutes in context.
+es: Quienes más aprovechan la IA no son quienes tienen la mejor tecnología. Son quienes invierten tres minutos en dar contexto.
+
+en: <cite>&mdash; From Day 1 of the bootcamp</cite>
+es: <cite>&mdash; Del día 1 del bootcamp</cite>
+
+en: Then one new muscle a day
+es: Después, un músculo nuevo cada día
+
+en: Each day builds on the one before it. Here's the shape of the ten days and the gist of each day's homework:
+es: Cada día se construye sobre el anterior. Esta es la forma de los diez días y la esencia de la tarea de cada uno:
+
+en: Introduce yourself
+es: Preséntate
+
+en: Set up your instructions. Make the tool know you.
+es: Configura tus instrucciones. Haz que la herramienta te conozca.
+
+en: Never take the first answer
+es: Nunca aceptes la primera respuesta
+
+en: Push back, regenerate, ask for three more.
+es: Cuestiona, regenera, pide tres más.
+
+en: Context is the skill
+es: El contexto es la habilidad
+
+en: Brief it the way you'd brief a new hire.
+es: Explícale como le explicarías a alguien nuevo en el equipo.
+
+en: Let it interview you
+es: Deja que te entreviste
+
+en: Flip it around: have AI ask you the questions.
+es: Dale la vuelta: que la IA te haga las preguntas a ti.
+
+en: The synthesizer
+es: El sintetizador
+
+en: Turn what you've avoided reading into actions.
+es: Convierte lo que has evitado leer en acciones.
+
+en: The honest critic
+es: El crítico honesto
+
+en: Ask it to find the holes in your own work.
+es: Pídele que encuentre los huecos en tu propio trabajo.
+
+en: Your Team of Five
+es: Tu equipo de cinco
+
+en: Give AI five roles and let them debate your problem.
+es: Dale a la IA cinco roles y deja que debatan tu problema.
+
+en: Stop repeating yourself
+es: Deja de repetirte
+
+en: Turn your best prompt into something reusable.
+es: Convierte tu mejor prompt en algo reutilizable.
+
+en: Move up the matrix
+es: Sube en la matriz
+
+en: Hand over one valuable weekly task, not a trivial one.
+es: Delega una tarea semanal valiosa, no una trivial.
+
+en: Show and tell
+es: Muestra y comparte
+
+en: Share what you built and teach one person how.
+es: Comparte lo que construiste y enséñale a una persona cómo hacerlo.
+
+en: The full prompts, demos, and exercises stay inside the bootcamp.
+es: Los prompts, demos y ejercicios completos se quedan dentro del bootcamp.
+
+en: Every email followed the same rhythm: a short story, one concept, a 10-minute exercise, and an open invitation to reply with questions. On the days where seeing it beat reading about it, I added a short video demo.
+es: Cada correo seguía el mismo ritmo: una historia corta, un concepto, un ejercicio de 10 minutos y una invitación abierta a responder con preguntas. Los días en que verlo valía más que leerlo, agregué un video corto de demostración.
+
+en: How It Spread
+es: Cómo se extendió
+
+en: I never made it mandatory, and it never went on a training calendar. People who signed up told their coworkers, and those coworkers reached out to join. Forty-eight people signed up that way.
+es: Nunca lo hice obligatorio y nunca entró a un calendario de capacitación. Quienes se inscribían se lo contaban a sus compañeros, y esos compañeros me buscaban para unirse. Así se inscribieron cuarenta y ocho personas.
+
+en: That's the signal I trust most. People don't recommend something to their colleagues unless it actually helped them.
+es: Esa es la señal en la que más confío. Nadie le recomienda algo a sus colegas a menos que de verdad le haya ayudado.
+
+en: <strong>48 organic sign-ups</strong>, all through word of mouth, with no mandate or assignment
+es: <strong>48 inscripciones orgánicas</strong>, todas de boca en boca, sin obligación ni asignación
+
+en: <strong>Questions kept coming in</strong> while it ran, a sign people were trying the drills in their real work and wanted to go further
+es: <strong>Las preguntas no dejaron de llegar</strong> mientras duró, señal de que la gente estaba probando los ejercicios en su trabajo real y quería ir más lejos
+
+en: <strong>The video demos got watched</strong> on the days that had them
+es: <strong>Los videos de demostración se vieron</strong> en los días que los tenían
+
+en: <strong>Thank-you messages</strong> when it wrapped up
+es: <strong>Mensajes de agradecimiento</strong> al terminar
+
+en: Most people don't need more AI features. They need someone to show them the obvious thing they skipped, and then give them a reason to come back tomorrow.
+es: La mayoría de las personas no necesita más funciones de IA. Necesita que alguien le muestre lo obvio que se saltó, y luego una razón para volver mañana.
+
+en: Bring This Bootcamp to Your Team
+es: Lleva este bootcamp a tu equipo
+
+en: If your people have AI licenses but not AI habits, let's talk about a bootcamp built around your tools, your roles, and your work.
+es: Si tu gente tiene licencias de IA pero no hábitos de IA, hablemos de un bootcamp diseñado para tus herramientas, tus roles y tu trabajo.
+
+en: Ten days, fifteen minutes a day, zero mandates. It starts with the obvious steps everyone skips, like personalizing AI to you, and it spread to 48 people by word of mouth.
+es: Diez días, quince minutos al día, cero obligaciones. Empieza con los pasos obvios que todos se saltan, como personalizar la IA para ti, y llegó a 48 personas de boca en boca.
+
+en: <a href="case-studies/ai-bootcamp.html" class="read-more" style="margin-top: 16px;">Read the Case Study
+es: <a href="case-studies/ai-bootcamp.html" class="read-more" style="margin-top: 16px;">Leer el caso de estudio
+
+en: <span class="status-badge badge-active">Case Study</span>
+es: <span class="status-badge badge-active">Caso de estudio</span>
+
+en: A 10-day, 15-minutes-a-day email bootcamp that took people at Applied Materials from "I opened Copilot once" to treating AI like a teammate. It starts with the obvious steps everyone skips, like setting up instructions and personalizing the tool to you, then adds one new habit a day. No mandate, no training calendar: people signed up because their coworkers told them to.
+es: Un bootcamp por correo de 10 días y 15 minutos al día que llevó a la gente de Applied Materials de "abrí Copilot una vez" a tratar a la IA como parte del equipo. Empieza con los pasos obvios que todos se saltan, como configurar instrucciones y personalizar la herramienta para ti, y luego suma un hábito nuevo cada día. Sin obligación ni calendario de capacitación: la gente se inscribió porque sus compañeros se lo recomendaron.
+
+en: Sign-Ups
+es: Inscripciones
+
+en: 48, all by word of mouth
+es: 48, todas de boca en boca
+
+en: 10 daily emails &amp; video demos
+es: 10 correos diarios y videos de demostración
+
+en: Time per Day
+es: Tiempo al día
+
+en: 15 minutes
+es: 15 minutos
+
+en: Day 1
+es: Día 1
+
+en: Make the tool know you
+es: Haz que la herramienta te conozca
