@@ -16,18 +16,18 @@
     <title>Adoption Doesn't Equal ROI | Ale Tamez</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --terracotta: #C48B6F;
-            --terracotta-light: #D4A08A;
-            --navy: #5A9E8F;
-            --cream: #FFFFFF;
-            --cream-dark: #F5F5F3;
-            --sage: #C9A24D;
+            --terracotta: #705148;
+            --terracotta-light: #8A6A60;
+            --navy: #1D1B18;
+            --cream: #DFDCD8;
+            --cream-dark: #D2CEC8;
+            --sage: #705148;
             --white: #FFFFFF;
-            --text-dark: #2C2C2C;
-            --text-medium: #5A5A5A;
+            --text-dark: #1D1B18;
+            --text-medium: #3A3631;
         }
 
         *, *::before, *::after {
@@ -37,7 +37,7 @@
         }
 
         body {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
             background-color: var(--cream);
             color: var(--text-dark);
             line-height: 1.7;
@@ -63,7 +63,7 @@
         }
 
         .nav-logo {
-            font-family: 'Playfair Display', serif;
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--navy);
@@ -82,7 +82,7 @@
         }
 
         .nav-links a {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
             font-size: 0.95rem;
             font-weight: 500;
             color: var(--text-medium);
@@ -137,7 +137,7 @@
         }
 
         .article-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
             font-size: 2.75rem;
             font-weight: 700;
             color: var(--navy);
@@ -171,7 +171,7 @@
         }
 
         .article-body p:first-of-type::first-letter {
-            font-family: 'Playfair Display', serif;
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
             font-size: 3.5rem;
             font-weight: 700;
             color: var(--terracotta);
@@ -198,7 +198,7 @@
         }
 
         .post-nav a {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
             font-size: 0.95rem;
             font-weight: 500;
             color: var(--terracotta);
@@ -241,7 +241,7 @@
         }
 
         footer .tagline {
-            font-family: 'Playfair Display', serif;
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
             font-style: italic;
             font-size: 1.05rem;
             color: var(--cream-dark);
@@ -250,7 +250,7 @@
 
         footer .copyright {
             font-size: 0.85rem;
-            color: var(--text-medium);
+            color: var(--cream-dark);
         }
 
         /* Responsive */
@@ -306,7 +306,22 @@
     .lang-switch a { color: #3A3631; }
     .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
     #navbar .nav-links, nav .nav-links { margin-left: auto; }
-    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+    @media (max-width: 768px) {
+      .lang-switch { margin-left: auto; margin-right: 12px; }
+      nav .hamburger, nav .nav-toggle { order: 3; }
+    }
+  </style>
+  <style id="type-css">
+    h1, h2, h3, h4, .nav-logo { font-weight: 600; letter-spacing: -0.015em; }
+    .hero-title { font-size: clamp(2.1rem, 4.4vw, 3.2rem); line-height: 1.12; }
+    .section-title, .do-title, .work-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
+    .hero-label, .hero-tagline, .section-label, .care-about-title, .blog-tag, .coming-soon-badge,
+    .contact-info .info-label, .toolkit-item .tk-phase, .manifesto-promise strong, .quote-source,
+    .status-badge, .hl-label, .highlight-item .hl-label, .card-tag, .phase-tag, .crumbs, .tag, .stat .label {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
   </style>
   <!-- /i18n:head -->
 </head>

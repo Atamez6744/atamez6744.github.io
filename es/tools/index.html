@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../tools/toolkit.css">
   <style>
     .tool-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
@@ -26,7 +26,7 @@
     .tool-card .tag { background: color-mix(in srgb, var(--c) 12%, white); color: var(--c); align-self: flex-start; margin-bottom: 10px; }
     .tool-card h2 { font-size: 1.9rem; margin-bottom: 8px; }
     .tool-card p { color: var(--espresso-soft); font-size: .98rem; flex: 1; }
-    .tool-card .q { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--espresso); margin: 14px 0 18px; }
+    .tool-card .q { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-style: italic; font-size: 1.15rem; color: var(--espresso); margin: 14px 0 18px; }
     .tool-card .go { font-weight: 600; color: var(--c); display: inline-flex; align-items: center; gap: 6px; }
     .tool-card .go svg { width: 16px; height: 16px; transition: transform .25s; }
     .tool-card:hover .go svg { transform: translateX(4px); }
@@ -36,7 +36,7 @@
     .journey > p { text-align: center; color: var(--espresso-soft); max-width: 620px; margin: 0 auto 28px; }
     .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
     .step { text-align: center; padding: 0 12px; position: relative; }
-    .step .dot { width: 54px; height: 54px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; background: var(--c); position: relative; z-index: 1; }
+    .step .dot { width: 54px; height: 54px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 1.5rem; background: var(--c); position: relative; z-index: 1; }
     .step:not(:last-child)::after { content: ''; position: absolute; top: 27px; left: 50%; width: 100%; height: 2px; background: var(--mushroom); }
     .step h3 { font-size: 1.3rem; }
     .step p { font-size: .88rem; color: var(--espresso-soft); }
@@ -62,7 +62,22 @@
     .lang-switch a { color: #3A3631; }
     .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
     #navbar .nav-links, nav .nav-links { margin-left: auto; }
-    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+    @media (max-width: 768px) {
+      .lang-switch { margin-left: auto; margin-right: 12px; }
+      nav .hamburger, nav .nav-toggle { order: 3; }
+    }
+  </style>
+  <style id="type-css">
+    h1, h2, h3, h4, .nav-logo { font-weight: 600; letter-spacing: -0.015em; }
+    .hero-title { font-size: clamp(2.1rem, 4.4vw, 3.2rem); line-height: 1.12; }
+    .section-title, .do-title, .work-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
+    .hero-label, .hero-tagline, .section-label, .care-about-title, .blog-tag, .coming-soon-badge,
+    .contact-info .info-label, .toolkit-item .tk-phase, .manifesto-promise strong, .quote-source,
+    .status-badge, .hl-label, .highlight-item .hl-label, .card-tag, .phase-tag, .crumbs, .tag, .stat .label {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
   </style>
   <!-- /i18n:head -->
 </head>

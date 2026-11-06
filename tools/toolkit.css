@@ -32,13 +32,13 @@
 
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Outfit', system-ui, sans-serif;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
   color: var(--espresso);
   background: var(--linen);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
-h1, h2, h3, h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; line-height: 1.15; }
+h1, h2, h3, h4 { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-weight: 600; line-height: 1.15; }
 a { color: var(--cocoa); text-decoration: none; transition: color .25s; }
 a:hover { color: var(--cocoa-dark); }
 img { max-width: 100%; display: block; }
@@ -50,7 +50,7 @@ img { max-width: 100%; display: block; }
 nav { position: fixed; inset: 0 0 auto 0; z-index: 1000; background: rgba(255,255,255,.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(29,27,24,.08); transition: box-shadow .3s; }
 nav.scrolled { box-shadow: 0 2px 20px rgba(29,27,24,.1); }
 .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 72px; }
-.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--espresso); }
+.nav-logo { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--espresso); }
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a { font-size: .9rem; font-weight: 500; color: var(--espresso-soft); text-transform: uppercase; letter-spacing: .08em; position: relative; padding-bottom: 4px; }
 .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--cocoa); transition: width .3s; }
@@ -120,7 +120,7 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 
 .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; }
 .stat { background: var(--paper); border-radius: 14px; padding: 18px; }
 .stat .label { font-size: .74rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--cocoa); }
-.stat .value { font-family: 'Cormorant Garamond', serif; font-size: 2.1rem; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; margin-top: 4px; }
+.stat .value { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 2.1rem; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; margin-top: 4px; }
 .stat .note { font-size: .82rem; color: var(--espresso-soft); margin-top: 2px; }
 
 /* ---------- TOAST ---------- */
@@ -141,7 +141,7 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 
 
 footer { background: var(--espresso); border-top: 1px solid rgba(255,255,255,.08); padding: 32px 0; text-align: center; }
 footer p { color: rgba(255,255,255,.45); font-size: .85rem; }
-footer .footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; color: rgba(255,255,255,.3); margin-top: 8px; font-size: 1rem; }
+footer .footer-tagline { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-style: italic; color: rgba(255,255,255,.3); margin-top: 8px; font-size: 1rem; }
 
 /* ---------- PRINT (so results can be saved as PDF) ---------- */
 @media print {

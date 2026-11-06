@@ -271,7 +271,25 @@ SWITCH_CSS = """<style id="lang-switch-css">
     .lang-switch a { color: #3A3631; }
     .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
     #navbar .nav-links, nav .nav-links { margin-left: auto; }
-    @media (max-width: 768px) { .lang-switch { margin-left: auto; margin-right: 12px; } }
+    @media (max-width: 768px) {
+      .lang-switch { margin-left: auto; margin-right: 12px; }
+      nav .hamburger, nav .nav-toggle { order: 3; }
+    }
+  </style>"""
+
+# Site-wide type: IBM Plex Sans for reading, IBM Plex Mono for small labels.
+# It lands on every page in both languages, after each page's own styles.
+TYPE_CSS = """<style id="type-css">
+    h1, h2, h3, h4, .nav-logo { font-weight: 600; letter-spacing: -0.015em; }
+    .hero-title { font-size: clamp(2.1rem, 4.4vw, 3.2rem); line-height: 1.12; }
+    .section-title, .do-title, .work-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
+    .hero-label, .hero-tagline, .section-label, .care-about-title, .blog-tag, .coming-soon-badge,
+    .contact-info .info-label, .toolkit-item .tk-phase, .manifesto-promise strong, .quote-source,
+    .status-badge, .hl-label, .highlight-item .hl-label, .card-tag, .phase-tag, .crumbs, .tag, .stat .label {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
   </style>"""
 
 
@@ -297,7 +315,7 @@ def strip_i18n(page_html):
 
 def inject(page_html, switch, alternates):
     page_html = strip_i18n(page_html)
-    head_block = f"\n  <!-- i18n:head -->\n  {alternates}\n  {SWITCH_CSS}\n  <!-- /i18n:head -->"
+    head_block = f"\n  <!-- i18n:head -->\n  {alternates}\n  {SWITCH_CSS}\n  {TYPE_CSS}\n  <!-- /i18n:head -->"
     page_html = page_html.replace("</head>", head_block + "\n</head>", 1)
     # Put the switch right after the nav links list, inside the nav bar.
     m = re.search(r'(<ul class="nav-links"[^>]*>.*?</ul>)', page_html, re.S)

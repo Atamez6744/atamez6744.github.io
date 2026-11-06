@@ -1167,8 +1167,8 @@ es: p. ej. Gestión de Programas
 en: Add to the map
 es: Agregar al mapa
 
-en: <span><span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;">Tune the weights</span><br><span class="hint">What matters most to <em>your</em> organization right now?</span></span>
-es: <span><span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;">Ajusta los pesos</span><br><span class="hint">¿Qué es lo más importante para <em>tu</em> organización ahora mismo?</span></span>
+en: <span><span style="font-family:'IBM Plex Sans', system-ui, sans-serif;font-size:1.5rem;">Tune the weights</span><br><span class="hint">What matters most to <em>your</em> organization right now?</span></span>
+es: <span><span style="font-family:'IBM Plex Sans', system-ui, sans-serif;font-size:1.5rem;">Ajusta los pesos</span><br><span class="hint">¿Qué es lo más importante para <em>tu</em> organización ahora mismo?</span></span>
 
 en: Reset to recommended
 es: Volver a los recomendados
