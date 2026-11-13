@@ -1847,8 +1847,8 @@ es: <span><strong>Te encuentro donde estás.</strong> Tu rol, tu ritmo, tu punto
 en: <span><strong>I start with what matters to you.</strong> Learning sticks when it solves a problem you already care about, so I find that problem first and build from there.</span>
 es: <span><strong>Empiezo por lo que te importa.</strong> El aprendizaje se queda cuando resuelve un problema que ya te importa, así que primero encuentro ese problema y construyo a partir de ahí.</span>
 
-en: <span><strong>I make it easy, fun, and sticky.</strong> Small wins early, real tools from day one, and enough play that people want to come back for more.</span>
-es: <span><strong>Lo hago fácil, divertido y memorable.</strong> Pequeñas victorias desde el inicio, herramientas reales desde el primer día y suficiente juego para que la gente quiera regresar por más.</span>
+en: <span><strong>I make adoption easy, engaging, and lasting.</strong> Quick wins early, real tools from day one, and hands-on practice that turns new skills into everyday habits.</span>
+es: <span><strong>Hago que la adopción sea fácil, atractiva y duradera.</strong> Logros rápidos desde el inicio, herramientas reales desde el primer día y práctica guiada que convierte nuevas habilidades en hábitos diarios.</span>
 
 en: <span><strong>I show, then I teach.</strong> I bring something real into the room, a working agent or a live demo, and once you&rsquo;re curious, I open the hood so you can build it yourself.</span>
 es: <span><strong>Primero muestro, luego enseño.</strong> Traigo algo real a la sala, un agente funcionando o un demo en vivo, y cuando ya tienes curiosidad, abro el cofre para que puedas construirlo tú.</span>
