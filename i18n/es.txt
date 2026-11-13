@@ -662,6 +662,15 @@ es: Competencias clave
 en: <span class="comp-tag">GenAI Enablement</span> <span class="comp-tag">Change Management</span> <span class="comp-tag">Training Design</span> <span class="comp-tag">Executive Communication</span> <span class="comp-tag">Microsoft Copilot</span> <span class="comp-tag">Champions Networks</span> <span class="comp-tag">Bilingual EN/ES</span> <span class="comp-tag">Data Storytelling</span> <span class="comp-tag">Community Building</span>
 es: <span class="comp-tag">Habilitación en IA Generativa</span> <span class="comp-tag">Gestión del Cambio</span> <span class="comp-tag">Diseño de Capacitación</span> <span class="comp-tag">Comunicación Ejecutiva</span> <span class="comp-tag">Microsoft Copilot</span> <span class="comp-tag">Redes de Champions</span> <span class="comp-tag">Bilingüe EN/ES</span> <span class="comp-tag">Storytelling con Datos</span> <span class="comp-tag">Construcción de Comunidad</span>
 
+en: Press & Recognition
+es: Prensa y reconocimientos
+
+en: Influential Women recognition card for Alejandra Tamez, Change Management and AI Transformation Lead at Applied Materials
+es: Tarjeta de reconocimiento de Influential Women para Alejandra Tamez, líder de gestión del cambio y transformación con IA en Applied Materials
+
+en: <a href="https://influentialwomen.com/connect/alejandra-tamez" target="_blank" rel="noopener" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Featured in Influential Women, November 2026.</a> Profiled for leading change management and AI adoption at Applied Materials.
+es: <a href="https://influentialwomen.com/connect/alejandra-tamez" target="_blank" rel="noopener" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 2px;">Destacada en Influential Women, noviembre de 2026.</a> Reconocida por liderar la gestión del cambio y la adopción de IA en Applied Materials.
+
 en: Speaking
 es: Conferencias
 
