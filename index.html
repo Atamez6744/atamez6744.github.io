@@ -264,19 +264,18 @@
 
     /* Proof points row (hero) */
     .hero-proof {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 0;
       margin: 0 0 36px;
       padding: 18px 0 0;
       border-top: 1px solid var(--sage-light);
       list-style: none;
-      max-width: 560px;
+      max-width: 620px;
     }
     .hero-proof li {
-      flex: 1 1 0;
       min-width: 0;
-      padding: 0 20px;
+      padding: 0 16px;
       border-left: 1px solid var(--sage-light);
     }
     .hero-proof li:first-child { padding-left: 0; border-left: none; }
@@ -1211,7 +1210,9 @@
       .hero-tagline { font-size: 0.75rem; letter-spacing: 0.18em; }
       .hero-text { max-width: 100%; }
       .hero-proof { margin-left: auto; margin-right: auto; }
-      .hero-proof li { padding: 0 12px; }
+      .hero-proof { grid-template-columns: repeat(2, 1fr); row-gap: 20px; }
+      .hero-proof li, .hero-proof li:first-child { padding: 0 12px; border-left: none; }
+      .hero-proof li:nth-child(even) { border-left: 1px solid var(--sage-light); }
       .hero-proof-number { font-size: 1.6rem; }
 
       .quotes-track { flex-direction: column; align-items: center; gap: 32px; }
@@ -1329,6 +1330,7 @@
           </div>
           <ul class="hero-proof" aria-label="Proof points">
             <li><span class="hero-proof-number">80+</span><span class="hero-proof-label">one-hour workshops delivered</span></li>
+            <li><span class="hero-proof-number">300+</span><span class="hero-proof-label">people trained</span></li>
             <li><span class="hero-proof-number">200</span><span class="hero-proof-label">AI Champions in the network</span></li>
             <li><span class="hero-proof-number">94%</span><span class="hero-proof-label">sustained Copilot adoption</span></li>
           </ul>
