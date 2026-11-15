@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alejandra Tamez de la Garza | Convierto el valor en capacidad</title>
+  <title>Alejandra Tamez de la Garza</title>
   <meta name="description" content="Líder de Habilitación en IA Generativa, Catalizadora del Cambio, Constructora de Puentes. Ayudo a las personas a cambiar los atajos por crecimiento, y les muestro lo que es posible cuando de verdad se presentan.">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="icon" type="image/png" href="../favicon.png">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Alejandra Tamez de la Garza — Convierto el valor en capacidad">
+  <meta property="og:title" content="Alejandra Tamez de la Garza">
   <meta property="og:description" content="Líder de Habilitación en IA Generativa, Catalizadora del Cambio, Constructora de Puentes. Ayudo a las personas a cambiar los atajos por crecimiento, y les muestro lo que es posible cuando de verdad se presentan.">
   <meta property="og:image" content="https://alejandratamez.com/social-preview.jpg">
   <meta property="og:url" content="https://alejandratamez.com/es/">
   <meta property="og:site_name" content="Ale Tamez">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alejandra Tamez de la Garza — Convierto el valor en capacidad">
+  <meta name="twitter:title" content="Alejandra Tamez de la Garza">
   <meta name="twitter:description" content="Líder de Habilitación en IA Generativa, Catalizadora del Cambio, Constructora de Puentes. Ayudo a las personas a cambiar los atajos por crecimiento, y les muestro lo que es posible cuando de verdad se presentan.">
   <meta name="twitter:image" content="https://alejandratamez.com/social-preview.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -260,6 +260,39 @@
       font-size: 0.85rem;
       font-weight: 600;
       border: 1px solid rgba(112, 81, 72, 0.15);
+    }
+
+    /* Proof points row (hero) */
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin: 0 0 36px;
+      padding: 18px 0 0;
+      border-top: 1px solid var(--sage-light);
+      list-style: none;
+      max-width: 620px;
+    }
+    .hero-proof li {
+      min-width: 0;
+      padding: 0 16px;
+      border-left: 1px solid var(--sage-light);
+    }
+    .hero-proof li:first-child { padding-left: 0; border-left: none; }
+    .hero-proof-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--terracotta);
+      letter-spacing: -0.02em;
+    }
+    .hero-proof-label {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      color: var(--text-medium);
     }
 
     .hero-cta {
@@ -1176,6 +1209,11 @@
       .hero-title { font-size: 2.4rem; }
       .hero-tagline { font-size: 0.75rem; letter-spacing: 0.18em; }
       .hero-text { max-width: 100%; }
+      .hero-proof { margin-left: auto; margin-right: auto; }
+      .hero-proof { grid-template-columns: repeat(2, 1fr); row-gap: 20px; }
+      .hero-proof li, .hero-proof li:first-child { padding: 0 12px; border-left: none; }
+      .hero-proof li:nth-child(even) { border-left: 1px solid var(--sage-light); }
+      .hero-proof-number { font-size: 1.6rem; }
 
       .quotes-track { flex-direction: column; align-items: center; gap: 32px; }
 
@@ -1263,7 +1301,6 @@
   <!-- NAVIGATION -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#home" class="nav-logo">Ale Tamez</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="about.html">Sobre mí</a></li>
         <li><a href="projects.html">Proyectos</a></li>
@@ -1283,11 +1320,18 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content fade-in">
+          <span class="hero-label">Alejandra Tamez</span>
           <h1 class="hero-title">Traduzco sistemas complejos en posibilidades humanas.</h1>
           <p class="hero-text">La vida es lo que tú haces de ella. Ayudo a las personas a cambiar los atajos por crecimiento, y les muestro lo que es posible cuando de verdad se presentan.</p>
           <div class="role-tags">
             <span class="role-tag">Líder de Habilitación en IA</span> <span class="role-tag">Catalizadora del Cambio</span> <span class="role-tag">Constructora de Puentes</span>
           </div>
+          <ul class="hero-proof" aria-label="Resultados">
+            <li><span class="hero-proof-number">80+</span><span class="hero-proof-label">talleres de una hora en Applied Materials</span></li>
+            <li><span class="hero-proof-number">200</span><span class="hero-proof-label">Champions de IA en la red</span></li>
+            <li><span class="hero-proof-number">94%</span><span class="hero-proof-label">de adopción sostenida de Copilot</span></li>
+            <li><span class="hero-proof-number">300+</span><span class="hero-proof-label">personas capacitadas fuera de Applied Materials</span></li>
+          </ul>
           <div class="hero-buttons">
             <a href="#contact" class="hero-cta"> Trabajemos juntos
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
