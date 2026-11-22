@@ -2420,8 +2420,8 @@ es: Los autores están empezando a contarles a sus lectores cómo usaron la IA. 
 en: Authors are starting to tell readers how they used AI. It made me wonder what we&#x27;re actually afraid of losing, and what we&#x27;ll never get to read because AI got there first.
 es: Los autores están empezando a contarles a sus lectores cómo usaron la IA. Eso me hizo preguntarme qué es lo que realmente tenemos miedo de perder, y qué nunca vamos a leer porque la IA llegó primero.
 
-en: Ale sitting on carpeted stairs, smiling and pointing at a tall stack of books, with Ethan Mollick's Co-Existence on top
-es: Ale sentada en unas escaleras alfombradas, sonriendo y señalando una pila alta de libros, con Co-Existence de Ethan Mollick hasta arriba
+en: Ale smiling and pointing at a tall stack of books, with Ethan Mollick's Co-Existence on top
+es: Ale sonriendo y señalando una pila alta de libros, con Co-Existence de Ethan Mollick hasta arriba
 
 en: AI
 es: IA
