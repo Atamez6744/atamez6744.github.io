@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandra Tamez de la Garza</title>
-  <meta name="description" content="GenAI Enablement Lead, Change Catalyst, Bridge Builder. I help people trade shortcuts for growth, and show them what's possible once they actually show up.">
+  <meta name="description" content="Hi, I'm Ale. I help people make the unfamiliar feel possible, especially with AI, and I write about people, faith, family, and life between two cultures.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Alejandra Tamez de la Garza">
-  <meta property="og:description" content="GenAI Enablement Lead, Change Catalyst, Bridge Builder. I help people trade shortcuts for growth, and show them what's possible once they actually show up.">
+  <meta property="og:description" content="Hi, I'm Ale. I help people make the unfamiliar feel possible, especially with AI, and I write about people, faith, family, and life between two cultures.">
   <meta property="og:image" content="https://alejandratamez.com/social-preview.jpg">
   <meta property="og:url" content="https://alejandratamez.com/">
   <meta property="og:site_name" content="Ale Tamez">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Alejandra Tamez de la Garza">
-  <meta name="twitter:description" content="GenAI Enablement Lead, Change Catalyst, Bridge Builder. I help people trade shortcuts for growth, and show them what's possible once they actually show up.">
+  <meta name="twitter:description" content="Hi, I'm Ale. I help people make the unfamiliar feel possible, especially with AI, and I write about people, faith, family, and life between two cultures.">
   <meta name="twitter:image" content="https://alejandratamez.com/social-preview.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1264,6 +1264,28 @@
     .toolkit-item .tk-go { margin-top: 16px; font-weight: 600; font-size: .9rem; color: var(--white); }
     @media (max-width: 1000px) { .toolkit-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 600px) { .toolkit-grid { grid-template-columns: 1fr; } .toolkit-band { padding: 80px 0; } }
+    /* ===== HOME: LATEST POSTS ===== */
+    .hero .care-about-title { margin: 8px 0 12px; color: var(--terracotta); }
+    .hero .care-tags { margin-bottom: 36px; }
+    .home-posts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+    .home-post { background: var(--cream); border-radius: 16px; overflow: hidden; border: 1px solid rgba(29, 27, 24, 0.05); display: flex; flex-direction: column; color: inherit; transition: transform 0.3s, box-shadow 0.3s; }
+    .home-post:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(29, 27, 24, 0.1); color: inherit; }
+    .home-post-image { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .home-post-body { padding: 28px; display: flex; flex-direction: column; flex: 1; }
+    .home-post h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
+    .home-post p { font-size: 0.92rem; color: var(--text-medium); line-height: 1.6; flex-grow: 1; }
+    .home-post.featured { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .home-post.featured:not(.has-image) { grid-template-columns: 1fr; }
+    .home-post.featured .home-post-image { height: 100%; min-height: 340px; max-height: 460px; }
+    .home-post.featured .home-post-body { padding: 44px; justify-content: center; }
+    .home-post.featured h3 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); }
+    .home-post.featured p { font-size: 1.05rem; flex-grow: 0; margin-bottom: 8px; }
+    @media (max-width: 900px) {
+      .home-posts { grid-template-columns: 1fr; }
+      .home-post.featured { grid-template-columns: 1fr; }
+      .home-post.featured .home-post-image { min-height: 0; height: 280px; }
+      .home-post.featured .home-post-body { padding: 28px; }
+    }
   </style>
 
   <!-- i18n:head -->
@@ -1303,8 +1325,6 @@
     <div class="nav-inner">
       <ul class="nav-links" id="navLinks">
         <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="tools/">Toolkit</a></li>
         <li><a href="blog/">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -1321,27 +1341,28 @@
       <div class="hero-grid">
         <div class="hero-content fade-in">
           <span class="hero-label">Alejandra Tamez</span>
-          <h1 class="hero-title">I translate complex systems into human possibility.</h1>
-          <p class="hero-text">Life is what you make it. I help people trade shortcuts for growth, and show them what's possible once they actually show up.</p>
-          <div class="role-tags">
-            <span class="role-tag">GenAI Enablement Lead</span>
-            <span class="role-tag">Change Catalyst</span>
-            <span class="role-tag">Bridge Builder</span>
+          <h1 class="hero-title">Hi, I'm Ale.</h1>
+          <p class="hero-text">I help people make the unfamiliar feel possible, especially when it comes to AI.</p>
+          <p class="hero-text">This is where I write about what matters to me: people, faith, family, and life between two cultures.</p>
+          <p class="care-about-title">What I care about</p>
+          <div class="care-tags">
+            <span class="care-tag">People</span>
+            <span class="care-tag">Faith</span>
+            <span class="care-tag">Family</span>
+            <span class="care-tag">Community</span>
+            <span class="care-tag">Culture</span>
+            <span class="care-tag">Travel</span>
+            <span class="care-tag">Dogs</span>
+            <span class="care-tag">AI</span>
           </div>
-          <ul class="hero-proof" aria-label="Proof points">
-            <li><span class="hero-proof-number">80+</span><span class="hero-proof-label">one-hour workshops at Applied Materials</span></li>
-            <li><span class="hero-proof-number">200</span><span class="hero-proof-label">AI Champions in the network</span></li>
-            <li><span class="hero-proof-number">94%</span><span class="hero-proof-label">sustained Copilot adoption</span></li>
-            <li><span class="hero-proof-number">300+</span><span class="hero-proof-label">people trained beyond Applied Materials</span></li>
-          </ul>
           <div class="hero-buttons">
-            <a href="#contact" class="hero-cta">
-              Work With Me
+            <a href="#blog" class="hero-cta">
+              Read the blog
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
             </a>
-            <a href="Alejandra_Tamez_Resume.pdf" download class="hero-cta-secondary">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-              Download Resume
+            <a href="Alejandra_Tamez_Resume.pdf" target="_blank" rel="noopener" class="hero-cta-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+              View Resume
             </a>
           </div>
         </div>
@@ -1353,173 +1374,81 @@
     </div>
   </section>
 
-  <!-- WHAT I ACTUALLY DO -->
-  <section class="do-section fade-in">
-    <div class="container">
-      <h2 class="do-title">What I Actually Do</h2>
-      <div class="do-grid">
-        <div class="do-card">
-          <div class="do-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-          </div>
-          <h3>Help People See It</h3>
-          <p>I translate complex AI systems into human possibility. Not "here's the tool" &mdash; "here's what becomes possible once you learn this." Visionary meets pragmatic.</p>
-        </div>
-        <div class="do-card">
-          <div class="do-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-          </div>
-          <h3>Measure What Matters</h3>
-          <p>Adoption isn't about usage. It's about redesigning the way you work. What changed about how you actually do your job? What capabilities became possible that weren't before? What friction got removed that unlocks new potential and innovation?</p>
-        </div>
-        <div class="do-card">
-          <div class="do-icon diamond"></div>
-          <h3>No Shortcuts</h3>
-          <p>I don't believe in them. Growth takes iteration, discomfort, and showing up again and again. I build systems and spaces that make that work feel possible, not like punishment.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW I WORK: MY HUMAN MANIFESTO -->
-  <section class="work-section fade-in" id="how-i-work">
-    <div class="container">
-      <div class="human-manifesto">
-        <span class="section-label">How I Work</span>
-        <h2 class="work-title">My Human Manifesto</h2>
-        <p class="manifesto-lede">Every person carries their own kind of magic. In the right environment, it shows up. <strong>My job is to build the environment where your magic shows up.</strong></p>
-        <p class="manifesto-intro">That means:</p>
-        <ol class="manifesto-list">
-          <li><span><strong>I meet you where you are.</strong> Your role, your pace, your starting point, in English or Spanish. Every path begins from wherever you&rsquo;re standing today.</span></li>
-          <li><span><strong>I start with what matters to you.</strong> Learning sticks when it solves a problem you already care about, so I find that problem first and build from there.</span></li>
-          <li><span><strong>I make adoption easy, engaging, and lasting.</strong> Quick wins early, real tools from day one, and hands-on practice that turns new skills into everyday habits.</span></li>
-          <li><span><strong>I show, then I teach.</strong> I bring something real into the room, a working agent or a live demo, and once you&rsquo;re curious, I open the hood so you can build it yourself.</span></li>
-          <li><span><strong>I pay attention.</strong> I remember your project, your goals, the thing you mentioned three weeks ago. Caring about people means noticing them.</span></li>
-        </ol>
-        <div class="manifesto-promise">
-          <div><strong>Your part</strong>Your part is simple: bring your curiosity, try the thing, and tell me honestly what&rsquo;s working.</div>
-          <div><strong>What you can count on</strong>Directness, warmth, and walking away lighter than you arrived, with a skill that&rsquo;s truly yours.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS PREVIEW -->
-  <section class="projects-preview" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <span class="section-label">Projects</span>
-          <h2 class="section-title">Receipts</h2>
-        </div>
-        <a href="projects.html" class="view-all">
-          View All Projects
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-        </a>
-      </div>
-      <div class="project-cards fade-in">
-        <div class="project-card">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
-          </div>
-          <h3>Copilot Enablement at Scale</h3>
-          <p>The full story of driving 94% sustained adoption across 13,000+ seats: the Champions network, the Flywheel methodology, the training engine. This is the flagship.</p>
-          <a href="case-studies/copilot-enablement-at-scale.html" class="read-more" style="margin-top: 16px;">Read the Case Study <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
-        </div>
-        <div class="project-card">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
-          </div>
-          <h3>10-Day AI Bootcamp</h3>
-          <p>Ten days, fifteen minutes a day, zero mandates. It starts with the obvious steps everyone skips, like personalizing AI to you, and it spread to 48 people by word of mouth.</p>
-          <a href="case-studies/ai-bootcamp.html" class="read-more" style="margin-top: 16px;">Read the Case Study <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
-        </div>
-        <div class="project-card">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
-          </div>
-          <h3>La Clave AI</h3>
-          <p>Spanish-language AI education for 500M+ Spanish speakers. A venture built on the belief that AI access shouldn't depend on what language you speak.</p>
-          <span class="coming-soon-badge">In Development</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOOLKIT -->
-  <section class="toolkit-band" id="toolkit">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <span class="section-label">The Toolkit</span>
-          <h2 class="section-title">Frameworks You Can Click</h2>
-          <p class="toolkit-intro">The tools I use to turn AI licenses into lasting habits, rebuilt so anyone can use them. Free, private, and in your browser.</p>
-        </div>
-        <a href="tools/" class="view-all">
-          Open the Toolkit
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-        </a>
-      </div>
-      <div class="toolkit-grid fade-in">
-        <a href="tools/flywheel-readiness.html" class="toolkit-item" style="--tk:#1F4E8C"><span class="tk-phase">All 5 stages</span><h3>Flywheel Check</h3><p>15 questions to find where your AI adoption is wobbling, and what to fix first.</p><span class="tk-go">Take the check &rarr;</span></a>
-        <a href="tools/prompt-builder.html" class="toolkit-item" style="--tk:#D9951E"><span class="tk-phase">Proficiency</span><h3>Prompt Builder</h3><p>Bilingual (EN/ES) Copilot prompt coach with live scoring and iteration prompts.</p><span class="tk-go">Build a prompt &rarr;</span></a>
-        <a href="tools/ai-value-calculator.html" class="toolkit-item" style="--tk:#2A8C82"><span class="tk-phase">Adoption</span><h3>Value Calculator</h3><p>Adoption doesn't equal ROI. See the real return and the cost of the habit gap.</p><span class="tk-go">Run the numbers &rarr;</span></a>
-        <a href="tools/use-case-prioritizer.html" class="toolkit-item" style="--tk:#C2185B"><span class="tk-phase">New Ways of Working</span><h3>Use Case Prioritizer</h3><p>Score AI ideas and map them on Impact vs. Ease to find your Quick Wins.</p><span class="tk-go">Prioritize &rarr;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOG PREVIEW -->
+  <!-- BLOG -->
   <section class="blog-preview" id="blog">
     <div class="container">
       <div class="section-header">
         <div>
           <span class="section-label">Blog</span>
-          <h2 class="section-title">AI Ideas & Learnings</h2>
-          <p style="color: var(--text-medium); font-size: 1rem; margin-top: -32px; margin-bottom: 0;">This is where I think out loud. About AI, about people, about what happens when you put the two together with intention.</p>
+          <h2 class="section-title">Latest posts</h2>
         </div>
         <a href="blog/" class="view-all">
-          View All Posts
+          See all posts
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
         </a>
       </div>
-      <div class="blog-grid fade-in">
-        <a href="blog/the-adoption-lie.html" class="blog-card" style="text-decoration:none;">
-          <div class="blog-card-tags">
-            <span class="blog-tag">AI Adoption</span>
-            <span class="blog-tag">Change Management</span>
-          </div>
-          <h3>Adoption Doesn't Equal ROI</h3>
-          <p>We celebrate adoption rates like they're the finish line. But are people actually using it, or did they just click the button because someone told them to?</p>
-          <div class="blog-card-footer">
-            <span class="read-time">July 14, 2025 &middot; 4 min read</span>
-            <span class="read-more">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
-          </div>
-        </a>
-        <a href="blog/ai-education-in-spanish.html" class="blog-card" style="text-decoration:none;">
-          <div class="blog-card-tags">
-            <span class="blog-tag">La Clave AI</span>
-            <span class="blog-tag">Community</span>
-          </div>
-          <h3>Why I'm Building AI Education in Spanish</h3>
-          <p>There are over 500 million Spanish speakers in the world. The vast majority of AI education exists only in English. That's not a gap. That's a wall.</p>
-          <div class="blog-card-footer">
-            <span class="read-time">October 6, 2025 &middot; 3 min read</span>
-            <span class="read-more">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+      <div class="home-posts fade-in">
+        <!-- home-posts -->
+        <a href="blog/happiness-is-only-real-when-shared.html" class="home-post featured has-image">
+          <img src="dinner-for-one.jpg" alt="A brioche bacon burger with fries and ketchup, crab mac and cheese, a glass of red wine, and a candle on a wooden restaurant table" class="home-post-image" width="1170" height="1556" loading="lazy">
+          <div class="home-post-body">
+            <div class="blog-card-tags">
+              <span class="blog-tag">Gratitude</span>
+              <span class="blog-tag">Family</span>
+            </div>
+            <h3>Happiness Is Only Real When Shared</h3>
+            <p>I took myself out to dinner to celebrate a small act of courage, and somewhere between the wine and dessert, I found my way back to my dad at the grocery checkout.</p>
+            <div class="blog-card-footer">
+              <span class="read-time">November 21, 2026 &middot; 3 min read</span>
+              <span class="read-more">Read post <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+            </div>
           </div>
         </a>
-        <a href="blog/humans-are-not-the-bottleneck.html" class="blog-card" style="text-decoration:none;">
-          <div class="blog-card-tags">
-            <span class="blog-tag">Leadership</span>
-            <span class="blog-tag">Culture</span>
-          </div>
-          <h3>Humans Are Not the Bottleneck</h3>
-          <p>People are not the bottleneck. The absence of trust, context, and relevance is. When you roll out a tool without explaining why it matters, you've just added another tab.</p>
-          <div class="blog-card-footer">
-            <span class="read-time">December 15, 2025 &middot; 3 min read</span>
-            <span class="read-more">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+        <a href="blog/austin-tech-week.html" class="home-post has-image">
+          <img src="austin-tech-week.jpg" alt="Ale and two fellow attendees smiling behind giant lit marquee letters that spell Austin Tech Week" class="home-post-image" width="1600" height="1200" loading="lazy">
+          <div class="home-post-body">
+            <div class="blog-card-tags">
+              <span class="blog-tag">Community</span>
+              <span class="blog-tag">Learning</span>
+            </div>
+            <h3>The Company You Keep: Lessons from Austin Tech Week</h3>
+            <p>At Austin Tech Week I walked into rooms full of strangers and walked out with a community. Why the people around you are the fastest way to learn.</p>
+            <div class="blog-card-footer">
+              <span class="read-time">October 31, 2026 &middot; 3 min read</span>
+              <span class="read-more">Read post <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+            </div>
           </div>
         </a>
+        <a href="blog/forrester-keynote.html" class="home-post has-image">
+          <img src="forrester-keynote.jpg" alt="Three panelists seated in white chairs on a stage, mid conversation, in front of a large green and yellow screen that reads Technology &amp; Innovation Forum." class="home-post-image" width="1600" height="888" loading="lazy">
+          <div class="home-post-body">
+            <div class="blog-card-tags">
+              <span class="blog-tag">Speaking</span>
+              <span class="blog-tag">Learning</span>
+            </div>
+            <h3>What a Forrester Keynote Taught Me About Saying Yes to Something New</h3>
+            <p>I shared the Forrester IT conference stage with the CIO of SailPoint to talk about how AI is reshaping the IT role. I felt nervous. I also felt curious, and curiosity won.</p>
+            <div class="blog-card-footer">
+              <span class="read-time">October 21, 2026 &middot; 3 min read</span>
+              <span class="read-more">Read post <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+            </div>
+          </div>
+        </a>
+        <a href="blog/decade-that-was-a-year.html" class="home-post">
+          <div class="home-post-body">
+            <div class="blog-card-tags">
+              <span class="blog-tag">AI Adoption</span>
+              <span class="blog-tag">Learning</span>
+            </div>
+            <h3>The Decade That Was Actually a Year</h3>
+            <p>I opened a deck from exactly one year ago expecting nostalgia. What I found instead made me rethink what growth with AI actually looks like, and how to measure it in myself.</p>
+            <div class="blog-card-footer">
+              <span class="read-time">August 30, 2026 &middot; 5 min read</span>
+              <span class="read-more">Read post <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></span>
+            </div>
+          </div>
+        </a>
+        <!-- /home-posts -->
       </div>
     </div>
   </section>
@@ -1530,8 +1459,8 @@
       <div class="contact-grid">
         <div class="fade-in">
           <span class="section-label">Get In Touch</span>
-          <h2 class="section-title">Let's Build Something<br>That Matters</h2>
-          <p class="contact-text">Whether you're designing an AI enablement strategy, looking for a speaker who actually speaks human, or just want to connect with someone who believes people are the point — I'd love to hear from you. I'm especially interested in freelance partnerships, speaking opportunities, and collaborations that put community and courage at the center.</p>
+          <h2 class="section-title">Say hola</h2>
+          <p class="contact-text">Want to talk about a post, invite me to speak, or just say hi? I'd love to hear from you.</p>
           <div class="contact-buttons">
             <a href="mailto:hola@alejandratamez.com" class="btn-primary">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
@@ -1570,15 +1499,6 @@
               <div>
                 <div class="info-label">Languages</div>
                 <div class="info-value">English & Spanish</div>
-              </div>
-            </li>
-            <li>
-              <div class="info-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>
-              </div>
-              <div>
-                <div class="info-label">Focus Areas</div>
-                <div class="info-value">AI Enablement, Change Management, Training</div>
               </div>
             </li>
           </ul>
@@ -1642,7 +1562,7 @@
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>

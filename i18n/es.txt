@@ -44,8 +44,8 @@ es: <span class="role-tag">Líder de Habilitación en IA</span> <span class="rol
 en: <a href="#contact" class="hero-cta"> Work With Me
 es: <a href="#contact" class="hero-cta"> Trabajemos juntos
 
-en: Download Resume </a>
-es: Descargar CV (inglés) </a>
+en: View Resume </a>
+es: Ver CV (inglés) </a>
 
 en: What I Actually Do
 es: Lo que realmente hago
@@ -916,8 +916,8 @@ es: ¿Quieres estas herramientas funcionando dentro de tu organización?
 en: I adapt these frameworks into full enablement programs, with workshops, champions networks, and measurement that holds up.
 es: Adapto estos marcos de trabajo en programas completos de habilitación, con talleres, redes de champions y una medición que se sostiene.
 
-en: Download my resume
-es: Descargar mi CV (inglés)
+en: View my resume
+es: Ver mi CV (inglés)
 
 # ---------------------------------------------------------------- Tools: shared
 en: Print / Save PDF
@@ -2212,3 +2212,64 @@ es: Así que celebra los pequeños logros. Pide el postre. Brinda por ti (una o 
 
 en: And don't forget the people who made the journey worth it. <em>Recordar es vivir.</em>
 es: Y no olvides a las personas que hicieron que el camino valiera la pena. <em>Recordar es vivir.</em>
+
+# ---------------------------------------------------------------- Home + About: personal, blog first (Nov 2026)
+en: Hi, I'm Ale. I help people make the unfamiliar feel possible, especially with AI, and I write about people, faith, family, and life between two cultures.
+es: Hola, soy Ale. Ayudo a las personas a sentir que lo desconocido es posible, sobre todo con la IA, y escribo sobre las personas, la fe, la familia y la vida entre dos culturas.
+
+en: <span class="hero-label">Alejandra Tamez</span>
+es: =
+
+en: Hi, I'm Ale.
+es: Hola, soy Ale.
+
+en: I help people make the unfamiliar feel possible, especially when it comes to AI.
+es: Ayudo a las personas a sentir que lo desconocido es posible, sobre todo cuando se trata de IA.
+
+en: This is where I write about what matters to me: people, faith, family, and life between two cultures.
+es: Aquí escribo sobre lo que más me importa: las personas, la fe, la familia y la vida entre dos culturas.
+
+en: What I care about
+es: Lo que me importa
+
+en: <span class="care-tag">People</span> <span class="care-tag">Faith</span> <span class="care-tag">Family</span> <span class="care-tag">Community</span> <span class="care-tag">Culture</span> <span class="care-tag">Travel</span> <span class="care-tag">Dogs</span> <span class="care-tag">AI</span>
+es: <span class="care-tag">Personas</span> <span class="care-tag">Fe</span> <span class="care-tag">Familia</span> <span class="care-tag">Comunidad</span> <span class="care-tag">Cultura</span> <span class="care-tag">Viajes</span> <span class="care-tag">Perros</span> <span class="care-tag">IA</span>
+
+en: <a href="#blog" class="hero-cta"> Read the blog
+es: <a href="#blog" class="hero-cta"> Leer el blog
+
+en: Latest posts
+es: Publicaciones recientes
+
+en: <a href="blog/" class="view-all"> See all posts
+es: <a href="blog/" class="view-all"> Ver todas
+
+en: Say hola
+es: Saluda
+
+en: Want to talk about a post, invite me to speak, or just say hi? I'd love to hear from you.
+es: ¿Quieres platicar sobre algo que escribí, invitarme a dar una charla o simplemente saludar? Me encantaría saber de ti.
+
+en: Who I am, what I care about, and the work, speaking and community that shaped me.
+es: Quién soy, lo que me importa, y el trabajo, las charlas y la comunidad que me han formado.
+
+en: A Little About Me
+es: Un poco sobre mí
+
+en: <span class="section-label">Along the Way</span>
+es: <span class="section-label">En el camino</span>
+
+en: Work, Speaking and Community
+es: Trabajo, charlas y comunidad
+
+en: I help people move from using AI because they were told to, to using it because it truly helps. At Applied Materials, that meant leading Copilot enablement and a Champions network where colleagues learn from each other.
+es: Ayudo a las personas a pasar de usar la IA porque se los pidieron a usarla porque de verdad les ayuda. En Applied Materials, eso significó liderar la adopción de Copilot y una red de Champions donde los colegas aprenden unos de otros.
+
+en: Whether it's a business, a methodology, or a movement, I default to building. La Clave AI is the next chapter, an effort to bring AI education to Spanish speakers in their own language.
+es: Ya sea un negocio, una metodología o un movimiento, mi instinto es construir. La Clave AI es el siguiente capítulo: un esfuerzo por llevar educación en IA a los hispanohablantes en su propio idioma.
+
+en: <a href="index.html#contact" class="hero-cta" style="margin: 0 auto;"> Say hola
+es: <a href="index.html#contact" class="hero-cta" style="margin: 0 auto;"> Saluda
+
+en: Turn first logins into weekly habits people choose on their own. This is where the 80+ training sessions came in: role-specific, hands-on, and built around real workflows instead of generic feature tours. Activation numbers are easy to celebrate and easy to misread, so the program measured continued, voluntary use, the signal that people were actually finding Copilot useful rather than just compliant.
+es: Convertir los primeros inicios de sesión en hábitos semanales que las personas eligen por su cuenta. Aquí entraron las más de 80 sesiones de capacitación: específicas para cada rol, prácticas y construidas alrededor de flujos de trabajo reales en lugar de recorridos genéricos de funciones. Los números de activación son fáciles de celebrar y fáciles de malinterpretar, así que el programa midió el uso continuo y voluntario, la señal de que las personas de verdad encontraban útil a Copilot y no solo cumplían.
