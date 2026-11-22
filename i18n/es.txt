@@ -2130,3 +2130,85 @@ es: Día 1
 
 en: Make the tool know you
 es: Haz que la herramienta te conozca
+
+# ---------------------------------------------------------------- Post: Happiness Is Only Real When Shared
+en: Happiness Is Only Real When Shared
+es: La felicidad solo es real cuando se comparte
+
+en: Happiness Is Only Real When Shared | Ale Tamez
+es: La felicidad solo es real cuando se comparte | Ale Tamez
+
+en: I took myself out to dinner to celebrate a small act of courage, and somewhere between the wine and dessert, I found my way back to my dad at the grocery checkout.
+es: Me invité a cenar para celebrar un pequeño acto de valentía, y en algún momento entre el vino y el postre, volví a encontrarme con mi papá en la caja del supermercado.
+
+en: Gratitude
+es: Gratitud
+
+en: Family
+es: Familia
+
+en: Faith
+es: Fe
+
+en: November 21, 2026 &middot; 3 min read
+es: 21 de noviembre de 2026 &middot; 3 min de lectura
+
+en: Tonight, I took myself out to dinner. No plus one. No birthday. No special occasion on the calendar. Just me, celebrating a little act of courage that felt worth celebrating.
+es: Esta noche me invité a cenar. Sin acompañante. Sin cumpleaños. Sin ninguna ocasión especial en el calendario. Solo yo, celebrando un pequeño acto de valentía que merecía celebrarse.
+
+en: And I went all out.
+es: Y no me limité.
+
+en: Crab mac and cheese, rich, golden, and fabulous. A burger with sprinkle fries that made me grin like a little kid. A glass of wine more expensive than I'd normally order, worth every sip. And to finish, chocolate lava cake with vanilla ice cream and raspberries.
+es: Mac and cheese de cangrejo, cremoso, dorado y fabuloso. Una hamburguesa con papas sazonadas que me hizo sonreír como niña chiquita. Una copa de vino más cara de lo que normalmente pediría, que valió cada sorbo. Y para terminar, un volcán de chocolate con helado de vainilla y frambuesas.
+
+en: A brioche bacon burger with fries and ketchup, crab mac and cheese, a glass of red wine, and a candle on a wooden restaurant table
+es: Una hamburguesa con tocino en pan brioche, papas fritas con cátsup, mac and cheese de cangrejo, una copa de vino tinto y una vela sobre una mesa de madera en un restaurante
+
+en: I savored every bite. Read between courses. Got a little work done. Took my sweet time.
+es: Saboreé cada bocado. Leí entre platillos. Avancé un poco de trabajo. Me tomé todo el tiempo del mundo.
+
+en: And somewhere between the wine and dessert, I thought about my dad.
+es: Y en algún momento entre el vino y el postre, pensé en mi papá.
+
+en: Growing up, money was tight. My parents had five daughters, and feeding seven people was no small feat. I remember family trips to the grocery store, all of us walking the aisles together. My dad at the checkout counter, carefully watching the numbers add up. He was actually the less frugal one compared to my mom, but even he knew there were limits.
+es: Cuando era niña, el dinero no alcanzaba para mucho. Mis papás tuvieron cinco hijas, y darle de comer a siete personas no era poca cosa. Recuerdo las idas al supermercado en familia, todos recorriendo los pasillos juntos. Mi papá en la caja, mirando con cuidado cómo subía la cuenta. En realidad él era el menos ahorrativo comparado con mi mamá, pero hasta él sabía que había límites.
+
+en: Sometimes we had to put things back. Sometimes we couldn't get everything we wanted.
+es: A veces teníamos que regresar cosas. A veces no podíamos llevarnos todo lo que queríamos.
+
+en: But we always left together.
+es: Pero siempre salíamos juntos.
+
+en: It's funny what stays with you.
+es: Es curioso lo que se te queda.
+
+en: I've traveled through Mexico, the United States, Costa Rica, Nicaragua, Guatemala, Honduras, and El Salvador. Through mission work, I've met people with very little who somehow found so much to give.
+es: He viajado por México, Estados Unidos, Costa Rica, Nicaragua, Guatemala, Honduras y El Salvador. En las misiones he conocido a personas con muy poco que, de alguna manera, encontraban tanto para dar.
+
+en: And I've come to believe that abundance has very little to do with how much you own.
+es: Y he llegado a creer que la abundancia tiene muy poco que ver con cuánto tienes.
+
+en: There's a line from <em>Into the Wild</em> that has stayed with me for years: <strong>"Happiness only real when shared."</strong> Christopher McCandless traveled into the wilderness searching for freedom, only to discover something my family had been teaching me all along.
+es: Hay una frase de <em>Into the Wild</em> que me ha acompañado por años: <strong>"La felicidad solo es real cuando se comparte."</strong> Christopher McCandless se adentró en la naturaleza buscando libertad, solo para descubrir algo que mi familia me había enseñado desde siempre.
+
+en: <strong>You can have very little and feel like you have everything.</strong>
+es: <strong>Puedes tener muy poco y sentir que lo tienes todo.</strong>
+
+en: Matthew 16:26 asks what good it is to gain the whole world if you lose your soul.
+es: Mateo 16:26 pregunta de qué sirve ganar el mundo entero si pierdes tu alma.
+
+en: And tonight, sitting alone at a beautiful restaurant, enjoying a meal I once wouldn't have imagined ordering without checking the price, I felt incredibly grateful. Not just for the dinner. Or for the freedom to celebrate myself. But for the memories that came rushing back with it.
+es: Y esta noche, sentada sola en un restaurante precioso, disfrutando una comida que antes no me habría imaginado pedir sin revisar el precio, me sentí increíblemente agradecida. No solo por la cena. Ni por la libertad de celebrarme. Sino por los recuerdos que llegaron de golpe con ella.
+
+en: The grocery aisles. My dad watching the total. My sisters beside me. The things we left behind and the love we always took home.
+es: Los pasillos del súper. Mi papá mirando el total. Mis hermanas a mi lado. Las cosas que dejábamos atrás y el amor que siempre nos llevábamos a casa.
+
+en: <strong>Maybe that's one of life's sweetest surprises. Sometimes the little things we celebrate today take us back to the things that mattered most all along.</strong>
+es: <strong>Tal vez esa sea una de las sorpresas más dulces de la vida. A veces las pequeñas cosas que celebramos hoy nos regresan a lo que siempre importó más.</strong>
+
+en: So celebrate the little wins. Order dessert. Raise a glass to yourself (or two). Take the time to appreciate how far you've come.
+es: Así que celebra los pequeños logros. Pide el postre. Brinda por ti (una o dos veces). Tómate el tiempo de apreciar lo lejos que has llegado.
+
+en: And don't forget the people who made the journey worth it. <em>Recordar es vivir.</em>
+es: Y no olvides a las personas que hicieron que el camino valiera la pena. <em>Recordar es vivir.</em>
