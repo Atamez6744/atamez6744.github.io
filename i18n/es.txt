@@ -2406,3 +2406,109 @@ es: =
 
 en: Please do not feed the algorithms.
 es: Por favor, no alimente a los algoritmos.
+
+# ---------------------------------------------------------------- Post: Why We Still Need Authors
+en: If AI Can Teach Us Almost Anything, Why Do We Still Need Authors?
+es: Si la IA puede enseñarnos casi cualquier cosa, ¿por qué seguimos necesitando autores?
+
+en: If AI Can Teach Us Almost Anything, Why Do We Still Need Authors? | Ale Tamez
+es: Si la IA puede enseñarnos casi cualquier cosa, ¿por qué seguimos necesitando autores? | Ale Tamez
+
+en: Authors are starting to tell readers how they used AI. It made me wonder what we're actually afraid of losing, and what we'll never get to read because AI got there first.
+es: Los autores están empezando a contarles a sus lectores cómo usaron la IA. Eso me hizo preguntarme qué es lo que realmente tenemos miedo de perder, y qué nunca vamos a leer porque la IA llegó primero.
+
+en: Authors are starting to tell readers how they used AI. It made me wonder what we&#x27;re actually afraid of losing, and what we&#x27;ll never get to read because AI got there first.
+es: Los autores están empezando a contarles a sus lectores cómo usaron la IA. Eso me hizo preguntarme qué es lo que realmente tenemos miedo de perder, y qué nunca vamos a leer porque la IA llegó primero.
+
+en: Ale sitting on carpeted stairs, smiling and pointing at a tall stack of books, with Ethan Mollick's Co-Existence on top
+es: Ale sentada en unas escaleras alfombradas, sonriendo y señalando una pila alta de libros, con Co-Existence de Ethan Mollick hasta arriba
+
+en: AI
+es: IA
+
+en: Creativity
+es: Creatividad
+
+en: Books
+es: Libros
+
+en: November 22, 2026 &middot; 3 min read
+es: 22 de noviembre de 2026 &middot; 3 min de lectura
+
+en: Something caught my attention in a few books I've read recently.
+es: Algo me llamó la atención en varios libros que he leído últimamente.
+
+en: Authors are increasingly sharing how they used AI in their writing process. Some even go out of their way to reassure readers that the ideas and words are still theirs.
+es: Cada vez más autores cuentan cómo usaron la IA en su proceso de escritura. Algunos incluso se toman la molestia de asegurarles a sus lectores que las ideas y las palabras siguen siendo suyas.
+
+en: I find that transparency refreshing. But it also makes me wonder: <strong>What exactly are we afraid of losing?</strong>
+es: Esa transparencia me parece refrescante. Pero también me hace preguntarme: <strong>¿qué es exactamente lo que tenemos miedo de perder?</strong>
+
+en: Authenticity? Originality? The creative struggle? Or simply the human behind the words?
+es: ¿La autenticidad? ¿La originalidad? ¿La lucha creativa? ¿O simplemente al ser humano detrás de las palabras?
+
+en: There's an interesting paradox here.
+es: Aquí hay una paradoja interesante.
+
+en: We now have AI tools that can explain, summarize, challenge, and personalize almost anything we want to learn. Yet we still seek out our favorite authors.
+es: Hoy tenemos herramientas de IA que pueden explicar, resumir, cuestionar y personalizar casi cualquier cosa que queramos aprender. Y aun así seguimos buscando a nuestros autores favoritos.
+
+en: We want <em>their</em> stories. <em>Their</em> perspectives. <em>Their</em> experiences. Not just the information they have to share.
+es: Queremos <em>sus</em> historias. <em>Sus</em> perspectivas. <em>Sus</em> experiencias. No solo la información que tienen para compartir.
+
+en: Maybe that's because <strong>knowledge is becoming abundant, but human perspective isn't interchangeable.</strong>
+es: Tal vez es porque <strong>el conocimiento se está volviendo abundante, pero la perspectiva humana no es intercambiable.</strong>
+
+en: And as AI makes it easier than ever to turn a half-baked idea into a polished manuscript, I suspect we'll see more books that probably should have been articles. Or maybe even LinkedIn posts. 😂
+es: Y como la IA hace más fácil que nunca convertir una idea a medio cocinar en un manuscrito pulido, sospecho que vamos a ver más libros que probablemente debieron ser artículos. O hasta publicaciones de LinkedIn. 😂
+
+en: But here's what I'm wrestling with.
+es: Pero esto es lo que me tiene dándole vueltas.
+
+en: <strong>Did AI help the author think more deeply, or did it simply make the writing easier?</strong>
+es: <strong>¿La IA ayudó al autor a pensar más a fondo, o simplemente le hizo más fácil escribir?</strong>
+
+en: And there's an even more fascinating question: <strong>What will we never get to read because AI touched the work in the first place?</strong>
+es: Y hay una pregunta todavía más fascinante: <strong>¿Qué es lo que nunca vamos a leer porque la IA tocó la obra desde el principio?</strong>
+
+en: Maybe the author would have struggled for weeks before arriving at an unexpected insight. Maybe they would have connected ideas that seemed completely unrelated. Or maybe AI helped them reach somewhere they never could have reached alone.
+es: Tal vez el autor habría batallado semanas antes de llegar a una idea inesperada. Tal vez habría conectado ideas que parecían no tener nada que ver. O tal vez la IA le ayudó a llegar a un lugar al que nunca habría llegado solo.
+
+en: We'll never know. Once AI enters the creative process, the alternative version of that work becomes unknowable.
+es: Nunca lo sabremos. En cuanto la IA entra al proceso creativo, la versión alternativa de esa obra se vuelve imposible de conocer.
+
+en: And whose concern should that be?
+es: ¿Y a quién le debería preocupar eso?
+
+en: <strong>Is it up to the audience to decide whether the finished work moves them, regardless of how it was created? Or should authors themselves wonder about the ideas they might never discover because AI got there first?</strong>
+es: <strong>¿Le toca al público decidir si la obra terminada lo conmueve, sin importar cómo se creó? ¿O deberían los propios autores preguntarse por las ideas que quizá nunca descubran porque la IA llegó primero?</strong>
+
+en: Then there's music. That's where my feelings get complicated.
+es: Luego está la música. Ahí es donde mis sentimientos se complican.
+
+en: I want to believe music is inseparable from human experience. From heartbreak, joy, longing, and everything in between. But if an AI-generated song moves me to tears, does it matter that no human experienced the emotions behind its creation?
+es: Quiero creer que la música es inseparable de la experiencia humana. Del corazón roto, la alegría, la nostalgia y todo lo que hay en medio. Pero si una canción generada por IA me hace llorar, ¿importa que ningún ser humano haya sentido las emociones detrás de su creación?
+
+en: Maybe it comes down to what each of us values.
+es: Tal vez todo se reduce a lo que cada quien valora.
+
+en: Which brings me to a prediction.
+es: Lo que me lleva a una predicción.
+
+en: <strong>I suspect that as AI-generated content becomes abundant, genuinely human-created work may command a premium.</strong>
+es: <strong>Sospecho que, conforme el contenido generado por IA se vuelva abundante, la obra creada genuinamente por humanos podría valer más.</strong>
+
+en: Not necessarily because it's technically better, but because we value knowing that someone lived, struggled, questioned, and made thousands of choices to create it.
+es: No necesariamente porque sea técnicamente mejor, sino porque valoramos saber que alguien vivió, batalló, se cuestionó y tomó miles de decisiones para crearla.
+
+en: Perhaps the future of creativity isn't simply about the quality of what gets produced, but about how much we value the human journey behind it.
+es: Quizá el futuro de la creatividad no se trata solo de la calidad de lo que se produce, sino de cuánto valoramos el camino humano que hay detrás.
+
+en: And I keep coming back to two questions:
+es: Y sigo regresando a dos preguntas:
+
+en: <strong>For readers:</strong> If a book profoundly changed your life, and you later discovered AI wrote 80% of it, would that diminish its value?
+es: <strong>Para los lectores:</strong> si un libro te cambió la vida profundamente y después descubrieras que la IA escribió el 80% de él, ¿perdería valor?
+
+en: <strong>For authors:</strong> If AI helps you create something brilliant, do you ever wonder what you might have created without it?
+es: <strong>Para los autores:</strong> si la IA te ayuda a crear algo brillante, ¿alguna vez te preguntas qué habrías creado sin ella?
