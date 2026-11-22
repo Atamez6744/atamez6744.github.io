@@ -1,0 +1,215 @@
+/* =====================================================================
+   Field Guide theme: ink and neon, shared by every page.
+   Loaded after each page's own styles (scripts/build_spanish.py adds it).
+   The old palette names are re-pointed so pages written for the linen
+   look turn dark: light background names become ink, dark text names
+   become paper, and the cocoa accent becomes marigold.
+   ===================================================================== */
+html:root {
+  --fg-ink: #14102e;
+  --fg-ink-2: #221a4a;
+  --fg-ink-3: #2d2460;
+  --fg-paper: #fff5e6;
+  --fg-muted: #cbc2ea;
+  --fg-magenta: #ff4fa3;
+  --fg-marigold: #ffc53d;
+  --fg-teal: #2ee6d0;
+  --fg-lilac: #b69cff;
+  --fg-display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --fg-mono: "Space Mono", ui-monospace, "Courier New", monospace;
+
+  /* main site pages */
+  --cream: var(--fg-ink);
+  --cream-dark: var(--fg-ink-2);
+  --white: var(--fg-ink-2);
+  --navy: var(--fg-paper);
+  --navy-light: var(--fg-muted);
+  --text-dark: var(--fg-paper);
+  --text-medium: var(--fg-muted);
+  --text-light: var(--fg-muted);
+  --terracotta: var(--fg-marigold);
+  --terracotta-light: var(--fg-magenta);
+  --terracotta-dark: var(--fg-magenta);
+  --sage: var(--fg-lilac);
+  --sage-light: var(--fg-muted);
+
+  /* toolkit pages */
+  --espresso: var(--fg-paper);
+  --espresso-soft: var(--fg-muted);
+  --cocoa: var(--fg-marigold);
+  --cocoa-light: var(--fg-magenta);
+  --cocoa-dark: var(--fg-magenta);
+  --linen: var(--fg-ink);
+  --linen-dark: var(--fg-ink-2);
+  --paper: var(--fg-ink-2);
+  --stone: var(--fg-muted);
+  --mushroom: var(--fg-ink-3);
+  --shadow: 0 0 0 2px var(--fg-ink-3);
+  --shadow-lift: 6px 6px 0 var(--fg-magenta);
+  color-scheme: dark;
+}
+
+html body {
+  background:
+    radial-gradient(60rem 40rem at 90% -10%, rgba(255, 79, 163, 0.28), transparent 60%),
+    radial-gradient(50rem 36rem at -10% 110%, rgba(46, 230, 208, 0.16), transparent 60%),
+    var(--fg-ink);
+  background-attachment: fixed;
+  color: var(--fg-paper);
+  font-family: var(--fg-display);
+}
+
+body h1, body h2, body h3, body h4, body .nav-logo {
+  font-family: var(--fg-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--fg-paper);
+}
+body h1 { font-variation-settings: "opsz" 96; }
+
+body ::selection { background: var(--fg-magenta); color: var(--fg-ink); }
+body :focus-visible { outline: 3px solid var(--fg-marigold); outline-offset: 4px; }
+
+/* small labels in mono */
+body .hero-label, body .section-label, body .care-about-title, body .blog-tag, body .card-tag,
+body .coming-soon-badge, body .contact-info .info-label, body .quote-source, body .crumbs, body .tag,
+body .article-tags span, body .read-time, body .card-read-time, body .phase-tag, body .status-badge,
+body .stat .label, body .filter-btn {
+  font-family: var(--fg-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* navigation bar */
+body nav, body #navbar, body #navbar.scrolled, body .site-header {
+  background: rgba(20, 16, 46, 0.82);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--fg-ink-3);
+  box-shadow: none;
+}
+body .nav-links a {
+  font-family: var(--fg-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  border-bottom: 2px solid transparent;
+}
+body .nav-links a:hover, body .nav-links a.active { color: var(--fg-paper); border-bottom-color: var(--fg-marigold); }
+body .nav-links a::after { display: none; }
+body .hamburger span { background: var(--fg-paper); }
+@media (max-width: 768px) {
+  body .nav-links { background: var(--fg-ink); border-bottom: 1px solid var(--fg-ink-3); }
+}
+
+/* language switch */
+body .lang-switch { border-color: var(--fg-ink-3); font-family: var(--fg-mono); }
+body .lang-switch span { background: var(--fg-marigold); color: var(--fg-ink); }
+body .lang-switch a { color: var(--fg-muted); }
+body .lang-switch a:hover { color: var(--fg-paper); background: var(--fg-ink-3); }
+
+/* links */
+body .article-body a, body .pillar-text a, body .exp-block a { color: var(--fg-teal) !important; }
+
+/* cards: ink panels with a neon edge */
+body .blog-card, body .project-card, body .stat-card, body .tool-card, body .principles div,
+body .highlight-item, body .case-card, body .card {
+  background: var(--fg-ink-2);
+  border: 2px solid var(--fg-ink-3);
+  box-shadow: none;
+  color: var(--fg-paper);
+}
+body .blog-card:hover, body .project-card:hover, body .tool-card:hover {
+  border-color: var(--fg-magenta);
+  box-shadow: 6px 6px 0 var(--fg-magenta);
+  transform: translate(-2px, -2px);
+}
+body .tool-card { border-top: 6px solid var(--c); }
+body .card-title, body .blog-card h2, body .blog-card h3 { color: var(--fg-paper); }
+body .card-excerpt, body .blog-card p { color: var(--fg-muted); }
+body .card-link, body .read-more { color: var(--fg-marigold); }
+body .card-accent { background: linear-gradient(90deg, var(--fg-magenta), var(--fg-marigold), var(--fg-teal)); }
+body .card-tag, body .blog-tag, body .article-tags span, body .care-tag, body .comp-tag, body .cert-badge {
+  background: transparent;
+  border: 1.5px solid var(--fg-ink-3);
+  color: var(--fg-teal);
+}
+
+/* filter buttons on the blog page */
+body .filter-btn { background: transparent; color: var(--fg-muted); border: 1.5px solid var(--fg-ink-3); }
+body .filter-btn:hover { color: var(--fg-paper); border-color: var(--fg-lilac); }
+body .filter-btn.active { background: var(--fg-marigold); color: var(--fg-ink); border-color: var(--fg-marigold); }
+
+/* buttons */
+body .hero-cta, body .btn-primary, body .btn.btn-primary, body .cta-btn {
+  background: var(--fg-marigold);
+  color: var(--fg-ink);
+  border: 0;
+  box-shadow: 6px 6px 0 var(--fg-magenta);
+  font-weight: 700;
+}
+body .hero-cta:hover, body .btn-primary:hover, body .btn.btn-primary:hover, body .cta-btn:hover {
+  background: var(--fg-marigold);
+  color: var(--fg-ink);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 var(--fg-magenta);
+}
+body .hero-cta-secondary, body .btn-secondary, body .btn.btn-ghost {
+  background: transparent;
+  color: var(--fg-paper);
+  border: 2px solid var(--fg-paper);
+}
+body .hero-cta-secondary:hover, body .btn-secondary:hover, body .btn.btn-ghost:hover {
+  background: var(--fg-paper);
+  color: var(--fg-ink);
+}
+
+/* articles */
+body .article-title { font-size: clamp(2.3rem, 5vw, 3.6rem); line-height: 1; }
+body .article-body p, body .article-body li { color: var(--fg-paper); }
+body .article-body strong { color: var(--fg-paper); }
+body .article-body p:first-of-type::first-letter { color: var(--fg-magenta); font-family: var(--fg-display); font-weight: 800; }
+body .article-body blockquote { border-left-color: var(--fg-marigold); color: var(--fg-muted); }
+body .article-divider { background: linear-gradient(90deg, var(--fg-magenta), var(--fg-marigold), var(--fg-teal)); height: 4px; }
+body .article-image, body .image-row img { border-radius: 6px; box-shadow: 10px 10px 0 var(--fg-magenta); }
+body .article-image-caption { color: var(--fg-muted); }
+body .post-nav { border-top-color: var(--fg-ink-3); }
+
+/* about page */
+body .pillar { border-color: var(--fg-ink-3); }
+body .pillar-name { color: var(--fg-marigold); }
+body .dogs-photo { border-radius: 6px; box-shadow: 10px 10px 0 var(--fg-teal); }
+
+/* section bands and footer */
+body .experience, body .about, body .blog-preview, body .contact, body .toolkit-band { background: transparent; }
+body .quotes-ribbon { background: transparent; border-top: 3px solid var(--fg-marigold); border-bottom: 3px solid var(--fg-marigold); }
+body .quote-item { color: var(--fg-paper); }
+body .quote-source { color: var(--fg-marigold); }
+body footer, body .site-footer {
+  background: transparent;
+  color: var(--fg-muted);
+  border-top: 1px solid var(--fg-ink-3);
+}
+body footer p, body footer .tagline, body footer .copyright, body .footer-tagline { color: var(--fg-muted); }
+
+/* form fields on the tools */
+body input, body textarea, body select {
+  background: var(--fg-ink);
+  color: var(--fg-paper);
+  border-color: var(--fg-ink-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body * { transition: none !important; animation: none !important; }
+}
+
+/* spots where pages set dark text or white panels directly */
+body .hero p, body .card-read-time { color: var(--fg-muted); }
+body .analogy, body .method-note, body .rec.focus, body .rec, body .question, body .result-card, body .panel {
+  background: var(--fg-ink-2);
+  color: var(--fg-paper);
+}
+body .progress { background: var(--fg-ink-3); }
+body .part.done .letter::after { background: var(--fg-ink); }
+body .tool-icon, body .tool-card .tag { background: var(--fg-ink); }

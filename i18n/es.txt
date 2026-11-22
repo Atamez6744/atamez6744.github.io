@@ -2273,3 +2273,136 @@ es: <a href="index.html#contact" class="hero-cta" style="margin: 0 auto;"> Salud
 
 en: Turn first logins into weekly habits people choose on their own. This is where the 80+ training sessions came in: role-specific, hands-on, and built around real workflows instead of generic feature tours. Activation numbers are easy to celebrate and easy to misread, so the program measured continued, voluntary use, the signal that people were actually finding Copilot useful rather than just compliant.
 es: Convertir los primeros inicios de sesión en hábitos semanales que las personas eligen por su cuenta. Aquí entraron las más de 80 sesiones de capacitación: específicas para cada rol, prácticas y construidas alrededor de flujos de trabajo reales en lugar de recorridos genéricos de funciones. Los números de activación son fáciles de celebrar y fáciles de malinterpretar, así que el programa midió el uso continuo y voluntario, la señal de que las personas de verdad encontraban útil a Copilot y no solo cumplían.
+
+# ---------------------------------------------------------------- Home: Field Guide (Nov 2026)
+en: <span>Field Guide, Vol. 39</span>
+es: <span>Guía de campo, vol. 39</span>
+
+en: Primary
+es: Principal
+
+en: <a href="Alejandra_Tamez_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+es: <a href="Alejandra_Tamez_Resume.pdf" target="_blank" rel="noopener">CV</a>
+
+en: Rare sighting, Austin, Texas
+es: Avistamiento raro, Austin, Texas
+
+en: One rare human who speaks <span class="shine">AI</span> and <span class="shine">Spanish</span>.
+es: Una humana poco común que habla <span class="shine">IA</span> y <span class="shine">español</span>.
+
+en: Curious by nature, bold by choice, and driven by a belief that the best ideas, experiences, and joys in life are meant to be shared. Oh and a little AI-pilled.
+es: Curiosa por naturaleza, valiente por decisión, y convencida de que las mejores ideas, experiencias y alegrías de la vida son para compartirse. Ah, y un poquito obsesionada con la IA.
+
+en: <a class="btn primary" href="#blog">Read the field notes <span aria-hidden="true">&rarr;</span></a> <a class="btn ghost" href="Alejandra_Tamez_Resume.pdf" target="_blank" rel="noopener">View resume</a>
+es: <a class="btn primary" href="#blog">Leer las notas de campo <span aria-hidden="true">&rarr;</span></a> <a class="btn ghost" href="Alejandra_Tamez_Resume.pdf" target="_blank" rel="noopener">Ver CV (inglés)</a>
+
+en: Black and white portrait of Ale Tamez, smiling
+es: Retrato en blanco y negro de Ale Tamez, sonriendo
+
+en: <span class="stamp" aria-hidden="true">Certified<br>unicorn</span>
+es: <span class="stamp" aria-hidden="true">Unicornio<br>certificado</span>
+
+en: Specimen No. 39, photographed in good light
+es: Espécimen n.º 39, fotografiado con buena luz
+
+en: Specimen card
+es: Ficha del espécimen
+
+en: <span class="mono">Filed by the herd</span>
+es: <span class="mono">Registrado por la manada</span>
+
+en: Common name
+es: Nombre común
+
+en: Ale (Alejandra Tamez)
+es: =
+
+en: Scientific name
+es: Nombre científico
+
+en: <span class="sci">Homo sapiens connectus</span>
+es: =
+
+en: Habitat
+es: Hábitat
+
+en: Austin, Texas, with two dogs for company
+es: Austin, Texas, con dos perros de compañía
+
+en: Plumage
+es: Plumaje
+
+en: Bold, colorful, ingenious, and unapologetically itself
+es: Atrevido, colorido, ingenioso y auténtico sin pedir perdón
+
+en: Diet
+es: Dieta
+
+en: Curiosity, good questions, and intricate systems to untangle
+es: Curiosidad, buenas preguntas y sistemas complejos por desenredar
+
+en: Rare trait
+es: Rasgo poco común
+
+en: Fluent in English and Spanish, and teaches Microsoft Copilot to whole organizations
+es: Habla inglés y español con fluidez, y enseña Microsoft Copilot a organizaciones enteras
+
+en: Conservation status
+es: Estado de conservación
+
+en: Thriving, and busy multiplying empathy
+es: Prosperando, y ocupada multiplicando la empatía
+
+en: <span class="mono">Latest field notes</span>
+es: <span class="mono">Notas de campo recientes</span>
+
+en: From the blog
+es: Del blog
+
+en: <a href="blog/" class="see-all">See all posts &rarr;</a>
+es: <a href="blog/" class="see-all">Ver todas &rarr;</a>
+
+en: Sightings
+es: Avistamientos
+
+en: <span class="mono">Sighting 01</span>
+es: <span class="mono">Avistamiento 01</span>
+
+en: Teaches the herd
+es: Enseña a la manada
+
+en: Leads GenAI enablement at Applied Materials and builds the Champions Network that teaches it forward.
+es: Lidera la adopción de IA generativa en Applied Materials y construye la red de Champions que comparte lo aprendido.
+
+en: <span class="mono">Sighting 02</span>
+es: <span class="mono">Avistamiento 02</span>
+
+en: Certified to change
+es: Certificada para el cambio
+
+en: Prosci ADKAR certified, which means she studies how people move from curious to capable.
+es: Certificada en Prosci ADKAR, un modelo de gestión del cambio: estudia cómo las personas pasan de la curiosidad a la capacidad.
+
+en: <span class="mono">Sighting 03</span>
+es: <span class="mono">Avistamiento 03</span>
+
+en: Spotted on stage
+es: Vista en el escenario
+
+en: Keynote speaker at the Forrester IT conference, where the audience got a fabulous dose of human magic.
+es: Conferencista principal en la conferencia de TI de Forrester, donde el público recibió una dosis fabulosa de magia humana.
+
+en: Every tool we build is only as magical as the <em>human</em> holding it.
+es: Toda herramienta que construimos es tan mágica como el <em>ser humano</em> que la usa.
+
+en: Margin is where life happens.
+es: En el margen es donde sucede la vida.
+
+en: <a class="btn primary" href="mailto:hola@alejandratamez.com">Email me</a> <a class="btn ghost" href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener">LinkedIn</a>
+es: <a class="btn primary" href="mailto:hola@alejandratamez.com">Escríbeme</a> <a class="btn ghost" href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener">LinkedIn</a>
+
+en: Hecho con corazón. Made with heart.
+es: =
+
+en: Please do not feed the algorithms.
+es: Por favor, no alimente a los algoritmos.

@@ -293,6 +293,11 @@ TYPE_CSS = """<style id="type-css">
   </style>"""
 
 
+# Field Guide theme (ink and neon): its fonts plus theme.css, loaded last on every page.
+THEME_LINKS = """<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/theme.css">"""
+
+
 def page_url(rel):
     if rel == "index.html":
         return SITE
@@ -315,7 +320,7 @@ def strip_i18n(page_html):
 
 def inject(page_html, switch, alternates):
     page_html = strip_i18n(page_html)
-    head_block = f"\n  <!-- i18n:head -->\n  {alternates}\n  {SWITCH_CSS}\n  {TYPE_CSS}\n  <!-- /i18n:head -->"
+    head_block = f"\n  <!-- i18n:head -->\n  {alternates}\n  {SWITCH_CSS}\n  {TYPE_CSS}\n  {THEME_LINKS}\n  <!-- /i18n:head -->"
     page_html = page_html.replace("</head>", head_block + "\n</head>", 1)
     # Put the switch right after the nav links list, inside the nav bar.
     m = re.search(r'(<ul class="nav-links"[^>]*>.*?</ul>)', page_html, re.S)
