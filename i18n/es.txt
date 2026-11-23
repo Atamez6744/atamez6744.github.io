@@ -2512,3 +2512,25 @@ es: <strong>Para los lectores:</strong> si un libro te cambió la vida profundam
 
 en: <strong>For authors:</strong> If AI helps you create something brilliant, do you ever wonder what you might have created without it?
 es: <strong>Para los autores:</strong> si la IA te ayuda a crear algo brillante, ¿alguna vez te preguntas qué habrías creado sin ella?
+
+# Soul Wired rebrand (Nov 23 2026)
+en: Soul Wired | Alejandra Tamez de la Garza
+es: =
+
+en: Soul Wired, home
+es: Soul Wired, inicio
+
+en: <span class="sw-soul">Soul</span><span class="sw-wired">wired</span>
+es: =
+
+en: Where people, stories, and technology <span class="shine">connect</span>.
+es: Donde las personas, las historias y la tecnología se <span class="shine">conectan</span>.
+
+en: <a href="index.html" class="nav-logo sw-logo" aria-label="Soul Wired, home"><span class="sw-soul">Soul</span><span class="sw-wired">wired</span></a>
+es: <a href="index.html" class="nav-logo sw-logo" aria-label="Soul Wired, inicio"><span class="sw-soul">Soul</span><span class="sw-wired">wired</span></a>
+
+en: <a href="../index.html" class="nav-logo sw-logo" aria-label="Soul Wired, home"><span class="sw-soul">Soul</span><span class="sw-wired">wired</span></a>
+es: <a href="../index.html" class="nav-logo sw-logo" aria-label="Soul Wired, inicio"><span class="sw-soul">Soul</span><span class="sw-wired">wired</span></a>
+
+en: <a href="index.html" class="nav-logo sw-logo sw-mast" aria-label="Soul Wired, home"><span class="sw-soul">Soul</span><span class="sw-wired">wired</span><span class="sw-cur" aria-hidden="true"></span></a>
+es: <a href="index.html" class="nav-logo sw-logo sw-mast" aria-label="Soul Wired, inicio"><span class="sw-soul">Soul</span><span class="sw-wired">wired</span><span class="sw-cur" aria-hidden="true"></span></a>

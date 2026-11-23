@@ -213,3 +213,58 @@ body .analogy, body .method-note, body .rec.focus, body .rec, body .question, bo
 body .progress { background: var(--fg-ink-3); }
 body .part.done .letter::after { background: var(--fg-ink); }
 body .tool-icon, body .tool-card .tag { background: var(--fg-ink); }
+
+/* Soul Wired logo: "Soul" in italic serif (the human half), "wired" in
+   typewriter mono (the tech half), joined by a short marigold wire. */
+body .nav-logo.sw-logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.08em;
+  font-size: 1.6rem;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0;
+  white-space: nowrap;
+  color: var(--fg-paper);
+}
+body .sw-logo .sw-soul {
+  font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+body .sw-logo .sw-wired {
+  font-family: var(--fg-mono);
+  font-size: 0.62em;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+body .sw-logo .sw-wired::before {
+  content: "";
+  display: inline-block;
+  width: 0.34em;
+  height: 0.11em;
+  margin-right: 0.14em;
+  vertical-align: 0.32em;
+  border-radius: 1px;
+  background: var(--fg-marigold);
+  transition: width 0.25s ease;
+}
+body .sw-logo:hover .sw-wired::before { width: 0.6em; background: var(--fg-magenta); }
+/* home page: a bigger masthead with a blinking cursor */
+body .nav-logo.sw-mast { font-size: clamp(2rem, 4vw, 2.6rem); }
+body .sw-logo .sw-cur {
+  display: inline-block;
+  width: 0.34em;
+  height: 0.05em;
+  margin-left: 0.04em;
+  background: var(--fg-teal);
+  align-self: baseline;
+  animation: sw-blink 1.1s steps(1) infinite;
+}
+@keyframes sw-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  body .sw-logo .sw-cur { animation: none; }
+  body .sw-logo .sw-wired::before { transition: none; }
+}
