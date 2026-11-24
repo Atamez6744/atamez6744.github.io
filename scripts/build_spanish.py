@@ -295,7 +295,8 @@ TYPE_CSS = """<style id="type-css">
 
 # Field Guide theme (ink and neon): its fonts plus theme.css, loaded last on every page.
 THEME_LINKS = """<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:ital,opsz,wght@1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/theme.css">"""
+  <link rel="stylesheet" href="/theme.css">
+  <script src="/comments.js" defer></script>"""
 
 
 def page_url(rel):
