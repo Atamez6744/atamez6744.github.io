@@ -2534,3 +2534,49 @@ es: <a href="../index.html" class="nav-logo sw-logo" aria-label="Soul Wired, ini
 
 en: <a href="index.html" class="nav-logo sw-logo sw-mast" aria-label="Soul Wired, home"><span class="sw-soul">Soul</span><span class="sw-wired">wired</span><span class="sw-cur" aria-hidden="true"></span></a>
 es: <a href="index.html" class="nav-logo sw-logo sw-mast" aria-label="Soul Wired, inicio"><span class="sw-soul">Soul</span><span class="sw-wired">wired</span><span class="sw-cur" aria-hidden="true"></span></a>
+
+# ---------------------------------------------------------------- Post: Take It All Away Then
+en: Take It All Away Then
+es: Entonces, quítamelo todo
+
+en: Take It All Away Then | Ale Tamez
+es: Entonces, quítamelo todo | Ale Tamez
+
+en: In almost every leadership seminar, the chat fills with the same words: overwhelmed, lost, no direction. If AI took your job tomorrow, who would still be standing there?
+es: En casi todos los seminarios de liderazgo, el chat se llena con las mismas palabras: abrumado, perdido, sin rumbo. Si la IA te quitara tu trabajo mañana, ¿quién seguiría ahí de pie?
+
+en: Quote card with a photo of Denzel Washington and his words: At the end of the day, it's not about what you have or even what you've accomplished. It's about who you've lifted up, who you've made better. It's about what you've given back.
+es: Tarjeta con una foto de Denzel Washington y sus palabras: Al final del día, no se trata de lo que tienes ni de lo que has logrado. Se trata de a quién has levantado, a quién has hecho mejor. Se trata de lo que has devuelto.
+
+en: Quote card with a photo of Denzel Washington and his words: At the end of the day, it&#x27;s not about what you have or even what you&#x27;ve accomplished. It&#x27;s about who you&#x27;ve lifted up, who you&#x27;ve made better. It&#x27;s about what you&#x27;ve given back.
+es: Tarjeta con una foto de Denzel Washington y sus palabras: Al final del día, no se trata de lo que tienes ni de lo que has logrado. Se trata de a quién has levantado, a quién has hecho mejor. Se trata de lo que has devuelto.
+
+en: November 24, 2026 &middot; 3 min read
+es: 24 de noviembre de 2026 &middot; 3 min de lectura
+
+en: I've sat through fifty or sixty one-hour leadership seminars from top consulting firms, bestselling authors, and Fortune 500 leaders. Almost every one opens the same way. The facilitator asks the chat some version of one question: <em>How are you feeling about all this change? How do you stay focused in the AI era? How do you feel about the future of work?</em>
+es: He estado en cincuenta o sesenta seminarios de liderazgo de una hora, impartidos por las principales consultoras, autores de best sellers y líderes de empresas Fortune 500. Casi todos empiezan igual. El facilitador le hace al chat alguna versión de una misma pregunta: <em>¿Cómo te sientes con todo este cambio? ¿Cómo te mantienes enfocado en la era de la IA? ¿Cómo te sientes con el futuro del trabajo?</em>
+
+en: And most sessions, the chat fills up with the same words: <strong>Overwhelmed. Lost. No direction.</strong>
+es: Y en la mayoría de las sesiones, el chat se llena con las mismas palabras: <strong>Abrumado. Perdido. Sin rumbo.</strong>
+
+en: We've all felt that. But when I read closely, I hear something deeper than stress about new tools. I hear people saying, "If AI can do what I do, I lack meaning." That sentence deserves our full attention. For some, or for many, a job title became a soul.
+es: Todos nos hemos sentido así. Pero cuando leo con atención, escucho algo más profundo que estrés por herramientas nuevas. Escucho a la gente decir: "Si la IA puede hacer lo que yo hago, mi vida pierde sentido". Esa frase merece toda nuestra atención. Para algunos, o para muchos, un puesto se volvió un alma.
+
+en: We built a culture that celebrates success, and then we defined success as output, titles, and paychecks. So when a machine starts producing the output, the whole identity starts to wobble. The fear is real, I've felt it. And underneath the fear is an old truth waiting to be remembered: <strong>you are more than your job.</strong>
+es: Construimos una cultura que celebra el éxito, y luego definimos el éxito como producción, puestos y sueldos. Entonces, cuando una máquina empieza a producir, toda la identidad se tambalea. El miedo es real, yo lo he sentido. Y debajo del miedo hay una verdad antigua esperando a que la recordemos: <strong>eres más que tu trabajo.</strong>
+
+en: When exactly did we start measuring our worth like machines measure theirs? By output. How much did I produce today? How fast? How well? AI is now beating us at that game, and maybe that's the gift. Because we were never built for that paradigm. We were created to feel, to love, to experience, to chase awe and adventure, to create and express. <strong>Your value was never in your output. It was in your aliveness all along.</strong>
+es: ¿En qué momento empezamos a medir nuestro valor como las máquinas miden el suyo? Por lo que producen. ¿Cuánto produje hoy? ¿Qué tan rápido? ¿Qué tan bien? La IA ya nos está ganando en ese juego, y tal vez ese sea el regalo. Porque nunca fuimos hechos para ese paradigma. Fuimos creados para sentir, para amar, para vivir experiencias, para buscar el asombro y la aventura, para crear y expresarnos. <strong>Tu valor nunca estuvo en lo que produces. Siempre estuvo en tu vitalidad.</strong>
+
+en: So here's the question I want to ask in the next seminar chat. <strong>Take it all away then.</strong> Your title, your inbox, your tasks. If AI took your job tomorrow, who would still be standing there?
+es: Así que esta es la pregunta que quiero hacer en el chat del próximo seminario. <strong>Entonces, quítamelo todo.</strong> Tu puesto, tu bandeja de entrada, tus pendientes. Si la IA te quitara tu trabajo mañana, ¿quién seguiría ahí de pie?
+
+en: My mother raised me on a line I carry everywhere: <em>"El que no vive para servir, no sirve para vivir."</em> Whoever doesn't live to serve isn't fit to live. Service is the meaning that never automates. Your love for your people, your curiosity, your faith, saying yes to inconveniencing oneself, the way you show up for a neighbor. No model can take that, and it pays dividends.
+es: Mi mamá me crió con una frase que llevo a todas partes: <em>"El que no vive para servir, no sirve para vivir."</em> El servicio es el sentido que nunca se automatiza. Tu amor por tu gente, tu curiosidad, tu fe, decir que sí a incomodarte por otros, la manera en que estás ahí para un vecino. Ningún modelo puede quitarte eso, y da frutos.
+
+en: Leaders, governments, and companies have real work to do here: equip people, invest in skills, tell the truth about what's changing. And each of us holds way more agency than what we think. You choose to keep learning. You choose where <em>your</em> meaning lives. You choose a life bigger than work.
+es: Los líderes, los gobiernos y las empresas tienen trabajo de verdad por hacer: preparar a la gente, invertir en habilidades, decir la verdad sobre lo que está cambiando. Y cada uno de nosotros tiene mucho más poder de decisión del que cree. Tú eliges seguir aprendiendo. Tú eliges dónde vive <em>tu</em> sentido. Tú eliges una vida más grande que el trabajo.
+
+en: AI can produce. Only you can live, feel, absorb, and create in many ways beyond tokens. So, who are you? <strong>Really?</strong>
+es: La IA puede producir. Solo tú puedes vivir, sentir, absorber y crear de mil maneras que van más allá de los tokens. Entonces, ¿quién eres? <strong>¿De verdad?</strong>

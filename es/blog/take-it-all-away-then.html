@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <meta name="description" content="En casi todos los seminarios de liderazgo, el chat se llena con las mismas palabras: abrumado, perdido, sin rumbo. Si la IA te quitara tu trabajo mañana, ¿quién seguiría ahí de pie?">
+    <meta property="og:title" content="Entonces, quítamelo todo">
+    <meta property="og:description" content="En casi todos los seminarios de liderazgo, el chat se llena con las mismas palabras: abrumado, perdido, sin rumbo. Si la IA te quitara tu trabajo mañana, ¿quién seguiría ahí de pie?">
+    <meta property="og:url" content="https://alejandratamez.com/es/blog/take-it-all-away-then.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ale Tamez">
+    <meta property="og:image" content="https://alejandratamez.com/take-it-all-away.jpg">
+    <title>Entonces, quítamelo todo | Ale Tamez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #705148;
+            --terracotta-light: #8A6A60;
+            --navy: #1D1B18;
+            --cream: #DFDCD8;
+            --cream-dark: #D2CEC8;
+            --sage: #705148;
+            --white: #FFFFFF;
+            --text-dark: #1D1B18;
+            --text-medium: #3A3631;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--cream-dark);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .nav-logo:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--navy);
+            transition: 0.3s;
+        }
+
+        .article-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .article-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-tags span {
+            background-color: var(--cream-dark);
+            color: var(--terracotta);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .article-title {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+
+        .article-meta .read-time {
+            color: var(--terracotta);
+            font-weight: 500;
+        }
+
+        .article-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--terracotta);
+            border: none;
+            margin: 2rem 0;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-body p:first-of-type::first-letter {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+        }
+
+        .article-body em {
+            font-style: italic;
+        }
+
+        .article-image {
+            width: 100%;
+            border-radius: 12px;
+            margin: 0.5rem 0 2rem;
+            display: block;
+        }
+
+        .article-image-caption {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            text-align: center;
+            margin-top: -1.5rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .image-row {
+            display: flex;
+            gap: 0.75rem;
+            margin: 0.5rem 0 2rem;
+        }
+
+        .image-row img {
+            width: 50%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .article-body h2 {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 2.25rem 0 1rem;
+        }
+
+        /* Photos in this post: smaller, centered, and never stretched.
+           height: auto keeps each photo's real shape; the two widths give
+           both photos the same height (about 340px) so they look balanced. */
+        .article-image.photo {
+            height: auto;
+            max-width: 460px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-image.photo.portrait {
+            max-width: 400px;
+        }
+
+
+        /* Post Navigation */
+        .post-nav {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--cream-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .post-nav a {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--terracotta);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .post-nav a:hover {
+            color: var(--terracotta-light);
+        }
+
+        .post-nav .back-link {
+            color: var(--text-medium);
+        }
+
+        .post-nav .back-link:hover {
+            color: var(--terracotta);
+        }
+
+        .post-nav .next-post {
+            text-align: right;
+        }
+
+        .post-nav .prev-post {
+            text-align: left;
+        }
+
+        .post-nav .next-post .label,
+        .post-nav .prev-post .label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            font-weight: 400;
+            margin-bottom: 0.2rem;
+        }
+
+        footer {
+            background-color: var(--navy);
+            color: var(--cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer .tagline {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--cream-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        footer .copyright {
+            font-size: 0.85rem;
+            color: var(--cream-dark);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--cream-dark);
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-body p:first-of-type::first-letter {
+                font-size: 3rem;
+            }
+
+            .image-row {
+                flex-direction: column;
+            }
+
+            .image-row img {
+                width: 100%;
+            }
+
+            .post-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .post-nav .next-post {
+                text-align: left;
+            }
+        }
+    </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/blog/take-it-all-away-then.html">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/blog/take-it-all-away-then.html">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/blog/take-it-all-away-then.html">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) {
+      .lang-switch { margin-left: auto; margin-right: 12px; }
+      nav .hamburger, nav .nav-toggle { order: 3; }
+    }
+  </style>
+  <style id="type-css">
+    h1, h2, h3, h4, .nav-logo { font-weight: 600; letter-spacing: -0.015em; }
+    .hero-title { font-size: clamp(2.1rem, 4.4vw, 3.2rem); line-height: 1.12; }
+    .section-title, .do-title, .work-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
+    .hero-label, .hero-tagline, .section-label, .care-about-title, .blog-tag, .coming-soon-badge,
+    .contact-info .info-label, .toolkit-item .tk-phase, .manifesto-promise strong, .quote-source,
+    .status-badge, .hl-label, .highlight-item .hl-label, .card-tag, .phase-tag, .crumbs, .tag, .stat .label {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:ital,opsz,wght@1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/theme.css">
+  <!-- /i18n:head -->
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo sw-logo" aria-label="Soul Wired, inicio"><span class="sw-soul">Soul</span><span class="sw-wired">wired</span></a>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../about.html">Sobre mí</a></li>
+                <li><a href="./">Blog</a></li>
+                <li><a href="../index.html#contact">Contacto</a></li>
+            </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Idioma / Language"><a href="../../blog/take-it-all-away-then.html" hreflang="en" lang="en" aria-label="View in English">EN</a><span aria-current="true">ES</span></div><!-- /i18n:switch -->
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-tags">
+                <span>Futuro del Trabajo</span>
+                <span>Liderazgo</span>
+                <span>Propósito</span>
+            </div>
+            <h1 class="article-title">Entonces, quítamelo todo</h1>
+            <p class="article-meta"><span class="read-time">24 de noviembre de 2026 &middot; 3 min de lectura</span></p>
+        </header>
+
+        <hr class="article-divider">
+
+        <div class="article-body">
+            <p>He estado en cincuenta o sesenta seminarios de liderazgo de una hora, impartidos por las principales consultoras, autores de best sellers y líderes de empresas Fortune 500. Casi todos empiezan igual. El facilitador le hace al chat alguna versión de una misma pregunta: <em>¿Cómo te sientes con todo este cambio? ¿Cómo te mantienes enfocado en la era de la IA? ¿Cómo te sientes con el futuro del trabajo?</em></p>
+
+            <p>Y en la mayoría de las sesiones, el chat se llena con las mismas palabras: <strong>Abrumado. Perdido. Sin rumbo.</strong></p>
+
+            <p>Todos nos hemos sentido así. Pero cuando leo con atención, escucho algo más profundo que estrés por herramientas nuevas. Escucho a la gente decir: "Si la IA puede hacer lo que yo hago, mi vida pierde sentido". Esa frase merece toda nuestra atención. Para algunos, o para muchos, un puesto se volvió un alma.</p>
+
+            <p>Construimos una cultura que celebra el éxito, y luego definimos el éxito como producción, puestos y sueldos. Entonces, cuando una máquina empieza a producir, toda la identidad se tambalea. El miedo es real, yo lo he sentido. Y debajo del miedo hay una verdad antigua esperando a que la recordemos: <strong>eres más que tu trabajo.</strong></p>
+
+            <p>¿En qué momento empezamos a medir nuestro valor como las máquinas miden el suyo? Por lo que producen. ¿Cuánto produje hoy? ¿Qué tan rápido? ¿Qué tan bien? La IA ya nos está ganando en ese juego, y tal vez ese sea el regalo. Porque nunca fuimos hechos para ese paradigma. Fuimos creados para sentir, para amar, para vivir experiencias, para buscar el asombro y la aventura, para crear y expresarnos. <strong>Tu valor nunca estuvo en lo que produces. Siempre estuvo en tu vitalidad.</strong></p>
+
+            <p>Así que esta es la pregunta que quiero hacer en el chat del próximo seminario. <strong>Entonces, quítamelo todo.</strong> Tu puesto, tu bandeja de entrada, tus pendientes. Si la IA te quitara tu trabajo mañana, ¿quién seguiría ahí de pie?</p>
+
+            <img src="../../take-it-all-away.jpg" alt="Tarjeta con una foto de Denzel Washington y sus palabras: Al final del día, no se trata de lo que tienes ni de lo que has logrado. Se trata de a quién has levantado, a quién has hecho mejor. Se trata de lo que has devuelto." class="article-image photo portrait" width="854" height="1054">
+
+            <p>Mi mamá me crió con una frase que llevo a todas partes: <em>"El que no vive para servir, no sirve para vivir."</em> El servicio es el sentido que nunca se automatiza. Tu amor por tu gente, tu curiosidad, tu fe, decir que sí a incomodarte por otros, la manera en que estás ahí para un vecino. Ningún modelo puede quitarte eso, y da frutos.</p>
+
+            <p>Los líderes, los gobiernos y las empresas tienen trabajo de verdad por hacer: preparar a la gente, invertir en habilidades, decir la verdad sobre lo que está cambiando. Y cada uno de nosotros tiene mucho más poder de decisión del que cree. Tú eliges seguir aprendiendo. Tú eliges dónde vive <em>tu</em> sentido. Tú eliges una vida más grande que el trabajo.</p>
+
+            <p>La IA puede producir. Solo tú puedes vivir, sentir, absorber y crear de mil maneras que van más allá de los tokens. Entonces, ¿quién eres? <strong>¿De verdad?</strong></p>
+        </div>
+
+        <div class="post-nav">
+            <a href="./" class="back-link">&larr; Volver al blog</a>
+            <a href="why-we-still-need-authors.html" class="next-post">
+                <span class="label">Siguiente publicación &rarr;</span>
+                Si la IA puede enseñarnos casi cualquier cosa, ¿por qué seguimos necesitando autores?
+            </a>
+        </div>
+    </article>
+
+    <footer>
+        <p class="tagline">"Haciendo que la tecnología sea deliciosamente satisfactoria."</p>
+        <p class="copyright">&copy; 2026 Ale Tamez. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
