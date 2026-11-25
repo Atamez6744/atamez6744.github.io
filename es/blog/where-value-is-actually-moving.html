@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <meta name="description" content="La IA no te está quitando el trabajo. Te está quitando cuánto de ese trabajo demuestra tu valor. Cuando ejecutar se vuelve más fácil, el criterio se vuelve visible.">
+    <meta property="og:title" content="Hacia dónde se está moviendo realmente el valor">
+    <meta property="og:description" content="La IA no te está quitando el trabajo. Te está quitando cuánto de ese trabajo demuestra tu valor. Cuando ejecutar se vuelve más fácil, el criterio se vuelve visible.">
+    <meta property="og:url" content="https://alejandratamez.com/es/blog/where-value-is-actually-moving.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ale Tamez">
+    <meta property="og:image" content="https://alejandratamez.com/social-preview.jpg">
+    <title>Hacia dónde se está moviendo realmente el valor | Ale Tamez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #705148;
+            --terracotta-light: #8A6A60;
+            --navy: #1D1B18;
+            --cream: #DFDCD8;
+            --cream-dark: #D2CEC8;
+            --sage: #705148;
+            --white: #FFFFFF;
+            --text-dark: #1D1B18;
+            --text-medium: #3A3631;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--cream-dark);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .nav-logo:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--navy);
+            transition: 0.3s;
+        }
+
+        /* Article */
+        .article-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .article-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-tags span {
+            background-color: var(--cream-dark);
+            color: var(--terracotta);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .article-title {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+
+        .article-meta .read-time {
+            color: var(--terracotta);
+            font-weight: 500;
+        }
+
+        .article-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--terracotta);
+            border: none;
+            margin: 2rem 0;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 2.25rem 0 1rem;
+        }
+
+        .article-body p:first-of-type::first-letter {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+        }
+
+        .article-body em {
+            font-style: italic;
+        }
+
+        /* Post Navigation */
+        .post-nav {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--cream-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .post-nav a {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--terracotta);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .post-nav a:hover {
+            color: var(--terracotta-light);
+        }
+
+        .post-nav .back-link {
+            color: var(--text-medium);
+        }
+
+        .post-nav .back-link:hover {
+            color: var(--terracotta);
+        }
+
+        .post-nav .next-post {
+            text-align: right;
+        }
+
+        .post-nav .next-post .label,
+        .post-nav .prev-post .label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            font-weight: 400;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--navy);
+            color: var(--cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer .tagline {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--cream-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        footer .copyright {
+            font-size: 0.85rem;
+            color: var(--cream-dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--cream-dark);
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-body p:first-of-type::first-letter {
+                font-size: 3rem;
+            }
+
+            .post-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .post-nav .next-post {
+                text-align: left;
+            }
+        }
+    </style>
+
+  <!-- i18n:head -->
+  <link rel="alternate" hreflang="en" href="https://alejandratamez.com/blog/where-value-is-actually-moving.html">
+  <link rel="alternate" hreflang="es" href="https://alejandratamez.com/es/blog/where-value-is-actually-moving.html">
+  <link rel="alternate" hreflang="x-default" href="https://alejandratamez.com/blog/where-value-is-actually-moving.html">
+  <style id="lang-switch-css">
+    .lang-switch { display: inline-flex; align-items: center; margin-left: 28px; border: 1.5px solid rgba(29,27,24,.18); border-radius: 50px; padding: 3px; font-size: .74rem; font-weight: 600; letter-spacing: .08em; line-height: 1; flex-shrink: 0; }
+    .lang-switch a, .lang-switch span { padding: 6px 10px; border-radius: 50px; text-decoration: none; }
+    .lang-switch span { background: #1D1B18; color: #fff; }
+    .lang-switch a { color: #3A3631; }
+    .lang-switch a:hover { color: #1D1B18; background: rgba(29,27,24,.07); }
+    #navbar .nav-links, nav .nav-links { margin-left: auto; }
+    @media (max-width: 768px) {
+      .lang-switch { margin-left: auto; margin-right: 12px; }
+      nav .hamburger, nav .nav-toggle { order: 3; }
+    }
+  </style>
+  <style id="type-css">
+    h1, h2, h3, h4, .nav-logo { font-weight: 600; letter-spacing: -0.015em; }
+    .hero-title { font-size: clamp(2.1rem, 4.4vw, 3.2rem); line-height: 1.12; }
+    .section-title, .do-title, .work-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
+    .hero-label, .hero-tagline, .section-label, .care-about-title, .blog-tag, .coming-soon-badge,
+    .contact-info .info-label, .toolkit-item .tk-phase, .manifesto-promise strong, .quote-source,
+    .status-badge, .hl-label, .highlight-item .hl-label, .card-tag, .phase-tag, .crumbs, .tag, .stat .label {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:ital,opsz,wght@1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/theme.css">
+  <script src="/comments.js" defer></script>
+  <!-- /i18n:head -->
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo sw-logo" aria-label="Soul Wired, inicio"><span class="sw-soul">Soul</span><span class="sw-wired">wired</span></a>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../about.html">Sobre mí</a></li>
+                <li><a href="./">Blog</a></li>
+                <li><a href="../index.html#contact">Contacto</a></li>
+            </ul>
+      <!-- i18n:switch --><div class="lang-switch" role="group" aria-label="Idioma / Language"><a href="../../blog/where-value-is-actually-moving.html" hreflang="en" lang="en" aria-label="View in English">EN</a><span aria-current="true">ES</span></div><!-- /i18n:switch -->
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-tags">
+                <span>Futuro del Trabajo</span>
+                <span>Estrategia de IA</span>
+                <span>Liderazgo</span>
+            </div>
+            <h1 class="article-title">Hacia dónde se está moviendo realmente el valor</h1>
+            <p class="article-meta"><span class="read-time">15 de julio de 2026 &middot; 3 min de lectura</span></p>
+        </header>
+
+        <hr class="article-divider">
+
+        <div class="article-body">
+            <p>Aquí te dejo algo para pensar. La IA no te está quitando el trabajo. Te está quitando cuánto de ese trabajo demuestra tu valor. Cuando ejecutar se vuelve más fácil, el criterio se vuelve visible, y de repente todos pueden ver quién lleva el timón de verdad. La IA es el suero de la verdad.</p>
+
+            <p>Las personas que destacan hoy pueden tomar un problema desordenado y enredado y convertirlo en algo que se puede resolver. Sopesan pros y contras cuando no hay una respuesta obvia. Conectan sus decisiones con el impacto real en el negocio. Y quizás lo más difícil de todo: deciden qué importa después y qué puede esperar. El premio son mejores decisiones; producir más nunca fue el punto. ¡Qué momento para estar vivos!</p>
+
+            <p>Esto ya está pasando dentro de los roles que tenemos hoy. Pensemos en el gerente de proyectos. La IA puede escribir reportes de estatus, dar seguimiento a los hitos y organizar tareas de maravilla. Pero los proyectos rara vez fracasan por falta de seguimiento. Fracasan porque las decisiones eran difusas. Así que el valor del gerente de proyectos se mueve río arriba: notar que un proyecto se está desviando antes de que las métricas lo detecten, alinear a las partes interesadas cuando cada una define el éxito de forma distinta, poner sobre la mesa desde temprano las concesiones entre alcance, tiempo y calidad, y proteger el resultado con la misma fiereza que el calendario. Es un cambio sutil. Ahora tú eres el sistema de criterio, y el sistema de registro puede encargarse solo.</p>
+
+            <p>El arquitecto de soluciones está viendo lo mismo. La IA puede bosquejar opciones de diseño e incluso ayudar con la implementación. Lo que no puede hacer es leer el contexto como tú lo lees. Tu valor está en plantear bien el problema antes de que alguien empiece a construir, en sopesar la escalabilidad contra el costo y la complejidad, en detectar los efectos en cadena que otros no ven, y en recomendar un camino claro cuando varias opciones "buenas" compiten por atención. Construir la solución es solo parte del trabajo. Elegir qué solución merece construirse es el verdadero oficio.</p>
+
+            <p>Si ves el panorama completo, el patrón es claro. Estamos pasando de hacer el trabajo a decidir qué trabajo importa. Eso es más difícil. Está menos definido, te deja más expuesto y, a primera vista, es más difícil de medir.</p>
+
+            <p>Entonces, ¿cómo demuestras tu criterio? Con resultados. Dan Shipper lo dice perfecto: "no te van a juzgar por cuánto sabes, sino por qué tan bien puedes asignar y administrar los recursos de la inteligencia para sacar el trabajo adelante." Piénsalo como un director de orquesta. Nadie le pide al director que toque cada instrumento. Lo juzgan por la música. Tu experiencia sigue importando. Solo que ahora se nota de otra forma: en las decisiones que tomas, en el trabajo hacia el que diriges a la IA y en los resultados que vienen después. Lo repito: ¡qué momento para estar vivos!</p>
+        </div>
+
+        <div class="post-nav">
+            <a href="hybrid-human-agent-teams.html" class="prev-post">
+                <span class="label">&larr; Publicación anterior</span>
+                Manic Monday: a favor de los equipos híbridos de personas y agentes
+            </a>
+            <a href="./" class="back-link">Volver al blog</a>
+            <a href="decade-that-was-a-year.html" class="next-post">
+                <span class="label">Siguiente publicación &rarr;</span>
+                La década que en realidad fue un año
+            </a>
+        </div>
+    </article>
+
+    <footer>
+        <p class="tagline">"Haciendo que la tecnología sea deliciosamente satisfactoria."</p>
+        <p class="copyright">&copy; 2026 Ale Tamez. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

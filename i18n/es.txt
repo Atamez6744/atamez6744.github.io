@@ -2580,3 +2580,37 @@ es: Los líderes, los gobiernos y las empresas tienen trabajo de verdad por hace
 
 en: AI can produce. Only you can live, feel, absorb, and create in many ways beyond tokens. So, who are you? <strong>Really?</strong>
 es: La IA puede producir. Solo tú puedes vivir, sentir, absorber y crear de mil maneras que van más allá de los tokens. Entonces, ¿quién eres? <strong>¿De verdad?</strong>
+
+# ---------------------------------------------------------------- Post: Where Value Is Actually Moving
+en: Where Value Is Actually Moving
+es: Hacia dónde se está moviendo realmente el valor
+
+en: Where Value Is Actually Moving | Ale Tamez
+es: Hacia dónde se está moviendo realmente el valor | Ale Tamez
+
+en: AI isn't taking away the work. It's taking away how much of the work proves your value. When execution gets easier, judgment becomes visible.
+es: La IA no te está quitando el trabajo. Te está quitando cuánto de ese trabajo demuestra tu valor. Cuando ejecutar se vuelve más fácil, el criterio se vuelve visible.
+
+en: AI isn&#x27;t taking away the work. It&#x27;s taking away how much of the work proves your value. When execution gets easier, judgment becomes visible.
+es: La IA no te está quitando el trabajo. Te está quitando cuánto de ese trabajo demuestra tu valor. Cuando ejecutar se vuelve más fácil, el criterio se vuelve visible.
+
+en: July 15, 2026 &middot; 3 min read
+es: 15 de julio de 2026 &middot; 3 min de lectura
+
+en: Here's some food for thought. AI isn't taking away the work. It's taking away how much of the work proves your value. When execution gets easier, judgment becomes visible, and suddenly everyone can see who's really steering the ship. AI is the truth serum.
+es: Aquí te dejo algo para pensar. La IA no te está quitando el trabajo. Te está quitando cuánto de ese trabajo demuestra tu valor. Cuando ejecutar se vuelve más fácil, el criterio se vuelve visible, y de repente todos pueden ver quién lleva el timón de verdad. La IA es el suero de la verdad.
+
+en: The people who stand out right now can take a messy, tangled problem and turn it into something solvable. They weigh tradeoffs when there's no obvious answer. They tie decisions back to real business impact. And maybe hardest of all, they decide what matters next and what can wait. The prize is better decisions, and more output was never the point. What a time to be alive!
+es: Las personas que destacan hoy pueden tomar un problema desordenado y enredado y convertirlo en algo que se puede resolver. Sopesan pros y contras cuando no hay una respuesta obvia. Conectan sus decisiones con el impacto real en el negocio. Y quizás lo más difícil de todo: deciden qué importa después y qué puede esperar. El premio son mejores decisiones; producir más nunca fue el punto. ¡Qué momento para estar vivos!
+
+en: This is already happening inside the roles we have today. Take the project manager. AI can write status reports, track milestones, and organize tasks beautifully. Projects rarely fail for lack of tracking, though. They fail because decisions were fuzzy. So the project manager's value moves upstream: noticing a project drifting before the metrics catch it, getting stakeholders aligned when each one defines success differently, putting tradeoffs between scope, time, and quality on the table early, and protecting the outcome as fiercely as the timeline. It's a subtle shift. You're the system of judgment now, and the system of record can handle itself.
+es: Esto ya está pasando dentro de los roles que tenemos hoy. Pensemos en el gerente de proyectos. La IA puede escribir reportes de estatus, dar seguimiento a los hitos y organizar tareas de maravilla. Pero los proyectos rara vez fracasan por falta de seguimiento. Fracasan porque las decisiones eran difusas. Así que el valor del gerente de proyectos se mueve río arriba: notar que un proyecto se está desviando antes de que las métricas lo detecten, alinear a las partes interesadas cuando cada una define el éxito de forma distinta, poner sobre la mesa desde temprano las concesiones entre alcance, tiempo y calidad, y proteger el resultado con la misma fiereza que el calendario. Es un cambio sutil. Ahora tú eres el sistema de criterio, y el sistema de registro puede encargarse solo.
+
+en: The solution architect is seeing the same thing. AI can sketch design options and even help with implementation. What it can't do is read context the way you do. Your value lives in framing the problem correctly before anyone starts building, weighing scalability against cost and complexity, spotting the downstream ripples others miss, and recommending a clear path when several "good" options are competing for attention. Building the solution is only part of the job. Choosing which solution deserves to be built is the real craft.
+es: El arquitecto de soluciones está viendo lo mismo. La IA puede bosquejar opciones de diseño e incluso ayudar con la implementación. Lo que no puede hacer es leer el contexto como tú lo lees. Tu valor está en plantear bien el problema antes de que alguien empiece a construir, en sopesar la escalabilidad contra el costo y la complejidad, en detectar los efectos en cadena que otros no ven, y en recomendar un camino claro cuando varias opciones "buenas" compiten por atención. Construir la solución es solo parte del trabajo. Elegir qué solución merece construirse es el verdadero oficio.
+
+en: Zoom out and the pattern is clear. We're moving from doing the work to deciding which work matters. That's harder. It's less defined, more exposed, and at first glance, harder to measure.
+es: Si ves el panorama completo, el patrón es claro. Estamos pasando de hacer el trabajo a decidir qué trabajo importa. Eso es más difícil. Está menos definido, te deja más expuesto y, a primera vista, es más difícil de medir.
+
+en: So how do you prove judgment? Through outcomes. Dan Shipper puts it perfectly: "you won't be judged on how much you know, but on how well you can allocate and manage the resources of intelligence to get work done." Think of it like a conductor. Nobody asks the conductor to play every instrument. They judge the music. Your experience still matters. It just shows up differently now, in the calls you make, the work you point AI toward, and the results that follow. I repeat, what a time to be alive!
+es: Entonces, ¿cómo demuestras tu criterio? Con resultados. Dan Shipper lo dice perfecto: "no te van a juzgar por cuánto sabes, sino por qué tan bien puedes asignar y administrar los recursos de la inteligencia para sacar el trabajo adelante." Piénsalo como un director de orquesta. Nadie le pide al director que toque cada instrumento. Lo juzgan por la música. Tu experiencia sigue importando. Solo que ahora se nota de otra forma: en las decisiones que tomas, en el trabajo hacia el que diriges a la IA y en los resultados que vienen después. Lo repito: ¡qué momento para estar vivos!
