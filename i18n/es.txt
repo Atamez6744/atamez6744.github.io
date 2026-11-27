@@ -2398,8 +2398,8 @@ es: Toda herramienta que construimos es tan mágica como el <em>ser humano</em> 
 en: Margin is where life happens.
 es: En el margen es donde sucede la vida.
 
-en: <a class="btn primary" href="mailto:hola@alejandratamez.com">Email me</a> <a class="btn ghost" href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener">LinkedIn</a>
-es: <a class="btn primary" href="mailto:hola@alejandratamez.com">Escríbeme</a> <a class="btn ghost" href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener">LinkedIn</a>
+en: <a class="btn primary" href="https://calendly.com/alejandratamez" target="_blank" rel="noopener" onclick="if (window.Calendly) { Calendly.initPopupWidget({url: 'https://calendly.com/alejandratamez'}); return false; }">Let's chat</a> <a class="btn ghost" href="mailto:hola@alejandratamez.com">Email me</a> <a class="btn ghost" href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener">LinkedIn</a>
+es: <a class="btn primary" href="https://calendly.com/alejandratamez" target="_blank" rel="noopener" onclick="if (window.Calendly) { Calendly.initPopupWidget({url: 'https://calendly.com/alejandratamez'}); return false; }">Platiquemos</a> <a class="btn ghost" href="mailto:hola@alejandratamez.com">Escríbeme</a> <a class="btn ghost" href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener">LinkedIn</a>
 
 en: Hecho con corazón. Made with heart.
 es: =

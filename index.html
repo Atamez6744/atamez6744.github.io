@@ -157,6 +157,9 @@
       .note, .btn, .home-post { transition: none; }
     }
   </style>
+  <!-- Calendly popup widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
   <!-- i18n:head -->
   <link rel="alternate" hreflang="en" href="https://alejandratamez.com/">
@@ -345,7 +348,8 @@
       <p>Want to talk about a post, invite me to speak, or just say hi? I'd love to hear from you.</p>
     </div>
     <div class="actions">
-      <a class="btn primary" href="mailto:hola@alejandratamez.com">Email me</a>
+      <a class="btn primary" href="https://calendly.com/alejandratamez" target="_blank" rel="noopener" onclick="if (window.Calendly) { Calendly.initPopupWidget({url: 'https://calendly.com/alejandratamez'}); return false; }">Let's chat</a>
+      <a class="btn ghost" href="mailto:hola@alejandratamez.com">Email me</a>
       <a class="btn ghost" href="https://www.linkedin.com/in/alejandra-tamez-delagarza/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </section>
